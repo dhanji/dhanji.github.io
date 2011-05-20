@@ -72,6 +72,8 @@ $(function() {
     $('#posts').animate({
       translateX: '-98%'
     }, 800);
+
+    return false;
   });
 
   // Reverse the previous transition.
@@ -95,6 +97,7 @@ $(function() {
     $('#posts').animate({
       translateX: '0'
     }, 800);
+    return false;
   });
 
   // Minimap scrolling.
@@ -103,11 +106,13 @@ $(function() {
     minimap.animate({
       marginRight: '-40px'
     }, 800);
+    return false;
   });
   $('.right').live('click', function() {
     var minimap = $('#minimap ul');
     minimap.animate({
       marginRight: 0
     }, 800);
+    return false;
   });
 });
