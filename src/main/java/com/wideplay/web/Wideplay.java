@@ -30,7 +30,10 @@ public class Wideplay {
     System.out.println("Cleaning output dir...");
     File views = new File("views");
     FileUtils.deleteDirectory(views);
-      views.mkdir();
+    views.mkdir();
+
+    // Copy everything in the web directory into views as well.
+    FileUtils.copyDirectory(new File("src/main/resources/web"), views);
 
     @SuppressWarnings("unchecked")
     Collection<File> files = FileUtils.listFiles(new File("src/main/resources"),

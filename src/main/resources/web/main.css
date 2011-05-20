@@ -1,0 +1,273 @@
+@font-face {
+  font-family: "Planer";
+  src: url(fonts/style_190986.woff) format("woff"),
+       url(fonts/style_190986.eot) format("eot"),
+       url(fonts/style_190986.svg#Planer) format("svg");
+}
+
+@font-face {
+  font-family: "Pakenham";
+  src: url(fonts/style_107773.woff) format("woff"),
+       url(fonts/style_107773.svg#PakenhamRg-Regular) format("svg");
+}
+
+body {
+  margin: 0;
+  font-family: "Helvetica neue", sans-serif;
+}
+a:hover {
+  text-decoration: underline;
+}
+a {
+  text-decoration: none;
+  color: #2f8ed6;
+}
+
+header.logo {
+  position: absolute;
+  top: 62%;
+  left: 72%;
+  z-index: 999;
+}
+
+header.logo span {
+  position: relative;
+  font-family: "Helvetica neue", sans-serif;
+  font-size: 90%;
+  font-weight: lighter;
+  top: -52px;
+  left: 132px;
+}
+header.logo span a {
+  color: #ccc !important;
+}
+header.logo h1 {
+  font-family: "Planer", sans-serif;
+  font-size: 60px;
+  line-height: 1.0;
+  font-weight: normal;
+  color: #b5f420;
+}
+
+section#background {
+  position: absolute;
+  top: -100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  overflow: hidden;
+  background: -webkit-gradient(
+    radial,
+    50% 20%,
+    0,
+    50% 50%,
+    470,
+    from(#454545),
+    to(#1a1a1a));
+}
+
+#bump {
+  position: absolute;
+  top: 82%;
+  /*bottom: 0;*/
+  left: 6%;
+  /*right: 0;*/
+
+  width: 110%;
+  height: 60%;
+
+  background: -webkit-gradient(
+    radial,
+    50% 50%,
+    30,
+    50% 50%,
+    370,
+    from(#2a2a2a),
+    to(#1a1a1a));
+
+  -webkit-box-shadow: 0 -8px 22px #131313;
+  -webkit-border-top-left-radius: 800px;
+  -webkit-transform: rotate(-15deg);
+}
+
+#curve {
+  position: absolute;
+  top: 45%;
+  /*bottom: 0;*/
+  right: -8%;
+  /*right: 0;*/
+
+  width: 38%;
+  height: 20%;
+
+  background: -webkit-gradient(
+    radial,
+    50% 50%,
+    30,
+    50% 50%,
+    370,
+    from(#2a2a2a),
+    to(#1a1a1a));
+
+  -webkit-box-shadow: 0 8px 20px #111;
+  -webkit-border-bottom-left-radius: 800px;
+  -webkit-transform: rotate(15deg);
+}
+
+/** articles **/
+nav#posts > ul > li {
+  margin: 0 42px;
+  padding: 12px;
+  float: left;
+  list-style-type: none;
+
+  width: 100px;
+  height: 150px;
+}
+
+/** timestamp **/
+nav#posts > ul > li time {
+  position: relative;
+  bottom: 60px;
+  color: #555;
+  font-size: 60%;
+}
+
+nav#posts > ul > li p {
+  position: relative;
+  bottom: 50px;
+  cursor: pointer;
+
+  color: #999;
+  font-size: small;
+}
+
+nav#posts > ul > li h2 {
+  position: absolute;
+  top: -50%;
+  margin-left: -20%;
+  font-size: 210%;
+  opacity: 0.4;
+  color: #ddd;
+  cursor: pointer;
+  text-transform: uppercase;
+
+  text-shadow: -1px 1px 4px #000;
+
+  font-weight: bolder;
+  -webkit-transform: rotate(-90deg);
+}
+
+nav#posts {
+  position: absolute;
+  z-index: 1;
+  top: 32%;
+  right: 20%;
+}
+
+
+nav#minimap {
+  position: absolute;
+  opacity: 0.6;
+  z-index: 1;
+  left: 8.8%;
+  bottom: 26%;
+
+  width: 28%;
+  overflow-x: hidden;
+}
+
+div.menu-control:hover {
+  opacity: 0.5;
+}
+div.menu-control {
+  position: absolute;
+  cursor: pointer;
+  z-index: 1;
+  bottom: 29.5%;
+  opacity: 0.1;
+  width: 12px;
+  height: 16px;
+  padding: 0 4px;
+  background: url(images/play_12x16.png) no-repeat;
+}
+
+div.left {
+  left: 5%;
+  -webkit-transform: rotate(180deg);
+}
+div.right {
+  left: 39%;
+}
+
+nav#minimap > ul {
+  float: right;
+  white-space: nowrap;
+}
+
+nav#minimap > ul > li {
+  display: inline-block;
+  list-style-type: none;
+  margin: 0 14px;
+  padding: 0 4px;
+}
+
+nav#minimap > ul > li.stub:hover {
+  opacity: 0.6;
+}
+nav#minimap > ul > li.stub {
+  width: 24px;
+  height: 24px;
+  background: url(images/read_more_24x24.png) no-repeat;
+  opacity: 0.3;
+
+  cursor: pointer;
+}
+
+/** post popup **/
+section#post {
+  display: none;
+  position: absolute;
+  z-index: 999;
+
+  top: 0;
+  bottom: 0;
+  left: 22%;
+  width: 500px;
+}
+
+section#post article h2 {
+  position: absolute;
+  bottom: 32%;
+  left: -92%;
+  font-size: 80px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  opacity: 0.1;
+  -webkit-transform: rotate(-90deg);
+}
+section#post article h1 {
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+section#post article nav {
+  position: absolute;
+  left: -46px;
+  top: 30px;
+}
+
+section#post article {
+  padding: 8px 18px;
+  color: #ddd;
+  /*font-family: "Planer", sans-serif;*/
+  font-family: "Helvetica neue", sans-serif;
+  font-weight: lighter;
+  font-size: small;
+}
+
+section#post article time {
+  font-size: small;
+  color: #999;
+  padding-bottom: 8px;
+}

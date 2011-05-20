@@ -45,7 +45,7 @@ public class Page implements Comparable<Page> {
     this.postedOn = postedOn;
   }
 
-  @Override public int compareTo(Page o) {
+  public int compareTo(Page o) {
     return o.postedOn.compareTo(this.postedOn);
   }
 }
