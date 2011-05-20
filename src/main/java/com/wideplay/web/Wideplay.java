@@ -32,9 +32,6 @@ public class Wideplay {
     FileUtils.deleteDirectory(views);
     views.mkdir();
 
-    // Copy everything in the web directory into views as well.
-    FileUtils.copyDirectory(new File("src/main/resources/web"), views);
-
     @SuppressWarnings("unchecked")
     Collection<File> files = FileUtils.listFiles(new File("src/main/resources"),
         new String[] { "markdown" }, true);

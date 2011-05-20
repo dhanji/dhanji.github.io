@@ -10,7 +10,7 @@ $(function() {
   // Load index.
   $.ajax({
     type: 'GET',
-    url: 'index.json',
+    url: 'views/index.json',
     dataType: 'json',
     data: '',
     success: function(data) {
@@ -42,7 +42,7 @@ $(function() {
     var page = $(this).parent().attr('page-id');
     $.ajax({
       type: 'GET',
-      url: page + '.json',
+      url: 'views/' + page + '.json',
       dataType: 'json',
       data: '',
       success: function(data) {
