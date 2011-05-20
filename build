@@ -1,2 +1,6 @@
 mvn package exec:java -Dexec.mainClass="com.wideplay.web.Wideplay"
 
+git commit -a -m 'Site update'
+git push
+
+

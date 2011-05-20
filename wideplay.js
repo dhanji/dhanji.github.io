@@ -37,6 +37,7 @@ $(function() {
     }
   });
 
+  var postBody = $('#post-body');
   $('#posts article > h2').live('click', function() {
     // Extract the page id and fetch it from the server.
     var page = $(this).parent().attr('page-id');
@@ -47,7 +48,10 @@ $(function() {
       data: '',
       success: function(data) {
         // Incoming blog page.
-
+        postBody.html(data.html);
+        var h1 = $('h1', postBody).first();
+        h1.before('<h2>' + h1.text() + '</h2>');
+        h1.after('<time datetime="">' + data.postedOn + '</time>')
       },
       failure: function() {
         alert("Unable to contact server =(");
