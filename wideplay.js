@@ -8,16 +8,13 @@ $(function() {
   var posts = $('#posts ul');
 
   // Load index.
-  alert("ajaxing")
   $.ajax({
     type: 'GET',
     url: 'views/index.json',
     dataType: 'json',
     data: '',
     success: function(data) {
-      alert("received" + data)
-      alert("received" + data.pages)
-      for (var i; i < data.pages; i++) {
+      for (var i = 0; i < data.pages.length; i++) {
         var page = data.pages[i];
         var builder = [
           '<li><article page-id="',
