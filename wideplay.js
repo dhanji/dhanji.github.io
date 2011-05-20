@@ -74,7 +74,7 @@ $(function() {
       $('#post').fadeIn('slow');
     });
     $('#posts').animate({
-      translateX: '-98%'
+      translateX: '-198%'
     }, 800);
 
     return false;
