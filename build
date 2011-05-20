@@ -1,0 +1,2 @@
+mvn package exec:java -Dexec.mainClass="com.wideplay.web.Wideplay"
+
