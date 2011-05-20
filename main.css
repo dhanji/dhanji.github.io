@@ -14,13 +14,14 @@
 body {
   margin: 0;
   font-family: "Helvetica neue", sans-serif;
+  overflow: hidden;
 }
 a:hover {
   text-decoration: underline;
 }
 a {
   text-decoration: none;
-  color: #2f8ed6;
+  color: #6699ff;
 }
 
 header.logo {
@@ -38,8 +39,8 @@ header.logo span {
   top: -52px;
   left: 132px;
 }
-header.logo span a {
-  color: #ccc !important;
+header.logo span, header.logo span > a {
+  color: #eee !important;
 }
 header.logo h1 {
   font-family: "Planer", sans-serif;
@@ -47,6 +48,21 @@ header.logo h1 {
   line-height: 1.0;
   font-weight: normal;
   color: #b5f420;
+}
+header.logo > nav > ul {
+  list-style-type: none;
+  position: relative;
+  top: -32px;
+  right: 240px;
+  width: 400px;
+}
+header.logo > nav > ul > li {
+  font-family: "HELVETICA NEUE";
+  font-size: 15px;
+  font-weight: lighter;
+  text-transform: lowercase;
+  float: right;
+  padding: 0 8px;
 }
 
 section#background {
@@ -59,12 +75,12 @@ section#background {
   overflow: hidden;
   background: -webkit-gradient(
     radial,
-    50% 20%,
+    40% 20%,
     0,
-    50% 50%,
+    40% 50%,
     470,
-    from(#454545),
-    to(#1a1a1a));
+    from(#777),
+    to(#1c1c1c));
 }
 
 #bump {
@@ -83,8 +99,8 @@ section#background {
     30,
     50% 50%,
     370,
-    from(#2a2a2a),
-    to(#1a1a1a));
+    from(#1a1a1a),
+    to(#2a2a2a));
 
   -webkit-box-shadow: 0 -8px 22px #131313;
   -webkit-border-top-left-radius: 800px;
@@ -94,9 +110,7 @@ section#background {
 #curve {
   position: absolute;
   top: 45%;
-  /*bottom: 0;*/
   right: -8%;
-  /*right: 0;*/
 
   width: 38%;
   height: 20%;
@@ -107,7 +121,7 @@ section#background {
     30,
     50% 50%,
     370,
-    from(#2a2a2a),
+    from(#3a3a3a),
     to(#1a1a1a));
 
   -webkit-box-shadow: 0 8px 20px #111;
@@ -146,12 +160,13 @@ nav#posts > ul > li p {
 nav#posts > ul > li h2 {
   position: absolute;
   top: -50%;
-  margin-left: -20%;
+  margin-left: -54%;
   font-size: 210%;
-  opacity: 0.4;
-  color: #ddd;
+  opacity: 0.5;
+  color: #eee;
   cursor: pointer;
   text-transform: uppercase;
+  white-space: nowrap;
 
   text-shadow: -1px 1px 4px #000;
 
@@ -162,10 +177,9 @@ nav#posts > ul > li h2 {
 nav#posts {
   position: absolute;
   z-index: 1;
-  top: 32%;
-  right: 20%;
+  top: 200px;
+  right: 280px;
 }
-
 
 nav#minimap {
   position: absolute;
@@ -260,8 +274,6 @@ section#post article nav {
 section#post article {
   padding: 8px 18px;
   color: #ddd;
-  /*font-family: "Planer", sans-serif;*/
-  font-family: "Helvetica neue", sans-serif;
   font-weight: lighter;
   font-size: small;
 }

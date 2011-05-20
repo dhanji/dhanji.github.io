@@ -10,10 +10,26 @@
 <body>
 <header class="logo">
   <h1>wideplay</h1>
-  <span><a href="http://twitter.com/dhanji" target="_blank">@dhanji</a></span>
+  <span>@<a href="http://twitter.com/dhanji" target="_blank">dhanji</a></span>
+
+  <nav>
+    <ul>
+      <li><a id="link-about" href="#">About</a></li>
+      <li><a id="link-archive" href="#">Archive</a></li>
+      <li><a id="link-projects" href="#">Projects</a></li>
+    </ul>
+  </nav>
 </header>
 <nav id="posts">
-  <ul></ul>
+  <ul>
+    <li>
+      <article>
+        <h2>test thing</h2>
+        <p>snippet</p>
+        <time>2 days ago</time>
+      </article>
+    </li>
+  </ul>
 </nav>
 <div class="menu-control left"></div>
 <nav id="minimap">
@@ -40,8 +56,18 @@
       <h2>Terrific Rubric</h2>
       <h1>Terrific Rubric</h1>
       <time datetime="">2 days ago</time>
-      <p>Text goes here</p>
-
+      <p> A UUID is an identifier that is unique across both space and time,
+      with respect to the space of all UUIDs.  Since a UUID is a fixed
+      size and contains a time field, it is possible for values to
+      rollover (around A.D. 3400, depending on the specific algorithm
+      used).  A UUID can be used for multiple purposes, from tagging
+      objects with an extremely short lifetime, to reliably identifying
+      very persistent objects across a network.
+      <p>
+      The internal representation of a UUID is a specific sequence of
+      bits in memory, as described in Section 4.  To accurately
+      represent a UUID as a URN, it is necessary to convert the bit
+      sequence to a string representation.</p>
     </div>
   </article>
 </section>
