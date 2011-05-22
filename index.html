@@ -1,73 +1,150 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-  <title>wideplay</title>
-  <link href="main.css" rel="stylesheet"/>
-  <script type="text/javascript" src="jquery-1.4.3.min.js"></script>
-  <script type="text/javascript" src="jquery.transform-0.9.3.min.js"></script>
-  <script type="text/javascript" src="wideplay.js"></script>
+  <title>Rethrick Construction</title>
+  <link href="main.css" rel="stylesheet">
+  <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
-<header class="logo">
-  <h1>wideplay</h1>
-  <span>@<a href="http://twitter.com/dhanji" target="_blank">dhanji</a></span>
-
-  <nav>
+<header>
+  <h1>&nbsp;</h1>
+  <nav class="top">
+    <input id="searchbox" type="text" value="">
+    <section id="results">
+      <ul>
+        <li>
+          <article class="post">
+            <h3>waving goodbye</h3>
+            <div class="snippet">Dispatches from the dark inner workings of an aspiring mad
+              scientist.
+            </div>
+          </article>
+        </li>
+      </ul>
+    </section>
+  </nav>
+  <nav class="bottom">
     <ul>
-      <li><a id="link-about" href="#">About</a></li>
-      <li><a id="link-archive" href="#">Archive</a></li>
-      <li><a id="link-projects" href="#">Projects</a></li>
+      <li><a id="link-about" href="#">about</a></li>
+      <li><a id="link-projects"  href="#">projects</a></li>
+      <li><a href="http://twitter.com/dhanji" target="_blank">twitter</a></li>
     </ul>
   </nav>
 </header>
-<nav id="posts">
-  <ul>
-    <li>
-      <article>
-        <h2>test thing</h2>
-        <p>snippet</p>
-        <time>2 days ago</time>
-      </article>
-    </li>
-  </ul>
-</nav>
-<div class="menu-control left"></div>
-<nav id="minimap">
-  <ul>
-    <li class="stub"></li>
-    <li class="stub"></li>
-    <li class="stub"></li>
-    <li class="stub"></li>
-    <li class="stub"></li>
-    <li class="stub"></li>
-    <li class="stub"></li>
-    <li class="stub"></li>
-  </ul>
-</nav>
-<div class="menu-control right"></div>
-<section id="background">
-  <div id="curve"></div> <!-- upper right curve -->
-  <div id="bump"></div> <!-- lower right bump -->
+<section id="index">
+  <!-- index of posts -->
+  <h1>Rethrick construction</h1>
+
+  <h2>Dispatches from the dark inner workings of an aspiring mad scientist.</h2>
+
+  <div class="index">
+    <article class="post">
+      <h3>waving goodbye</h3>
+      <time pubdate datetime="">2 days ago</time>
+      <div class="snippet">Dispatches from the dark inner workings of an aspiring mad scientist.
+        Dispatches from the dark inner workings of an aspiring mad scientist.
+      </div>
+    </article>
+    <article class="post">
+      <h3>On the significance of boswells</h3>
+      <time pubdate datetime="">2 days ago</time>
+
+      <div class="snippet">Dispatches from the dark inner workings of an aspiring mad scientist.
+        Dispatches from the dark inner workings of an aspiring mad scientist.
+      </div>
+    </article>
+    <article class="post">
+      <h3>title3</h3>
+      <time pubdate datetime="">2 days ago</time>
+
+      <div class="snippet">Dispatches from the dark inner workings of an aspiring mad scientist.
+        Dispatches from the dark inner workings of an aspiring mad scientist.
+      </div>
+    </article>
+    <article class="post">
+      <h3>title4</h3>
+      <time pubdate datetime="">2 days ago</time>
+
+      <div class="snippet">Dispatches from the dark inner workings of an aspiring mad scientist.
+        Dispatches from the dark inner workings of an aspiring mad scientist.
+      </div>
+    </article>
+    <article class="post">
+      <h3>title</h3>
+      <time pubdate datetime="">2 days ago</time>
+
+      <div class="snippet">Dispatches from the dark inner workings of an aspiring mad scientist.
+      </div>
+    </article>
+    <article class="post">
+      <h3>title</h3>
+      <time pubdate datetime="">2 days ago</time>
+      <div class="snippet">snippet</div>
+    </article>
+  </div>
 </section>
-<section id="post">
-  <article>
-    <nav><a id="back-link" href="index.html#">&larr; Back</a></nav>
-    <div id="post-body">
-      <h2>Terrific Rubric</h2>
-      <h1>Terrific Rubric</h1>
-      <time datetime="">2 days ago</time>
-      <p> A UUID is an identifier that is unique across both space and time,
-      with respect to the space of all UUIDs.  Since a UUID is a fixed
-      size and contains a time field, it is possible for values to
-      rollover (around A.D. 3400, depending on the specific algorithm
-      used).  A UUID can be used for multiple purposes, from tagging
-      objects with an extremely short lifetime, to reliably identifying
-      very persistent objects across a network.
+<section id="main">
+
+  <h1 class="accent">
+    waving goodbyeee
+  </h1>
+
+  <article id="content">
+    <a id="link-back" href="#">&larr; Back</a>
+
+    <h1>Page title <time pubdate datetime="">11 May 2011</time></h1>
+
+    <div class="text">
+      Robo Cog proudly boasts
+      the hipster trifecta: good coffee surrounded by fixed-gear bicycles and vintage robot toys.
+      Opened five months ago by three Thai dudes Ð House, Jet and Winny (yes, one name each, like
+      Madonna) Ð in a sweet-looking cottage complete with white picket fence. Although it only seats
+      20, Robo Cog is surprisingly spacious. You may have to wait for a table at peak times, but
+      once
+      you've secured a spot stretch out and enjoy some people-watching. Kick things off with one of
+      the 15 different fresh juice combinations - we recommend the pineapple pick me up - while you
+      peruse the sizeable menu.
+      <blockquote>
+        <span class="curly">&#8220;</span>
+        If you need a bit of a jump start order the freezochino, easily one of
+        the best iced coffee frappes we've had to date. The breakfast trifle is a mix-up of yoghurt,
+        honey, mixed berries and toasted granola, topped with slivers of Granny Smith apple Ð an
+        excellent argument for eating dessert for breaky. If your tastes run to savoury then the
+        chicken
+        quesadillas are a winner Ð order them with a side of the house-made Mexican salsa.
+      </blockquote>
+      Traditionalists are also catered for here, the eggs Benny (Benedict) is a credit to the
+      classics. Robo Cog is very easy on the eye, but it's the great food and jovial service that
+      will
+      ensure we return, and regularly at that.
+      <p><a href="#">Robo Cog</a> proudly boasts
+        the hipster trifecta: good coffee surrounded by fixed-gear bicycles and vintage robot toys.
+        Opened five months ago by three Thai dudes Ð House, Jet and Winny (yes, one name each, like
+        Madonna) Ð in a sweet-looking cottage complete with white picket fence. Although it only
+        seats
+        20, Robo Cog is surprisingly spacious. You may have to wait for a table at peak times, but
+        once
+      <pre>
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  <b>border-radius: 10px;</b>
+  background: #ddd;
+}</pre>
       <p>
-      The internal representation of a UUID is a specific sequence of
-      bits in memory, as described in Section 4.  To accurately
-      represent a UUID as a URN, it is necessary to convert the bit
-      sequence to a string representation.</p>
+        If you need a bit of a jump start order the <a href="#">freezochino</a>, easily one of
+        the best iced coffee frappes we've had to date. The breakfast trifle is a mix-up of yoghurt,
+        honey, mixed berries and toasted granola, topped with slivers of Granny Smith apple Ð an
+        excellent argument for eating dessert for breaky. If your tastes run to savoury then the
+        chicken
+        quesadillas are a winner Ð order them with a side of the house-made Mexican salsa.
+        Traditionalists are also catered for here, the eggs Benny (Benedict) is a credit to the
+        classics. Robo Cog is very easy on the eye, but it's the great food and jovial service that
+        will
+        ensure we return, and regularly at that.
     </div>
   </article>
 </section>
