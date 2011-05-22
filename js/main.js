@@ -2,7 +2,7 @@
 var rpc = function(url, func) {
   $.ajax({
     url: 'views/' + url + '.json',
-    type: 'POST',
+    type: 'GET',
     dataType: 'json',
     data: '',
     success: func,
