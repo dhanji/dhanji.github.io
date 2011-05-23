@@ -24,6 +24,6 @@ your pageviews have been dispatched by my code.
 Additionally, I am one of the authors of the [JAX-RS](http://en.wikipedia.org/wiki/Java_API_for_RESTful_Web_Services)
  Specification for RESTful web services.
 
-If you like books on Software Engineering you might enjoy: [Dependency Injection: Design Patterns](http://manning.com/prasanna).
+If you like books on Software Engineering you might enjoy [Dependency Injection: Design Patterns](http://manning.com/prasanna).
 
 If you'd like to shout a question at me or simply say hi, I'm [on Twitter](http://twitter.com/dhanji).
