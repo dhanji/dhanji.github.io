@@ -68,7 +68,7 @@ public class Wideplay {
 
       page.setTitle(h1.first().text());
       page.setPostedOn(new Date(file.lastModified()));
-      page.setHtml(document.toString());
+      page.setHtml(document.select("body").html());
 
       // Convert to JSON and save.
       System.out.println("Writing '" + page.getTitle() + "' (" + page.getId() + ".markdown)...");
