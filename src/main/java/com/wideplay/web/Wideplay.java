@@ -54,23 +54,28 @@ public class Wideplay {
       Page page = new Page();
       page.setId(fileName.substring(0, fileName.length() - ".markdown".length()));
       String html = markdown.markdown(template);
-      page.setHtml(html);
 
       // JSoup this sucka to grab metadata out of it.
       Document document = Jsoup.parse(html);
 
       // There should always be an h1
       Elements h1 = document.select("h1");
+      Elements noindex = document.select("meta[noindex]");
+      boolean shouldIndex = noindex.isEmpty();
       Preconditions.checkState(!h1.isEmpty(), file.getName() + " is missing a title (<h1> tag)");
+      h1.remove();  // remove from document as it is rendered using JSON.
+      noindex.remove(); // remove internal meta tags.
+
       page.setTitle(h1.first().text());
       page.setPostedOn(new Date(file.lastModified()));
+      page.setHtml(document.toString());
 
       // Convert to JSON and save.
       System.out.println("Writing '" + page.getTitle() + "' (" + page.getId() + ".markdown)...");
       writeFile(page.getId() + ".json", gson.toJson(page));
 
       // Do not add to index if there is a meta noindex tag.
-      if (document.select("meta[noindex]").isEmpty()) {
+      if (shouldIndex) {
         // Construct a snippet and store into the index.
         // Destructively update the page coz we've already saved it.
         page.setHtml(snippet(document));

@@ -1,1 +1,1 @@
-{"id":"about","title":"About Me","html":"<p><meta noindex/></p>\n\n<h1>About Me</h1>\n\n<p>Hi how are you.</p>\n","postedOn":"23 May 2011"}
+{"id":"about","title":"About Me","html":"<html>\n <head></head>\n <body>\n  <p></p>  \n  <p>Hi how are you.</p> \n </body>\n</html>","postedOn":"23 May 2011"}
