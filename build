@@ -1,5 +1,6 @@
 mvn package exec:java -Dexec.mainClass="com.wideplay.web.Wideplay"
 
+git add views
 git commit -a -m 'Site update'
 git push
 
