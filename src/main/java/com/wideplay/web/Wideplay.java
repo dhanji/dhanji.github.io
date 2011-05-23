@@ -69,10 +69,13 @@ public class Wideplay {
       System.out.println("Writing '" + page.getTitle() + "' (" + page.getId() + ".markdown)...");
       writeFile(page.getId() + ".json", gson.toJson(page));
 
-      // Construct a snippet and store into the index.
-      // Destructively update the page coz we've already saved it.
-      page.setHtml(snippet(document));
-      index.getPages().add(page);
+      // Do not add to index if there is a meta noindex tag.
+      if (document.select("meta[noindex]").isEmpty()) {
+        // Construct a snippet and store into the index.
+        // Destructively update the page coz we've already saved it.
+        page.setHtml(snippet(document));
+        index.getPages().add(page);
+      }
     }
     System.out.println(files.size() + " files written.");
 

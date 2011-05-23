@@ -48,7 +48,7 @@ $(function() {
       for (var i = 0; i < data.pages.length; i++) {
         var page = data.pages[i];
         var builder = [
-          '<article class="post">',
+          '<article class="post" page-id="', page.id,'">',
           '<h3>', page.title,'</h3>',
           '<time pubdate datetime="', page.postedOn, '">', page.postedOn,'</time>',
           '<div class="snippet">', page.html, '</div>',
@@ -60,7 +60,7 @@ $(function() {
   });
 
   $('#index article h3').live('click', function() {
-    var page = $('#content').attr('page-id');
+    var page = $(this).parent().attr('page-id');
     openReadingPanel(page);
   });
 
