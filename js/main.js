@@ -29,6 +29,9 @@ function openReadingPanel(page) {
   var readingPanel = $('#main');
   rpc(page, onArticleArrived);
 
+  $('#content > h1').html('Loading...');
+  $('#content > .text').html('');
+
   var width = $(window).width();
   readingPanel.css('left', width).show()
       .animate({
