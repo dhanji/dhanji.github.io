@@ -13,10 +13,9 @@ import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.FileReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.Collection;
 import java.util.Date;
@@ -48,8 +47,8 @@ public class Wideplay {
 
     Index index = new Index();
     for (File file : files) {
-      FileInputStream input = new FileInputStream(file);
-      String template = IOUtils.toString(new InputStreamReader(input, Charsets.UTF_8));
+      FileReader input = new FileReader(file);
+      String template = IOUtils.toString(input);
       IOUtils.closeQuietly(input);
 
       // Outfile is...
