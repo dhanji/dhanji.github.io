@@ -13,7 +13,7 @@ consist of open source projects except where they point to my work at Google.
     Realtime search and indexing architecture, many aspects of the GWT-based user interface,
     the Data and Wave embedding APIs and also spent a lot of time on scalability and
     performance. I intend to make a series of posts describing my experiences with Wave,
-    Google and working on large disruptive projects in general. So stay tuned!
+    Google and working on large, disruptive projects in general. So stay tuned!
   * [Guice](http://code.google.com/p/google-guice) - I was the official maintainer of Guice for a
     long time along with Jesse Wilson. I created the Guice Servlet and Persist extensions that are
     widely in use at many startups and websites. Nearly every Java program at Google uses these
@@ -24,7 +24,6 @@ consist of open source projects except where they point to my work at Google.
   * [Maven Atom](https://github.com/sonatype/polyglot-maven/tree/master/pmaven-atom) - An experiment
    to create a concise and elegant alternative grammar for Maven. Part of the
     [Polyglot Maven](http://polyglot.sonatype.org/) project. Here is an example:
-   
      > repositories << "http://repository.codehaus.org",
      >                 "http://repo1.maven.org/maven2"
      > project "Google Guice" @ "http://code.google.com/p/google-guice"
@@ -32,15 +31,15 @@ consist of open source projects except where they point to my work at Google.
      >   srcs: [ src: "src" test: "test" ]
      >   deps: [ junit:junit:3.8.1 ]
      >   scm:  [ url: "url:git:git@github.com:mikebrock/mvel.git" ]
-  * I have also represented Google on the JAX-RS, JSR-303 (Bean Validation) expert groups, and
-    others. Google has since withdrawn from these efforts.
+  * I have also represented Google on the JAX-RS, JSR-303 (Bean Validation) and Servlet expert
+    groups. They have since withdrawn from these efforts.
 
 After Wave, I also worked on a few secret projects at Google. One of these was released as the
 [smart content discovery](http://googleblog.blogspot.com/2011/03/whats-new-with-blogger.html)
 feature that was launched inside Blogger at SXSW 2010.
 
 I frequently collaborate with [The Man In Blue](http://themaninblue.com) whom I consider without
-hyperbole to be the world's best user experience designer, bar none.
+hyperbole to be the world's finest user experience designer, bar none.
 
-In addition, I have a number of side projects I am always working on. As they mature you will see
- them posted about on this website.
+In addition, I have a number of side projects I am always working on. As they mature I will post
+about them on this website.

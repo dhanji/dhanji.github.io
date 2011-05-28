@@ -52,7 +52,7 @@ $(function() {
         var page = data.pages[i];
         var builder = [
           '<article class="post" page-id="', page.id,'">',
-          '<h3>', page.title,'</h3>',
+          '<h3>', page.title,' </h3>',
           '<time pubdate datetime="', page.postedOn, '">', page.postedOn,'</time>',
           '<div class="snippet">', page.html, '</div>',
           '</article>'
