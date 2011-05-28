@@ -1,5 +1,6 @@
 package com.wideplay.web;
 
+import com.google.common.base.Charsets;
 import com.google.common.base.Preconditions;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -12,9 +13,10 @@ import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
-import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.Collection;
 import java.util.Date;
@@ -46,7 +48,9 @@ public class Wideplay {
 
     Index index = new Index();
     for (File file : files) {
-      String template = IOUtils.toString(new FileReader(file));
+      FileInputStream input = new FileInputStream(file);
+      String template = IOUtils.toString(new InputStreamReader(input, Charsets.UTF_8));
+      IOUtils.closeQuietly(input);
 
       // Outfile is...
       String fileName = file.getName();
@@ -104,7 +108,7 @@ public class Wideplay {
       outFile.createNewFile();
     FileOutputStream outputStream = new FileOutputStream(outFile);
     outputStream.getChannel().truncate(0L);
-    OutputStreamWriter writer = new OutputStreamWriter(outputStream);
+    OutputStreamWriter writer = new OutputStreamWriter(outputStream, Charsets.UTF_8);
     IOUtils.write(data, writer);
     writer.flush();
     IOUtils.closeQuietly(writer);
