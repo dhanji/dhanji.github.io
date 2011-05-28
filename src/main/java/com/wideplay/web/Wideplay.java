@@ -15,6 +15,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.OutputStreamWriter;
 import java.util.Collection;
 import java.util.Date;
 
@@ -22,7 +23,6 @@ import java.util.Date;
  * @author dhanji@gmail.com (Dhanji R. Prasanna)
  */
 public class Wideplay {
-
   public static final int SNIPPET_LENGTH = 150;
 
   public static void main(String... args) throws IOException {
@@ -104,7 +104,7 @@ public class Wideplay {
       outFile.createNewFile();
     FileOutputStream outputStream = new FileOutputStream(outFile);
     outputStream.getChannel().truncate(0L);
-    IOUtils.write(data, outputStream);
+    IOUtils.write(data, new OutputStreamWriter(outputStream));
     IOUtils.closeQuietly(outputStream);
   }
 }
