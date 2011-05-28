@@ -104,7 +104,10 @@ public class Wideplay {
       outFile.createNewFile();
     FileOutputStream outputStream = new FileOutputStream(outFile);
     outputStream.getChannel().truncate(0L);
-    IOUtils.write(data, new OutputStreamWriter(outputStream));
+    OutputStreamWriter writer = new OutputStreamWriter(outputStream);
+    IOUtils.write(data, writer);
+    writer.flush();
+    IOUtils.closeQuietly(writer);
     IOUtils.closeQuietly(outputStream);
   }
 }
