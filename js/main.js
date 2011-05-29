@@ -119,7 +119,14 @@ $(function() {
   $(window).bind('statechange', function(){
     var state = hist.getState();
     // your code ...
-    
+
+    if (!state.url  || state.url == '') {
+      // Go home.
+      $('#main').fadeOut('fast');
+      $('#main h1.accent').fadeOut('fast');
+    } else {
+      openReadingPanel(state.url);
+    }
   });
 
 })(window);
