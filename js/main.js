@@ -65,9 +65,9 @@ $(function() {
   });
 
   // Look to see if this is a direct link and open the linked page if it is.
-  var path = window.location.pathname;
+  var path = window.location.hash;
   if (path) {
-    path = path.slice(path.lastIndexOf('/') + 1);
+    path = path.slice(path.lastIndexOf('#') + 1);
     if (path && path != '') {
       openReadingPanel(path);
     }
@@ -75,20 +75,20 @@ $(function() {
 
   $('#index article h3').live('click', function() {
     var page = $(this).parent().attr('page-id');
-    hist.pushState({ id: page }, $(this).text(), '?' + page);
+    hist.pushState({ id: page }, $(this).text(), '#' + page);
     openReadingPanel(page);
     return false;
   });
 
   $('#link-about').click(function() {
     var page = 'about';
-    hist.pushState({ id: page }, 'About me', '?' + page);
+    hist.pushState({ id: page }, 'About me', '#' + page);
     openReadingPanel(page);
     return false;
   });
   $('#link-projects').click(function() {
     var page = 'projects';
-    hist.pushState({ id: page }, 'My Projects', '?' + page);
+    hist.pushState({ id: page }, 'My Projects', '#' + page);
     openReadingPanel(page);
     return false;
   });
