@@ -64,21 +64,29 @@ $(function() {
     }
   });
 
+  // Look to see if this is a direct link and open the linked page if it is.
+  var path = window.location.pathname;
+  if (path && path != '') {
+    openReadingPanel(path);
+  }
+
   $('#index article h3').live('click', function() {
     var page = $(this).parent().attr('page-id');
-    hist.pushState({}, $(this).text(), page);
+    hist.pushState({ id: page }, $(this).text(), page);
     openReadingPanel(page);
     return false;
   });
 
   $('#link-about').click(function() {
-    hist.pushState({}, 'About me', 'about');
-    openReadingPanel('about');
+    var page = 'about';
+    hist.pushState({ id: page }, 'About me', page);
+    openReadingPanel(page);
     return false;
   });
   $('#link-projects').click(function() {
-    hist.pushState({}, 'My Projects', 'projects');
-    openReadingPanel('projects');
+    var page = 'projects';
+    hist.pushState({ id: page }, 'My Projects', page);
+    openReadingPanel(page);
     return false;
   });
 
@@ -120,12 +128,13 @@ $(function() {
     var state = hist.getState();
     // your code ...
 
-    if (!state.url  || state.url == '') {
+//    alert(state.title)
+    if (!state.title  || state.title == '') {
       // Go home.
       $('#main').fadeOut('fast');
       $('#main h1.accent').fadeOut('fast');
     } else {
-      openReadingPanel(state.url);
+      openReadingPanel(state.data.id);
     }
   });
 
