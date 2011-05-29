@@ -66,8 +66,11 @@ $(function() {
 
   // Look to see if this is a direct link and open the linked page if it is.
   var path = window.location.pathname;
-  if (path && path != '') {
-    openReadingPanel(path);
+  if (path) {
+    path = path.slice(path.lastIndexOf('/') + 1);
+    if (path && path != '') {
+      openReadingPanel(path);
+    }
   }
 
   $('#index article h3').live('click', function() {
@@ -91,7 +94,7 @@ $(function() {
   });
 
   // Reverse animation for back-link
-  $('#link-back').live('click', function() {
+  $('#link-back').click(function() {
     var width = $(window).width();
     $('#main').animate({
       left: width
