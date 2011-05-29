@@ -100,7 +100,7 @@ $(function() {
       left: width
     });
     $('#main h1.accent').fadeOut('fast');
-    hist.pushState({ id: ''}, 'Home', '');
+    hist.back();
     return false;
   });
 
@@ -130,7 +130,7 @@ $(function() {
   $(window).bind('statechange', function(){
     var state = hist.getState();
     // your code ...
-    if (!state.id || state.id == '') {
+    if (!state.title || state.title == '') {
       // Go home.
       $('#main').fadeOut('fast');
       $('#main h1.accent').fadeOut('fast');
