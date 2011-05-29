@@ -1,4 +1,0 @@
-
-# Waving Goodbye
-
-By now,
