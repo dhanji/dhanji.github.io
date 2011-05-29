@@ -130,7 +130,7 @@ $(function() {
   $(window).bind('statechange', function(){
     var state = hist.getState();
     // your code ...
-    if (!state.title  || state.title == '') {
+    if (!state.id || state.id == '') {
       // Go home.
       $('#main').fadeOut('fast');
       $('#main h1.accent').fadeOut('fast');
