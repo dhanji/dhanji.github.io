@@ -148,7 +148,6 @@ section#index div.index {
   margin-top: 60px;
   margin-left: 2px;
   padding-left: 0;
-  list-style-type: none;
   -webkit-column-count: 2;
 
   width: 620px;
@@ -179,7 +178,6 @@ section#index article div.snippet {
 }
 
 /** the article itself **/
-
 section#main {
   display: none;
   background: white;
@@ -219,6 +217,7 @@ section#main article {
   position: relative;
   left: 90px;
   width: 580px;
+  padding-bottom: 20px;
   line-height: 1.6;
 }
 section#main article time {

@@ -1,5 +1,7 @@
 var hist = window.History;
 
+var MOBILE_THRESHOLD_PX = 700;
+
 var rpc = function(url, func) {
   $.ajax({
     url: 'views/' + url + '.json',
@@ -19,8 +21,6 @@ var onArticleArrived = function(data) {
   $('#content > .text').html(data.html);
 };
 
-var noop = function() {};
-
 // Detect iOS browsers.
 if (navigator.userAgent.indexOf('iPhone') >= 0 || navigator.userAgent.indexOf('iPad') >= 0) {
 	$('html').addClass('ios');
@@ -34,9 +34,25 @@ function openReadingPanel(page) {
   $('#content > .text').html('');
 
   var width = $(window).width();
+
+  // Mobile browsers (handle window size event)
+  var left = '304px';
+  var windowWidth = parseInt($(window).width());
+  if (windowWidth < MOBILE_THRESHOLD_PX) {
+    left = 0;
+    $('#main article').css({
+      width: (windowWidth - 145) + 'px'
+    });
+    $('#main').css({
+      right: 0,
+      'overflow-y': 'visible',
+      'overflow-x': 'visible'
+    });
+  }
+
   readingPanel.css('left', width).show()
       .animate({
-        left: '304px'
+        left: left
       }, function() {
         // sHow accent when done
         $('#main h1.accent').fadeIn();
@@ -122,6 +138,28 @@ $(function() {
       target.text(originalText).fadeIn();
     });
   });
+
+  // Reflow content to fit in mobile browsers:
+  var windowWidth = parseInt($(window).width());
+  if (windowWidth < MOBILE_THRESHOLD_PX) {
+    $('header').css({
+      position: 'static',
+      right: 0
+    });
+    $('#index').css({
+      position: 'static',
+      left: 0
+    });
+    $('#index .index').css({
+      width: 'auto',
+      height: 'auto',
+      '-webkit-column-count': 0
+    });
+    $('#index article').css({
+      width: '100%'
+    });
+    $('body').css('overflow-y', 'auto');
+  }
 });
 
 (function(window){
