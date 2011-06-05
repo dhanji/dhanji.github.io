@@ -84,6 +84,7 @@ header nav.bottom ul {
   font-family: 'Museo', sans-serif;
   list-style-type: none;
   text-transform: uppercase;
+  /*width: 120px;*/
 }
 header nav.bottom ul a:hover {
   color: #999;
@@ -93,6 +94,10 @@ header nav.bottom ul a {
   text-decoration: none;
   color: #ccc;
   line-height: 1.4;
+  white-space: nowrap;
+}
+header nav.bottom ul a.dhanji {
+  color: #0099ff;
 }
 
 #searchbox {
@@ -133,6 +138,7 @@ section#index > h1 {
   font-weight: lighter;
   font-size: 34px;
 }
+
 section#index > h2 {
   margin-top: -20px;
   font-family: 'Museo', sans-serif;
