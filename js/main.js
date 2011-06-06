@@ -22,7 +22,7 @@ var onArticleArrived = function(data) {
 
 // Detect iOS browsers.
 if (navigator.userAgent.indexOf('iPhone') >= 0 || navigator.userAgent.indexOf('iPad') >= 0
-    || navigator.userAgent.indexOf('android') >= 0) {
+    || navigator.userAgent.indexOf('Android') >= 0) {
 	$('html').addClass('ios');
 }
 
