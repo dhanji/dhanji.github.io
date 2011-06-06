@@ -32,6 +32,7 @@ function openReadingPanel(page) {
 
   $('#content > h1').html('Loading...');
   $('#content > .text').html('');
+  $('#index').hide();
 
   var width = $(window).width();
 
@@ -105,6 +106,7 @@ $(function() {
 
   // Reverse animation for back-link
   $('#link-back').click(function() {
+    $('#index').show();
     var width = $(window).width();
     $('#main').animate({
       left: width
@@ -161,6 +163,7 @@ $(function() {
       page = page.slice(1);
     }
     if (!page || page == '') {
+      $('#index').show();
       // Go home.
       $('#main').fadeOut('fast');
       $('#main h1.accent').fadeOut('fast');

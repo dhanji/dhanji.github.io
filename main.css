@@ -10,7 +10,6 @@ body {
   font-size: 16px;
   font-weight: lighter;
   margin: 0;
-  overflow: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -118,10 +117,12 @@ section#index {
   top: 0;
   bottom: 0;
   left: 274px;
-  right: 220px;
+  right: 0;
 
   padding: 4px 64px;
-  /*border-left: 1px solid #eee;*/
+  overflow-x: hidden;
+  overflow-y: auto;
+  z-index: -1;
 }
 
 #by-dhanji {
@@ -186,7 +187,7 @@ section#index article div.snippet {
 /** the article itself **/
 section#main {
   display: none;
-  background: white;
+  background: #fff;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -197,6 +198,7 @@ section#main {
   overflow-y: auto;
   overflow-x: hidden;
   border-left: 1px solid #eee;
+  z-index: 999;
 }
 
 section#main h1.accent {
@@ -210,7 +212,7 @@ section#main h1.accent {
   opacity: 0.04;
   -webkit-transform: translate(-80px, 410px) rotateZ(-90deg);
   white-space: nowrap;
-  z-index: -1;
+  z-index: -10;
 }
 
 section#main h1 {
