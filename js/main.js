@@ -21,7 +21,8 @@ var onArticleArrived = function(data) {
 };
 
 // Detect iOS browsers.
-if (navigator.userAgent.indexOf('iPhone') >= 0 || navigator.userAgent.indexOf('iPad') >= 0) {
+if (navigator.userAgent.indexOf('iPhone') >= 0 || navigator.userAgent.indexOf('iPad') >= 0
+    || navigator.userAgent.indexOf('android')) {
 	$('html').addClass('ios');
 }
 
