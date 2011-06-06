@@ -39,7 +39,7 @@ function openReadingPanel(page) {
   // Mobile browsers (handle window size event)
   var left = '304px';
   var windowWidth = parseInt($(window).width());
-  if (windowWidth < MOBILE_THRESHOLD_PX) {
+  if (windowWidth < MOBILE_THRESHOLD_PX || $('html').has('ios')) {
     left = 0;
     $('#main article').css({
       width: (windowWidth - 145) + 'px'
