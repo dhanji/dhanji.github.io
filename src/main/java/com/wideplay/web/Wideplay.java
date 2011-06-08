@@ -18,6 +18,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.Date;
 
 /**
@@ -88,6 +89,7 @@ public class Wideplay {
     System.out.println(files.size() + " files written.");
 
     // Write an index now.
+    Collections.sort(index.getPages());
     writeFile("index.json", gson.toJson(index));
     System.out.println("New index written.");
   }
