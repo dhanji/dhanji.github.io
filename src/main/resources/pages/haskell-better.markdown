@@ -39,7 +39,7 @@ can be reduced this way. And it is quite clear which side is the more suited to 
 ### Actual Performance
 
 This is something you rarely hear annoying Haskell fanboys say, but Haskell has inherent, idiomatic
-advantages over all other languages in performance. The trick is in [lazy evaluation](http://en.wikipedia.org/wiki/Lazy_evaluation).
+advantages over most other languages in performance. The trick is in [lazy evaluation](http://en.wikipedia.org/wiki/Lazy_evaluation).
 Consider the following trivial example:
 
 	pick [] = []
@@ -60,7 +60,8 @@ that emits `xml` from [Maven Atom source code](https://github.com/dhanji/play/bl
 
 In particular, this line:
 
-	xmlTag name content = '<' : name ++ ">" ++ content ++ ( "</" ++ (head $ words name) ++ ">")
+	xmlTag name content = '<' : name ++ ">" ++ content ++
+	                      ( "</" ++ (head $ words name) ++ ">")
 
 ..is used almost abusively all over the program; to rip apart the contents of an XML start
 tag to extract the name of its end tag: `"</" ++ (head $ words name) ++ ">"`. To the non-lazy
@@ -80,9 +81,9 @@ and many others (my uncle was even a member of the original Haskell committee).
 
 But as I said, it will never head over to the mainstream.
 There are many reasons for this: Haskell's APIs are pedantic, quirkily designed, its monadic IO is confusing
-and complicated, and so on. But the main reason is that shift in mindset required is far too great. We're
+and complicated, and so on. But the main reason is that the shift in mindset required is far too great. We're
 just too used to laundry-list-style sequences of instructions and attempting, however futilely, to
-mentally map the search-space of a complex real-world problem, in fairly literal terms.
+map the search-space of complex real-world problems in our minds, in fairly literal terms.
 
 And I'm glad. I have fun with my exclusive little hobby, small community of co-conspirators, and
 that tiny bit of magic I feel every time I stand back and behold my latest Haskell creation!
