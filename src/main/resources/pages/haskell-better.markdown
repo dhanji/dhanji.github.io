@@ -24,7 +24,7 @@ through a series of states.
 
 I don't know about you but I find this model extremely difficult. In my limited experience, most people
 are unable to keep more than a handful of potential options in their heads, let alone model the search
-space of even the simplest of practical computer programs. If you don't believe me, construct a binary
+space of even the simplest of practical computing problems. If you don't believe me, construct a binary
 search tree in your head, consisting of the english alphabet and desribe how to get to the letter Q.
 
 This brings me to my next point--we're lazy. It's much simpler to describe the mechanism of the tree
@@ -56,17 +56,17 @@ language is pretty much impossible without trading speed and memory. This sort o
 is extremely useful in many real world use cases.
 
 Lest you write this off as yet another contrived example to favor Haskell, check out this parser
-that emits `xml` from *Maven Atom* source code: [https://github.com/dhanji/play/blob/master/hake.hs]
+that emits `xml` from [Maven Atom source code](https://github.com/dhanji/play/blob/master/hake.hs).
 
 In particular, this line:
 
 	xmlTag name content = '<' : name ++ ">" ++ content ++ ( "</" ++ (head $ words name) ++ ">")
 
 ..is used almost abusively all over the program; to rip apart the contents of an XML start
-tag and extract the name of its end tag: `( "</" ++ (head $ words name) ++ ">")`. To the non-lazy
+tag to extract the name of its end tag: `"</" ++ (head $ words name) ++ ">"`. To the non-lazy
 programmer, this would appear extremely inefficient--why split the entire length of `name` by whitespace
 every single time? But this is not how it works--in practice, the program only ever seeks as far as
-the first whitespace because the function `words` is *lazily* evaluated.
+the first space character because the function `words` is *lazily* evaluated.
 
 In most other languages, this is something that could easily explode in CPU and memory cost.
 In those languages, you'd be writing a separate 'optimized' version requiring additional tests,
@@ -85,7 +85,7 @@ just too used to laundry-list-style sequences of instructions and attempting, ho
 mentally map the search-space of a complex real-world problem, in fairly literal terms.
 
 And I'm glad. I have fun with my exclusive little hobby, small community of co-conspirators, and
-that tiny bit of magic every time I stand back and behold my latest Haskell creation!
+that tiny bit of magic I feel every time I stand back and behold my latest Haskell creation!
 
 <br>
 
