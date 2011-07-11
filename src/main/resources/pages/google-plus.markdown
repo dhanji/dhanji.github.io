@@ -68,8 +68,7 @@ a secret project. Hinted at being an overhaul of their social graph, a new group
  was an attempt to stop or delay the book's publication.
 
 I have no idea if this last bit was true or not, but one fine day Paul Adams quit and [went to facebook](http://techcrunch.com/2010/12/20/paul-adams-googler-whose-presentation-foretold-facebook-groups-heads-to-facebook/).
-(By the way, if Google were ever to enforce a non-compete, this should have been it, but "Don't Be Evil"
-actually means something to them.) I was convinced that this was the final nail in the coffin.
+I was convinced that this was the final nail in the coffin.
  Engineers outside Emerald Sea--a cynical bunch at the best of times--were making snide comments
   and writing off the project as a dismal failure before it even launched.
 
