@@ -122,6 +122,7 @@ example, the Google+ sharing console is only ever a click away in any Google pro
 
 With those caveats in place however, I predict that while Google+ will not usurp the throne from facebook per se, it will instead
  grow into a strong, competitive player and much-needed alternative. Much as Chrome has with IE.
+ Where facebook has the larger, but no-longer dominant share.
  I predict that when this game is done playing, there will be no more thrones.
 
 <br>
