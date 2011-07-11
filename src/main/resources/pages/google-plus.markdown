@@ -127,4 +127,4 @@ With those caveats in place however, I predict that while Google+ will not usurp
 
 <br>
 
-<div style="font-size: small;">Find me on <a href="http://twitter.com/dhanji">twitter</a></div>
+<div style="font-size: small;">Find me on <a href="http://twitter.com/dhanji">twitter</a> (Disclaimer: All opinions here are purely my speculation. And any Google-specific information is already in the public domain and linked-to where appropriate)</div>
