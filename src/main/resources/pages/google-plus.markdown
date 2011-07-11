@@ -40,7 +40,7 @@ and came up with the Circles product. This was to be the core differentiator bet
  codenamed [Emerald Sea](http://www.wired.com/epicenter/2011/06/inside-google-plus-social/)) and facebook.
 
 As part of induction into Emerald Sea, my team got the 30-minute pitch from the Circles team. I
- listened politely, all the while rolling-my-eyes in secret at their seemingly implausible naivite.
+ listened politely, all the while rolling-my-eyes in secret at their seemingly implausible naivete.
  By then I was also growing increasingly frustrated at Google's [sluggish engineering culture](http://slacy.com/blog/2011/03/what-larry-page-really-needs-to-do-to-return-google-to-its-startup-roots/).
   I have [previously described](http://rethrick.com/#waving-goodbye) how the toolchain is not well-suited to fast, iterative development and
  rapid innovation. I asked the obvious question--"While I agree that Circles is a very compelling feature,
