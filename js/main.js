@@ -176,6 +176,7 @@ $(function() {
   // Account for Firefox's weirdly thin rendering of Helvetica Neue
   if (navigator.userAgent.indexOf('Firefox') >= 0) {
     $('body').css('font-family', 'Arial');
+    $('#main').css('padding-right', '134px');
   }
 
 });
