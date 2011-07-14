@@ -26,7 +26,6 @@ if (navigator.userAgent.indexOf('iPhone') >= 0 || navigator.userAgent.indexOf('i
 	$('html').addClass('ios');
 }
 
-var _gaq = _gaq || [];
 function openReadingPanel(page) {
   var readingPanel = $('#main');
   window.location.hash = page;
