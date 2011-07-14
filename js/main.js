@@ -26,6 +26,7 @@ if (navigator.userAgent.indexOf('iPhone') >= 0 || navigator.userAgent.indexOf('i
 	$('html').addClass('ios');
 }
 
+var _gaq = _gaq || [];
 function openReadingPanel(page) {
   var readingPanel = $('#main');
   window.location.hash = page;
@@ -59,6 +60,7 @@ function openReadingPanel(page) {
         // sHow accent when done
         $('#main h1.accent').fadeIn();
       });
+  _gaq.push(['_trackEvent', 'panelView', page]);
 }
 
 $(function() {
