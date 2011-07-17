@@ -1,0 +1,258 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>scmtc - a platform for scheming</title>
+  <link href='http://fonts.googleapis.com/css?family=Inconsolata&v2' rel='stylesheet' type='text/css'>
+  <style type="text/css">
+    body {
+      margin: 0;
+      font-family: "Helvetica neue", sans-serif;
+      font-size: smaller;
+      font-weight: lighter;
+      background: #f1f1f1;
+      color: #333;
+    }
+
+    body a {
+      color: #5e87ff;
+    }
+
+    h1 {
+      margin-left: 28px;
+      color: red;
+      text-shadow: 1px 1px 1px #eee;
+    }
+
+    h2 {
+      color: #555;
+      font-size: large;
+      padding-top: 8px;
+    }
+
+    header .author {
+      margin-top: -20px;
+      font-style: italic;
+      font-size: smaller;
+      color: #999;
+    }
+
+    header .author a {
+      font-style: italic;
+      color: #999;
+      text-decoration: none;
+    }
+
+    header .author a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      margin: 12px;
+    }
+
+    #main .caption, p, pre, h2 {
+      margin-left: 20%;
+      margin-right: 28%;
+    }
+
+    #main pre {
+      font-family: "Inconsolata", monospace;
+      font-size: 15px;
+
+      color: #333;
+      background: #fefefe;
+      padding-top: 18px;
+      padding-bottom: 6px;
+      border-radius: 4px;
+      margin-top: 16px;
+      margin-bottom: 16px;
+    }
+
+    #main pre .keyword {
+      color: #8eaaff;
+    }
+    #main pre .function {
+      font-weight: bold;
+      color: #555;
+    }
+    #main pre .string {
+      color: #999;
+    }
+
+    #main p {
+      padding: 4px 0;
+    }
+
+    span.code {
+      font-family: monospace;
+      color: #555;
+    }
+
+    #main .caption a {
+      color: #8eaaff;
+    }
+    #main .caption {
+      margin-top: -12px;
+      padding-left: 2px;
+      font-size: smaller;
+      color: #999;
+    }
+  </style>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      $('pre').each(function(item) {
+        var pre = $(this);
+        var builder = [];
+        var words = pre.html().split(/(")/);
+        var inString = false;
+        for (var i = 0; i < words.length; i++) {
+          var word = words[i];
+          if (word == '"') {
+            if (inString)
+              word = word + '</span>';
+            else
+              word = '<span class="string">' + word;
+            inString = !inString;
+          }
+          builder.push(word);
+        }
+
+        var html = builder.join('');
+        builder = [];
+        words = html.split(' ');
+        for (var i = 0; i < words.length; i++) {
+          var word = words[i];
+          if (word.match(/define|lambda|display|begin/)) {
+            word = '<span class="keyword">' + word + '</span>';
+          } else if (word.match(/[0-9]+([.][0-9]+)?/)) {
+            word = '<span class="number">' + word + '</span>';
+          }
+
+          if (i > 0 && words[i - 1] == 'define') {
+            word = '<span class="function">' + word + '</span>';
+          }
+
+          builder.push(word);
+          builder.push(' ');
+        }
+
+        html = builder.join('');
+        pre.html(html);
+      });
+    });
+  </script>
+</head>
+<body>
+<header>
+  <h1>scmtc</h1>
+
+  <div class="author">by <a href="http://rethrick.com">Dhanji R. Prasanna</a></div>
+</header>
+<section id="main">
+  <p>
+    <strong>scmtc</strong> is a REPL for web applications based on the
+    <a href="http://en.wikipedia.org/wiki/Scheme_(programming_language)">scheme programming language.</a>
+      scmtc is built around event-driven IO and comes with many common tools for web programming.
+    It runs on a JVM, and so can be extended easily to use any Java library.
+
+  </p>
+  <h2>Overview</h2>
+  <p>
+    This is "Hello World" in scmtc:
+  </p>
+
+  <div class="code">
+  <pre>
+    define get
+      lambda (request response)
+        body response "Hello Worldly Schemer!"
+  </pre>
+  </div>
+
+
+  <p>
+    I've defined a function <span class="code">lambda (request response)</span> that responds by setting
+    the body of the response to <span class="code">"Hello Worldly Schemer!"</span>. scmtc will execute
+    this function for all GET requests because the function is cleverly named
+    <span class="code">get</span>.
+
+  </p>
+
+  <p>
+   The code <span class="code">body response "Hello..."</span> doesn't actually write the response,
+    instead it places it in a queue to be written asynchronously. I can ask to be notified when the
+    response has actually been written:
+  </p>
+
+  <div class="code">
+  <pre>
+    define get
+      lambda (request response)
+        begin
+          body response "Hello Worldly Schemer!"
+          after response
+            lambda ()
+              display "done"
+  </pre>
+  </div>
+
+  <p>
+   Since scheme is a functional language, you create a sequence of calls using the
+    <span class="code">begin</span> form. In this case, I've registered a nameless function to be
+    run after the respose completes and print <span class="code">"done"</span> to the console.
+  </p>
+
+
+
+  <h2>Download</h2>
+  <p>
+    To begin scheming, <a href="#">download the scmtc runtime</a> and start a project as follows:</p>
+
+  <div class="code">
+  <pre>
+    mkdir hello_world
+    cd hello_world
+    scm start
+  </pre>
+  </div>
+  <p>
+    This will create a "hello world" scmtc project and launch the scmtc runtime on port 8080. You
+    should see the project running if you visit <span class="code">http://localhost:8080</span>.
+  </p>
+
+  <p>
+    The page you see is served by the file <span class="code">home.scmtc</span>.
+    Let's take a look at this file:
+  </p>
+
+  <div class="code">
+  <pre>
+    define get
+      lambda (request response)
+        body response "Hello Schemer!"
+  </pre>
+    <div class="caption">This code is in <a href="#scmtc-syntax"><em>scmtc</em> syntax</a>.</div>
+  </div>
+
+  <p>
+    This special syntax is merely sugar around standard Scheme (Lisp) syntax. It is functionally
+    identical to the following, more familiar Lisp syntax:
+  </p>
+
+  <div class="code">
+  <pre>
+    (define get
+      (lambda (request response)
+        (body response "Hello Schemer!")))
+  </pre>
+
+    <div class="caption">If you prefer this syntax, your filenames should have a
+      .scm extension
+    </div>
+  </div>
+  <p>
+
+</section>
+</body>
+</html>
