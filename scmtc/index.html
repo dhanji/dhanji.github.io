@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 <html>
-<head>
+<head> 
+  <meta http-equiv="Content-Type" value="text/html; charset=utf-8">
   <title>scmtc - a platform for scheming</title>
   <link href='http://fonts.googleapis.com/css?family=Inconsolata&v2' rel='stylesheet' type='text/css'>
   <style type="text/css">
@@ -22,6 +23,14 @@
       color: red;
       text-shadow: 1px 1px 1px #eee;
     }
+    
+    h1 span {
+      position: relative;
+      top: -5px;
+      font-size: 14px;
+      font-weight: normal;
+      color: #555;
+    }
 
     h2 {
       color: #555;
@@ -31,6 +40,7 @@
 
     header .author {
       margin-top: -20px;
+      margin-left: 28px;
       font-style: italic;
       font-size: smaller;
       color: #999;
@@ -72,11 +82,10 @@
       color: #8eaaff;
     }
     #main pre .function {
-      font-weight: bold;
-      color: #555;
+      color: #999;
     }
     #main pre .string {
-      color: #999;
+      color: #bbb;
     }
 
     #main p {
@@ -123,7 +132,7 @@
         words = html.split(' ');
         for (var i = 0; i < words.length; i++) {
           var word = words[i];
-          if (word.match(/define|lambda|display|begin/)) {
+          if (word.match(/define|lambda|display|begin|newline|if|cond|car/)) {
             word = '<span class="keyword">' + word + '</span>';
           } else if (word.match(/[0-9]+([.][0-9]+)?/)) {
             word = '<span class="number">' + word + '</span>';
@@ -145,14 +154,14 @@
 </head>
 <body>
 <header>
-  <h1>scmtc</h1>
+  <h1>sc·mt·c <span>/skiˈmætɪk, skɪ-/</span></h1>
 
   <div class="author">by <a href="http://rethrick.com">Dhanji R. Prasanna</a></div>
 </header>
 <section id="main">
   <p>
     <strong>scmtc</strong> is a REPL for web applications based on the
-    <a href="http://en.wikipedia.org/wiki/Scheme_(programming_language)">scheme programming language.</a>
+    <a href="http://en.wikipedia.org/wiki/Scheme_(programming_language)">scheme programming language</a>.
       scmtc is built around event-driven IO and comes with many common tools for web programming.
     It runs on a JVM, and so can be extended easily to use any Java library.
 
@@ -168,6 +177,7 @@
       lambda (request response)
         body response "Hello Worldly Schemer!"
   </pre>
+  <div class="caption">This code is in <a href="#scmtc-syntax"><em>scmtc</em> syntax</a>.</div>
   </div>
 
 
@@ -202,10 +212,8 @@
     <span class="code">begin</span> form. In this case, I've registered a nameless function to be
     run after the respose completes and print <span class="code">"done"</span> to the console.
   </p>
-
-
-
-  <h2>Download</h2>
+  
+  <h2>Getting Started</h2>
   <p>
     To begin scheming, <a href="#">download the scmtc runtime</a> and start a project as follows:</p>
 
@@ -213,7 +221,7 @@
   <pre>
     mkdir hello_world
     cd hello_world
-    scm start
+    scm
   </pre>
   </div>
   <p>
@@ -223,18 +231,52 @@
 
   <p>
     The page you see is served by the file <span class="code">home.scmtc</span>.
-    Let's take a look at this file:
+  </p>
+  
+  <a name="scmtc-syntax"><h2>Templates</h2></a>
+  <p>
+  Templates in scmtc are powered by the excellent <a href="mvel.codehaus.org">MVEL Templates</a>
+  system out of the box. To render responses via a template, use the following style:
   </p>
 
   <div class="code">
   <pre>
     define get
       lambda (request response)
-        body response "Hello Schemer!"
+        template:mvel response
+          record
+            "name"  ::  "Dhanji"
   </pre>
-    <div class="caption">This code is in <a href="#scmtc-syntax"><em>scmtc</em> syntax</a>.</div>
+  </div>
+  <p>
+  This will look for a template named <span class="code">home.mvel</span> and render it using the
+  provided record of name-value pairs. (The function <span class="code">record</span>
+  creates a list of pairs. And the operator <span class="code">::</span> is syntactic sugar.)
+  <p>
+  Match this with an MVEL template that looks something like the following:
+  </p>
+  
+  <div class="code">
+  <pre>
+    Hello there, @{name}!
+  </pre>
+   <div class="caption">scmtc will look for x.mvel where x is name of the current scmtc script.</div>
   </div>
 
+  
+  <a name="scmtc-syntax"><h2>Syntax</h2></a>
+  <p>
+  So far we have seen code that looks like this:
+  </p>
+  <div class="code">
+  <pre>
+    define get
+      lambda (request response)
+        body response "Hello Schemer!"
+  </pre>
+    <div class="caption">Files that have a .scmtc extension are processed in scmtc syntax.</div>
+  </div>
+  
   <p>
     This special syntax is merely sugar around standard Scheme (Lisp) syntax. It is functionally
     identical to the following, more familiar Lisp syntax:
@@ -252,6 +294,33 @@
     </div>
   </div>
   <p>
+  <h2>String Interpolation</h2>
+  <p>
+  scmtc supports string interpolation. This code shows the IP address of the incoming request
+  to the user:
+  </p>
+  
+  <div class="code">
+  <pre>
+    define get
+      lambda (request response)
+        begin
+          define ip (request/ip request)
+          body response "Your IP address is @{ip}"
+  </pre>
+  </div>
+
+  <p>
+  Here, the special function <span class="code">request/ip</span> reads the IP address from the
+  incoming request. We can write the above code more concisely as follows:
+  </p>
+  <div class="code">
+  <pre>
+    define get
+      lambda (request response)
+        body response "Your IP is @{(request/ip request)}"
+  </pre>
+  </div>
 
 </section>
 </body>
