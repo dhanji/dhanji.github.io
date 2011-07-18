@@ -1,0 +1,99 @@
+<!DOCTYPE HTML> 
+<html> 
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+  <title>Rethrick Construction</title> 
+  <link href="/main.css" rel="stylesheet" /> 
+  <style type="text/css">
+    #main {
+      display: block !important;
+    }
+  
+  </style> 
+  <!--[if lt IE 9]>
+  <script type="text/javascript" src="/js/html5.js"></script>
+  <![endif]--> 
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js">
+  </script> 
+  <script type="text/javascript">
+    if (window.opera
+        || navigator.userAgent.indexOf('Firefox') >= 0
+        || navigator.userAgent.indexOf('Chrome') >= 0
+        || navigator.userAgent.indexOf('Apple') >= 0) {
+      // Send better browsers off to the JS version of this page.
+      var to = window.location.pathname.slice(1);
+      if (to.charAt(to.length - 1) == '/') {
+        to = to.slice(0, to.length - 1);
+      }
+      window.location = 'http://rethrick.com#' + to;
+    }
+  
+  </script> 
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-24538005-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  
+  </script> 
+ </head> 
+ <body> 
+  <header> 
+   <h1>&nbsp;</h1> 
+   <nav class="top"> 
+    <form>
+     <input id="searchbox" type="text" value="" /> 
+     <section id="results"> 
+      <ul> 
+       <li> 
+        <article class="post"> 
+         <h3>waving goodbye</h3> 
+         <div class="snippet">
+          Dispatches from the dark inner workings of an aspiring mad scientist. 
+         </div> 
+        </article> </li> 
+      </ul> 
+      <a id="link-rss" href="/views/rethrick.xml"><img src="/images/rss_24x24.png" /></a> 
+     </section> 
+     <div style="font-size: smaller; color: #555">
+       This version of the site is meant for crawlers and crappy browsers like MSIE. 
+      <p> Please visit <a href="http://rethrick.com">http://rethrick.com</a> for the HTML5 version with Chrome, Safari or Firefox. </p> 
+     </div> 
+    </form>
+   </nav> 
+   <nav class="bottom"> 
+    <ul> 
+     <li><a class="dhanji" href="http://twitter.com/dhanji" target="_blank">dhanji</a></li> 
+     <li><a id="link-projects" href="http://rethrick.com/projects">projects</a></li> 
+     <li><a id="link-about" href="http://rethrick.com/about">about me</a></li> 
+    </ul> 
+   </nav> 
+  </header> 
+  <section id="main"> 
+   <article id="content"> 
+    <a id="link-back" href="http://rethrick.com">← Back</a> 
+    <h1>Comets and Meteors <time pubdate="" datetime="">28 May 2011</time></h1> 
+    <div class="text">
+     <p>I am exploring writing an app with Comet (reverse Ajax) aka ‘hanging gets’. I thought I knew how this worked in detail, but after days of research I found my knowledge sorely lacking. There isn’t much good information on the web either, so I thought I’d summarize what I learned here.</p> 
+     <p>You can achieve server-to-client message pushing in several different ways:</p> 
+     <ul> 
+      <li>Websockets - HTML5 standard that allows you to establish a full-duplex TCP socket with a high-level Javascript API. Only Chrome/Safari, Opera and Firefox seem to support this (Firefox 4 has since disabled support for security reasons).</li> 
+      <li>Forever Frame - An iFrame whose content length is infinite. You just keep writing script tags out that invoke a callback in the parent frame with the server’s push data. This is commonly used with IE.</li> 
+      <li>Hanging GET (Multipart response) - This is a wonderful hack around an occult and obscure behavior introduced by Netscape. It only works in Firefox and Safari/Chrome, but it is brilliant—by reusing the ability to send multiple images back in a single response, you can instead encode JSON packets chunked by message length. The browser processes each JSON packet without ever closing the response stream, which can live forever.</li> 
+      <li>Hanging GET (Long polling) - A less wonderful but perhaps more effective hack, a long poll is very much like a regular poll except that if there is no data, the server holds the stream open rather than return an empty response. When there is data to push, it is written and the response is closed. The client immediately opens a new request to re-establish this backchannel. A clever scheme will hold open POSTs that the client uses to send data and flip between them. This is the basis for the Bayeaux protocol.</li> 
+      <li>Other (Flash Socket, Java Pushlet, etc.) - These rely on plugins to open a duplex channel to the server and have their own issues with compatibility and problems working via proxies.</li> 
+     </ul> 
+     <p>This confused me at first because there are two flavors of hanging GET. Long polling works on all browsers but is somewhat inefficient. Multipart response is very clever and more efficient but does not work with IE.</p> 
+     <p>There are many libraries that magic all this away for you. I caution against using them until you really understand what they do. Most of the ones I checked out do way more than you want and implement everything under the sun. IMO this is unnecessary bloat on the JS side and an increase in stack complexity.</p> 
+     <p>You can build a long polling server with very little effort using vanilla jQuery and <a href="http://eclipse.org/jetty">Jetty</a>, using its continuations API. This is remarkably scalable too, given that Jetty continuations is not a thread-per-request model. Making a server to use with Websockets is similarly straightforward.</p> 
+     <p>My advice? Build a simple RPC abstraction on top of websockets. Test with Chrome or Firefox and then when you really need to support other browsers sub in the hand-over-hand long polling method I described above.</p> 
+     <p>I’ll post any code I come up with.</p>
+    </div> 
+   </article> 
+  </section>  
+ </body>
+</html>

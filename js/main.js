@@ -180,4 +180,10 @@ $(function() {
     $('#main').css('padding-right', '134px');
   }
 
+  // Search doesn't yet work.
+  $('#searchbox').focus(function() {
+    $(this).val("To be implemented");
+  }).blur(function() {
+    $(this).val('');
+  });
 });

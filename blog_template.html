@@ -4,9 +4,28 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>Rethrick Construction</title>
   <link href="main.css" rel="stylesheet">
+  <style type="text/css">
+    #main {
+      display: block !important;
+    }
+  </style>
+  <!--[if lt IE 9]>
+  <script type="text/javascript" src="/js/html5.js"></script>
+  <![endif]-->
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-  <script type="text/javascript" src="js/jquery.hashchange-1.0.0.js"></script>
-  <script type="text/javascript" src="js/main.js"></script>
+  <script type="text/javascript">
+    if (window.opera
+        || navigator.userAgent.indexOf('Firefox') >= 0
+        || navigator.userAgent.indexOf('Chrome') >= 0
+        || navigator.userAgent.indexOf('Apple') >= 0) {
+      // Send better browsers off to the JS version of this page.
+      var to = window.location.pathname.slice(1);
+      if (to.charAt(to.length - 1) == '/') {
+        to = to.slice(0, to.length - 1);
+      }
+      window.location = 'http://rethrick.com#' + to;
+    }
+  </script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-24538005-1']);
@@ -23,7 +42,6 @@
   <h1>&nbsp;</h1>
   <nav class="top">
     <input id="searchbox" type="text" value="">
-    <img class="mag-glass" src="images/magnifying_glass_alt_16x16.png">
     <section id="results">
       <ul>
         <li>
@@ -35,41 +53,28 @@
           </article>
         </li>
       </ul>
-      <a id="link-rss" href="/views/rethrick.xml"><img src="images/rss_24x24.png"></a>
+      <a id="link-rss" href="/views/rethrick.xml"><img src="/images/rss_24x24.png"></a>
     </section>
+    <div style="font-size: smaller; color: #555">
+      This version of the site is meant for crawlers and crappy browsers like MSIE.
+      <p>
+        Please visit <a href="http://rethrick.com">http://rethrick.com</a> for the HTML5 version with
+        Chrome, Safari or Firefox.
+      </p>
+    </div>
   </nav>
   <nav class="bottom">
     <ul>
       <li><a class="dhanji" href="http://twitter.com/dhanji" target="_blank">dhanji</a></li>
-      <li><a id="link-projects"  href="#">projects</a></li>
-      <li><a id="link-about" href="#">about me</a></li>
+      <li><a id="link-projects"  href="http://rethrick.com/projects">projects</a></li>
+      <li><a id="link-about" href="http://rethrick.com/about">about me</a></li>
     </ul>
   </nav>
 </header>
-<section id="index">
-  <!-- index of posts -->
-  <h1>Rethrick construction</h1>
-
-  <h2>Dispatches from the dark inner workings of an aspiring mad scientist.</h2>
-
-  <div class="index">
-    <article class="post">
-      <h3>waving goodbye</h3>
-      <time pubdate datetime="">2 days ago</time>
-      <div class="snippet">Dispatches from the dark inner workings of an aspiring mad scientist.
-        Dispatches from the dark inner workings of an aspiring mad scientist.
-      </div>
-    </article>
-  </div>
-</section>
 <section id="main">
 
-  <h1 class="accent">
-    waving goodbye
-  </h1>
-
   <article id="content">
-    <a id="link-back" href="#">&larr; Back</a>
+    <a id="link-back" href="http://rethrick.com">&larr; Back</a>
 
     <h1>Page title<time pubdate datetime=""> 11 May 2011</time></h1>
 

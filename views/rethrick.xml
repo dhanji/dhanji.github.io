@@ -1,0 +1,209 @@
+<rss version="2.0">
+  <channel>
+    <title>Rethrick Construction</title>
+    <description>A website by Dhanji R. Prasanna</description>
+    <link>http://rethrick.com/</link>
+
+    
+    <item>
+      <guid isPermaLink="true">
+        http://rethrick.com/google-plus
+      </guid>
+      <title>Like it or Not</title>
+      <description>&lt;p&gt;There's no shortage of punditry around the future and fate of Google+, a massive social networking effort from Google. Much of it centers around competition with facebook and whether or not it will succeed in unseating the latter as the dominant social networking site.&lt;/p&gt; 
+&lt;p&gt;I have a somewhat unique perspective on the matter, since I worked under the Google+ project umbrella for a good 6-8 months after &lt;a href=&quot;http://rethrick.com/#waving-goodbye&quot;&gt;Wave was canceled&lt;/a&gt; and know many of the engineers and product designers involved in this drama.&lt;/p&gt; 
+&lt;p&gt;The argument is generally phrased along the lines of 'is Google+ a facebook killer?'. This is a somewhat contrived and sensational narrative, so let me try and explain what I think the argument is really about, in perhaps less shrill terms.&lt;/p&gt; 
+&lt;p&gt;The argument is certainly about whether Google+ will succeed as a social networking product. About whether users will leave facebook for it in significant numbers, and whether this will dethrone facebook as the reigning social network monopoly. But before you hear my take, let me give you some background.&lt;/p&gt; 
+&lt;h3&gt;On Innovation&lt;/h3&gt; 
+&lt;p&gt;It might surprise you to learn that I don't find Google+ all that innovative. It hits all the notes that a facebook clone merits, and adds a few points of distinctiveness that are genuinely compelling, sure--but I don't find it all that interesting, personally. To my mind, Twitter was a far greater innovation that continues unchallenged. But broad product innovation is not exactly what they were going for, I believe.&lt;/p&gt; 
+&lt;h3&gt;A History of Circles&lt;/h3&gt; 
+&lt;p&gt;A few years ago, before the CEO cared a whit about social networking or identity, a Google User Experience researcher named Paul Adams created a slide deck called the &lt;a href=&quot;http://www.slideshare.net/padday/the-real-life-social-network-v2&quot;&gt;Real Life Social Network&lt;/a&gt;. In a very long and well-illustrated talk, he makes the point that there is an impedence mismatch between what you share on facebook and your interactions in real life. So when you share a photo of yourself doing something crazy at a party, you don't intend for your aunt and uncle, workmates or casual acquaintances to see it. But facebook does not do a good job of making this separation. This, in essence, is what the slide deck says and his point is made with great amounts of detail and insight.&lt;/p&gt; 
+&lt;p&gt;So when Google began its social effort in earnest, the powers-that-be seized upon Paul's research and came up with the Circles product. This was to be the core differentiator between Google+ (then codenamed &lt;a href=&quot;http://www.wired.com/epicenter/2011/06/inside-google-plus-social/&quot;&gt;Emerald Sea&lt;/a&gt;) and facebook.&lt;/p&gt; 
+&lt;p&gt;As part of induction into Emerald Sea, my team got the 30-minute pitch from the Circles team. I listened politely, all the while rolling-my-eyes in secret at their seemingly implausible naivete. By then I was also growing increasingly frustrated at Google's &lt;a href=&quot;http://slacy.com/blog/2011/03/what-larry-page-really-needs-to-do-to-return-google-to-its-startup-roots/&quot;&gt;sluggish engineering culture&lt;/a&gt;. I have &lt;a href=&quot;http://rethrick.com/#waving-goodbye&quot;&gt;previously described&lt;/a&gt; how the toolchain is not well-suited to fast, iterative development and rapid innovation. I asked the obvious question--&amp;quot;While I agree that Circles is a very compelling feature, this slide deck is public. Surely someone at facebook has seen it, and it won't take them long to copy it?&amp;quot;&lt;/p&gt; 
+&lt;p&gt;I was met with a sheepish, if honest look of resignation. They knew the danger of this, but were counting on the fact that facebook wouldn't be able to change something so core to their product, at least not by the time Emerald Sea got to market.&lt;/p&gt; 
+&lt;p&gt;I laughed, disbelieving. Facebook has a hacker culture, they're only a handful of engineers, and they develop with quick, adaptable tools like PHP. Especially when compared with the slow moving mammoths we were using at Google. (By that time, 200+ engineers over 3 months had produced little more than ugly, bug-ridden demos, and everyone was fretting about the sure-to-fail aggressive timeline.)&lt;/p&gt; 
+&lt;h3&gt;Half Circle&lt;/h3&gt; 
+&lt;p&gt;Sure enough, I watched as techcrunch published leak after leak of facebook going into lockdown for a secret project. Hinted at being an overhaul of their social graph, a new groups system, and many other things. On my side of the fence, engineers were increasingly frustrated. Some leaving Emerald Sea for other projects and some even &lt;a href=&quot;http://techcrunch.com/2010/10/29/rasmussen-facebook-google/&quot;&gt;leaving for facebook&lt;/a&gt;. I had the impression that Paul Adams was not being heard (if you're not an engineer at Google, you often aren't). Many were visibly unhappy with his slide deck having been published for all to see (soon to be released as a book). I even heard a rumor that there was an attempt to stop or delay the book's publication.&lt;/p&gt; 
+&lt;p&gt;I have no idea if this last bit was true or not, but one fine day Paul Adams quit and &lt;a href=&quot;http://techcrunch.com/2010/12/20/paul-adams-googler-whose-presentation-foretold-facebook-groups-heads-to-facebook/&quot;&gt;went to facebook&lt;/a&gt;. I was convinced that this was the final nail in the coffin. Engineers outside Emerald Sea--a cynical bunch at the best of times--were making snide comments and writing off the project as a dismal failure before it even launched.&lt;/p&gt; 
+&lt;p&gt;Then it happened--facebook finally released the product they'd been working on so secretly, their answer to Paul's thesis. The team lead at facebook even publicly tweeted a snarky jab at Google. Their product was called &lt;a href=&quot;http://www.huffingtonpost.com/2010/10/06/facebook-groups-launch-to_n_752918.html&quot;&gt;Facebook Groups&lt;/a&gt;.&lt;/p&gt; 
+&lt;p&gt; I was dumbstruck. Was I reading this correctly? I quickly logged on and played with it, to see for myself. My former colleagues had started a Google Wave alumni group, and I even looked in there to see if I had misunderstood. But no--it seemed that facebook had completely missed the point. There was no change to the social graph, there was no real impetus to encourage people to map their real-life social circles on to the virtual graph, and the feature itself was a under a tab sitting somewhere off to the side.&lt;/p&gt; 
+&lt;h3&gt;Full Circle&lt;/h3&gt; 
+&lt;p&gt;Then I remembered something the Circles team lead had said:&lt;/p&gt; 
+&lt;blockquote&gt; 
+ &lt;p&gt;&amp;quot;...[We know] the danger of this, but were counting on the fact that facebook wouldn't be able to change something so core to their product.&amp;quot;&lt;/p&gt; 
+&lt;/blockquote&gt; 
+&lt;p&gt;I had originally assumed that he meant facebook would lack the agility to make the necessary technical changes, so central to their system. But I was wrong--the real point was that they would not be &lt;em&gt;willing&lt;/em&gt; to change direction so fundamentally. And given such a large, captivated audience you could hardly blame them.&lt;/p&gt; 
+&lt;p&gt;And now, Circles have launched as a central feature of Google+, with a generally positive reaction from the tech press and users alike. Wow.&lt;/p&gt; 
+&lt;p&gt;Now, I'm not saying that Circles is the one killer feature to bring down facebook--not at all. What I am saying, however, is that these two products are not playing on an even field. Like Microsoft and online Office, it is incredibly difficult for facebook to make fundamental changes to their product suite to answer competitive threats. It is for this reason I feel that Google+ has a genuine shot at dethroning facebook.&lt;/p&gt; 
+&lt;h3&gt;A Game of Thrones&lt;/h3&gt; 
+&lt;p&gt;Of course, there are many other factors to consider--some more important than I've stated. For example, the Google+ sharing console is only ever a click away in any Google property via the toolbar. This is bound to keep users deeply engaged. At the same time it will probably attract anti-trust scrutiny. On the other hand, Facebook already has strong networks effects in its favor and stealing away even a quarter of its 750m users will be an arduous, multi-year campaign. And Mark Zuckerberg has time and again shown that he has the uncanny ability to make good decisions under pressure. So maybe facebook will decide at some point that it needs to pivot fundamentally and make the necessary changes.&lt;/p&gt; 
+&lt;p&gt; Both companies will compete fervently for partnerships with major web properties to feature the Like or +1 buttons. And the mobile ecosystem (with Apple now &lt;a href=&quot;http://mashable.com/2011/06/07/apple-twitter-ios5/&quot;&gt;getting in bed with Twitter&lt;/a&gt;) will have a large impact. There are so many variables at play that many of the things I've said may make no difference at all in the outcome.&lt;/p&gt; 
+&lt;p&gt;With those caveats in place however, I predict that while Google+ will not usurp the throne from facebook per se, it will instead grow into a strong, competitive player and much-needed alternative. Much as Chrome has with IE. Where facebook has the larger, but no-longer dominant share. I predict that when this game is done playing, there will be no more thrones.&lt;/p&gt; 
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt; 
+&lt;div style=&quot;font-size: small;&quot;&gt;
+ Find me on 
+ &lt;a href=&quot;http://twitter.com/dhanji&quot;&gt;twitter&lt;/a&gt; (Disclaimer: All opinions here are purely my speculation. And any Google-specific information is already in the public domain and linked-to where appropriate)
+&lt;/div&gt;</description>
+      <link>http://rethrick.com/#google-plus</link>
+    </item>
+    
+    <item>
+      <guid isPermaLink="true">
+        http://rethrick.com/haskell-better
+      </guid>
+      <title>Haskell</title>
+      <description>&lt;p&gt;I'm sure you've run into that annoying clod of a programmer, perhaps a colleague, an intern, or someone you meet at drinks after a usergroup meeting. This person won't shut up about how fantastic the Haskell programming language is. About how every other language is inferior, almost by definition, how some day we will all be coding in Haskell, and disdaining object-oriented programming as the failed anachronism that it already, clearly is.&lt;/p&gt; 
+&lt;p&gt;Well, I am one of these people! To be sure, I find them equally annoying to be around and do roll my eyes when I hear the phrase &lt;em&gt;referential transparency&lt;/em&gt; bandied about with the same fervent, partial dementia as &lt;em&gt;manifest destiny&lt;/em&gt;. I listen closely for the subtle misunderstandings that are inevitably lurking underneath this newly-minted zealotry. And I am seldom disappointed.&lt;/p&gt; 
+&lt;p&gt;Haskell will never take over mainstream programming, it will always be the seductive, out-of-reach mistress and muse of aspiring hackers. But I am a fan. Let me tell you why.&lt;/p&gt; 
+&lt;h3&gt;A Question of State&lt;/h3&gt; 
+&lt;p&gt;Most modern programming is built around the idea of a state machine. Sure, there are patterns that reduce things to declarative constructs and good libraries that encourage stateless architecture, but essentially this is window dressing around the core programming model--which is pushing inputs through a series of states.&lt;/p&gt; 
+&lt;p&gt;I don't know about you but I find this model extremely difficult. In my limited experience, most people are unable to keep more than a handful of potential options in their heads, let alone model the search space of even the simplest of practical computing problems. If you don't believe me, construct a binary search tree in your head, consisting of the english alphabet and desribe how to get to the letter Q.&lt;/p&gt; 
+&lt;p&gt;This brings me to my next point--we're lazy. It's much simpler to describe the mechanism of the tree than to realize the tree in your head. To say the tree behaves such that all letters above 'K' go in the right half of the tree and those below 'K' go in the left half. And so on, recursively.&lt;/p&gt; 
+&lt;p&gt;Programming in Haskell naturally fits this way of modeling the universe. I concede here that I've picked an example that is very favorable to my argument. But consider the broader dialectic of a material search space versus the abstract, recursive description of a constraint. I argue that almost all problems can be reduced this way. And it is quite clear which side is the more suited to human cognitive facility.&lt;/p&gt; 
+&lt;h3&gt;Actual Performance&lt;/h3&gt; 
+&lt;p&gt;This is something you rarely hear annoying Haskell fanboys say, but Haskell has inherent, idiomatic advantages over most other languages in performance. The trick is in &lt;a href=&quot;http://en.wikipedia.org/wiki/Lazy_evaluation&quot;&gt;lazy evaluation&lt;/a&gt;. Consider the following trivial example:&lt;/p&gt; 
+&lt;pre&gt;&lt;code&gt;pick [] = []
+pick ls = (take 100 ls) !! random
+
+pick [1..]
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;Here we are picking a number at random from the first 100 items of a list. Haskell's advantage lies in the fact that it will only pick as many items from the list as the random index requires. In this case, since the list is infinitely long, that will save us a lot of memory and CPU.&lt;/p&gt; 
+&lt;p&gt;This code is readable, expressive and incredibly performant. Writing code like this in any other language is pretty much impossible without trading speed and memory. This sort of expressiveness is extremely useful in many real world use cases.&lt;/p&gt; 
+&lt;p&gt;Lest you write this off as yet another contrived example to favor Haskell, check out this parser that emits &lt;code&gt;xml&lt;/code&gt; from &lt;a href=&quot;https://github.com/dhanji/play/blob/master/hake.hs&quot;&gt;Maven Atom source code&lt;/a&gt;.&lt;/p&gt; 
+&lt;p&gt;In particular, this line:&lt;/p&gt; 
+&lt;pre&gt;&lt;code&gt;xmlTag name content = '&amp;lt;' : name ++ &amp;quot;&amp;gt;&amp;quot; ++ content ++
+                      ( &amp;quot;&amp;lt;/&amp;quot; ++ (head $ words name) ++ &amp;quot;&amp;gt;&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;..is used almost abusively all over the program; to rip apart the contents of an XML start tag to extract the name of its end tag: &lt;code&gt;&amp;quot;&amp;lt;/&amp;quot; ++ (head $ words name) ++ &amp;quot;&amp;gt;&amp;quot;&lt;/code&gt;. To the non-lazy programmer, this would appear extremely inefficient--why split the entire length of &lt;code&gt;name&lt;/code&gt; by whitespace every single time? But this is not how it works--in practice, the program only ever seeks as far as the first space character because the function &lt;code&gt;words&lt;/code&gt; is &lt;em&gt;lazily&lt;/em&gt; evaluated.&lt;/p&gt; 
+&lt;p&gt;In most other languages, this is something that could easily explode in CPU and memory cost. In those languages, you'd be writing a separate 'optimized' version requiring additional tests, prone to subtle bugs, performance problems and creating reams of unnecessary text to drag one's eyes over.&lt;/p&gt; 
+&lt;h3&gt;No Manifest Destiny&lt;/h3&gt; 
+&lt;p&gt;So, I'll admit it--I too, am a fanboy. I have a special affinity for Haskell, for the reasons mentioned above and many others (my uncle was even a member of the original Haskell committee).&lt;/p&gt; 
+&lt;p&gt;But as I said, it will never head over to the mainstream. There are many reasons for this: Haskell's APIs are pedantic, quirkily designed, its monadic IO is confusing and complicated, and so on. But the main reason is that the shift in mindset required is far too great. We're just too used to laundry-list-style sequences of instructions and attempting, however futilely, to map the search-space of complex real-world problems in our minds, in fairly literal terms.&lt;/p&gt; 
+&lt;p&gt;And I'm glad. I have fun with my exclusive little hobby, small community of co-conspirators, and that tiny bit of magic I feel every time I stand back and behold my latest Haskell creation!&lt;/p&gt; 
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt; 
+&lt;div style=&quot;font-size: small;&quot;&gt;
+ Find me on 
+ &lt;a href=&quot;http://twitter.com/dhanji&quot;&gt;twitter&lt;/a&gt;
+&lt;/div&gt;</description>
+      <link>http://rethrick.com/#haskell-better</link>
+    </item>
+    
+    <item>
+      <guid isPermaLink="true">
+        http://rethrick.com/crosstalk
+      </guid>
+      <title>Crosstalk: A Chat App</title>
+      <description>&lt;p&gt;Not long ago there was a crazy rush of startups building group chat applications. Names like Beluga, Convore, Banter.ly, Group.me, Brizzly and others spring to mind. Other, more mature products like 37signals' Campfire and web-based IRC clients are also part of this suite.&lt;/p&gt; 
+&lt;p&gt;The space is crowded, and recently bubble-like in its growth. I think there are a multitude of reasons for this:&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;Status updates have become the currency of social interaction thanks to Twitter and Facebook&lt;/li&gt; 
+ &lt;li&gt;There is a real need for group communication that these products do not provide&lt;/li&gt; 
+ &lt;li&gt;It is fairly easy to write a group chat app, and the point of distincion is all about UI&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;p&gt;As an experiment to test these three theories, &lt;a href=&quot;http://themaninblue.com&quot;&gt;The Man in Blue&lt;/a&gt; and I took a week to see if we could build such a group-chat application. We came up with Crosstalk after four days.&lt;/p&gt; 
+&lt;p&gt;&lt;a href=&quot;images/xtalk-home.png&quot;&gt; &lt;img src=&quot;images/xtalk-home.png&quot; style=&quot;width:400px; display: block; margin: 0 auto; border: 1px solid darkgray; padding: 2px;&quot; /&gt; &lt;/a&gt;&lt;/p&gt; 
+&lt;p&gt;&lt;br /&gt; &lt;a href=&quot;images/xtalk-room.png&quot;&gt; &lt;img src=&quot;images/xtalk-room.png&quot; style=&quot;width:400px; display: block; margin: 0 auto; border: 1px solid darkgray; padding: 2px;&quot; /&gt; &lt;/a&gt;&lt;/p&gt; 
+&lt;p&gt;We have no particular intention of making this a startup or a running service (for reasons obvious from above), so in light of that I am announcing the release of the code as open source to do with as you will:&lt;/p&gt; 
+&lt;p&gt;&lt;a href=&quot;http://github.com/dhanji/crosstalk&quot;&gt;http://github.com/dhanji/crosstalk&lt;/a&gt;&lt;/p&gt; 
+&lt;h3&gt;Events&lt;/h3&gt; 
+&lt;p&gt;To give ourselves a specific goal, we focused on realtime chat for events, and customized it for the excellent &lt;a href=&quot;http://webstock.co.nz&quot;&gt;Webstock&lt;/a&gt; conference in New Zealand. We hoped it would prove useful for session attendees to share instant reactions, links and photos.&lt;/p&gt; 
+&lt;p&gt; It proved to have mixed results, some sessions were good and others weak. We didn't promote the app at all beyond a tweet, so this may have been the cause. Also 4-days of coding are bound to leave one with a few bugs.&lt;/p&gt; 
+&lt;h3&gt;Technology&lt;/h3&gt; 
+&lt;p&gt;The server was written on Google Appengine/Java, and powered by &lt;a href=&quot;http://sitebricks.org&quot;&gt;Sitebricks&lt;/a&gt;. We used the Appengine Channel API for Comet support (Message Push to the browser) and the client was written in jQuery with a focus on HTML5 features.&lt;/p&gt; 
+&lt;p&gt;I am proud to say we managed to get nearly every feature we wanted done, though not all worked to satisfaction for various reasons, including some quirks of Appengine. Here's an overview:&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;You sign in with a Twitter account over OAuth&lt;/li&gt; 
+ &lt;li&gt;Adding &lt;em&gt;terms&lt;/em&gt; to a room triggers a periodic fetch of tweets matching that term from the public timeline&lt;/li&gt; 
+ &lt;li&gt;Attachments such as images can be dragged and dropped into the browser window&lt;/li&gt; 
+ &lt;li&gt;Images, Video URLs, and even Amazon product links are expanded/snippeted inline using &lt;a href=&quot;http://embed.ly&quot;&gt;embed.ly&lt;/a&gt;&lt;/li&gt; 
+ &lt;li&gt;The right margin features an activity histogram for the life of the chatroom&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;p&gt;The disclaimer is that it's still very raw, but you should be able to build and deploy it on any Appengine account using:&lt;/p&gt; 
+&lt;pre&gt;&lt;code&gt;mvn package
+appcfg.sh update src/main/webapp
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;div style=&quot;font-size: small;&quot;&gt;
+ You will need 
+ &lt;a href=&quot;http://maven.apache.org&quot;&gt;Maven 2.2.1&lt;/a&gt; and the 
+ &lt;a href=&quot;http://code.google.com/appengine/downloads.html&quot;&gt;Appengine Java SDK&lt;/a&gt;
+&lt;/div&gt; 
+&lt;p&gt;Tweet me your thoughts.&lt;/p&gt; 
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt; 
+&lt;div style=&quot;font-size: small;&quot;&gt;
+ Find me on 
+ &lt;a href=&quot;http://twitter.com/dhanji&quot;&gt;twitter&lt;/a&gt;
+&lt;/div&gt;</description>
+      <link>http://rethrick.com/#crosstalk</link>
+    </item>
+    
+    <item>
+      <guid isPermaLink="true">
+        http://rethrick.com/waving-goodbye
+      </guid>
+      <title>Waving Goodbye</title>
+      <description>&lt;p&gt;In the past month or two, fully 8 of my colleagues from the &lt;a href=&quot;http://wave.google.com&quot;&gt;Google Wave&lt;/a&gt; project have resigned from the company. This is no strange coincidence given that annual bonuses for 2010 were paid out at the end of Q1 2011. However, it does give one pause to think about so many people from the same project (including myself) counting down the bonus clock.&lt;/p&gt; 
+&lt;p&gt;For my part I really enjoyed my time at Google--it is the best job I've ever had, by a long way. Everything you hear about is true: the friendly atmosphere, the freedom to pursue innovative ideas and projects, capricious indulgence of engineers, and the noble sense of purpose to change the world for the better with nary a thought given to profits or costs.&lt;/p&gt; 
+&lt;p&gt;So why did we all quit? My colleagues have stated &lt;a href=&quot;http://blog.pamelafox.org/2011/02/goodbye-google-hello-world.html&quot;&gt;their&lt;/a&gt; &lt;a href=&quot;http://blog.douweosinga.com/2011/05/leaving-google-part-2.html&quot;&gt;own&lt;/a&gt; &lt;a href=&quot;http://jutopia.tirsen.com/2011/04/29/leaving_google.html&quot;&gt;reasons&lt;/a&gt;, so I won't speak for them. But for me it was very simple: I just didn't enjoy going in to work anymore. Many would question why one would leave a high-paying job with all the comforts and freedoms that come at a place like Google. Some people possess the ability to truck on through and find their place in the system, maybe even take some joy in the everyday grind. I admire this ability but it is completely alien to me.&lt;/p&gt; 
+&lt;h3&gt;Productivity&lt;/h3&gt; 
+&lt;p&gt;Looking back, I did achieve a lot at Google--on Wave I helped design the search and indexing pipeline which was the single best-scaling component in the entire system, supporting over 3 million users at one point. The search team lead and I spent hours sitting together, hammering out details of intricate concurrency code, recovery algorithms and solutions to tricky memory-pressure issues.&lt;/p&gt; 
+&lt;p&gt;I also wrote the entire front end for Realtime Search, worked on Wave's Embedding APIs and spent long hours and sleepless nights with each backend team helping improve their server's performance during the harshest weeks of Wave's user load.&lt;/p&gt; 
+&lt;p&gt;Outside Wave, Bob Lee, Jesse Wilson and I maintained Guice--a library at the heart of nearly every single Java server at Google. I worked with various teams from AdWords, Gmail, Apps, and many others helping them sort out Guice and even general Java problems, particularly in dealing with performance and concurrency. And did countless code reviews. I also represented Google on 3 different expert groups and was a member of the internal leadership council on all matters relating to Java.&lt;/p&gt; 
+&lt;p&gt;Yet, I never once felt productive. I always felt like I was behind, and chasing the tail of some ephemeral milepost of where I ought to be.&lt;/p&gt; 
+&lt;h3&gt;Recognition&lt;/h3&gt; 
+&lt;p&gt;The nature of a large company like Google is such that they reward consistent, focused performance in one area. This sounds good on the surface, but if you're a hacker at heart like me, it's really the death knell for your career. It means that staking out a territory and defending it is far more important than &lt;em&gt;doing what it takes&lt;/em&gt; to get a project to its goal. It means that working on Search, APIs, UI, performance, scalability and getting each one of those pieces across the line by any means necessary is actually bad for your career.&lt;/p&gt; 
+&lt;p&gt;Engineers who simply staked out one component in the codebase, and rejected patches so they could maintain complete control over design and implementation details had much greater rewards. (I was one among many who felt this way, and had colleagues who deserved more recognition than me who received less, lest you think I am belly-aching =)&lt;/p&gt; 
+&lt;p&gt;This is a general problem at Google--where territorialism is incentivized, but it was particularly bad on the Wave project. I say this without bitterness--it is merely an observation in hindsight. A saving grace for me was that my colleagues across the various Google offices did give me a lot of personal recognition for my work on Guice and Java. But not everyone is so lucky.&lt;/p&gt; 
+&lt;h3&gt;Speed&lt;/h3&gt; 
+&lt;p&gt;Here is something you've may have heard but never quite believed before: Google's vaunted scalable software infrastructure is obsolete. Don't get me wrong, their hardware and datacenters are the best in the world, and as far as I know, nobody is close to matching it. But the software stack on top of it is 10 years old, aging and designed for building search engines and crawlers. And it is well and truly obsolete.&lt;/p&gt; 
+&lt;p&gt;&lt;a href=&quot;http://code.google.com/p/protobuf/&quot;&gt;Protocol Buffers&lt;/a&gt;, &lt;a href=&quot;http://labs.google.com/papers/bigtable.html&quot;&gt;BigTable&lt;/a&gt; and &lt;a href=&quot;http://labs.google.com/papers/mapreduce.html&quot;&gt;MapReduce&lt;/a&gt; are ancient, creaking dinosaurs compared to &lt;a href=&quot;http://msgpack.org&quot;&gt;MessagePack&lt;/a&gt;, JSON, and &lt;a href=&quot;http://hadoop.apache.org/&quot;&gt;Hadoop&lt;/a&gt;. And new projects like &lt;a href=&quot;http://code.google.com/webtoolkit/&quot;&gt;GWT&lt;/a&gt;, &lt;a href=&quot;http://code.google.com/closure/&quot;&gt;Closure&lt;/a&gt; and &lt;a href=&quot;http://www.cidrdb.org/cidr2011/Papers/CIDR11_Paper32.pdf&quot;&gt;MegaStore&lt;/a&gt; are sluggish, overengineered Leviathans compared to fast, elegant tools like &lt;a href=&quot;http://jquery.org&quot;&gt;jQuery&lt;/a&gt; and &lt;a href=&quot;http://mongodb.org&quot;&gt;mongoDB&lt;/a&gt;. Designed by engineers in a vacuum, rather than by developers who have need of tools.&lt;/p&gt; 
+&lt;p&gt;In the short time I've been outside Google I've created entire apps in Java in the space of a single workday. (Yes, you can program as &lt;a href=&quot;http://sitebricks.org&quot;&gt;quickly in Java&lt;/a&gt; as in Ruby or Python, if you understand your tools well.) I've gotten prototypes off the ground, shown it to people, or deployed them with hardly any barriers.&lt;/p&gt; 
+&lt;h3&gt;The Future&lt;/h3&gt; 
+&lt;p&gt;The feeling now is liberating and joyous. Working by yourself or in a small team is fantastic in so many ways, that I simply can't describe it properly. If you're a hacker, Google is not the ideal place for you.&lt;/p&gt; 
+&lt;p&gt;That said, I've learned so much from working there, and I like to believe that I bridge the gap between hacker and engineer quite well. I enjoy the mathematical puzzles that Googlers love, I believe in the value of a programmer versed in Computer Science as well as Software Engineering, ardently. I do believe that Google is the best company in several generations and has transformed the way we think, live and work for the better. And I have no cynical reservations about their motto &amp;quot;Don't Be Evil&amp;quot;. They aren't, and if you think you can find another company who has done as much for the world and been as conscientious while keeping its promises to shareholders, then the more fool you.&lt;/p&gt; 
+&lt;p&gt;For my part, the future is a bright day, free of the encumberances of bureaucracy and scale. The sun is shining and I'm getting ready to start hacking.&lt;/p&gt; 
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt; 
+&lt;div style=&quot;font-size: small;&quot;&gt;
+ Find me on 
+ &lt;a href=&quot;http://twitter.com/dhanji&quot;&gt;twitter&lt;/a&gt;
+&lt;/div&gt;</description>
+      <link>http://rethrick.com/#waving-goodbye</link>
+    </item>
+    
+    <item>
+      <guid isPermaLink="true">
+        http://rethrick.com/unit-tests-false-idol
+      </guid>
+      <title>Unit Testing: A False Idol</title>
+      <description>&lt;p&gt;There is a fervor among agile enthusiasts and programmers about unit testing that borders on religion. This fever has even infected the ranks of everyday programmers, even those who do not practice Test-driven or eXtreme Programming. So much so that the code coverage metric is a prized goal, one which misguided engineering managers give out t-shirts and other pedestrian awards for. (At Google you similarly received certifications based on levels of coverage--to be fair, among other criteria.) This is a false idol--don't worship it!&lt;/p&gt; 
+&lt;p&gt; Unit tests create the illusion of a well-tested codebase, without the rigor that goes with it. The problem lies in the fact that there is almost never a match between the unit test and the atomicity of the unit under test. Invariably, these components have strong dependencies on the behavior of neighboring, external code. When you mock that dependency you are making an explicit commitment to maintain two streams of code--the mock, and the neighboring logic.&lt;/p&gt; 
+&lt;p&gt;In Sitebricks, we have 321 unit tests and about 83 integration tests. The latter have, time and again, proven far more useful in detecting bugs and preventing regressions than have the former. In fact, every time I add a working, well-tested feature, I find that I must crawl a spiderweb of unrelated unit tests and fix all the mock behaviors to correspond to the new system. This makes refactoring very frustrating, and sometimes downright impractical.&lt;/p&gt; 
+&lt;p&gt;This is not to say that all unit testing is bad--of course not. The dispatch logic in Guice Servlet and Sitebricks benefit from rigorous, modular unit tests. If you have ever used Gmail, Blogger, Google Apps, AdWords or Google Wave (all use Guice Servlet to dispatch requests) you have seen the benefits of this rigor first-hand. But take it from me, we could have achieved the same level of confidence with a few well written unit tests and a battery of integration tests. And we'd have been in a much better position to improve the framework and add features quickly.&lt;/p&gt; 
+&lt;p&gt;Nowadays, when I'm doing major refactors of Sitebricks I simply delete unit tests that are getting in my way, the overall code quality continues to be high and I am able to respond faster to bug reports and feature requests.&lt;/p&gt; 
+&lt;p&gt;So the next time someone comes to you saying let's write the tests first, or that we should aim for 80% code coverage, take it with a healthy dose of skepticism.&lt;/p&gt;</description>
+      <link>http://rethrick.com/#unit-tests-false-idol</link>
+    </item>
+    
+    <item>
+      <guid isPermaLink="true">
+        http://rethrick.com/comets-meteors
+      </guid>
+      <title>Comets and Meteors</title>
+      <description>&lt;p&gt;I am exploring writing an app with Comet (reverse Ajax) aka &lsquo;hanging gets&rsquo;. I thought I knew how this worked in detail, but after days of research I found my knowledge sorely lacking. There isn&rsquo;t much good information on the web either, so I thought I&rsquo;d summarize what I learned here.&lt;/p&gt; 
+&lt;p&gt;You can achieve server-to-client message pushing in several different ways:&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;Websockets - HTML5 standard that allows you to establish a full-duplex TCP socket with a high-level Javascript API. Only Chrome/Safari, Opera and Firefox seem to support this (Firefox 4 has since disabled support for security reasons).&lt;/li&gt; 
+ &lt;li&gt;Forever Frame - An iFrame whose content length is infinite. You just keep writing script tags out that invoke a callback in the parent frame with the server&rsquo;s push data. This is commonly used with IE.&lt;/li&gt; 
+ &lt;li&gt;Hanging GET (Multipart response) - This is a wonderful hack around an occult and obscure behavior introduced by Netscape. It only works in Firefox and Safari/Chrome, but it is brilliant&mdash;by reusing the ability to send multiple images back in a single response, you can instead encode JSON packets chunked by message length. The browser processes each JSON packet without ever closing the response stream, which can live forever.&lt;/li&gt; 
+ &lt;li&gt;Hanging GET (Long polling) - A less wonderful but perhaps more effective hack, a long poll is very much like a regular poll except that if there is no data, the server holds the stream open rather than return an empty response. When there is data to push, it is written and the response is closed. The client immediately opens a new request to re-establish this backchannel. A clever scheme will hold open POSTs that the client uses to send data and flip between them. This is the basis for the Bayeaux protocol.&lt;/li&gt; 
+ &lt;li&gt;Other (Flash Socket, Java Pushlet, etc.) - These rely on plugins to open a duplex channel to the server and have their own issues with compatibility and problems working via proxies.&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;p&gt;This confused me at first because there are two flavors of hanging GET. Long polling works on all browsers but is somewhat inefficient. Multipart response is very clever and more efficient but does not work with IE.&lt;/p&gt; 
+&lt;p&gt;There are many libraries that magic all this away for you. I caution against using them until you really understand what they do. Most of the ones I checked out do way more than you want and implement everything under the sun. IMO this is unnecessary bloat on the JS side and an increase in stack complexity.&lt;/p&gt; 
+&lt;p&gt;You can build a long polling server with very little effort using vanilla jQuery and &lt;a href=&quot;http://eclipse.org/jetty&quot;&gt;Jetty&lt;/a&gt;, using its continuations API. This is remarkably scalable too, given that Jetty continuations is not a thread-per-request model. Making a server to use with Websockets is similarly straightforward.&lt;/p&gt; 
+&lt;p&gt;My advice? Build a simple RPC abstraction on top of websockets. Test with Chrome or Firefox and then when you really need to support other browsers sub in the hand-over-hand long polling method I described above.&lt;/p&gt; 
+&lt;p&gt;I&rsquo;ll post any code I come up with.&lt;/p&gt;</description>
+      <link>http://rethrick.com/#comets-meteors</link>
+    </item>
+    
+  </channel>
+</rss>
