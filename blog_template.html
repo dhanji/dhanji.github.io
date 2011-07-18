@@ -19,7 +19,11 @@
         || navigator.userAgent.indexOf('Chrome') >= 0
         || navigator.userAgent.indexOf('Apple') >= 0) {
       // Send better browsers off to the JS version of this page.
-      window.location = 'http://rethrick.com#' + window.location.pathname.slice(1);
+      var to = window.location.pathname.slice(1);
+      if (to.charAt(to.length - 1) == '/') {
+        to = to.slice(0, to.length - 1);
+      }
+      window.location = 'http://rethrick.com#' + to;
     }
   </script>
   <script type="text/javascript">
