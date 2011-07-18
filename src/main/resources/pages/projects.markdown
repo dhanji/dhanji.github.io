@@ -24,9 +24,9 @@ consist of open source projects except where they point to my work at Google.
   * [Maven Atom](https://github.com/sonatype/polyglot-maven/tree/master/pmaven-atom) - An experiment
    to create a concise and elegant alternative grammar for Maven. Part of the
     [Polyglot Maven](http://polyglot.sonatype.org/) project. Here is an example:
-     repositories << "http://repository.codehaus.org",
+<pre>   repositories << "http://repository.codehaus.org",
                      "http://repo1.maven.org/maven2"
-<pre>     project "Google Guice" @ "http://code.google.com/p/google-guice"
+    project "Google Guice" @ "http://code.google.com/p/google-guice"
        id: com.google.inject:guice:4.0
        srcs: [ src: "src" test: "test" ]
        deps: [ junit:junit:3.8.1 ]
