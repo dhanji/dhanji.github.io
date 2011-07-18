@@ -244,14 +244,15 @@
     define get
       lambda (request response)
         template:mvel response
-          record
-            "name"  ::  "Dhanji"
+          record [
+            "name"  =>  "Dhanji"
+          ]
   </pre>
   </div>
   <p>
   This will look for a template named <span class="code">home.mvel</span> and render it using the
   provided record of name-value pairs. (The function <span class="code">record</span>
-  creates a list of pairs. And the operator <span class="code">::</span> is syntactic sugar.)
+  creates a list of pairs. And the operator <span class="code">=></span> is syntactic sugar.)
   <p>
   Match this with an MVEL template that looks something like the following:
   </p>
