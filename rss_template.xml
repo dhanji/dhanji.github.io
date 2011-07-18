@@ -1,0 +1,18 @@
+<rss version="2.0">
+  <channel>
+    <title>Rethrick Construction</title>
+    <description>A website by Dhanji R. Prasanna</description>
+    <link>http://rethrick.com/</link>
+
+    @foreach{page : pages}
+    <item>
+      <guid isPermaLink="true">
+        http://rethrick.com/@{page.id}
+      </guid>
+      <title>@{page.title}</title>
+      <description>@{org.apache.commons.lang.StringEscapeUtils.escapeHtml(page.html)}</description>
+      <link>http://rethrick.com/#@{page.id}</link>
+    </item>
+    @end{}
+  </channel>
+</rss>

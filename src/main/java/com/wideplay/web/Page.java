@@ -7,7 +7,7 @@ import java.util.Date;
  *
  * @author dhanji@gmail.com (Dhanji R. Prasanna)
  */
-public class Page implements Comparable<Page> {
+public class Page implements Comparable<Page>, Cloneable {
   private String id;   // page id, used in URL fragments
   private String title;
   private String html; // (as html) after markdown

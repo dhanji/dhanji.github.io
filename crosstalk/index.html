@@ -1,0 +1,121 @@
+<!DOCTYPE HTML> 
+<html> 
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+  <title>Rethrick Construction</title> 
+  <link href="/main.css" rel="stylesheet" /> 
+  <style type="text/css">
+    #main {
+      display: block !important;
+    }
+  
+  </style> 
+  <!--[if lt IE 9]>
+  <script type="text/javascript" src="/js/html5.js"></script>
+  <![endif]--> 
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js">
+  </script> 
+  <script type="text/javascript">
+    if (window.opera
+        || navigator.userAgent.indexOf('Firefox') >= 0
+        || navigator.userAgent.indexOf('Chrome') >= 0
+        || navigator.userAgent.indexOf('Apple') >= 0) {
+      // Send better browsers off to the JS version of this page.
+      window.location = 'http://rethrick.com#' + window.location.pathname.slice(1);
+    }
+  
+  </script> 
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-24538005-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  
+  </script> 
+ </head> 
+ <body> 
+  <header> 
+   <h1>&nbsp;</h1> 
+   <nav class="top"> 
+    <form>
+     <input id="searchbox" type="text" value="" /> 
+     <section id="results"> 
+      <ul> 
+       <li> 
+        <article class="post"> 
+         <h3>waving goodbye</h3> 
+         <div class="snippet">
+          Dispatches from the dark inner workings of an aspiring mad scientist. 
+         </div> 
+        </article> </li> 
+      </ul> 
+      <a id="link-rss" href="/views/rethrick.xml"><img src="/images/rss_24x24.png" /></a> 
+     </section> 
+     <div style="font-size: smaller; color: #555">
+       This version of the site is meant for crawlers and crappy browsers like MSIE. 
+      <p> Please visit <a href="http://rethrick.com">http://rethrick.com</a> for the HTML5 version with Chrome, Safari or Firefox. </p> 
+     </div> 
+    </form>
+   </nav> 
+   <nav class="bottom"> 
+    <ul> 
+     <li><a class="dhanji" href="http://twitter.com/dhanji" target="_blank">dhanji</a></li> 
+     <li><a id="link-projects" href="http://rethrick.com/projects">projects</a></li> 
+     <li><a id="link-about" href="http://rethrick.com/about">about me</a></li> 
+    </ul> 
+   </nav> 
+  </header> 
+  <section id="main"> 
+   <article id="content"> 
+    <a id="link-back" href="http://rethrick.com">← Back</a> 
+    <h1>Crosstalk: A Chat App <time pubdate="" datetime="">08 Jun 2011</time></h1> 
+    <div class="text">
+     <p>Not long ago there was a crazy rush of startups building group chat applications. Names like Beluga, Convore, Banter.ly, Group.me, Brizzly and others spring to mind. Other, more mature products like 37signals' Campfire and web-based IRC clients are also part of this suite.</p> 
+     <p>The space is crowded, and recently bubble-like in its growth. I think there are a multitude of reasons for this:</p> 
+     <ul> 
+      <li>Status updates have become the currency of social interaction thanks to Twitter and Facebook</li> 
+      <li>There is a real need for group communication that these products do not provide</li> 
+      <li>It is fairly easy to write a group chat app, and the point of distincion is all about UI</li> 
+     </ul> 
+     <p>As an experiment to test these three theories, <a href="http://themaninblue.com">The Man in Blue</a> and I took a week to see if we could build such a group-chat application. We came up with Crosstalk after four days.</p> 
+     <p><a href="images/xtalk-home.png"> <img src="images/xtalk-home.png" style="width:400px; display: block; margin: 0 auto; border: 1px solid darkgray; padding: 2px;" /> </a></p> 
+     <p><br /> <a href="images/xtalk-room.png"> <img src="images/xtalk-room.png" style="width:400px; display: block; margin: 0 auto; border: 1px solid darkgray; padding: 2px;" /> </a></p> 
+     <p>We have no particular intention of making this a startup or a running service (for reasons obvious from above), so in light of that I am announcing the release of the code as open source to do with as you will:</p> 
+     <p><a href="http://github.com/dhanji/crosstalk">http://github.com/dhanji/crosstalk</a></p> 
+     <h3>Events</h3> 
+     <p>To give ourselves a specific goal, we focused on realtime chat for events, and customized it for the excellent <a href="http://webstock.co.nz">Webstock</a> conference in New Zealand. We hoped it would prove useful for session attendees to share instant reactions, links and photos.</p> 
+     <p> It proved to have mixed results, some sessions were good and others weak. We didn't promote the app at all beyond a tweet, so this may have been the cause. Also 4-days of coding are bound to leave one with a few bugs.</p> 
+     <h3>Technology</h3> 
+     <p>The server was written on Google Appengine/Java, and powered by <a href="http://sitebricks.org">Sitebricks</a>. We used the Appengine Channel API for Comet support (Message Push to the browser) and the client was written in jQuery with a focus on HTML5 features.</p> 
+     <p>I am proud to say we managed to get nearly every feature we wanted done, though not all worked to satisfaction for various reasons, including some quirks of Appengine. Here's an overview:</p> 
+     <ul> 
+      <li>You sign in with a Twitter account over OAuth</li> 
+      <li>Adding <em>terms</em> to a room triggers a periodic fetch of tweets matching that term from the public timeline</li> 
+      <li>Attachments such as images can be dragged and dropped into the browser window</li> 
+      <li>Images, Video URLs, and even Amazon product links are expanded/snippeted inline using <a href="http://embed.ly">embed.ly</a></li> 
+      <li>The right margin features an activity histogram for the life of the chatroom</li> 
+     </ul> 
+     <p>The disclaimer is that it's still very raw, but you should be able to build and deploy it on any Appengine account using:</p> 
+     <pre><code>mvn package
+appcfg.sh update src/main/webapp
+</code></pre> 
+     <div style="font-size: small;">
+       You will need 
+      <a href="http://maven.apache.org">Maven 2.2.1</a> and the 
+      <a href="http://code.google.com/appengine/downloads.html">Appengine Java SDK</a> 
+     </div> 
+     <p>Tweet me your thoughts.</p> 
+     <p><br /></p> 
+     <div style="font-size: small;">
+       Find me on 
+      <a href="http://twitter.com/dhanji">twitter</a> 
+     </div>
+    </div> 
+   </article> 
+  </section>  
+ </body>
+</html>
