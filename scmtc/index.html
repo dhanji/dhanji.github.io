@@ -35,9 +35,14 @@
     h2 {
       color: #555;
       font-size: large;
-      padding-top: 8px;
+      padding-top: 22px;
     }
 
+    h3 {
+      color: #555;
+      font-size: normal;
+      padding-top: 2px;
+    }
     header .author {
       margin-top: -20px;
       margin-left: 28px;
@@ -60,7 +65,7 @@
       margin: 12px;
     }
 
-    #main .caption, p, pre, h2 {
+    #main .caption, p, pre, h2, h3 {
       margin-left: 20%;
       margin-right: 28%;
     }
@@ -294,8 +299,7 @@
       .scm extension
     </div>
   </div>
-  <p>
-  <h2>String Interpolation</h2>
+  <h3>String Interpolation</h3>
   <p>
   scmtc supports string interpolation. This code shows the IP address of the incoming request
   to the user:
@@ -322,7 +326,48 @@
         body response "Your IP is @{(request/ip request)}"
   </pre>
   </div>
+  
+  <h3>Lists and Records</h3>
+  <p>
+  scmtc has syntax sugar for lists, instead of the standard scheme form <span class="code">(list 1 2 3 4 5)</span>
+  you can write :
+  
+  </p>
+  <div class="code">
+  <pre>
+    [1 2 3 4 5]
+    
+    [1 2 3
+     4 5 6
+     7 8 9]
+     
+    []
+  </pre>
+  <div class="caption">Lists may safely span multiple lines.</div>
+  </div>
 
+  <p>
+  These two are functionally identical. This syntax is identical to what we saw earlier for records as well,
+  using the <em>hashrocket</em> (=>), so you can write code that looks like an associative mapping, but
+  in reality is just a list:
+  </p>
+
+  <div class="code">
+  <pre>
+    [ "name"        => "Dhanji"
+      "occupation"  => "Hacker" ]
+     
+    [
+      "name"        => "Dhanji"
+      "occupation"  => "Hacker"
+    ]
+    
+    [=>]
+    
+    []
+  </pre>
+  <div class="caption">The hashrocket symbol is elided completely by the scmtc translator.</div>
+  </div>
 </section>
 </body>
 </html>
