@@ -35,9 +35,15 @@
     h2 {
       color: #555;
       font-size: large;
-      padding-top: 8px;
+      padding-top: 18px;
     }
 
+    h3 {
+      color: #555;
+      font-size: normal;
+      font-weight: lighter;
+      padding-top: 12px;
+    }
     header .author {
       margin-top: -20px;
       margin-left: 28px;
@@ -64,7 +70,7 @@
       padding-bottom: 50px;
     }
 
-    #main .caption, p, pre, h2, ul {
+    #main .caption, p, pre, h2, h3, ul {
       margin-left: 20%;
       margin-right: 28%;
     }
@@ -78,8 +84,8 @@
       padding-top: 18px;
       padding-bottom: 6px;
       border-radius: 4px;
-      margin-top: 16px;
-      margin-bottom: 16px;
+      margin-top: 18px;
+      margin-bottom: 18px;
     }
 
     #main pre .keyword {
@@ -93,7 +99,9 @@
     }
 
     #main p {
-      padding: 4px 0;
+      color: #666;
+      line-height: 1.4;
+      padding: 6px 0;
     }
 
     span.code {
@@ -219,17 +227,17 @@
 
   <h2>Getting Started</h2>
   <p>
-    To begin scheming, <a href="#">download the scmtc runtime</a> and start a project as follows:</p>
+    To begin scheming, <a href="https://github.com/dhanji/scmtc/blob/master/dist/scmtc.zip?raw=true">download the scmtc runtime</a> and start a project as follows:</p>
 
   <div class="code">
   <pre>
-    mkdir hello_world
-    cd hello_world
-    scm
+    unzip [path/to/]scmtc.zip
+    cd dist
+    ./scm
   </pre>
   </div>
   <p>
-    This will create a "hello world" scmtc project and launch the scmtc runtime on port 8080. You
+    This will start a "hello world" scmtc project and launch the scmtc runtime on port 8080. You
     should see the project running if you visit <span class="code">http://localhost:8080</span>.
   </p>
 
@@ -248,14 +256,15 @@
     define get
       lambda (request response)
         template:mvel response
-          record
-            "name"  ::  "Dhanji"
+          record [
+            "name"  =>  "Dhanji"
+          ]
   </pre>
   </div>
   <p>
   This will look for a template named <span class="code">home.mvel</span> and render it using the
   provided record of name-value pairs. (The function <span class="code">record</span>
-  creates a list of pairs. And the operator <span class="code">::</span> is syntactic sugar.)
+  creates a list of pairs. And the operator <span class="code">=></span> is syntactic sugar.)
   <p>
   Match this with an MVEL template that looks something like the following:
   </p>
@@ -297,8 +306,7 @@
       .scm extension
     </div>
   </div>
-  <p>
-  <h2>String Interpolation</h2>
+  <h3>String Interpolation</h3>
   <p>
   scmtc supports string interpolation. This code shows the IP address of the incoming request
   to the user:
@@ -324,6 +332,47 @@
       lambda (request response)
         body response "Your IP is @{(request/ip request)}"
   </pre>
+  </div>
+
+  <h3>Lists and Records</h3>
+  <p>
+  scmtc has syntax sugar for lists, instead of the standard scheme form <span class="code">(list 1 2 3 4 5)</span>
+  you can write :
+
+  </p>
+  <div class="code">
+  <pre>
+    [1 2 3 4 5]
+
+    [1 2 3
+     4 5 6
+     7 8 9]
+
+    []
+  </pre>
+  <div class="caption">Lists may safely span multiple lines.</div>
+  </div>
+
+  <p>
+  These two are functionally identical. This syntax is identical to what we saw earlier for records as well,
+  using the <em>hashrocket</em> (=>), so you can write code that looks like an associative mapping, but
+  in reality is just a list:
+  </p>
+  <div class="code">
+  <pre>
+    [ "name"        => "Dhanji"
+      "occupation"  => "Hacker" ]
+
+    [
+      "name"        => "Dhanji"
+      "occupation"  => "Hacker"
+    ]
+
+    [=>]
+
+    []
+  </pre>
+  <div class="caption">The hashrocket symbol is elided completely by the scmtc translator.</div>
   </div>
 
   <p></p>
