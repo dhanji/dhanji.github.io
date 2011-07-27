@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <html>
-<head> 
+<head>
   <meta http-equiv="Content-Type" value="text/html; charset=utf-8">
   <title>scmtc - a platform for scheming</title>
   <link href='http://fonts.googleapis.com/css?family=Inconsolata&v2' rel='stylesheet' type='text/css'>
@@ -23,7 +23,7 @@
       color: red;
       text-shadow: 1px 1px 1px #eee;
     }
-    
+
     h1 span {
       position: relative;
       top: -5px;
@@ -60,7 +60,11 @@
       margin: 12px;
     }
 
-    #main .caption, p, pre, h2 {
+    #main {
+      padding-bottom: 50px;
+    }
+
+    #main .caption, p, pre, h2, ul {
       margin-left: 20%;
       margin-right: 28%;
     }
@@ -154,7 +158,7 @@
 </head>
 <body>
 <header>
-  <h1>sc·mt·c <span>/skiˈmætɪk, skɪ-/</span></h1>
+  <h1>sc&middot;mt&middot;c <span>/skiˈmætɪk, skɪ-/</span></h1>
 
   <div class="author">by <a href="http://rethrick.com">Dhanji R. Prasanna</a></div>
 </header>
@@ -212,7 +216,7 @@
     <span class="code">begin</span> form. In this case, I've registered a nameless function to be
     run after the respose completes and print <span class="code">"done"</span> to the console.
   </p>
-  
+
   <h2>Getting Started</h2>
   <p>
     To begin scheming, <a href="#">download the scmtc runtime</a> and start a project as follows:</p>
@@ -232,7 +236,7 @@
   <p>
     The page you see is served by the file <span class="code">home.scmtc</span>.
   </p>
-  
+
   <a name="scmtc-syntax"><h2>Templates</h2></a>
   <p>
   Templates in scmtc are powered by the excellent <a href="mvel.codehaus.org">MVEL Templates</a>
@@ -255,7 +259,7 @@
   <p>
   Match this with an MVEL template that looks something like the following:
   </p>
-  
+
   <div class="code">
   <pre>
     Hello there, @{name}!
@@ -263,7 +267,7 @@
    <div class="caption">scmtc will look for x.mvel where x is name of the current scmtc script.</div>
   </div>
 
-  
+
   <a name="scmtc-syntax"><h2>Syntax</h2></a>
   <p>
   So far we have seen code that looks like this:
@@ -276,7 +280,7 @@
   </pre>
     <div class="caption">Files that have a .scmtc extension are processed in scmtc syntax.</div>
   </div>
-  
+
   <p>
     This special syntax is merely sugar around standard Scheme (Lisp) syntax. It is functionally
     identical to the following, more familiar Lisp syntax:
@@ -299,7 +303,7 @@
   scmtc supports string interpolation. This code shows the IP address of the incoming request
   to the user:
   </p>
-  
+
   <div class="code">
   <pre>
     define get
@@ -322,6 +326,24 @@
   </pre>
   </div>
 
+  <p></p>
+  <h2>Architecture</h2>
+
+  <p>
+  scmtc is built on top of the <a href="http://jscheme.sourceforge.net/jscheme/main.html">JScheme</a> interpreter and
+  the following internal libraries:
+    <ul>
+      <li>Guice</li>
+      <li>JBoss Netty</li>
+      <li>Apache Commons IO</li>
+    </ul>
+  <p>
+  As such all of these libraries are available for use from your scheme programs using JScheme's
+  <a href="http://jscheme.sourceforge.net/jscheme/doc/javaprimitives.html">Java bridge</a>.
+  <p>
+    The source code is available <a href="http://github.com/dhanji/scmtc">on Github</a>.
+    To contribute, send me a pull request!
+  </p>
 </section>
 </body>
 </html>
