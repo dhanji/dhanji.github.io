@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Loop</title>
+  <link href="http://fonts.googleapis.com/css?family=Gochi+Hand|Gentium+Book+Basic|Inconsolata&amp;v2" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="loop.css">
+</head>
+<body>
+<section id="main">
+  <h1>Loop</h1>
+  <p>
+    Loop is a little, functional language that runs on the JVM. Ironically, there is no loop construction in Loop.
+  </p>
+  <p>
+    Here is quicksort in Loop (similar to haskell):
+  </p>
+  <pre>
+quicksort(ls) -->
+  []     : []
+  [x:xs] : quicksort(i for i in ls if i > x) + x + quicksort(i for i in ls if i < x)</pre>
+</section>
+</body>
+</html>

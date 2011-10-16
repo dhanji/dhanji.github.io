@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+}
+
+body {
+  font-family: "Gentium Book Basic", "Times New Roman", serif;
+  font-size: 18px;
+}
+
+#main {
+  width: 65%;
+  margin: 4em auto;
+}
+
+h1 {
+  font-family: "Gochi Hand", "Georgia", serif;
+  margin-bottom: 26px;
+}
+
+pre {
+  background: #f4f4f4;
+  margin: 16px 0;
+  font-family: "Inconsolata", monospace;
+  font-size: 15px;
+  padding: 6px;
+}
+
+p {
+  margin: 16px 0;
+}
