@@ -14,17 +14,28 @@ body {
 
 h1 {
   font-family: "Gochi Hand", "Georgia", serif;
+  font-size: 30px;
   margin-bottom: 26px;
+}
+h2 {
+  font-family: "Helvetica neue", serif;
+  font-size: 18px;
+  margin: 36px 0 18px 0;
 }
 
 pre {
   background: #f4f4f4;
-  margin: 16px 0;
+  margin: 16px 4px;
   font-family: "Inconsolata", monospace;
   font-size: 15px;
-  padding: 6px;
+  padding: 12px 10px;
+  color: #333;
 }
 
 p {
-  margin: 16px 0;
+  margin: 20px 0;
+}
+
+span.error {
+  color: red;
 }

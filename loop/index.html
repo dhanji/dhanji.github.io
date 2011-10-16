@@ -9,15 +9,111 @@
 <section id="main">
   <h1>Loop</h1>
   <p>
-    Loop is a little, functional language that runs on the JVM. Ironically, there is no loop construction in Loop.
-  </p>
-  <p>
-    Here is quicksort in Loop (similar to haskell):
+    Loop is a little functional language that runs on the JVM.&nbsp;&nbsp;Ironically, there is no loop construct in Loop.
+    Here is a simple function that reverses a string:
   </p>
   <pre>
-quicksort(ls) -->
-  []     : []
-  [x:xs] : quicksort(i for i in ls if i > x) + x + quicksort(i for i in ls if i < x)</pre>
+reverse(str) -->
+  ''          : ''
+  [c:rest]    : reverse(rest) + c</pre>
+  <p>
+    This is pattern matching syntax and it reads as follows:
+  </p>
+  <ul>
+    <li>The reverse of the empty string is the empty string</li>
+    <li>The reverse of a non-empty string is the first character (<code>c</code>) appended to the reverse of
+      the remainder (<code>rest</code>).</li>
+  </ul>
+
+  <p>Loop also supports guards, which are a sophisticated addition to pattern matching:
+  </p>
+
+  <pre>
+sign(x) -->
+  0             : 'zero'
+    | x > 0     : 'positive'
+    | x < 0     : 'negative'</pre>
+
+  <ul>
+    <li>Here the only pattern we're matching is 0</li>
+    <li>A guard is prefixed by <code>|</code> and can be any boolean expression</li>
+  </ul>
+
+  <p>This function gives you a better idea of how guards are used:
+  <pre>
+parse(line) -->
+  ''                                        : Token.EMPTY
+  [x:xs]  | x == '#'                        : Token.COMMENT
+          | x ~= /[-*]/                     : Token.BULLET
+          | x ~= /['"]/ && xs ~= /['"]$/)   : Token.STRING
+          | _                               : Token.UNKNOWN
+  </pre>
+
+  <h2>Blended &nbsp;style</h2>
+  <p>
+    Some JVM languages blend functional and object-oriented approaches. Loop has similar goals, but
+    unlike many of them approaches OO programming from the functional side. For example, these two forms are equivalent:
+  </p>
+
+  <pre>
+reverse('Hamburgers & Hotdogs')
+
+'Hamburgers & Hotdogs'.reverse()
+</pre>
+
+  <h2>Simple stuff</h2>
+  <p>
+    Here's how you something really simple and useful, like open and print lines of a text file:
+  </p>
+  <pre>
+  require io
+
+  main ->
+    print(lines(File.read('thundercats.csv'))</pre>
+
+  <h2>Scope</h2>
+  <p>
+    Loop supports 3 levels of scope. The simplest is public scope, which all functions are by
+    default:
+  </p>
+  <pre>
+  hello ->
+    "Hello"
+
+  main ->
+    print(hello())</pre>
+
+  <p>The function <code>hello()</code> is visible to all parts of the program. The next level is
+  module scope, which is akin to package-private in Java:</p>
+  <pre>
+    # in hello.loop
+    module hello
+
+    @hello ->
+      "Hi"
+
+
+    # in main.loop
+    module main
+
+    main ->
+      <span class="error">@hello()    # results in an error</span></pre>
+
+  <p>
+    Any function prefixed with an <code>@</code> is considered private to the current module.
+    Functions may also be private to other functions, as a way of neatly reusing and hiding specialized
+    code:
+  </p>
+
+  <pre>
+    main ->
+      print(hello())
+      where
+        hello ->
+          "Hi there!"</pre>
+  <p>
+    Everything inside the where block is private to the declaring function.
+  </p>
 </section>
 </body>
 </html>
