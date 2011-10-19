@@ -7,13 +7,13 @@
 </head>
 <body>
 <section id="main">
-  <h1>Loop</h1>
+  <h1>Loop &rang;</h1>
   <p>
     Loop is a little functional language that runs on the JVM.&nbsp;&nbsp;Ironically, there is no loop construct in Loop.
     Here is a simple function that reverses a string:
   </p>
   <pre>
-reverse(str) -->
+reverse(str) =>
   ''          : ''
   [c:rest]    : reverse(rest) + c</pre>
   <p>
@@ -70,6 +70,19 @@ reverse('Hamburgers & Hotdogs')
 
   main ->
     print(lines(File.read('thundercats.csv'))</pre>
+ <p>
+    Here's a function that processes lines of a log file:
+  </p>
+  <pre>
+    process(text, errors) =>
+      (line : /[\r\n]/ : rest)     : rest.process(line.count(errors))
+      _                            : text.count(errors)
+
+      where
+        count(line, errors) ->
+           | line.startsWith('ERROR')   : errors++
+           | _                          : errors
+  </pre>
 
   <h2>Scope</h2>
   <p>
