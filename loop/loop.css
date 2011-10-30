@@ -3,13 +3,17 @@
 }
 
 body {
-  font-family: "Gentium Book Basic", "Times New Roman", serif;
-  font-size: 18px;
+  font-family: Arial, sans-serif;
+  font-size: small;
   color: #333;
 }
 
+body a {
+  color: #5e87ff;
+}
+
 #main {
-  width: 65%;
+  width: 640px;
   margin: 4em auto;
 }
 
@@ -17,18 +21,20 @@ h1 {
   font-family: "Gochi Hand", "Georgia", serif;
   font-size: 30px;
   margin-bottom: 26px;
+  color: #333;
 }
 h2 {
   font-family: "Helvetica neue", serif;
   font-size: 18px;
   margin: 48px 0 18px 0;
+  color: #333;
 }
 
 pre {
   background: #f4f4f4;
   margin: 16px 4px;
-  font-family: "Inconsolata", monospace;
-  font-size: 14px;
+  font-family: "Monaco", monospace;
+  font-size: smaller;
   padding: 12px 10px;
   color: #333;
   border-radius: 3px;
@@ -46,11 +52,17 @@ pre strong {
 
 p {
   margin: 20px 0;
+  line-height: 1.4;
 }
 
 #main code {
-  font-family: "Inconsolata", monospace;
-  font-size: 15px;
+  font-family: "Monaco", monospace;
+  font-size: smaller;
+  background: rgb(252, 229,189);
+  border-radius: 4px;
+  padding: 1px 4px;
+  color: #333;
+  border: 1px solid rgba(0,0,0,0.1);
 }
 
 span.error {

@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Loop</title>
-  <link href="http://fonts.googleapis.com/css?family=Gochi+Hand|Gentium+Book+Basic|Inconsolata&amp;v2" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Gochi+Hand" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="loop.css">
 </head>
 <body>
@@ -18,17 +18,17 @@ reverse(str) =>
   ''          : ''
   (c:rest)    : reverse(rest) + c</pre>
 
-  <p>Loop is dynamically typed and blends object-oriented and functional styles. However unlike some JVM languages,
-  it approaches OO  from the functional side.</p>
-  <h2>Pattern Matching</h2>
   <p>
-    The function <code>reverse()</code> uses pattern matching, and should be read as follows:
-  </p>
-  <ul>
-    <li>The reverse of the empty string is the empty string</li>
-    <li>The reverse of a non-empty string is the first character <code>c</code> appended to the reverse of
-      the <code>rest</code>.</li>
-  </ul>
+      The function <code>reverse()</code> uses pattern matching, and should be read as follows:
+    </p>
+    <ul>
+      <li>The reverse of the empty string is the empty string</li>
+      <li>The reverse of a non-empty string is the first character <code>c</code> appended to the reverse of
+        the <code>rest</code>.</li>
+    </ul>
+
+  <p>Loop is dynamically typed and directly interoperates with Java objects.</p>
+  <h2>Pattern Matching</h2>
 
   <p>With Loop's pattern matching, you can even do interesting things like this:
   </p>
@@ -42,8 +42,28 @@ unlines(input) =>
   You can easily imagine extending this to process a log or CSV file.
     <p>You may also notice that
   <code>.unlines()</code> is called with postfix syntax instead of the common prefix syntax (as
-    was the case with <code>reverse()</code>, earlier), this is part of Loop's blended style and is
-  entirely optional.</p>
+    was the case with <code>reverse()</code>, earlier), this syntactic sugar to improve the
+  readability of
+  relationships between data and operations.</p>
+
+  <h2>Web Applications</h2>
+  <p>
+    OK, let's do something more interesting. If you add <code>LoopFilter</code> to any Java servlet
+    container, you can respond to HTTP requests with the following code:
+  </p>
+  <pre>
+handle(request) =>
+  [ action <- params.action ]  | action == 'addUser'   : add(request.newUser)
+                               | action == 'editName'  : edit(request.id, request.name)
+                               | action == 'delete'    : remove(request.id)
+                               | otherwise             : 400</pre>
+
+  <p>Here, we're using a form of object pattern matching to handle various
+  kinds of requests for adding or updating users. First a pattern rule extracts the
+  <code>action</code> query parameter from the request, then <em>guards</em> select the appropriate
+  action (adding, editing or deleting users) by inspecting its value.</p>
+
+  <p>This makes web programming simple, declarative and concise.</p>
 
   <h2>Topics</h2>
   <p>If you are interested read further about Loop, below.</p>
@@ -67,9 +87,9 @@ unlines(input) =>
     <pre>
 capitalize(text) =>
   (word : ' ' : rest)      : capitalizeWord(word) + ' ' + capitalize(rest)
-  <strong>where
+  where
     capitalizeWord =>
-      (c:rest)             : upperCase(c) + rest</strong></pre>
+      (c:rest)             : upperCase(c) + rest</pre>
   <p>
     Here, function <code>capitalizeWord()</code> is defined inside a <code>where</code> block, making
     it private to <code>capitalize()</code>, which uses it to capitalize the first character of every
