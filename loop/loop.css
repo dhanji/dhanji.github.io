@@ -5,6 +5,7 @@
 body {
   font-family: "Gentium Book Basic", "Times New Roman", serif;
   font-size: 18px;
+  color: #333;
 }
 
 #main {
@@ -20,22 +21,43 @@ h1 {
 h2 {
   font-family: "Helvetica neue", serif;
   font-size: 18px;
-  margin: 36px 0 18px 0;
+  margin: 48px 0 18px 0;
 }
 
 pre {
   background: #f4f4f4;
   margin: 16px 4px;
   font-family: "Inconsolata", monospace;
-  font-size: 15px;
+  font-size: 14px;
   padding: 12px 10px;
   color: #333;
+  border-radius: 3px;
+  border: 1px solid #ddd;
+}
+
+pre comment {
+  color: #999;
+  font-weight: lighter;
+}
+
+pre strong {
+  color: #555;
 }
 
 p {
   margin: 20px 0;
 }
 
+#main code {
+  font-family: "Inconsolata", monospace;
+  font-size: 15px;
+}
+
 span.error {
   color: red;
+}
+
+ul.topics {
+  list-style-type: square;
+  padding-left: 22px;
 }
