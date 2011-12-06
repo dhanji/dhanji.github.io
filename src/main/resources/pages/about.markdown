@@ -26,4 +26,5 @@ Additionally, I am one of the authors of the [JAX-RS](http://en.wikipedia.org/wi
 
 If you like books on Software Engineering you might enjoy [Dependency Injection: Design Patterns](http://manning.com/prasanna).
 
-If you'd like to shout a question at me or simply say hi, I'm [on Twitter](http://twitter.com/dhanji). Or privately via [myfirstname] at gmail.
+If you'd like to shout a question at me or simply say hi, I'm [on Twitter](http://twitter.com/dhanji).
+ Or privately via [myfirstname] at gmail.
