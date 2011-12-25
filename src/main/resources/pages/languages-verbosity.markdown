@@ -44,7 +44,7 @@ They have achieved remarkable results:
       }
     }
 
-<caption>Java code for determining if a string contains numeric characters [1]</caption>
+<caption>Java code for determining if a string contains numeric characters</caption>
 
     val numeric = string.exists(_.isDigit)
 
@@ -120,7 +120,7 @@ and class is clear:
 
     h = happy.happy.class;
 
-Here the left-most happy is obviously a package and the right-most, a class. This is a remarkable
+Here the left-most happy is obviously a package and the right-most, a class [1]. This is a remarkable
 property of the language and it is still more remarkable that this has been preserved across so many
 versions of Java. It may not be immediately apparent, but this strict adherence to grammatical
 rigor has many benefits to readability.
@@ -210,5 +210,8 @@ there will always be an evolving, frothing frontier to challenge and provoke us-
 write better, and create better languages to express ourselves.
 
 <br>
+
+[1] Technically this could refer to an outer/inner class structure, but that serves effectively
+the same purpose (namespace).
 
 <div style="font-size: small;">Find me on <a href="http://twitter.com/dhanji">twitter</a></div>
