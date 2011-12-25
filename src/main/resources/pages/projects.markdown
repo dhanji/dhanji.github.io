@@ -38,8 +38,5 @@ After Wave, I also worked on a few secret projects at Google. One of these was r
 [smart content discovery](http://googleblog.blogspot.com/2011/03/whats-new-with-blogger.html)
 feature that was launched inside Blogger at SXSW 2010.
 
-I frequently collaborate with [The Man In Blue](http://themaninblue.com) whom I consider without
-hyperbole to be the world's finest user experience designer, bar none.
-
 In addition, I have a number of side projects I am always working on. As they mature I will post
 about them on this website.
