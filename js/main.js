@@ -56,8 +56,14 @@ function openReadingPanel(page) {
       .animate({
         left: left
       }, function() {
-        // sHow accent when done
-        $('#main h1.accent').fadeIn();
+        // Show accent when done
+        var accent = $('#main h1.accent');
+        accent.fadeIn(function() {
+          // Trim its length
+          var maxLength = 10;
+          if (accent.html().length > maxLength)
+            accent.html($.trim(accent.html().slice(0, maxLength)) + '...');
+        });
       });
   _gaq.push(['_trackEvent', 'panelView', page]);
 }
