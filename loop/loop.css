@@ -26,6 +26,25 @@ body a {
   width: 460px;
 }
 
+#sidebar {
+  position: absolute;
+  left: 12%;
+  top: 68px;
+}
+
+#sidebar button {
+  display: block;
+  background: white;
+  border: none;
+  width: 78px;
+  color: #777;
+  padding: 4px 8px;
+  margin: 10px auto;
+  border-radius: 20px;
+  box-shadow: 0 0 3px rgba(0,0,0,0.3);
+  cursor: pointer;
+}
+
 h1 {
   font-family: "Gochi Hand", "Georgia", serif;
   font-size: 30px;
@@ -111,6 +130,10 @@ ul.topics {
   list-style-type: none;
   padding-left: 18px;
 }
+ul.topics > li pre {
+  display: none;
+}
+
 ul.topics > li {
   padding-left: 4px;
   padding-bottom: 4px;
@@ -120,10 +143,10 @@ ul.topics > li > img { /* list bullet icon */
   opacity: 0.3;
   padding: 0 6px 0 0;
 }
-ul.topics >li a {
+ul.topics > li a {
   text-decoration: none;
 }
-ul.topics >li a:hover {
+ul.topics > li a:hover {
   text-decoration: underline;
 }
 
@@ -171,4 +194,18 @@ ul.topics >li a:hover {
 #link-tute > img {
   width: 14px !important;
   margin: 0 6px -2px 4px;
+}
+
+#bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+#bottom div {
+  font-size: smaller;
+  text-align: center;
+  color: #bbb;
+  margin: 8px auto;
+  width: 360px;
 }
