@@ -78,10 +78,15 @@ public class Wideplay {
       // JSoup this sucka to grab metadata out of it.
       Document document = Jsoup.parse(html);
 
+      Elements nopublish = document.select("meta[nopublish]");
+      if (!nopublish.isEmpty())
+        continue;
+
       // There should always be an h1
       Elements h1 = document.select("h1");
       Elements noindex = document.select("meta[noindex]");
       boolean shouldIndex = noindex.isEmpty();
+
       Preconditions.checkState(!h1.isEmpty(), file.getName() + " is missing a title (<h1> tag)");
       h1.remove();  // remove from document as it is rendered using JSON.
       noindex.remove(); // remove internal meta tags.
