@@ -7,6 +7,74 @@
     
     <item>
       <guid isPermaLink="true">
+        http://rethrick.com/visual-testing
+      </guid>
+      <title>Testing Parsers & Concurrent Code</title>
+      <description>&lt;p&gt;Testing is an interesting subject. Everyone pays lip service to it, but I suspect that secretly no one wants to do it. I'm specifically talking about writing automated tests. Much of the available literature focuses on testing frameworks (xUnit, QuickCheck, Selenium, and so on) or methodologies (test-driven development, functional testing), but not much on testing techniques. This may sound reasonable, but by comparison literature on writing production code is considerably richer&sbquo;&amp;Auml;&amp;icirc;you can find all kinds of books and articles on design patterns, architecture, and algorithms. But apart from some pedantic stuff about mock versus stub objects, I haven't really come across a lot on the techniques of testing. I've always found learning a new technique to be far more valuable than learning a new framework.&lt;/p&gt; 
+&lt;p&gt;Until a few years ago, I had pretty much assumed that I knew all there was to know about testing. It was a chore that simply had to be endured, with things like test-driven development (TDD) being occasional, interesting distractions. However, since then I've come to realize that what I don't know far outweighs what I do know. Visual testing is a technique I picked up from watching and imitating brilliant engineers over the years. While it may not be revolutionary, I've found it incredibly useful when attacking difficult testing problems.&lt;/p&gt; 
+&lt;h3&gt;Comparing Strings&lt;/h3&gt; 
+&lt;p&gt;Like many good techniques, visual testing is largely about giving you clear, concise, and exhaustive information about what happened. Here's a simple example:&lt;/p&gt; 
+&lt;pre&gt;&lt;code&gt; @Test
+ public void sortSomeNumbers() {
+   assertEquals(&amp;quot;[1, 2, 3]&amp;quot;, Sorter.sort(3, 2, 1).toString());
+ }
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;This test asserts that my program, Sorter, correctly sorts a list of three numbers. But the test is comparing strings, rather than asserting order in a list of numbers. &lt;em&gt;If this example is setting off your type-safety warning bells, don't worry; its benefit will become clear shortly.&lt;/em&gt;&lt;/p&gt; 
+&lt;p&gt;Since we're only testing string equality, it doesn't really matter if Sorter.sort() returns a list, an array, or some other kind of object&sbquo;&amp;Auml;&amp;icirc;as long as its string form produces a result that we expect. This capability is incredibly powerful for a couple of reasons:&lt;/p&gt; 
+&lt;p&gt;You can instantly see when something is wrong by simply diffing two strings. You're free to change your mind about the underlying logic (repeatedly), and your test remains unchanged. You might argue that the second point is achieved with a sufficiently abstract interface&sbquo;&amp;Auml;&amp;icirc;this is largely true, but in many cases it's quite cumbersome. (Particularly with evolving code, I've found it quite painful.) And refactoring tools only take you so far. Using strings neatly sidesteps this problem.&lt;/p&gt; 
+&lt;p&gt;&lt;i&gt;Read the &lt;a href=&quot;http://www.informit.com/articles/article.aspx?p=1831497&quot;&gt;rest of this article&lt;/a&gt; (at InformIT).&lt;/i&gt;&lt;/p&gt; 
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt; 
+&lt;div style=&quot;font-size: small;&quot;&gt;
+ Find me on 
+ &lt;a href=&quot;http://twitter.com/dhanji&quot;&gt;twitter&lt;/a&gt;
+&lt;/div&gt;</description>
+      <link>http://rethrick.com/#visual-testing</link>
+    </item>
+    
+    <item>
+      <guid isPermaLink="true">
+        http://rethrick.com/weekendproject
+      </guid>
+      <title>Exploring the mythical weekend project</title>
+      <description>&lt;p&gt;Recently, I decided to give up one of my weekends and see if I could build an entire working product from scratch. If you're like me, you have a lot of ideas rattling around in your head and far too little time to realize any of them. Some seem like world-beaters, others are interesting asides that would probably delight a niche audience. Regardless, I can't shake the feeling that the world (and certainly, I) would be better off with these ideas material in reality, and perhaps more importantly--out of my head.&lt;/p&gt; 
+&lt;p&gt;I'll give away the ending: I succeeded. It took me roughly 16 hours to plan, build and launch my idea to the world. And then, there was anti-climax. &lt;/p&gt; 
+&lt;p&gt;But before we get into that, let me retrace my steps over a gruelling, frustrating and wholly satisfying two days.&lt;/p&gt; 
+&lt;h3&gt;The Idea&lt;/h3&gt; 
+&lt;p&gt;The easiest part of the whole process was the idea. Not only do I have far too many of those available, but at any given time I am also sitting on a pile of partially-built prototypes. They number in the 20s at current and were variously built at airports, hotel-lobbies, conference venues and any other time that I imagine the rest of the population spends at the beach and on other healthy activities.&lt;/p&gt; 
+&lt;p&gt;If you hack on open source or your own startup ideas you know exactly what I'm talking about. Many of these projects will never see the light of day, but there is a primal, irrepressible need at the cellular level to try.&lt;/p&gt; 
+&lt;p&gt;I picked the one that I've been thinking about most recently, and opened my code editor. As a lark, I decided to put this up on twitter:&lt;/p&gt; 
+&lt;blockquote class=&quot;twitter-tweet&quot;&gt;
+ &lt;p&gt; Attempting &amp;quot;weekend coding project&amp;quot; Goal: working app in 2 days. Will I succeed? Will I fail miserably? Watch this spot for hourly updates!&lt;/p&gt;@dhanji 
+&lt;/blockquote&gt; 
+&lt;h3&gt;The Journey&lt;/h3&gt; 
+&lt;p&gt;There was quite a spirited response, plenty of encouragement, curiosity and snark for good measure:&lt;/p&gt; 
+&lt;blockquote class=&quot;twitter-tweet&quot;&gt;
+ &lt;p&gt; @dhanji It'll kinda work but then you'll never finish it really is what usually happens.&lt;/p&gt; @dosinga 
+&lt;/blockquote&gt; 
+&lt;blockquote class=&quot;twitter-tweet&quot;&gt;
+ &lt;p&gt; @dhanji hashtag please&lt;/p&gt; @j03w 
+&lt;/blockquote&gt; 
+&lt;blockquote class=&quot;twitter-tweet&quot;&gt;
+ &lt;p&gt; @dhanji Wats the app? Wat technologies u using?&lt;/p&gt; @AalasiAadmi 
+&lt;/blockquote&gt; 
+&lt;p&gt;I had not planned to put anything on twitter, and I certainly had not planned on anyone following me through two days of blathering on about obscure compile bugs, &lt;a href=&quot;http://en.wikipedia.org/wiki/User_error&quot;&gt;PEBKAC&lt;/a&gt; errors and mostly, simple &lt;a href=&quot;http://en.wikipedia.org/wiki/Rtfm&quot;&gt;RTFM&lt;/a&gt; whining. This was an unexpected boost to my productivity and cheer. It turned into a game: if I ran into something frustrating I cursed and swore on twitter while my friends cheered me up or brought me back down to earth.&lt;/p&gt; 
+&lt;blockquote class=&quot;twitter-tweet&quot;&gt;
+ &lt;p&gt; Feeling a lot slower than I normally do with this setup. Waiting for that boulder to cross the crest of the hill #weekendproject&lt;/p&gt; @dhanji 
+&lt;/blockquote&gt; 
+&lt;blockquote class=&quot;twitter-tweet&quot;&gt;
+ &lt;p&gt; @dhanji perhaps it's all the tweeting slowing you down :D&lt;/p&gt; --private-- 
+&lt;/blockquote&gt; 
+&lt;p&gt;&lt;i&gt;Read the &lt;a href=&quot;http://www.informit.com/articles/article.aspx?p=1829420&quot;&gt;rest of this article&lt;/a&gt; (at InformIT).&lt;/i&gt;&lt;/p&gt; 
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt; 
+&lt;div style=&quot;font-size: small;&quot;&gt;
+ Find me on 
+ &lt;a href=&quot;http://twitter.com/dhanji&quot;&gt;twitter&lt;/a&gt;
+&lt;/div&gt;</description>
+      <link>http://rethrick.com/#weekendproject</link>
+    </item>
+    
+    <item>
+      <guid isPermaLink="true">
         http://rethrick.com/sherlock
       </guid>
       <title>More than a Boswell</title>

@@ -6,6 +6,7 @@ body {
   font-family: Arial, sans-serif;
   font-size: small;
   color: #333;
+  background-image: url(bg.png);
 }
 
 body a {
@@ -14,7 +15,10 @@ body a {
 
 #main {
   width: 640px;
-  margin: 4em auto;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 4em;
+  background-color: #fff;
 }
 
 h1 {

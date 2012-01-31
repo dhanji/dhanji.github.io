@@ -171,14 +171,12 @@ section#index div.index {
   margin-top: 60px;
   margin-left: 2px;
   padding-left: 0;
-  -webkit-column-count: 2;
 
   width: 620px;
   height: 650px;
 }
 section#index article {
   color: #777;
-  width: 190px;
 }
 section#index article h3:hover {
   color: #0099ff;

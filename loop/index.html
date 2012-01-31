@@ -11,63 +11,9 @@
   <h1>Loop &rang;</h1>
   <p>
     Loop is a little functional language that runs on the JVM.&nbsp;&nbsp;Ironically, there is no loop construct in Loop.
-    Here is a function that reverses a string:
-  </p>
-  <pre>
-reverse(str) =>
-  ''          : ''
-  (c:rest)    : reverse(rest) + c</pre>
-
-  <p>
-      The function <code>reverse()</code> uses pattern matching, and should be read as follows:
-    </p>
-    <ul>
-      <li>The reverse of the empty string is the empty string</li>
-      <li>The reverse of a non-empty string is the first character <code>c</code> appended to the reverse of
-        the <code>rest</code>.</li>
-    </ul>
-
-  <p>Loop is dynamically typed and directly interoperates with Java objects.</p>
-  <h2>Pattern Matching</h2>
-
-  <p>With Loop's pattern matching, you can even do interesting things like this:
   </p>
 
-  <pre>
-unlines(input) =>
-  (line : '\n' : rest)    : line + rest.unlines()
-  otherwise               : input</pre>
-
-  <p>This function uses greedy pattern matching to remove newline characters from a string.
-  You can easily imagine extending this to process a log or CSV file.
-    <p>You may also notice that
-  <code>.unlines()</code> is called with postfix syntax instead of the common prefix syntax (as
-    was the case with <code>reverse()</code>, earlier), this syntactic sugar to improve the
-  readability of
-  relationships between data and operations.</p>
-
-  <h2>Web Applications</h2>
-  <p>
-    OK, let's do something more interesting. If you add <code>LoopFilter</code> to any Java servlet
-    container, you can respond to HTTP requests with the following code:
-  </p>
-  <pre>
-handle(request) =>
-  [ action <- params.action ]  | action == 'addUser'   : add(request.newUser)
-                               | action == 'editName'  : edit(request.id, request.name)
-                               | action == 'delete'    : remove(request.id)
-                               | otherwise             : 400</pre>
-
-  <p>Here, we're using a form of object pattern matching to handle various
-  kinds of requests for adding or updating users. First a pattern rule extracts the
-  <code>action</code> query parameter from the request, then <em>guards</em> select the appropriate
-  action (adding, editing or deleting users) by inspecting its value.</p>
-
-  <p>This makes web programming simple, declarative and concise.</p>
-
-  <h2>Topics</h2>
-  <p>If you are interested read further about Loop, below.</p>
-
+  <h2>Features</h2>
   <ul class="topics">
     <li><a href="#">Functions</a></li>
     <li><a href="#">Scopes</a></li>
@@ -79,46 +25,6 @@ handle(request) =>
     <li><a href="#">Interfaces</a></li>
     <li><a href="#">Calling into Java</a></li>
   </ul>
-
-  <h2>Scopes</h2>
-  <p>There are primarily 3 scopes in Loop. The simplest is public, which all functions are by
-  default. The next is function scope, which allows you to define helper functions that exist
-  only within the scope of a parent function:</p>
-    <pre>
-capitalize(text) =>
-  (word : ' ' : rest)      : capitalizeWord(word) + ' ' + capitalize(rest)
-  where
-    capitalizeWord =>
-      (c:rest)             : upperCase(c) + rest</pre>
-  <p>
-    Here, function <code>capitalizeWord()</code> is defined inside a <code>where</code> block, making
-    it private to <code>capitalize()</code>, which uses it to capitalize the first character of every
-    word of a string.
-  </p>
-  <p>The third scope is for privacy to a <code>module</code> and is denoted by the <code>@</code>
-    prefix. See the section on <a href="#">modules</a> to learn more.</p>
-
-  <h2>Data Structures</h2>
-  <p>Loop provides some data structures out of the box. Apart from Java primitives like int and boolean,
-  Loop also treats lists, strings and maps as primitives:</p>
-    <pre>
-reverse(list) =>
-  []        : []
-  [x:xs]    : reverse(xs) + x</pre>
-  <p>
-    This is identical to the string reversal function at the top of the page, but instead operates
-    on lists. Any <code>java.util.List</code> can be reversed by this function. Similarly, simple
-    name/value pairs may be associated using a map:
-  </p>
-    <pre>
-details(id) =>
-  0         : [::]
-  1         : [ 'name' :: 'Dhanji', 'age' :: '30' ]
-  2         : [ 'name' :: 'Michael', 'age' :: '212' ]
-  otherwise : [ 'name' :: 'Unknown', 'age' :: '-1' ]</pre>
-
-  <p>The symbols <code>[::]</code> and <code>[]</code> denote the empty map and list, respectively.</p>
-
 </section>
 </body>
 </html>
