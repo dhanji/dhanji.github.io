@@ -17,7 +17,7 @@ Like many good techniques, visual testing is largely about giving you clear, con
 This test asserts that my program, Sorter, correctly sorts a list of three numbers. But the test is comparing strings, rather than asserting order in a list of numbers.
 _If this example is setting off your type-safety warning bells, don't worry; its benefit will become clear shortly._
 
-Since we're only testing string equality, it doesn't really matter if Sorter.sort() returns a list, an array, or some other kind of object—as long as its string form produces a result that we expect. This capability is incredibly powerful for a couple of reasons:
+Since we're only testing string equality, it doesn't really matter if Sorter.sort() returns a list, an array, or some other kind of object-as long as its string form produces a result that we expect. This capability is incredibly powerful for a couple of reasons:n
 
 You can instantly see when something is wrong by simply diffing two strings.
 You're free to change your mind about the underlying logic (repeatedly), and your test remains unchanged.

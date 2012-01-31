@@ -89,7 +89,7 @@
  }
 </code></pre> 
      <p>This test asserts that my program, Sorter, correctly sorts a list of three numbers. But the test is comparing strings, rather than asserting order in a list of numbers. <em>If this example is setting off your type-safety warning bells, don't worry; its benefit will become clear shortly.</em></p> 
-     <p>Since we're only testing string equality, it doesn't really matter if Sorter.sort() returns a list, an array, or some other kind of object‚&Auml;&icirc;as long as its string form produces a result that we expect. This capability is incredibly powerful for a couple of reasons:</p> 
+     <p>Since we're only testing string equality, it doesn't really matter if Sorter.sort() returns a list, an array, or some other kind of object-as long as its string form produces a result that we expect. This capability is incredibly powerful for a couple of reasons:n</p> 
      <p>You can instantly see when something is wrong by simply diffing two strings. You're free to change your mind about the underlying logic (repeatedly), and your test remains unchanged. You might argue that the second point is achieved with a sufficiently abstract interface--this is largely true, but in many cases it's quite cumbersome. (Particularly with evolving code, I've found it quite painful.) And refactoring tools only take you so far. Using strings neatly sidesteps this problem.</p> 
      <p><i>Read the <a href="http://www.informit.com/articles/article.aspx?p=1831497">rest of this article</a> (at InformIT).</i></p> 
      <p><br /></p> 
