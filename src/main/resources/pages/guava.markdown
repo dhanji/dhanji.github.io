@@ -3,11 +3,13 @@
 
 This post by my former colleague, Kevin Bourrillion, has caused a bit of a stir amongst the Java faithful. 
 
-[https://plus.google.com/113026104107031516488/posts/ZRdtjTL1MpM]
+[https://plus.google.com/113026104107031516488/posts/ZRdtjTL1MpM](https://plus.google.com/113026104107031516488/posts/ZRdtjTL1MpM)
 
 It's not really fair to blame everything in the comments threads on the original post, but it takes a special kind of audacity to suggest that it is harder to accept patches to Guava (a nice, elegant, but not all that significant library) than the the Linux Kernel:
 
+<blockquote>
 "Disclaimer: I don't know what patches to the Linux Kernel are typically like, nor PCGen. But, +Martijn Verburg, there's a pretty big difference between submitting a patch to a library and submitting a patch to a "project". Patches to libraries are typically changes/additions/removals to the API, whereas patches to 'projects' are typically changes to the internals. It's a whole lot easier to change the internals of something than it is to change the API. Changing the API means the effects can bubble outwards. Changing the internals is usually just optimizations or bug-fixes."
+</blockquote>
 
 I am aghast. This is the Linux Kernel we're talking about here. The. Linux. Kernel. If anything has a bubble-out impact in all of computing, it is this. Short of the impact of cosmic radiation on silicon micro-architectures, it is the single most fundamental  part of the stack of modern computing.
 
@@ -33,7 +35,9 @@ One of Kevin's own other projects--Guice--did the opposite to great effect. It i
 
 In the end developing in the open and feeding the patches back to Google was the right call. It accorded with the spirit of open source.
 
+<blockquote>
 "Kevin Bourrillion - Well, there is the fact that we take all of our source code, put it out where you can have it, with an Apache2 license on it giving you leeway to do almost whatever you want with it. If that's not enough to be called "open source", I don't mind if people want to say that Guava is not open source."
+</blockquote>
 
 So take up that mantra, and let it be what it wants to be. Engage with the community and let them embrace you--that doesn't mean you have to accept all their patches. It doesn't even mean accept 10% of them. Not even 1%. It means, be open to considering them. Treat them like peers, like people who have real problems and real solutions too. Because believe it or not there are talented people working everywhere and their worth in testing, debugging and contributing changes is incalculable. Their code will often surprise you, pleasantly. And it is worth it.
 
