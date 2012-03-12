@@ -8,17 +8,17 @@ This post by my former colleague, Kevin Bourrillion, has caused a bit of a stir 
 It's not really fair to blame everything in the comments threads on the original post, but it takes a special kind of audacity to suggest that it is harder to accept patches to Guava (a nice, elegant, but not all that significant library) than the the Linux Kernel:
 
 <blockquote>
-"Disclaimer: I don't know what patches to the Linux Kernel are typically like, nor PCGen. But, +Martijn Verburg, there's a pretty big difference between submitting a patch to a library and submitting a patch to a "project". Patches to libraries are typically changes/additions/removals to the API, whereas patches to 'projects' are typically changes to the internals. It's a whole lot easier to change the internals of something than it is to change the API. Changing the API means the effects can bubble outwards. Changing the internals is usually just optimizations or bug-fixes."
+"Sam Berlin - Disclaimer: I don't know what patches to the Linux Kernel are typically like, nor PCGen. But, +Martijn Verburg, there's a pretty big difference between submitting a patch to a library and submitting a patch to a "project". Patches to libraries are typically changes/additions/removals to the API, whereas patches to 'projects' are typically changes to the internals. It's a whole lot easier to change the internals of something than it is to change the API. Changing the API means the effects can bubble outwards. Changing the internals is usually just optimizations or bug-fixes."
 </blockquote>
 
-I am aghast. This is the Linux Kernel we're talking about here. The. Linux. Kernel. If anything has a bubble-out impact in all of computing, it is this. Short of the impact of cosmic radiation on silicon micro-architectures, it is the single most fundamental  part of the stack of modern computing.
+I am quite fond of Sam as a friend, but I am aghast. This is the Linux Kernel we're talking about here. _The. Linux. Kernel._ If anything has a bubble-out impact, it is this. Short of the silicon diode micro-architecture, it is the most fundamental part of the stack of modern computing.
 
-More than that it is the single most exemplary case of an open source project that literally accepts thousands of contributions simultaneously, processes, curates and applies them to the most impactful 4 megabytes in the entire technology world.
+More than that it is the single most poignant example of an open source project that accepts thousands of contributions simultaneously, processes, curates and applies them to the most impactful 5 megabytes[1] in the entire technology world.
 
 Also, the Kernel is an API. It is the most fundamental of APIs. It is how you call into the physical hardware using the abstractions of device drivers, system calls and threads. It is harder to accept patches into the least significant part of the Linux Kernel on its least active day than it will ever be for Guava.
 
 <blockquote>
-"Be honest: if you were going to sign yourself up for doing all that work above... wouldn't you at least want to have the pleasure of writing the code for it yourself? I love writing code -- that's why I do this! -- but such a large majority of my time goes into activities like those described above. If my job were all about just applying other people's patches, I would inevitably start hating it after a while. Let me have some fun sometimes, okay? :-)"
+"Kevin Bourrillion - Be honest: if you were going to sign yourself up for doing all that work above... wouldn't you at least want to have the pleasure of writing the code for it yourself? I love writing code -- that's why I do this! -- but such a large majority of my time goes into activities like those described above. If my job were all about just applying other people's patches, I would inevitably start hating it after a while. Let me have some fun sometimes, okay? :-)"
 </blockquote>
 
 This is a nice sentiment. I like Kevin, so I am going to smile back. =) There you go. But let's be honest--it is hyperbolic and a reductio ad absurdum. "all about just applying other people's patches" is nowhere near the stance he has taken. Every open source project needs a strong, principled leader with a solid vision for its future. A lot of the time this means saying no to things--and that's exactly what a benevolent dictator is there for. But even Saddam Hussein pretended to hold elections every now and then for the illusion of legitimacy.
@@ -41,6 +41,8 @@ In the end developing in the open and feeding the patches back to Google was the
 
 So take up that mantra, and let it be what it wants to be. Engage with the community and let them embrace you--that doesn't mean you have to accept all their patches. It doesn't even mean accept 10% of them. Not even 1%. It means, be open to considering them. Treat them like peers, like people who have real problems and real solutions too. Because believe it or not there are talented people working everywhere and their worth in testing, debugging and contributing changes is incalculable. Their code will often surprise you, pleasantly. And it is worth it.
 
+
+[1] <pre><code>-rw-r--r-- 1 root root 5089792 Oct 25 00:48 /boot/vmlinuz</code></pre>
 
 <br>
 
