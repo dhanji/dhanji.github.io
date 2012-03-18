@@ -13,7 +13,7 @@ You can achieve server-to-client message pushing in several different ways:
   * Forever Frame - An iFrame whose content length is infinite. You just keep writing script tags
  out that invoke a callback in the parent frame with the server's push data. This is commonly used with IE.
   * Hanging GET (Multipart response) - This is a wonderful hack around an occult and obscure
- behavior introduced by Netscape. It only works in Firefox and Safari/Chrome, but it is brilliant—by
+ behavior introduced by Netscape. It only works in Firefox and Safari/Chrome, but it is brilliant-by
   reusing the ability to send multiple images back in a single response, you can instead encode JSON
   packets chunked by message length. The browser processes each JSON packet without ever closing the
   response stream, which can live forever.

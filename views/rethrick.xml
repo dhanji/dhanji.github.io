@@ -15,7 +15,7 @@
 &lt;ul&gt; 
  &lt;li&gt;Websockets - HTML5 standard that allows you to establish a full-duplex TCP socket with a high-level Javascript API. Only Chrome/Safari, Opera and Firefox seem to support this (Firefox 4 has since disabled support for security reasons).&lt;/li&gt; 
  &lt;li&gt;Forever Frame - An iFrame whose content length is infinite. You just keep writing script tags out that invoke a callback in the parent frame with the server's push data. This is commonly used with IE.&lt;/li&gt; 
- &lt;li&gt;Hanging GET (Multipart response) - This is a wonderful hack around an occult and obscure behavior introduced by Netscape. It only works in Firefox and Safari/Chrome, but it is brilliant&mdash;by reusing the ability to send multiple images back in a single response, you can instead encode JSON packets chunked by message length. The browser processes each JSON packet without ever closing the response stream, which can live forever.&lt;/li&gt; 
+ &lt;li&gt;Hanging GET (Multipart response) - This is a wonderful hack around an occult and obscure behavior introduced by Netscape. It only works in Firefox and Safari/Chrome, but it is brilliant-by reusing the ability to send multiple images back in a single response, you can instead encode JSON packets chunked by message length. The browser processes each JSON packet without ever closing the response stream, which can live forever.&lt;/li&gt; 
  &lt;li&gt;Hanging GET (Long polling) - A less wonderful but perhaps more effective hack, a long poll is very much like a regular poll except that if there is no data, the server holds the stream open rather than return an empty response. When there is data to push, it is written and the response is closed. The client immediately opens a new request to re-establish this backchannel. A clever scheme will hold open POSTs that the client uses to send data and flip between them. This is the basis for the Bayeaux protocol.&lt;/li&gt; 
  &lt;li&gt;Other (Flash Socket, Java Pushlet, etc.) - These rely on plugins to open a duplex channel to the server and have their own issues with compatibility and problems working via proxies.&lt;/li&gt; 
 &lt;/ul&gt; 
@@ -25,6 +25,54 @@
 &lt;p&gt;My advice? Build a simple RPC abstraction on top of websockets. Test with Chrome or Firefox and then when you really need to support other browsers sub in the hand-over-hand long polling method I described above.&lt;/p&gt; 
 &lt;p&gt;I'll post any code I come up with.&lt;/p&gt;</description>
       <link>http://rethrick.com/#comets-meteors</link>
+    </item>
+    
+    <item>
+      <guid isPermaLink="true">
+        http://rethrick.com/crosstalk
+      </guid>
+      <title>Crosstalk: A Chat App</title>
+      <description>&lt;p&gt;Not long ago there was a crazy rush of startups building group chat applications. Names like Beluga, Convore, Banter.ly, Group.me, Brizzly and others spring to mind. Other, more mature products like 37signals' Campfire and web-based IRC clients are also part of this suite.&lt;/p&gt; 
+&lt;p&gt;The space is crowded, and recently bubble-like in its growth. I think there are a multitude of reasons for this:&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;Status updates have become the currency of social interaction thanks to Twitter and Facebook&lt;/li&gt; 
+ &lt;li&gt;There is a real need for group communication that these products do not provide&lt;/li&gt; 
+ &lt;li&gt;It is fairly easy to write a group chat app, and the point of distincion is all about UI&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;p&gt;As an experiment to test these three theories, &lt;a href=&quot;http://themaninblue.com&quot;&gt;The Man in Blue&lt;/a&gt; and I took a week to see if we could build such a group-chat application. We came up with Crosstalk after four days.&lt;/p&gt; 
+&lt;p&gt;&lt;a href=&quot;http://rethrick.com/images/xtalk-home.png&quot;&gt; &lt;img src=&quot;http://rethrick.com/images/xtalk-home.png&quot; style=&quot;width:400px; display: block; margin: 0 auto; border: 1px solid #777; padding: 2px;&quot; /&gt; &lt;/a&gt;&lt;/p&gt; 
+&lt;p&gt;&lt;br /&gt; &lt;a href=&quot;http://rethrick.com/images/xtalk-room.png&quot;&gt; &lt;img src=&quot;http://rethrick.com/images/xtalk-room.png&quot; style=&quot;width:400px; display: block; margin: 0 auto; border: 1px solid #777; padding: 2px;&quot; /&gt; &lt;/a&gt;&lt;/p&gt; 
+&lt;p&gt;We have no particular intention of making this a startup or a running service (for reasons obvious from above), so in light of that I am announcing the release of the code as open source to do with as you will:&lt;/p&gt; 
+&lt;p&gt;&lt;a href=&quot;http://github.com/dhanji/crosstalk&quot;&gt;http://github.com/dhanji/crosstalk&lt;/a&gt;&lt;/p&gt; 
+&lt;h3&gt;Events&lt;/h3&gt; 
+&lt;p&gt;To give ourselves a specific goal, we focused on realtime chat for events, and customized it for the excellent &lt;a href=&quot;http://webstock.co.nz&quot;&gt;Webstock&lt;/a&gt; conference in New Zealand. We hoped it would prove useful for session attendees to share instant reactions, links and photos.&lt;/p&gt; 
+&lt;p&gt; It proved to have mixed results, some sessions were good and others weak. We didn't promote the app at all beyond a tweet, so this may have been the cause. Also 4-days of coding are bound to leave one with a few bugs.&lt;/p&gt; 
+&lt;h3&gt;Technology&lt;/h3&gt; 
+&lt;p&gt;The server was written on Google Appengine/Java, and powered by &lt;a href=&quot;http://sitebricks.org&quot;&gt;Sitebricks&lt;/a&gt;. We used the Appengine Channel API for Comet support (Message Push to the browser) and the client was written in jQuery with a focus on HTML5 features.&lt;/p&gt; 
+&lt;p&gt;I am proud to say we managed to get nearly every feature we wanted done, though not all worked to satisfaction for various reasons, including some quirks of Appengine. Here's an overview:&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;You sign in with a Twitter account over OAuth&lt;/li&gt; 
+ &lt;li&gt;Adding &lt;em&gt;terms&lt;/em&gt; to a room triggers a periodic fetch of tweets matching that term from the public timeline&lt;/li&gt; 
+ &lt;li&gt;Attachments such as images can be dragged and dropped into the browser window&lt;/li&gt; 
+ &lt;li&gt;Images, Video URLs, and even Amazon product links are expanded/snippeted inline using &lt;a href=&quot;http://embed.ly&quot;&gt;embed.ly&lt;/a&gt;&lt;/li&gt; 
+ &lt;li&gt;The right margin features an activity histogram for the life of the chatroom&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;p&gt;The disclaimer is that it's still very raw, but you should be able to build and deploy it on any Appengine account using:&lt;/p&gt; 
+&lt;pre&gt;&lt;code&gt;mvn package
+appcfg.sh update src/main/webapp
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;div style=&quot;font-size: small;&quot;&gt;
+ You will need 
+ &lt;a href=&quot;http://maven.apache.org&quot;&gt;Maven 2.2.1&lt;/a&gt; and the 
+ &lt;a href=&quot;http://code.google.com/appengine/downloads.html&quot;&gt;Appengine Java SDK&lt;/a&gt;
+&lt;/div&gt; 
+&lt;p&gt;Tweet me your thoughts.&lt;/p&gt; 
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt; 
+&lt;div style=&quot;font-size: small;&quot;&gt;
+ Find me on 
+ &lt;a href=&quot;http://twitter.com/dhanji&quot;&gt;twitter&lt;/a&gt;
+&lt;/div&gt;</description>
+      <link>http://rethrick.com/#crosstalk</link>
     </item>
     
     <item>
@@ -300,54 +348,6 @@ pick [1..]
  &lt;a href=&quot;http://twitter.com/dhanji&quot;&gt;twitter&lt;/a&gt;
 &lt;/div&gt;</description>
       <link>http://rethrick.com/#haskell-better</link>
-    </item>
-    
-    <item>
-      <guid isPermaLink="true">
-        http://rethrick.com/crosstalk
-      </guid>
-      <title>Crosstalk: A Chat App</title>
-      <description>&lt;p&gt;Not long ago there was a crazy rush of startups building group chat applications. Names like Beluga, Convore, Banter.ly, Group.me, Brizzly and others spring to mind. Other, more mature products like 37signals' Campfire and web-based IRC clients are also part of this suite.&lt;/p&gt; 
-&lt;p&gt;The space is crowded, and recently bubble-like in its growth. I think there are a multitude of reasons for this:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;Status updates have become the currency of social interaction thanks to Twitter and Facebook&lt;/li&gt; 
- &lt;li&gt;There is a real need for group communication that these products do not provide&lt;/li&gt; 
- &lt;li&gt;It is fairly easy to write a group chat app, and the point of distincion is all about UI&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;p&gt;As an experiment to test these three theories, &lt;a href=&quot;http://themaninblue.com&quot;&gt;The Man in Blue&lt;/a&gt; and I took a week to see if we could build such a group-chat application. We came up with Crosstalk after four days.&lt;/p&gt; 
-&lt;p&gt;&lt;a href=&quot;images/xtalk-home.png&quot;&gt; &lt;img src=&quot;images/xtalk-home.png&quot; style=&quot;width:400px; display: block; margin: 0 auto; border: 1px solid darkgray; padding: 2px;&quot; /&gt; &lt;/a&gt;&lt;/p&gt; 
-&lt;p&gt;&lt;br /&gt; &lt;a href=&quot;images/xtalk-room.png&quot;&gt; &lt;img src=&quot;images/xtalk-room.png&quot; style=&quot;width:400px; display: block; margin: 0 auto; border: 1px solid darkgray; padding: 2px;&quot; /&gt; &lt;/a&gt;&lt;/p&gt; 
-&lt;p&gt;We have no particular intention of making this a startup or a running service (for reasons obvious from above), so in light of that I am announcing the release of the code as open source to do with as you will:&lt;/p&gt; 
-&lt;p&gt;&lt;a href=&quot;http://github.com/dhanji/crosstalk&quot;&gt;http://github.com/dhanji/crosstalk&lt;/a&gt;&lt;/p&gt; 
-&lt;h3&gt;Events&lt;/h3&gt; 
-&lt;p&gt;To give ourselves a specific goal, we focused on realtime chat for events, and customized it for the excellent &lt;a href=&quot;http://webstock.co.nz&quot;&gt;Webstock&lt;/a&gt; conference in New Zealand. We hoped it would prove useful for session attendees to share instant reactions, links and photos.&lt;/p&gt; 
-&lt;p&gt; It proved to have mixed results, some sessions were good and others weak. We didn't promote the app at all beyond a tweet, so this may have been the cause. Also 4-days of coding are bound to leave one with a few bugs.&lt;/p&gt; 
-&lt;h3&gt;Technology&lt;/h3&gt; 
-&lt;p&gt;The server was written on Google Appengine/Java, and powered by &lt;a href=&quot;http://sitebricks.org&quot;&gt;Sitebricks&lt;/a&gt;. We used the Appengine Channel API for Comet support (Message Push to the browser) and the client was written in jQuery with a focus on HTML5 features.&lt;/p&gt; 
-&lt;p&gt;I am proud to say we managed to get nearly every feature we wanted done, though not all worked to satisfaction for various reasons, including some quirks of Appengine. Here's an overview:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;You sign in with a Twitter account over OAuth&lt;/li&gt; 
- &lt;li&gt;Adding &lt;em&gt;terms&lt;/em&gt; to a room triggers a periodic fetch of tweets matching that term from the public timeline&lt;/li&gt; 
- &lt;li&gt;Attachments such as images can be dragged and dropped into the browser window&lt;/li&gt; 
- &lt;li&gt;Images, Video URLs, and even Amazon product links are expanded/snippeted inline using &lt;a href=&quot;http://embed.ly&quot;&gt;embed.ly&lt;/a&gt;&lt;/li&gt; 
- &lt;li&gt;The right margin features an activity histogram for the life of the chatroom&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;p&gt;The disclaimer is that it's still very raw, but you should be able to build and deploy it on any Appengine account using:&lt;/p&gt; 
-&lt;pre&gt;&lt;code&gt;mvn package
-appcfg.sh update src/main/webapp
-&lt;/code&gt;&lt;/pre&gt; 
-&lt;div style=&quot;font-size: small;&quot;&gt;
- You will need 
- &lt;a href=&quot;http://maven.apache.org&quot;&gt;Maven 2.2.1&lt;/a&gt; and the 
- &lt;a href=&quot;http://code.google.com/appengine/downloads.html&quot;&gt;Appengine Java SDK&lt;/a&gt;
-&lt;/div&gt; 
-&lt;p&gt;Tweet me your thoughts.&lt;/p&gt; 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt; 
-&lt;div style=&quot;font-size: small;&quot;&gt;
- Find me on 
- &lt;a href=&quot;http://twitter.com/dhanji&quot;&gt;twitter&lt;/a&gt;
-&lt;/div&gt;</description>
-      <link>http://rethrick.com/#crosstalk</link>
     </item>
     
     <item>

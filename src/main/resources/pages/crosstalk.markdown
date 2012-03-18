@@ -15,13 +15,13 @@ for this:
 As an experiment to test these three theories, [The Man in Blue](http://themaninblue.com) and I took a week to see if we could
 build such a group-chat application. We came up with Crosstalk after four days.
 
-<a href="images/xtalk-home.png">
-  <img src="images/xtalk-home.png" style="width:400px; display: block; margin: 0 auto; border: 1px solid darkgray; padding: 2px;">
+<a href="http://rethrick.com/images/xtalk-home.png">
+  <img src="http://rethrick.com/images/xtalk-home.png" style="width:400px; display: block; margin: 0 auto; border: 1px solid #777; padding: 2px;">
 </a>
 
 <br>
-<a href="images/xtalk-room.png">
-  <img src="images/xtalk-room.png" style="width:400px; display: block; margin: 0 auto; border: 1px solid darkgray; padding: 2px;">
+<a href="http://rethrick.com/images/xtalk-room.png">
+  <img src="http://rethrick.com/images/xtalk-room.png" style="width:400px; display: block; margin: 0 auto; border: 1px solid #777; padding: 2px;">
 </a>
 
 
@@ -62,7 +62,7 @@ Appengine account using:
 
     mvn package
     appcfg.sh update src/main/webapp
-    
+
 <div style="font-size: small;">You will need <a href="http://maven.apache.org">Maven 2.2.1</a> and the
 <a href="http://code.google.com/appengine/downloads.html">Appengine Java SDK</a></div>
 
