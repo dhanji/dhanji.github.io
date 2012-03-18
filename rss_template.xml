@@ -9,7 +9,7 @@
       <guid isPermaLink="true">
         http://rethrick.com/@{page.id}
       </guid>
-      <title>@{page.title}</title>
+      <title>@{org.apache.commons.lang.StringEscapeUtils.escapeHtml(page.title)}</title>
       <description>@{org.apache.commons.lang.StringEscapeUtils.escapeHtml(page.html)}</description>
       <link>http://rethrick.com/#@{page.id}</link>
     </item>

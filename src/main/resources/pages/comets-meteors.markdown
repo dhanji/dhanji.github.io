@@ -1,7 +1,7 @@
 
 # Comets and Meteors
 
-I am exploring writing an app with Comet (reverse Ajax) aka ‘hanging gets’. I thought I knew how
+I am exploring writing an app with Comet (reverse Ajax) aka 'hanging gets'. I thought I knew how
  this worked in detail, but after days of research I found my knowledge sorely lacking. There isn’t
   much good information on the web either, so I thought I’d summarize what I learned here.
 
