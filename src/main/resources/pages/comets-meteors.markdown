@@ -2,8 +2,8 @@
 # Comets and Meteors
 
 I am exploring writing an app with Comet (reverse Ajax) aka 'hanging gets'. I thought I knew how
- this worked in detail, but after days of research I found my knowledge sorely lacking. There isn’t
-  much good information on the web either, so I thought I’d summarize what I learned here.
+ this worked in detail, but after days of research I found my knowledge sorely lacking. There isn't
+  much good information on the web either, so I thought I'd summarize what I learned here.
 
 You can achieve server-to-client message pushing in several different ways:
 
@@ -11,7 +11,7 @@ You can achieve server-to-client message pushing in several different ways:
  high-level Javascript API. Only Chrome/Safari, Opera and Firefox seem to support this (Firefox
  4 has since disabled support for security reasons).
   * Forever Frame - An iFrame whose content length is infinite. You just keep writing script tags
- out that invoke a callback in the parent frame with the server’s push data. This is commonly used with IE.
+ out that invoke a callback in the parent frame with the server's push data. This is commonly used with IE.
   * Hanging GET (Multipart response) - This is a wonderful hack around an occult and obscure
  behavior introduced by Netscape. It only works in Firefox and Safari/Chrome, but it is brilliant—by
   reusing the ability to send multiple images back in a single response, you can instead encode JSON
@@ -43,4 +43,4 @@ My advice? Build a simple RPC abstraction on top of websockets. Test with Chrome
  then when you really need to support other browsers sub in the hand-over-hand long polling method
  I described above.
 
-I’ll post any code I come up with.
+I'll post any code I come up with.
