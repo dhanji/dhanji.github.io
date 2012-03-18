@@ -2,7 +2,7 @@
   <channel>
     <title>Rethrick Construction</title>
     <description>A website by Dhanji R. Prasanna</description>
-    <link>http://rethrick.com/</link>
+    <link rel="self" type="application/rss+xml">http://rethrick.com/</link>
 
     @foreach{page : pages}
     <item>
