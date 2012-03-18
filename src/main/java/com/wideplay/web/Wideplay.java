@@ -10,6 +10,7 @@ import com.google.gson.LongSerializationPolicy;
 import com.petebevin.markdown.MarkdownProcessor;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
+import org.apache.commons.lang.StringEscapeUtils;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
@@ -91,7 +92,7 @@ public class Wideplay {
       h1.remove();  // remove from document as it is rendered using JSON.
       noindex.remove(); // remove internal meta tags.
 
-      page.setTitle(h1.first().text());
+      page.setTitle(StringEscapeUtils.escapeHtml(h1.first().text()));
       page.setPostedOn(new Date(file.lastModified()));
       page.setHtml(document.select("body").html());
 
