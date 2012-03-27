@@ -1,4 +1,4 @@
-mvn package exec:java -Dexec.mainClass="com.wideplay.web.Wideplay"
+mvn package exec:java -Dexec.mainClass="com.wideplay.web.Rethrick"
 
 if [ "$1" != "local" ]; then
   git add .

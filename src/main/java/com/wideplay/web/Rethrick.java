@@ -21,6 +21,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Collection;
 import java.util.Collections;
@@ -31,12 +32,12 @@ import java.util.Map;
 /**
  * @author dhanji@gmail.com (Dhanji R. Prasanna)
  */
-public class Wideplay {
+public class Rethrick {
   public static final int SNIPPET_LENGTH = 150;
   private static final String DD_MMM_YYYY = "dd MMM yyyy";
   private static final DateFormat DATE_FORMAT = new SimpleDateFormat(DD_MMM_YYYY);
 
-  public static void main(String... args) throws IOException {
+  public static void main(String... args) throws IOException, ParseException {
     // Clean output dir first.
     System.out.println("Cleaning output dir...");
     File views = new File("views");
@@ -85,14 +86,17 @@ public class Wideplay {
       // There should always be an h1
       Elements h1 = document.select("h1");
       Elements noindex = document.select("meta[noindex]");
+      Elements published = document.select("meta[published]");
       boolean shouldIndex = noindex.isEmpty();
+      Preconditions.checkState(!published.isEmpty(), "%s is missing a published meta tag", fileName);
+      Date publishedOn = DATE_FORMAT.parse(published.attr("published"));
 
       Preconditions.checkState(!h1.isEmpty(), file.getName() + " is missing a title (<h1> tag)");
-      h1.remove();  // remove from document as it is rendered using JSON.
+      h1.remove();      // remove from document as it is rendered using JSON.
       noindex.remove(); // remove internal meta tags.
 
       page.setTitle(h1.first().text());
-      page.setPostedOn(new Date(file.lastModified()));
+      page.setPostedOn(publishedOn);
       page.setHtml(document.select("body").html());
 
       // Convert to JSON and save.
@@ -140,7 +144,8 @@ public class Wideplay {
   }
 
   private static String snippet(Document document) {
-    Elements p = document.select("p");
+    // Grab any paragraph tags that have text.
+    Elements p = document.select("p:matchesOwn(.+)");
     Preconditions.checkState(!p.isEmpty(), "Page has no content!");
     String text = p.first().text();
     if (text.length() < SNIPPET_LENGTH)

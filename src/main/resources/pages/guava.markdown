@@ -1,7 +1,8 @@
+<meta published="12 Mar 2012"/>
 
 # Google Guava, Guice and other Fresh Fruit
 
-This post by my former colleague, Kevin Bourrillion, has caused a bit of a stir amongst the Java faithful. 
+This post by my former colleague, Kevin Bourrillion, has caused a bit of a stir amongst the Java faithful.
 
 [https://plus.google.com/113026104107031516488/posts/ZRdtjTL1MpM](https://plus.google.com/113026104107031516488/posts/ZRdtjTL1MpM)
 
@@ -25,11 +26,11 @@ This is a nice sentiment. I like Kevin, so I am going to smile back. =) There yo
 
 (Given that Kevin and I are friends, I will assume he smiled when reading this too)
 
-I understand the difficulty of developing a two-headed beast like Guava. A certain portion of it is buried under the mammoth structure that is the Google code base. A certain portion of it is being dragged forward by the open source community of external users. The latter group has very little conception of the size, scale and complexity of the former task. And keeping the two in sync is a nightmarish proposition. I don't envy anyone the task. If there are Java engineers talented, experienced and thoughtful enough to do it anywhere in the world--then those people are Kevin and his team. 
+I understand the difficulty of developing a two-headed beast like Guava. A certain portion of it is buried under the mammoth structure that is the Google code base. A certain portion of it is being dragged forward by the open source community of external users. The latter group has very little conception of the size, scale and complexity of the former task. And keeping the two in sync is a nightmarish proposition. I don't envy anyone the task. If there are Java engineers talented, experienced and thoughtful enough to do it anywhere in the world--then those people are Kevin and his team.
 
 In my time I worked on several open source projects at Google--they used vastly different models that often depended on the attitudes of the developers in charge. Google Wave for example, treated open source as a second class citizen, a marketing gimmick and a once-made promise to be kept, time allowing. Guava seems to be bleeding those same colors.
 
-My point though--is why bother? Discard all this confounding complexity and bureaucratic weight. Commit to the open source principle. They've slapped an Apache license on it for some reason. Part of that reason is developer advocacy, part of it is hiring (yes, open source projects are a huge hiring funnel for talented Googlers), and another part is the true joy that comes with seeing your work benefit others. For free, for them to do with as they please. 
+My point though--is why bother? Discard all this confounding complexity and bureaucratic weight. Commit to the open source principle. They've slapped an Apache license on it for some reason. Part of that reason is developer advocacy, part of it is hiring (yes, open source projects are a huge hiring funnel for talented Googlers), and another part is the true joy that comes with seeing your work benefit others. For free, for them to do with as they please.
 
 One of Kevin's own other projects--Guice--did the opposite to great effect. It is used internally at the bottom of every stack, but the pain is nowhere near as bad as maintaining Guava (at least it wasn't when I maintained it). Partly this was because its surface area is smaller, but mostly it was because patches happened in the open. And the open repo was the sole source of truth. It wasn't ideal, we rejected many more patches than I'd have liked. No one maintained Guice full time, we all had to volunteer nights and weekends to accept those patches. There was no dedicated team, and no management budget. And yet we didn't rule out accepting patches from non-Googlers. In fact, we encouraged them.
 

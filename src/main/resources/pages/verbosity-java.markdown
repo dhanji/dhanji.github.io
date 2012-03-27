@@ -1,3 +1,4 @@
+<meta published="10 Jan 2012"/>
 
 # Languages, Verbosity and Java
 

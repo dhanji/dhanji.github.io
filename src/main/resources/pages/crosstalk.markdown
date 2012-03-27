@@ -1,3 +1,4 @@
+<meta published="08 Jun 2011"/>
 
 # Crosstalk: A Chat App
 

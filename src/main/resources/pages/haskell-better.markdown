@@ -1,3 +1,4 @@
+<meta published="29 Jun 2011"/>
 
 # Haskell
 

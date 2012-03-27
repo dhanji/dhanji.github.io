@@ -1,3 +1,5 @@
+<meta published="16 Jan 2012"/>
+
 # More than a Boswell
 
 To say that I am a fan of Sherlock Holmes is like saying the Pope has a passing interest in Christianity. I have a deep fondness for the Victorian detective stories, and read all 4 novels and 56 short stories multiple times before I was 13. I watched with great interest, then, the two new revivals of this enormous, looming franchise: *Sherlock*, the BBC TV show and the somewhat more classical (at least in period) *Sherlock Holmes* films by Guy Ritchie.

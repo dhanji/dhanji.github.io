@@ -1,4 +1,5 @@
 <meta nopublish/>
+<meta published="10 Jan 2012"/>
 
 # Languages, verbosity and Java
 

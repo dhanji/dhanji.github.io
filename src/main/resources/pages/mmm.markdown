@@ -1,3 +1,4 @@
+<meta published="12 Oct 2011"/>
 
 # The Mythical Man-Month
 

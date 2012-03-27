@@ -1,4 +1,5 @@
 <meta noindex/>
+<meta published="29 May 2011"/>
 
 # My Projects
 
@@ -9,6 +10,9 @@ consist of open source projects except where they point to my work at Google.
     makes life easy for Java developers providing something akin to the simplicity of Rails or
     Django yet with the rigor and type safety of Java. Some of the ideas in JAX-RS mirror
     those found in Sitebricks. It is a work-in-progress.
+  * [Fluent.io](http://fluent.io) - This is an email startup I founded along with some ex-colleagues
+    from Google. It is built on Sitebricks and features an instant-search capability similar to
+    Google Search, but over your email. Fluent is still in Beta.
   * [Google Wave](http://wave.google.com) - In my nearly two years at this project, I helped design and build the
     Realtime search and indexing architecture, many aspects of the GWT-based user interface,
     the Data and Wave embedding APIs and also spent a lot of time on scalability and

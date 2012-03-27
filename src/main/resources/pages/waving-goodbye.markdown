@@ -1,3 +1,4 @@
+<meta published="06 Jun 2011"/>
 
 # Waving Goodbye
 

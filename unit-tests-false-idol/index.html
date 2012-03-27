@@ -79,6 +79,8 @@
     <a id="link-back" href="http://rethrick.com">← Back</a> 
     <h1>Unit Testing: A False Idol <time pubdate="" datetime="">29 May 2011</time></h1> 
     <div class="text">
+     <p></p> 
+     <meta published="29 May 2011" /> 
      <p>There is a fervor among agile enthusiasts and programmers about unit testing that borders on religion. This fever has even infected the ranks of everyday programmers, even those who do not practice Test-driven or eXtreme Programming. So much so that the code coverage metric is a prized goal, one which misguided engineering managers give out t-shirts and other pedestrian awards for. (At Google you similarly received certifications based on levels of coverage--to be fair, among other criteria.) This is a false idol--don't worship it!</p> 
      <p> Unit tests create the illusion of a well-tested codebase, without the rigor that goes with it. The problem lies in the fact that there is almost never a match between the unit test and the atomicity of the unit under test. Invariably, these components have strong dependencies on the behavior of neighboring, external code. When you mock that dependency you are making an explicit commitment to maintain two streams of code--the mock, and the neighboring logic.</p> 
      <p>In Sitebricks, we have 321 unit tests and about 83 integration tests. The latter have, time and again, proven far more useful in detecting bugs and preventing regressions than have the former. In fact, every time I add a working, well-tested feature, I find that I must crawl a spiderweb of unrelated unit tests and fix all the mock behaviors to correspond to the new system. This makes refactoring very frustrating, and sometimes downright impractical.</p> 

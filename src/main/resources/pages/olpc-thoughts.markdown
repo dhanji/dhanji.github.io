@@ -1,4 +1,4 @@
-<meta noindex/>
+<meta nopublish/>
 
 # Lifting the Third World
 

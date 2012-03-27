@@ -1,3 +1,4 @@
+<meta published="11 Jul 2011"/>
 
 # Like it or Not
 

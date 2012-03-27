@@ -1,3 +1,4 @@
+<meta published="01 Feb 2012"/>
 
 # Exploring the mythical weekend project
 
@@ -8,8 +9,8 @@ asides that would probably delight a niche audience. Regardless, I can't shake t
 world (and certainly, I) would be better off with these ideas material in reality, and perhaps more
  importantly--out of my head.
 
-I'll give away the ending: I succeeded. It took me roughly 16 hours to plan, build and 
-launch my idea to the world. And then, there was anti-climax. 
+I'll give away the ending: I succeeded. It took me roughly 16 hours to plan, build and
+launch my idea to the world. And then, there was anti-climax.
 
 But before we get into that, let me retrace my steps over a gruelling, frustrating
 and wholly satisfying two days.
@@ -18,7 +19,7 @@ and wholly satisfying two days.
 
 The easiest part of the whole process was the idea. Not only do I have far too many of those available,
 but at any given time I am also sitting on a pile of partially-built prototypes. They number in
-the 20s at current and were variously built at airports, hotel-lobbies, conference venues and any 
+the 20s at current and were variously built at airports, hotel-lobbies, conference venues and any
 other time that I imagine the rest of the population spends at the beach and on other healthy activities.
 
 If you hack on open source or your own startup ideas you know exactly what I'm talking about. Many of

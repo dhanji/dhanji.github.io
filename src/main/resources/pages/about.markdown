@@ -1,8 +1,9 @@
 <meta noindex/>
+<meta published="29 May 2011"/>
 
 # About Me
 
-Hi, I am Dhanji R. Prasanna, hacker-at-large. I like to build things.
+Hi, I am Dhanji R. Prasanna, hacker-at-large. I like to [build things](http://rethrick.com/projects).
 
 I formerly worked at Google where I was a member of the Wave team among other things. In my two
 years on the project, I mainly worked on the Realtime Search and Indexing component where I
