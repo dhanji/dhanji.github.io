@@ -36,7 +36,7 @@ The paradox arises when you consider the second property. It is logically impera
 
 Years later, Russell and Whitehead would publish Principia Mathematica, which among other things, proposed a solution to the paradox. Their solution was to introduce something known as the theory of types. This theory of theirs reorganized the system of set theory in terms of increasing hierarchies of different types. Each layer in the hierarchy was exclusively composed of types from the previous layer, avoiding the kind of loops that were the bane of set theory. (see [http://en.wikipedia.org/wiki/Type_theory](http://en.wikipedia.org/wiki/Type_theory))
 
-This is, very loosely, the foundation of type theory and type systems that we see in modern programming languages today. Java, C#, Ruby, Haskell and programmers of many others such languages take the idea of types, properties and hierarchies for granted. But it is useful to know their origin.
+This is, very loosely, the foundation of type theory and type systems that we see in modern programming languages today. Java, C#, Ruby, Haskell and programmers of many other such languages take the idea of types, properties and hierarchies for granted. But it is useful to know their origin.
 
 It is also useful to know the distinction between the systems of types used in various programming languages. In heated debates between proponents of dynamic-typing and static-typing, one often encounters a few misconceptions about terminology and the nature of type systems. The primary among these is strong vs. weak typing--it may surprise you to learn that Java, Ruby, Python, Scheme and C# are all strongly typed languages. Strong typing is the idea that computations occur only between compatible types. For example, this expression in Java is illegal:
 
@@ -46,7 +46,7 @@ It is also useful to know the distinction between the systems of types used in v
     // This call is illegal
     increment(24.0);
 
-This is because the types int and double are incompatible. Java does not know how to correctly convert 24.0 into an integer for computation. This kind of expression is known as a mixed-type computation and is generally discouraged by best practice. The reason is that the system cannot convert between these types without losing some information in the process. Doubles in Java are stored in 64-bits. Ints are stored in 32-bits, so the conversion between them necessitates a loss of information.
+This is because the types int and double are incompatible. Java does not know how to correctly convert 24.0 into an integer for computation. This kind of expression is known as a mixed-type computation and is generally discouraged by best practice. The reason is that it can't convert between these types without losing some information in the process. Doubles in Java are stored in 64-bits. Ints are stored in 32-bits, so the conversion between them necessitates a loss of information.
 
 You might argue that Java permits expressions of this form:
 
