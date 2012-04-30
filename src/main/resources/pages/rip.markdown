@@ -5,7 +5,7 @@
 Today, Google Wave is scheduled to be taken down. After weeks of being read-only, it will finally
 close its doors and vanish from the domains of Google to the nether-realm of the dead pool.
 
-For me, today is a day to remember remember all the various pieces I got to work on, and all the fantastic,
+For me, today is a day to remember all the components I got to work on, and all the fantastic,
 brilliant, whip-smart engineers that touched it. And whom I was privileged to work, talk and
 share a drink with. 
 
