@@ -15,7 +15,7 @@ APIs, the Wave Server, open-source effort, JVMs and web client. Between my frien
 of the stack. As messy as that sounds, it was immensely fun and rewarding, and I wouldn't have it
 any other way: equal parts chaos, adrenaline, frustration, disappointment and celebration.
 
-Many words have been written about Wave, warts, sparkles, and soul. To me it was a deeply personal
+Many words have been written about Wave, warts, sparkles, and all. To me it was a deeply personal
 and moving experience, like none before. We tried, and failed, to make a dent in the universe.
 And are now scattered to the winds.
 
