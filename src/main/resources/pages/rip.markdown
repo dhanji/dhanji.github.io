@@ -9,7 +9,7 @@ For me, today is a day to remember remember all the various pieces I got to work
 brilliant, whip-smart engineers that touched it. And whom I was privileged to work, talk and
 share a drink with. 
 
-Throughout my 2 years on the project I worked variously on Search, Indexing, 
+Through my 2 years on the project I worked variously on Search, Indexing, 
 APIs, the Wave Server, JVMs and the GWT web client. Between my friend and former colleague,
  <a href="http://tirsen.com">Jon Tirsen</a>, I think we touched nearly every part
 of the stack. As messy as that sounds, it was immensely fun and rewarding, and I wouldn't have it
