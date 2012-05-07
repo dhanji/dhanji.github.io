@@ -7,6 +7,26 @@
     
     <item>
       <guid isPermaLink="true">
+        http://rethrick.com/source-code-dead
+      </guid>
+      <title>Source code is dead: Long live source code</title>
+      <description>&lt;p&gt;&lt;/p&gt;
+&lt;meta published=&quot;08 May 2012&quot; /&gt;  
+&lt;p&gt;I used to work at Google, a company that's entirely dependent on the source code its engineers produce for its lifeblood. And yet, Google has a rather strange attitude toward source code, giving it away like there's no tomorrow.&lt;/p&gt; 
+&lt;p&gt;From various APIs and libraries to its two programming languages (DART and Go) and its flagship web browser (Chrome), Google has a multitude of high-profile open source projects. This has gained the company a lot of fans in the developer community, and has enabled real extensions and real projects that are offshoots (for example, RockMelt was a startup built on Chromium).&lt;/p&gt; 
+&lt;p&gt;And yet, there's a definite tension at Google between the old guard, who believe that source code is very valuable, and the open source &amp;quot;evangelists,&amp;quot; who believe that nearly all code at the company should be released as open source. Fortunately for Google (and for developers at large), its track record generally shows a willingness to share. Even in cases where Google has been reluctant to release source code (GFS, BigTable), engineers have published papers describing how others may be able to implement their own versions.&lt;/p&gt; 
+&lt;p&gt;This situation mimics a tension seen at many companies&sbquo;&amp;Auml;&amp;icirc;some folks (engineers) want to see their source code released in the open, and others (management) find the idea very scary. In the old days, source code was genuinely an advantage&sbquo;&amp;Auml;&amp;icirc;tools such as compilers and development editors were few and far between, often jealously guarded if they did anything at all capable, and in many cases even sold as a vended product. As time progressed, having source code became less important&sbquo;&amp;Auml;&amp;icirc;we have the GNU Project to thank for this change, primarily. The GNU C Compiler, Emacs, and various other free tools made it much easier for anyone to produce and release their own tools. Fantastic purpose-driven tools like Python and the Apache web server expanded and democratized the landscape enormously.&lt;/p&gt; 
+&lt;p&gt;&lt;i&gt;Read the &lt;a href=&quot;https://www.informit.com/articles/article.aspx?p=1848530&quot;&gt;rest of this article&lt;/a&gt; (at InformIT).&lt;/i&gt;&lt;/p&gt; 
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt; 
+&lt;div style=&quot;font-size: small;&quot;&gt;
+ Find me on 
+ &lt;a href=&quot;http://twitter.com/dhanji&quot;&gt;twitter&lt;/a&gt;
+&lt;/div&gt;</description>
+      <link>http://rethrick.com/#source-code-dead</link>
+    </item>
+    
+    <item>
+      <guid isPermaLink="true">
         http://rethrick.com/rip
       </guid>
       <title>RIP, Google Wave</title>
@@ -545,26 +565,6 @@ appcfg.sh update src/main/webapp
 &lt;p&gt;My advice? Build a simple RPC abstraction on top of websockets. Test with Chrome or Firefox and then when you really need to support other browsers sub in the hand-over-hand long polling method I described above.&lt;/p&gt; 
 &lt;p&gt;I'll post any code I come up with.&lt;/p&gt;</description>
       <link>http://rethrick.com/#comets-meteors</link>
-    </item>
-    
-    <item>
-      <guid isPermaLink="true">
-        http://rethrick.com/source-code-dead
-      </guid>
-      <title>Source code is dead: Long live source code</title>
-      <description>&lt;p&gt;&lt;/p&gt;
-&lt;meta published=&quot;08 May 2011&quot; /&gt;  
-&lt;p&gt;I used to work at Google, a company that's entirely dependent on the source code its engineers produce for its lifeblood. And yet, Google has a rather strange attitude toward source code, giving it away like there's no tomorrow.&lt;/p&gt; 
-&lt;p&gt;From various APIs and libraries to its two programming languages (DART and Go) and its flagship web browser (Chrome), Google has a multitude of high-profile open source projects. This has gained the company a lot of fans in the developer community, and has enabled real extensions and real projects that are offshoots (for example, RockMelt was a startup built on Chromium).&lt;/p&gt; 
-&lt;p&gt;And yet, there's a definite tension at Google between the old guard, who believe that source code is very valuable, and the open source &amp;quot;evangelists,&amp;quot; who believe that nearly all code at the company should be released as open source. Fortunately for Google (and for developers at large), its track record generally shows a willingness to share. Even in cases where Google has been reluctant to release source code (GFS, BigTable), engineers have published papers describing how others may be able to implement their own versions.&lt;/p&gt; 
-&lt;p&gt;This situation mimics a tension seen at many companies&sbquo;&amp;Auml;&amp;icirc;some folks (engineers) want to see their source code released in the open, and others (management) find the idea very scary. In the old days, source code was genuinely an advantage&sbquo;&amp;Auml;&amp;icirc;tools such as compilers and development editors were few and far between, often jealously guarded if they did anything at all capable, and in many cases even sold as a vended product. As time progressed, having source code became less important&sbquo;&amp;Auml;&amp;icirc;we have the GNU Project to thank for this change, primarily. The GNU C Compiler, Emacs, and various other free tools made it much easier for anyone to produce and release their own tools. Fantastic purpose-driven tools like Python and the Apache web server expanded and democratized the landscape enormously.&lt;/p&gt; 
-&lt;p&gt;&lt;i&gt;Read the &lt;a href=&quot;https://www.informit.com/articles/article.aspx?p=1848530&quot;&gt;rest of this article&lt;/a&gt; (at InformIT).&lt;/i&gt;&lt;/p&gt; 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt; 
-&lt;div style=&quot;font-size: small;&quot;&gt;
- Find me on 
- &lt;a href=&quot;http://twitter.com/dhanji&quot;&gt;twitter&lt;/a&gt;
-&lt;/div&gt;</description>
-      <link>http://rethrick.com/#source-code-dead</link>
     </item>
     
   </channel>
