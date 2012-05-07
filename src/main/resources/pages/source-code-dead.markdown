@@ -1,4 +1,7 @@
 <meta published="08 May 2011"/>
+
+<h1>Source code is dead: Long live source code</h1>
+
 I used to work at Google, a company that's entirely dependent on the source code its engineers produce for its lifeblood. And yet, Google has a rather strange attitude toward source code, giving it away like there's no tomorrow.
 
 From various APIs and libraries to its two programming languages (DART and Go) and its flagship web browser (Chrome), Google has a multitude of high-profile open source projects. This has gained the company a lot of fans in the developer community, and has enabled real extensions and real projects that are offshoots (for example, RockMelt was a startup built on Chromium).
