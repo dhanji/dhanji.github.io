@@ -13,22 +13,35 @@ consist of open source projects except where they point to my work at Google and
   * [Fluent.io](http://fluent.io) - This is an email startup I founded along with some ex-colleagues
     from Google. It is built on Sitebricks and features an instant-search capability similar to
     Google Search, but over your email. I designed and built this feature from the ground up, including
-    special adaptations to make it scale for hundreds of concurrent users with near-realtime indexing
-    capability.
-    For fluent I also created a pure-Java, custom-built IMAP engine which works via Non-blocking IO to fetch
+    special adaptations to make it scale for hundreds of concurrent users with near-realtime indexing.
+    I also created a pure-Java, custom IMAP engine using Non-blocking IO to fetch
     gigabytes of messages concurrently, performing over 50x better than industry standard JavaMail.
     Additionally, I also designed a fault-tolerant sharded messaging layer for communication over websocket
     and inter-process responsibilities.
     I am responsible for the entire tech stack at Fluent, the product is still in Beta.
+
+> Fluent's search feature ... it's truly instantaneous... I can confirm that ... Fluent's instant search is crazy, crazy fast. It's like Google Instant for your inbox.
+
+ -- [TechCrunch](http://techcrunch.com/2012/05/31/first-impressions-on-fluent-the-startup-promising-the-future-of-email)
+
+> The speed and accuracy of the mail search is stupendous; it makes you wonder why Google doesn't have something similar in place for its own Gmail interface.
+
+ -- [Computer World](http://www.computerworld.com/s/article/9227899/Fluent_review_An_innovative_new_interface_for_Gmail)
+
   * [Google Wave](http://wave.google.com) - In my nearly two years at this project, I helped design and build the
     Realtime search and indexing architecture, many aspects of the GWT-based user interface,
     the Data and Wave embedding APIs and also spent a lot of time on scalability and
     performance. I intend to make a series of posts describing my experiences with Wave,
     Google and working on large, disruptive projects in general.
+  * I have also represented Google on the JAX-RS, JSR-303 (Bean Validation) and Servlet expert
+    groups. They have since withdrawn from these efforts.
   * [Guice](http://code.google.com/p/google-guice) - I was the official maintainer of Guice for a
     long time along with Jesse Wilson. I created the Guice Servlet and Persist extensions that are
     widely in use at many startups and websites. Nearly every Java program at Google uses these
     technologies.
+  * [Loop](http://looplang.org) - A functional programming language. Borrowing from the syntax and
+    semantics of Scheme, Ruby, Haskell and Erlang, Loop is an attempt to create a practical, elegant and powerful programming
+    language for quick development. For a tagline you could think of it as reinventing Lisp with modern syntactic influences.
   * [MVEL](http://mvel.codehaus.org) - I helped write the static typing layer for this fast,
     wonderful little expression language from my dear friend [Mike Brock](http://twitter.com/brockm).
      I remain a devoted fan.
@@ -42,8 +55,6 @@ consist of open source projects except where they point to my work at Google and
        srcs: [ src: "src" test: "test" ]
        deps: [ junit:junit:3.8.1 ]
        scm:  [ url: "url:git:git@github.com:mikebrock/mvel.git" ]</pre>
-  * I have also represented Google on the JAX-RS, JSR-303 (Bean Validation) and Servlet expert
-    groups. They have since withdrawn from these efforts.
 
 After Wave, I also worked on a few secret projects at Google. One of these was released as the
 [smart content discovery](http://googleblog.blogspot.com/2011/03/whats-new-with-blogger.html)
