@@ -5,7 +5,7 @@
 So we have this feature in my startup [Fluent](http://fluent.io) called *Instant Search* which is quite similar to the
 feature of the same name in Google search. The idea is that as you are typing a query, the results arrive instantaneously
 for each partially formed progression of your final query term. So for example, if you typed "deep", before pressing enter
-you would already have results for "deep vein thrombosis", "deep throat" and "deep sea diving" in the infinitesimal space
+you would already have results for "deep vein thrombosis", "deep blue" and "deep sea diving" in the infinitesimal space
 of time it took to type the 'p' in "deep".
 
 <br>
@@ -40,7 +40,7 @@ However, all this aside, the best way to reduce latency for instant responsivene
 Particularly, an HTML5 WebSocket. This may seem obvious to you, but consider that there are various tradeoffs to be made. WebSocket instantly limits you to a handful of browsers (at the time, only Safari and Chrome), and even those don't implement
 it exactly alike. Minor differences in how SSL/trust occurs, etc., can affect the WebSocket upgrade request or prevent 
 reconnections on-drop from working properly. For example, for a long time Safari would refuse to make a WebSocket connection
-to an untrusted cert on localhost, so that made testing locally very painful. A version upgrade, Safari allowed this but Chrome
+to an untrusted cert on localhost, so that made testing locally very painful. A version upgrade later, Safari allowed this but Chrome
 decided not to.
 
 Furthermore, you have to keep in mind that this channel wasn't meant solely for the Instant Search feature--a whole lot 
