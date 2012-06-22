@@ -2,8 +2,7 @@
 
 # The Secret of 'Instant Search'
 
-So we have this feature in my startup [Fluent](http://fluent.io) called *Instant Search* which is quite similar to the
-feature of the same name in Google search. The idea is that as you are typing a query, the results arrive instantaneously
+So we have this feature in my startup [Fluent](http://fluent.io) called *Instant Search*. The idea is that as you are typing a query, the results arrive instantaneously
 for each partially formed progression of your final query term. So for example, if you typed "deep", before pressing enter
 you would already have results for "deep vein thrombosis", "deep blue" and "deep sea diving" in the infinitesimal space
 of time it took to type the 'p' in "deep".
