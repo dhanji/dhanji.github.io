@@ -79,7 +79,7 @@ tab would correctly return to it, while general traffic (like new mail notificat
 
 The early effort and frustrations totally paid off. Here is a selection of press responses to our Instant Search feature:
 
-> Fluent's ... instant search function, which is one of the service's standout features. Fluent starts searching as soon as you type a single letter into the box; results from your email appear almost instantly and then morph as you continue to construct your search term, much like what Google does with its "Instant" search functionality. The speed and accuracy of the mail search is stupendous.
+> Fluent's ... instant search function, which is one of the service's standout features. Fluent starts searching as soon as you type a single letter into the box; results from your email appear almost instantly and then morph as you continue to construct your search term ... The speed and accuracy of the mail search is stupendous.
 
 -- [Computer World](http://www.computerworld.com/s/article/9227899/Fluent_review_An_innovative_new_interface_for_Gmail)
 
@@ -87,7 +87,7 @@ The early effort and frustrations totally paid off. Here is a selection of press
 
 -- [Technology Review](http://m.technologyreview.com/web/40612/)
 
-> Even more impressive than all the above is Fluent's instant search. This is potentially the service's "killer" feature ...Fluent's search feature doesn't wait until you've completed a word, it's truly instantaneous ... Fluent's instant search is crazy, crazy fast. It's like Google Instant for your inbox. Which, of course, then begs the question: why isn't Google doing this? 
+> Even more impressive than all the above is Fluent's instant search. This is potentially the service's "killer" feature ...Fluent's search feature doesn't wait until you've completed a word, it's truly instantaneous ... Fluent's instant search is crazy, crazy fast.
 
 -- [TechCrunch](http://techcrunch.com/2012/05/31/first-impressions-on-fluent-the-startup-promising-the-future-of-email/)
 
