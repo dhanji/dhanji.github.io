@@ -1,4 +1,3 @@
-<meta nopublish/>
 <meta published="08 Aug 2012"/>
 
 # On Ending Fluent
@@ -27,13 +26,12 @@ to a file or document, with a corresponding comment thread. To know, by person, 
 provide a kind of insight that you were simply not aware of.
 
 There is an astronomical wealth of data available in your personal
-correspondence.  This included social networks,
-calendars, cloud file systems, forums, wikis, documents and more. We wanted to take a user's interaction with their digital world to the next level. 
+correspondence.  This includes social networks,
+calendars, cloud file systems, forums, wikis, documents and more. We wanted to take a user's interaction with their digital world to the next level.
 
-Email was just the first stop.
+Email was just the first step.
 
-You can see that this is a valid, if ambitious goal, with the trend in new apps--Google Now, Cue, Siri, all feature small facets
-of this unified communications crucible and personal narrative.
+You can see that this is a valid, if ambitious goal, with the recent trend in apps--Google Now, Cue, Siri, all feature small facets of this unified communications crucible and personal narrative.
 
 ### Chasing Gmail
 
