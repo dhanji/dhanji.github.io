@@ -90,6 +90,8 @@ As we said in the blog post, we're not killing the dream. Rather it's going on t
 
 Or perhaps it will be reborn in the projects we're each pursuing on our own, in some small way.
 
+**Note: Techcrunch published a piece based on this article**
+
 <br>
 
 <div style="font-size: small;">Find me on <a href="http://twitter.com/dhanji">twitter</a></div>
