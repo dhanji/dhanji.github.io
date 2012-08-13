@@ -82,6 +82,9 @@ from the sluggish, patchwork interfaces of the Web 2.0 world. It is perhaps not 
 But iOS devices are already ubiquitous. Soon they will be entrenched, with the majority of users on their second or third generation device
 and with all the comfort and familiarity of past experience. Apps will develop and evolve the aesthetic, going past the need for simple (and obvious) touch metaphors into new, uncharted territory. And I'm excited to see what that brings.
 
+<br>
+
+<div style="font-size: small;">PS: I realize that one objection many of you will have is that Mac OS copies these designs too--to that I say yes, the operative word is "copy"</div>
 
 <br>
 
