@@ -77,7 +77,7 @@ Having said all this however, I don't believe that Apple will continue with skeu
 
 The subtle point here is that this isn't so much for brand new users (who have little 
 baggage to shed anyway), but to the vast majority of people coming from the rigid, cumbersome model of a mouse-driven desktop UI. And most recently
-from the sluggish, patchwork interfaces of the Web 2.0 world. It is perhaps not surprising then, that it is this group that is most vocal in their objections. 
+from the sluggish, patchwork interfaces of the Web 2.0 world. It is perhaps not surprising, that it is this group which is most vocal in its objections. 
 
 But iOS devices are already ubiquitous. Soon they will be entrenched, with the majority of users on their second or third generation device
 and with all the comfort and familiarity of past experience. Apps will develop and evolve the aesthetic, going past the need for simple (and obvious) touch metaphors into new, uncharted territory. And I'm excited to see what that brings.
