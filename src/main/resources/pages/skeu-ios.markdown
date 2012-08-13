@@ -13,7 +13,7 @@ there to resemble real world metaphors but that serve no functional purpose. For
 or the twine-bound spine of the [Address Book](http://www.digitalforreallife.com/wp-content/uploads/2012/06/iOS-Address-Book.png). 
 
 Most of the rants I've read go into tailspins about how awful this is, and how disappointing it is to receive something like this from
-Apple, who are known for taste and design. The specific criticism seems to fall into a couple of broad categories.
+Apple, who are known for taste and design. The specific criticism seems to fall into a couple of broad categories:
 
   * It is inconsistent across apps
   * It serves no functional purpose
@@ -45,7 +45,7 @@ At best, the requirement for consistent look and feel is a weak argument.
 
 It may seem tautological to say this, but really, the answer to this argument is in the definition itself. These interface elements are 
 *ornamental by design*. They don't serve a functional purpose just as a desktop wallpaper of the Milky Way does not in any way serve
-to enchance usability beyond a plain gray background.
+to enhance usability beyond a plain gray background.
 
 They serve, however, to add elements of style and distinction. And more than that to give you a sense of familiarity--in a sense to bring the
 metaphor closer by reminding you of facets of real world address books, calendars and notebooks.
@@ -76,7 +76,7 @@ It's these little touches of humanity that give Apple products their unremitting
 Having said all this however, I don't believe that Apple will continue with skeuomorphic designs very far into the future. The move to mobile, touch-driven devices presented a need for this style of design, to get users to think of the device in a novel and unexpected fashion. And to find a way to make gestures feel natural and intuitive. 
 
 The subtle point here is that this isn't so much for brand new users (who have little 
-baggage to shed anyway), but to the vast majority of people coming from the rigid, cumbersome model of a mouse-driven desktop UI. And most recently
+baggage to shed anyway), but for the vast majority of people coming from the rigid, cumbersome model of a mouse-driven desktop UI. And most recently
 from the sluggish, patchwork interfaces of the Web 2.0 world. It is perhaps not surprising, that it is this group which is most vocal in its objections. 
 
 But iOS devices are already ubiquitous. Soon they will be entrenched, with the majority of users on their second or third generation device
