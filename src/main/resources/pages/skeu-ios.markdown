@@ -37,7 +37,7 @@ an app is closely tied to its purpose and helps me recall what I was doing with 
 I think the discontentment perhaps comes from the early days of Mac, where a consistent look was emphasized quite strongly (remember brushed metal?). It made
 somewhat more sense in that context because you could see multiple apps open at the same time, and switching between them was instant and
 seamless. In as constrained an environment as an iPhone or iPad, the app takes up all the room and switching is a distinct, deliberate, 
-multiple step operation.
+multiple-step operation.
 
 At best, the requirement for consistent look and feel is a weak argument.
 
@@ -69,7 +69,7 @@ This leads me to my thesis--maybe these apps can be made to look better, or more
 stock apps (which I admit, fall short of Penultimate's aesthetic)--but there is a warmth to them that is familiar and inviting. If only for
 an extra moment, your eyes linger on the leather trim, the curled corner of a page or the comfort of warm fabric.
 
-It's these little touches of humanity that give Apple products their unrelenting appeal. 
+It's these little touches of humanity that give Apple products their unremitting appeal. 
 
 ### The Future
 
