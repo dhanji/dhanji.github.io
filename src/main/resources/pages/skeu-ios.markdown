@@ -51,10 +51,10 @@ They serve, however, to add elements of style and distinction. And more than tha
 metaphor closer by reminding you of facets of real world address books, calendars and notebooks.
 
 What everyone seems really mad about is that this just *doesn't look good*. 
-Now I understand if the complaint is that stock iOS apps don't look good--I sortof agree with this, Calendar in particular is a bit ugly, in 
-particular because of the color of its leather. You could make a similar argument for one or two of the others, but to pan all skeuomorphism
-as a result of this, is somewhat extreme. I'm not a designer but I disagree with the absolutism of this stance.
-While I concede that these things are a matter of taste, and one nominally looks to the bright lights of an industry for direction on matters of taste--in this case I think they're burning the forest because they don't like a few trees.
+Now I understand if the complaint is that stock iOS apps don't look good--I sortof agree with this, Calendar in particular is a bit ugly, 
+mainly because of the color of its leather trim. You could make a similar argument for one or two of the others, but to pan all skeuomorphs
+as a result of this, is somewhat extreme. I'm not a designer but I disagree with the absolutism of such a stance.
+While I concede that these things are a matter of taste, and one nominally looks to the bright lights of an industry for direction on matters of taste--in this case I think they're burning the entire forest because they don't like a few trees.
 
 Take two of my favorite apps: [Penultimate](http://itunes.apple.com/au/app/penultimate/id354098826?mt=8) and [Things](http://itunes.apple.com/au/app/things-for-ipad/id364365411?mt=8). Both are fairly simple in what they do, and have close metaphors with the real world. 
 Penultimate is a free form scratch pad, while Things is a task list. The former recalls the look and feel of a [Moleskine notebook](http://www.moleskineus.com/cahier-pocket-graph.html) and the latter, a ruled pad of checklists.
