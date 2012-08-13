@@ -94,4 +94,8 @@ Or perhaps it will be reborn in the projects we're each pursuing on our own, in 
 
 <br>
 
-<div style="font-size: small;">Find me on <a href="http://twitter.com/dhanji">twitter</a></div>
+<div style="font-size: small;">Find me on <a href="http://twitter.com/dhanji">twitter</a>
+
+<a href="https://twitter.com/twitterapi" class="twitter-follow-button" data-show-count="false" data-lang="en">Follow @twitterapi</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</div>
