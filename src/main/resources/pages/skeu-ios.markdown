@@ -51,7 +51,7 @@ They serve, however, to add elements of style and distinction. And more than tha
 metaphor closer by reminding you of facets of real world address books, calendars and notebooks.
 
 What everyone seems really mad about is that this just *doesn't look good*. I'm no designer but I disagree with the absolutism of this stance.
-While I concede that these things are a matter of taste, and one nominally looks to the bright lights of an industry for direction on matters of taste--in this case I think they're just wrong.
+While I concede that these things are a matter of taste, and one nominally looks to the bright lights of an industry for direction on matters of taste--in this case I think they're wrong.
 
 Take two of my favorite apps: [Penultimate](http://itunes.apple.com/au/app/penultimate/id354098826?mt=8) and [Things](http://itunes.apple.com/au/app/things-for-ipad/id364365411?mt=8). Both are fairly simple in what they do, and have close metaphors with the real world. 
 Penultimate is a free form scratch pad, while Things is a task list. The former recalls the look and feel of a [Moleskine notebook](http://www.moleskineus.com/cahier-pocket-graph.html) and the latter, a ruled pad of checklists.
@@ -60,10 +60,10 @@ Both these apps are wildly successful, beautiful to look at, enviably focused an
 graph-paper, cardboard and stapled spine for a more "functional" UI. (What would that even be? Yet another Web 2.0 spinoff with blue-gradient
 buttons?)
 
-By contrast, let's look at Windows 8: it is a well designed OS, it's UI is smooth, slick and very attractive. But
-at the same time there's something alien about it--like it was designed to be used in a sci-fi movie; like those tablets the scientists are
-carrying around in Avatar or the GUI from the next [Encom OS](http://www.youtube.com/watch?v=Btyv6yTF4UM&feature=player_detailpage#t=110s)
-in Tron Legacy. It feels cold and sterile, lacking in the kind of humanity that Apple's efforts famously enjoin.
+By contrast, let's look at Windows 8: it is a well designed OS. Its UI is smooth, slick and very attractive. But
+at the same time there's something alien about it--like it was designed to be used in a sci-fi movie. It looks like those tablets that scientists are
+carrying around in Avatar or the GUI from [Encom OS XII](http://www.youtube.com/watch?v=Btyv6yTF4UM&feature=player_detailpage#t=110s)
+in Tron Legacy. It just feels cold and sterile, lacking in the kind of humanity that Apple's efforts famously enjoin.
 
 This leads me to my thesis--maybe these apps can be made to look better, or more consistent, or maybe the complaints are only about Apple's
 stock apps (which I admit, fall short of Penultimate's aesthetic)--but there is a warmth to them that is familiar and inviting. If only for
