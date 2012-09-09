@@ -6,7 +6,7 @@
 Ok this will be my last post about Wave and all things related. I've wanted to get this off my chest
 for awhile, so here goes. Hopefully, reading it is as interesting to you as writing it was cathartic to me.
 
-### A seedling doubt
+## Part 1: A Seedling Doubt
 
 I remember a chilly Fall evening at Sweeney's rooftop bar in Sydney. This was at the height of Wave.
 The growth numbers were incredible, signups were happening faster than we could spin up capacity, and
@@ -66,7 +66,7 @@ clear, I had previously worked on the original, slow, GWT client too).
 By the time we pushed this through Google's careful release process however, it was time to draw
 the curtain down on Wave itself. The executive team was not really interested in a second go.
 
-### Rethinking things
+## Part 2: Rethinking things
 
 But in hindsight, Im not sure making a faster or simpler client would have bought us all that much. The problems
 ran deeper, as that blogger had so succinctly identified--there was a looming question about the product itself. In that
@@ -98,48 +98,58 @@ an easy-access viral bullhorn for announcements.
 
 In this spirit I made a few mockups (click to expand):
 
+
 <a href="http://rethrick.com/images/wave/main.png">
   <img src="http://rethrick.com/images/wave/main.png" style="width:500px; display: block; margin: 0 auto; border: 1px solid #777; padding: 2px;">
 </a>
+
 
 This is a simple list of discussion threads belonging to a group, in this case for the [Sitebricks project](http://sitebricks.org). It is nice and clean, and it presents most of the information you need in a forum. Newer discussions rise to the top, and older ones fall away into an archive. The app deliberately
 shows only a limited number as I think the signal-to-noise ratio of a mailing list has a dramatic falloff.
 
 The detailed view of a single discussion is also modernized but presents the main topic clearly.
 
+
 <a href="http://rethrick.com/images/wave/thread.png">
   <img src="http://rethrick.com/images/wave/thread.png" style="width:500px; display: block; margin: 0 auto; border: 1px solid #777; padding: 2px;">
 </a>
 
-Here we have concurrently-editable rich text (that famous Wave OT technology) that forms the root of the discussion. While I think there is value in anyone being able to annotate the text of the first post, I don't agree with Wave's freeform tree-reply model. Follow up replies and comments go below, in a simple linear flow:
+
+Here we have concurrently-editable rich text (that famous Wave OT technology) that forms the root of the discussion. While I think there is value in anyone being able to annotate the text of the first post, I don't agree with Wave's freeform tree-reply model. Follow up replies and comments instead occur in a simple linear flow:
+
 
 <a href="http://rethrick.com/images/wave/reply.png">
   <img src="http://rethrick.com/images/wave/reply.png" style="width:500px; display: block; margin: 0 auto; border: 1px solid #777; padding: 2px;">
 </a>
 
+
 Next, a simple analog of Twitter's asymmetric follow model makes it easy to express interest in a single thread, an entire group, or a person across groups:
+
 
 <a href="http://rethrick.com/images/wave/following.png">
   <img src="http://rethrick.com/images/wave/following.png" style="width:500px; display: block; margin: 0 auto; border: 1px solid #777; padding: 2px;">
 </a>
 
-This is not dissimilar to "watched" threads in some older forum apps. However I find the toggle button being quick and responsive, lets you jump in and out of interest in a topic nicely. Replies to public threads come back at you via @mentions on Twitter, or if you've elected as an email notification, but all the engagement happens on the site.
 
-You can even implement ACLs this way. Also you can do inventive things like restricting edit access or comment access to your social graph on Twitter. One can imagine expert groups being run this way, quite effectively.
+This is not dissimilar to "watched" threads in some older forum apps. However, the toggle button being quick and responsive, lets you jump in and out of interest in a topic nicely. Replies to public threads come back at you via @mentions on Twitter, or if you've elected, as an email notification; but all the engagement happens on the site.
+
+You can even implement ACLs using this scheme. Doing inventive things like restricting edit or comment access to your social graph on Twitter. One can imagine expert groups being run this way, quite effectively.
 
 ### Conclusion
 
 Getting one or two high-profile open source projects to use the app would be a fantastic way to get grass-roots usage going. Related projects would soon follow giving you coveted viral growth (e.g. jQuery + plugins). And there'd be a ton of daily, real-world usage to measure and learn from. These kinds of users are quite vocal and will tell you exactly where you need to improve, and will bring with them a devoted user community.
 
-Furthermore, I'd follow Github's wonderful example of giving away all public groups for free and charging a modest sum for private groups and discussions as a means of income.
+Furthermore, I'd follow Github's wonderful example of giving away all public groups for free and charging a modest sum for private discussions as a source of revenue.
+
 
 <a href="http://rethrick.com/images/wave/private.png">
   <img src="http://rethrick.com/images/wave/private.png" style="width:500px; display: block; margin: 0 auto; border: 1px solid #777; padding: 2px;">
 </a>
 
+
 Finally, there is a lot of scope beyond this. The set of Mailing List users (although this set is very large--Google Groups itself accounts for millions of users) is only a starting point, but a good starting point at that. If successful, working your way to the next great use case ought to be natural and smooth. You can imagine everything from planning an event, to working on group assignments, to live-blogging the next iProduct happening on this platform.
 
-Wave attempted to be a great many things, but it attempted them all at once. If it started instead with just one and mastered it thoroughly, perhaps it would have earned the rest.
+Wave attempted to be a great many things, but it attempted them all at once. If it started instead with just one and mastered it thoroughly, perhaps in time it would have earned the rest.
 
 <br>
 
