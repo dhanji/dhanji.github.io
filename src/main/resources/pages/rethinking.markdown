@@ -127,9 +127,9 @@ Another thing I felt strongly about was the need for a topic _before_ you start 
 </a>
 
 
-This makes people stop and think about what exactly they want to say, and the best way in which to summarize it rather than dumping a bunch of thoughts and then sticking subject on them as an afterthought.
+This makes people stop and think about what exactly they want to say, and the best way in which to summarize it rather than dumping a bunch of thoughts on a page and then sticking a subject on them as an afterthought.
 
-Next, a simple analog of Twitter's asymmetric follow model makes it easy to express interest in a single thread, an entire group, or a person across groups:
+Next, a simple analog of Twitter's asymmetric follow model makes it easy to express interest in a single thread, an entire group, or a person _across_ groups:
 
 
 <a href="http://rethrick.com/images/wave/following.png">
@@ -145,7 +145,7 @@ There are a number of similar engagement techniques, for example, a dynamic coun
 
 
 <a href="http://rethrick.com/images/wave/stats.png">
-  <img src="http://rethrick.com/images/wave/stats.png" style="width:500px; display: block; margin: 0 auto; border: 1px solid #777; padding: 2px;">
+  <img src="http://rethrick.com/images/wave/stats.png" style="width:200px; display: block; margin: 0 auto; border: 1px solid #777; padding: 2px;">
 </a>
 
 
