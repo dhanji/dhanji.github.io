@@ -8,7 +8,7 @@ for awhile, so here goes. Hopefully, reading it is as interesting to you as writ
 
 ## Part 1: A Seedling Doubt
 
-I remember a chilly Fall evening at Sweeney's rooftop bar in Sydney. This was at the height of Wave.
+I remember a chilly Spring evening at Sweeney's rooftop bar in Sydney. This was at the height of Wave.
 The growth numbers were incredible, signups were happening faster than we could spin up capacity, and
 invites were filling up eBay auctions at a rate of knots.
 
