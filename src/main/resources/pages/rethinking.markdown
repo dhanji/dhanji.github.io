@@ -3,8 +3,8 @@
 
 # Rethinking Google Wave
 
-Ok this will be my last post about Wave and things related. But I've wanted to get this on
-the page for awhile, so here goes. Hopefully, it is a catharsis of sorts.
+Ok this will be my last post about Wave and all things related. I've wanted to get this off my chest
+for awhile, so here goes. Hopefully, reading it is as interesting to you as writing it was cathartic to me.
 
 ### A seedling doubt
 
@@ -66,7 +66,7 @@ clear, I had previously worked on the original, slow, GWT client too).
 By the time we pushed this through Google's careful release process however, it was time to draw
 the curtain down on Wave itself. The executive team was not really interested in a second go.
 
-### Rethinking Product
+### Rethinking things
 
 But in hindsight, Im not sure making a faster or simpler client would have bought us all that much. The problems
 ran deeper, as that blogger had so succinctly identified--there was a question about the product itself. In that
@@ -95,14 +95,49 @@ people are generally avid early adopters and strong evangelists for products the
 Using something like Twitter for logins also has little advantages like a better coverage of avatars and
 an easy-access viral bullhorn for announcements. 
 
-### Discussion
+### Minimum Viable Product
 
-In this spirit I made a few mockups:
+In this spirit I made a few mockups (click to expand):
 
 <a href="http://rethrick.com/images/wave/main.png">
-  <img src="http://rethrick.com/images/wave/main.png" style="width:400px; display: block; margin: 0 auto; border: 1px solid #777; padding: 2px;">
+  <img src="http://rethrick.com/images/wave/main.png" style="width:500px; display: block; margin: 0 auto; border: 1px solid #777; padding: 2px;">
 </a>
 
+This is a simple list of discussion threads belonging to a group, in this case for the [Sitebricks project](http://sitebricks.org). I think it is nice and clean, and it presents most of the information you need in a forum. Newer discussions rise to the top, and older ones fall away into an archive. The app deliberately
+shows only a limited number as I think the signal-to-noise ratio of a mailing list has a dramatic falloff.
+
+The detailed view of a single discussion is also modernized but presents the main topic clearly.
+<a href="http://rethrick.com/images/wave/thread.png">
+  <img src="http://rethrick.com/images/wave/thread.png" style="width:500px; display: block; margin: 0 auto; border: 1px solid #777; padding: 2px;">
+</a>
+
+Here we have concurrently-editable rich text (that famous Wave OT technology) that forms the root of the discussion. Follow up replies and comments go below, in a simple linear flow. While I think there is value in anyone being able to annotate the text of the first post, I don't agree with Wave's freeform tree-reply model.
+
+<a href="http://rethrick.com/images/wave/reply.png">
+  <img src="http://rethrick.com/images/wave/reply.png" style="width:500px; display: block; margin: 0 auto; border: 1px solid #777; padding: 2px;">
+</a>
+
+A simple analog of Twitter's asymmetric follow model makes it easy to express interest in a single thread, an entire group, or a person across groups:
+
+<a href="http://rethrick.com/images/wave/following.png">
+  <img src="http://rethrick.com/images/wave/following.png" style="display: block; margin: 0 auto; border: 1px solid #777; padding: 2px;">
+</a>
+
+This is not dissimilar to "watched" threads in some older forum apps. However I find the toggle button being quick and responsive, lets you jump in and out of interest in a topic nicely. Replies to public threads come back at you via @mentions on Twitter, or if you've elected as an email notification, but all the engagement happens on the site.
+
+### Conclusion
+
+Getting one or two high-profile open source projects to use the app would have been a fantastic way to get grass-roots viral buy-in. Related projects would soon follow, and there'd be a ton of daily, real-world usage to measure and learn from. These kinds of users are also vocal and will tell you exactly where you need to improve, and will bring with them a devoted user community.
+
+I would also follow the github's wonderful model of giving away all public groups for free and charging a modest sum for private groups and discussions.
+
+<a href="http://rethrick.com/images/wave/private.png">
+  <img src="http://rethrick.com/images/wave/private.png" style="display: block; margin: 0 auto; border: 1px solid #777; padding: 2px;">
+</a>
+
+Finally, there is a lot scope beyond this. I don't mean to say that Wave should only have been targetted at the set of Mailing List users (although this set is very large, Google Groups itself accounts for millions of users). But it's a good starting point--after a success here, working your way to the next great use case ought to be natural and effective.
+
+Wave attempted to be a great many things, but it attempted them all at once. If we started instead with just the one and mastered it thoroughly, perhaps it would have earned the rest.
 
 <br>
 
