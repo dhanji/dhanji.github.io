@@ -69,26 +69,25 @@ the curtain down on Wave itself. The executive team was not really interested in
 ### Rethinking things
 
 But in hindsight, Im not sure making a faster or simpler client would have bought us all that much. The problems
-ran deeper, as that blogger had so succinctly identified--there was a question about the product itself. In that
-vein, I have been thinking about what Wave would look like if it were run like a startup in earnest. That is,
-one without legions of engineers and product designers, and no Google launchpad to spring from.
+ran deeper, as that blogger had so succinctly identified--there was a looming question about the product itself. In that
+vein, I have been thinking about what Wave would look like if it were run again as a startup in earnest. That is,
+one without legions of engineers and product designers, and without the leviathan Google launchpad to spring from.
 
-So if we unravel it from this position we'd start with that Wave was empirically successful at (disclaimer,
-this is entirely my opinion). What wave was good for in the end was working on a topic with a group. Generally the model worked best as follows:
+What wave was good for in the end was working on a topic with a group. Generally the model worked best as follows:
 
   * A single "presenter" of a topic puts out a thesis in the first post
   * N responders comment below or make minor edits to the post for marginal improvements
   * Each topic has an ephemeral lifespan like any normal forum thread
 
-What current use case gits this really well? There are probably a number that come to mind, but my pick
-would be Mailing Lists, specifically Google Groups used by for example, an open source project. The current
+What use case fits this really well? There are probably a number that come to mind, but my pick
+would be Mailing Lists, for example a Google Group used by an open source project. The current
 state of the art here is severely lacking:
 
   * It is stuck in the email era of interactivity
   * Spam is an enormous problem (jQuery [left Google Groups](http://forum.jquery.com/topic/moving-away-from-google-groups-to-forums))
-  * Forums have been largely static for years
+  * Poor support for rich media, extensions, and so on.
 
-I originally started by limiting logins to Twitter accounts (now you would choose something more developer friendly). This has a number of benefits, the main one being that you eliminate spam almost instantly. 
+When I originally thought this up, I started by limiting logins to Twitter accounts (now you would choose something more developer friendly). This has a number of benefits, the main one being that you eliminate spam almost instantly. 
 Also Twitter users overlap well with our target audience--active open source contributors and users. These
 people are generally avid early adopters and strong evangelists for products they like.
 
@@ -103,41 +102,44 @@ In this spirit I made a few mockups (click to expand):
   <img src="http://rethrick.com/images/wave/main.png" style="width:500px; display: block; margin: 0 auto; border: 1px solid #777; padding: 2px;">
 </a>
 
-This is a simple list of discussion threads belonging to a group, in this case for the [Sitebricks project](http://sitebricks.org). I think it is nice and clean, and it presents most of the information you need in a forum. Newer discussions rise to the top, and older ones fall away into an archive. The app deliberately
+This is a simple list of discussion threads belonging to a group, in this case for the [Sitebricks project](http://sitebricks.org). It is nice and clean, and it presents most of the information you need in a forum. Newer discussions rise to the top, and older ones fall away into an archive. The app deliberately
 shows only a limited number as I think the signal-to-noise ratio of a mailing list has a dramatic falloff.
 
 The detailed view of a single discussion is also modernized but presents the main topic clearly.
+
 <a href="http://rethrick.com/images/wave/thread.png">
   <img src="http://rethrick.com/images/wave/thread.png" style="width:500px; display: block; margin: 0 auto; border: 1px solid #777; padding: 2px;">
 </a>
 
-Here we have concurrently-editable rich text (that famous Wave OT technology) that forms the root of the discussion. Follow up replies and comments go below, in a simple linear flow. While I think there is value in anyone being able to annotate the text of the first post, I don't agree with Wave's freeform tree-reply model.
+Here we have concurrently-editable rich text (that famous Wave OT technology) that forms the root of the discussion. While I think there is value in anyone being able to annotate the text of the first post, I don't agree with Wave's freeform tree-reply model. Follow up replies and comments go below, in a simple linear flow:
 
 <a href="http://rethrick.com/images/wave/reply.png">
   <img src="http://rethrick.com/images/wave/reply.png" style="width:500px; display: block; margin: 0 auto; border: 1px solid #777; padding: 2px;">
 </a>
 
-A simple analog of Twitter's asymmetric follow model makes it easy to express interest in a single thread, an entire group, or a person across groups:
+Next, a simple analog of Twitter's asymmetric follow model makes it easy to express interest in a single thread, an entire group, or a person across groups:
 
 <a href="http://rethrick.com/images/wave/following.png">
-  <img src="http://rethrick.com/images/wave/following.png" style="display: block; margin: 0 auto; border: 1px solid #777; padding: 2px;">
+  <img src="http://rethrick.com/images/wave/following.png" style="width:500px; display: block; margin: 0 auto; border: 1px solid #777; padding: 2px;">
 </a>
 
 This is not dissimilar to "watched" threads in some older forum apps. However I find the toggle button being quick and responsive, lets you jump in and out of interest in a topic nicely. Replies to public threads come back at you via @mentions on Twitter, or if you've elected as an email notification, but all the engagement happens on the site.
 
+You can even implement ACLs this way. Also you can do inventive things like restricting edit access or comment access to your social graph on Twitter. One can imagine expert groups being run this way, quite effectively.
+
 ### Conclusion
 
-Getting one or two high-profile open source projects to use the app would have been a fantastic way to get grass-roots viral buy-in. Related projects would soon follow, and there'd be a ton of daily, real-world usage to measure and learn from. These kinds of users are also vocal and will tell you exactly where you need to improve, and will bring with them a devoted user community.
+Getting one or two high-profile open source projects to use the app would be a fantastic way to get grass-roots usage going. Related projects would soon follow giving you coveted viral growth (e.g. jQuery + plugins). And there'd be a ton of daily, real-world usage to measure and learn from. These kinds of users are quite vocal and will tell you exactly where you need to improve, and will bring with them a devoted user community.
 
-I would also follow the github's wonderful model of giving away all public groups for free and charging a modest sum for private groups and discussions.
+Furthermore, I'd follow Github's wonderful example of giving away all public groups for free and charging a modest sum for private groups and discussions as a means of income.
 
 <a href="http://rethrick.com/images/wave/private.png">
-  <img src="http://rethrick.com/images/wave/private.png" style="display: block; margin: 0 auto; border: 1px solid #777; padding: 2px;">
+  <img src="http://rethrick.com/images/wave/private.png" style="width:500px; display: block; margin: 0 auto; border: 1px solid #777; padding: 2px;">
 </a>
 
-Finally, there is a lot scope beyond this. I don't mean to say that Wave should only have been targetted at the set of Mailing List users (although this set is very large, Google Groups itself accounts for millions of users). But it's a good starting point--after a success here, working your way to the next great use case ought to be natural and effective.
+Finally, there is a lot of scope beyond this. The set of Mailing List users (although this set is very large--Google Groups itself accounts for millions of users) is only a starting point, but a good starting point at that. If successful, working your way to the next great use case ought to be natural and smooth. You can imagine everything from planning an event, to working on group assignments, to live-blogging the next iProduct happening on this platform.
 
-Wave attempted to be a great many things, but it attempted them all at once. If we started instead with just the one and mastered it thoroughly, perhaps it would have earned the rest.
+Wave attempted to be a great many things, but it attempted them all at once. If it started instead with just one and mastered it thoroughly, perhaps it would have earned the rest.
 
 <br>
 
