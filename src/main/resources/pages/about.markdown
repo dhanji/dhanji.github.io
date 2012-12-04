@@ -16,6 +16,8 @@ My background is primarily in Java. I represented Google on several Java expert 
 member of Google's internal leadership council on all matters Java. Before that I worked as a
 consultant at ThoughtWorks.
 
+In 2011 I founded an email startup called [Fluent](http://fluent.io) which caused a [brief splash](http://rethrick.com/projects).
+
 In my free time I contribute to various open source [projects](/projects).
 I created the Sitebricks web platform which sits behind many large projects including Maven
 Central and Repository Search. I also created and maintain Guice's Servlet request dispatching
