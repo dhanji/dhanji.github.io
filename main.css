@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,500);
+
 @font-face {
   font-family: 'Museo';
   src: url('fonts/museo_300_154926.eot?') format('eot'), url('fonts/museo_300_154926.woff') format('woff'), url('fonts/museo_300_154926.ttf') format('truetype'), url('fonts/museo_300_154926.svg#Museo-300') format('svg');
@@ -5,294 +7,38 @@
   font-style: normal;
 }
 
+ul {
+  list-style-type: none;
+}
+
 body {
   font-family: "Helvetica neue", sans-serif;
-  font-size: 16px;
-  font-weight: lighter;
+  font-size: small;
   margin: 0;
+
+  background: #eee;
 }
 
-::-webkit-scrollbar {
-    width: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  background: #ddd;
-}
-
-header {
-  position: absolute;
-  width: 280px;
-  top: 0;
-  bottom: 0;
-  left: 0;
+img.mural {
+  margin-top: -5em;
+  width: 100%;
 }
 
 header h1 {
-  font-family: 'Museo', sans-serif;
-  padding-left: 84px;
-  color: #0099ff;
-}
-
-header nav.top {
-  width: 200px;
-  margin: 0 auto 0 auto;
-}
-
-header nav.top section#results {
-  margin-top: 44px;
-}
-
-header nav.top ul {
-  display: none;
-  margin: 8px;
-  padding: 12px;
-  list-style-type: none;
-}
-
-header nav.top ul li {
-  padding-bottom: 14px;
-}
-
-header nav.top article h3:hover {
-  color: #0099ff;
-}
-header nav.top article h3 {
-  font-family: 'Museo', sans-serif;
-  font-weight: lighter;
-  font-size: 98%;
-  text-transform: capitalize;
-  margin-bottom: 0;
-  cursor: pointer;
-  color: #555;
-}
-header nav.top article .snippet {
-  padding-top: 4px;
-  display: block;
-  font-size: 13px;
-  color: #999;
-}
-
-header nav.bottom {
   position: absolute;
-  top: 14px;
-  left: 106px;
-}
-header nav.bottom ul {
-  font-family: 'Museo', sans-serif;
-  list-style-type: none;
+  left: 1em;
+  font-family: 'Museo', Arial, sans-serif;
   text-transform: uppercase;
-}
-header nav.bottom ul a:hover {
-  color: #999;
-}
-header nav.bottom ul a {
-  float: right;
-  text-decoration: none;
-  color: #ccc;
-  line-height: 1.4;
-  white-space: nowrap;
-}
-header nav.bottom ul a.dhanji {
-  color: #0099ff;
+
+  color: white;
+  text-shadow: 0 0 4px rgba(0,0,0,0.9);
 }
 
-#searchbox {
-  font-family: 'Arial', sans-serif;
-  font-size: 14px;
-  border: none;
-  -webkit-box-shadow: inset 0 0 8px rgba(0,0,0,0.2);
-  border-radius: 4px;
-  margin-top: 34px;
-  padding: 6px 8px;
-  outline: none;
-  width: 180px;
-}
-
-img.mag-glass {
-  position: relative;
-  top: -21px;
-  left: -23px;
-  opacity: 0.2;
-}
-
-#link-rss:hover {
-  opacity: 1.0;
-}
-#link-rss {
+nav.quick {
   position: absolute;
-  bottom: 6px;
-  left: 8px;
-  opacity: 0.3;
+  right: 1em
 }
 
-/** the index of articles (landing page) **/
-section#index {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 274px;
-  right: 0;
-
-  padding: 4px 64px;
-  overflow-x: hidden;
-  overflow-y: auto;
-  z-index: -1;
-}
-
-#by-dhanji {
-  display: none;
-  float: left;
-  margin-top: -10px;
-  font-family: 'Museo', sans-serif;
-  color: #555;
-}
-
-section#index > h1 {
-  font-family: 'Museo', sans-serif;
-  text-transform: uppercase;
-  font-weight: lighter;
-  font-size: 34px;
-}
-
-section#index > h2 {
-  margin-top: -20px;
-  font-family: 'Museo', sans-serif;
-  font-style: italic;
-  font-size: 15px;
-  font-weight: lighter;
-  color: #999;
-  padding-bottom: 3px;
-  /*border-bottom: 1px solid #ddd;*/
-}
-
-section#index div.index {
-  margin-top: 60px;
-  margin-left: 2px;
-  padding-left: 0;
-
-  width: 620px;
-  height: 650px;
-}
-section#index article {
-  color: #777;
-}
-section#index article h3:hover {
-  color: #0099ff;
-}
-section#index article h3 {
-  font-family: 'Museo', sans-serif;
-  text-transform: capitalize;
-  margin-bottom: 0;
-  cursor: pointer;
-  color: #333;
-}
-section#index article time {
-  font-size: small;
-  color: #aaa;
-}
-section#index article div.snippet {
-  margin-top: 12px;
-  padding-bottom: 40px;
-  font-size: 14px;
-}
-
-/** the article itself **/
-section#main {
-  display: none;
-  background: #fff;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 324px;
-  right: 2px;
-
-  padding: 12px 44px 44px 0;
-  overflow-y: auto;
-  overflow-x: hidden;
-  border-left: 1px solid #eee;
-  z-index: 999;
-}
-
-section#main h1.accent {
-  display: none;
-  position: fixed;
-  left: 0;
-  top: 0;
-  font-size: 52pt;
-  margin: 0;
-  color: #000;
-  opacity: 0.04;
-  -webkit-transform: translate(-80px, 410px) rotateZ(-90deg);
-  white-space: nowrap;
-  z-index: -10;
-}
-
-section#main h1 {
-  font-family: 'Museo', sans-serif;
-  font-weight: normal;
-  text-transform: uppercase;
-}
-
-section#main article {
-  position: relative;
-  left: 90px;
-  width: 580px;
-  padding-bottom: 20px;
-  line-height: 1.6;
-}
-section#main article time {
-  display: none;
-  font-size: 12px;
-  color: #999;
-}
-section#main article div.text {
-  color: #333;
-}
-
-#link-back:hover {
-  text-decoration: underline;
-  opacity: 1.0;
-}
-#link-back:visited {
-  color: blue;
-}
-#link-back {
-  font-size: 90%;
-  position: absolute;
-  left: -70px;
-  top: 8px;
-  text-decoration: none;
-  opacity: 0.2;
-}
-
-section#main article blockquote {
-  font-family: 'Museo', sans-serif;
-  font-style: italic;
-  color: #999;
-  padding: 4px 0;
-}
-
-section#main article .curly {
-  position: absolute;
-  margin-top: -70px;
-  left: 0;
-  font-family: 'Helvetica neue', sans-serif;
-  font-style: normal;
-  display: inline-block;
-  float: left;
-  font-size: 184px;
-  opacity: 0.16;
-}
-section#main article pre {
-  font-family: "Courier New", monospace;
-  font-size: 14px;
-
-  padding: 8px 20px;
-  margin: 20px 0;
-}
-section#main article pre > b {
-  font-weight: bold;
-  color: #333;
+nav.quick a {
+  color: white;
 }
