@@ -96,14 +96,13 @@ nav.quick ul li {
 
 .index .post:hover {
   background-color: rgba(0,0,0,0.34);
-  cursor: pointer;
 }
 .index .post {
   background-color: rgba(0,0,0,0.12);
   float: left;
   color: white;
   width: 200px;
-  margin-right: 10em;
+  margin-right: 8em;
 
   border-top: 8px solid white;
   border-bottom: 8px solid white;
@@ -111,7 +110,7 @@ nav.quick ul li {
 }
 
 .index .post h3 {
-  font-family: 'Raleway';
+  font-family: 'Raleway', "Helvetica Neue", Arial, sans-serif;;
   margin: 0;
   margin-bottom: 1em;
 }
@@ -121,8 +120,12 @@ nav.quick ul li {
   float: right;
 }
 
+.index .post a {
+  text-decoration: none;
+  color: inherit;
+}
 .index .post .snippet {
-  font-family: 'Raleway';
+  font-family: 'Raleway', "Helvetica Neue", Arial, sans-serif;
   font-size: 15px;
   text-shadow: 0 0 3px rgba(0,0,0,1.0);
 }
@@ -136,7 +139,7 @@ nav.quick ul li {
 }
 
 #footer .menu {
-  font-family: 'Raleway';
+  font-family: 'Raleway', "Helvetica Neue", Arial, sans-serif;;
   font-size: medium;
   color: #aaa;
 }

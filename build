@@ -1,4 +1,5 @@
-mvn package exec:java -Dexec.mainClass="com.wideplay.web.Rethrick"
+echo Building site publisher...
+mvn package exec:java -Dexec.mainClass="com.wideplay.web.Rethrick" | egrep "^[^\[].*"
 
 if [ "$1" != "local" ]; then
   git add .

@@ -1,5 +1,7 @@
 package com.wideplay.web;
 
+import com.google.gson.Gson;
+
 import java.util.Date;
 
 /**
@@ -17,8 +19,8 @@ public class Page implements Comparable<Page>, Cloneable {
     return id;
   }
 
-  public void setId(String id) {
-    this.id = id;
+  public void name(String fileName) {
+    this.id = fileName.substring(0, fileName.length() - ".markdown".length());
   }
 
   public String getTitle() {
@@ -47,5 +49,9 @@ public class Page implements Comparable<Page>, Cloneable {
 
   public int compareTo(Page o) {
     return o.postedOn.compareTo(this.postedOn);
+  }
+
+  public Page clone(Gson gson) {
+    return gson.fromJson(gson.toJson(this), Page.class);
   }
 }

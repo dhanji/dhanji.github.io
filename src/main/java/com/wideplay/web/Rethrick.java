@@ -12,6 +12,7 @@ import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.mvel2.templates.TemplateRuntime;
 
@@ -21,7 +22,6 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.text.DateFormat;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Collection;
 import java.util.Collections;
@@ -37,7 +37,20 @@ public class Rethrick {
   private static final String DD_MMM_YYYY = "dd MMM yyyy";
   private static final DateFormat DATE_FORMAT = new SimpleDateFormat(DD_MMM_YYYY);
 
-  public static void main(String... args) throws IOException, ParseException {
+  // Mark them down.
+  private MarkdownProcessor markdown = new MarkdownProcessor();
+  private Gson gson = new GsonBuilder()
+      .setLongSerializationPolicy(LongSerializationPolicy.STRING)
+      .setDateFormat(DD_MMM_YYYY)
+      .disableHtmlEscaping()
+      .create();
+
+
+  public static void main(String... args) throws Exception {
+    new Rethrick().publish();
+  }
+
+  void publish() throws Exception {
     // Clean output dir first.
     System.out.println("Cleaning output dir...");
     File views = new File("views");
@@ -54,14 +67,6 @@ public class Rethrick {
     // Preprocess blog template a little, cleanup some of the DEV options (like relinking the CSS)
     blogTemplate.select("head > link[href=main.css]").attr("href", "/main.css");
 
-    // Mark them down.
-    MarkdownProcessor markdown = new MarkdownProcessor();
-    Gson gson = new GsonBuilder()
-        .setLongSerializationPolicy(LongSerializationPolicy.STRING)
-        .setDateFormat(DD_MMM_YYYY)
-        .disableHtmlEscaping()
-        .create();
-
     Index index = new Index();
     List<Page> pages = Lists.newArrayListWithExpectedSize(files.size());
     for (File file : files) {
@@ -73,7 +78,7 @@ public class Rethrick {
       String fileName = file.getName();
 
       Page page = new Page();
-      page.setId(fileName.substring(0, fileName.length() - ".markdown".length()));
+      page.name(fileName);
       String html = markdown.markdown(template);
 
       // JSoup this sucka to grab metadata out of it.
@@ -116,7 +121,7 @@ public class Rethrick {
 
       // Do not add to index if there is a meta noindex tag.
       if (shouldIndex) {
-        pages.add(clone(gson, page));
+        pages.add(page.clone(gson));
 
         // Construct a snippet and store into the index.
         // Destructively update the page coz we've already saved it.
@@ -127,13 +132,7 @@ public class Rethrick {
     System.out.println(files.size() + " files written.");
 
     // Write an index now.
-    Collections.sort(index.getPages());
-    Document indexTemplate = Jsoup.parse(IOUtils.toString(new FileReader("blog_template.html")));
-    indexTemplate.select("section.index").clear();
-
-    for (Page page : index.getPages()) {
-      indexTemplate
-    }
+    writeIndex(index);
 
     // Write RSS feed.
     Collections.sort(pages);
@@ -143,8 +142,39 @@ public class Rethrick {
     System.out.println("RSS feed written.");
   }
 
-  private static Page clone(Gson gson, Page page) {
-    return gson.fromJson(gson.toJson(page), Page.class);
+  private static void writeIndex(Index index) throws IOException {
+    Collections.sort(index.getPages());
+    Document indexTemplate = Jsoup.parse(IOUtils.toString(new FileReader("index_template.html")));
+    Element article = indexTemplate.select("section.index .inner article.post").first();
+    Elements inner = indexTemplate.select("section.index .inner");
+    inner.html("");
+
+    for (Page page : index.getPages().subList(0, 3)) {
+      article = article.clone();
+      article.select("a").attr("href", "/" + page.getId());
+      article.select(".snippet").html(page.getTitle());
+      article.select("time")
+          .attr("datetime", page.getPostedOn().toString())
+          .html(DATE_FORMAT.format(page.getPostedOn()));
+
+      inner.append(article.outerHtml());
+    }
+
+    // Write the rest of the index to the bottom crawl.
+    inner = indexTemplate.select("#footer .menu ul");
+    article = inner.select("li").last();
+    inner.html("<li>→&nbsp;</li>"); // Leading arrow thingy.
+    for (Page page : index.getPages().subList(3, index.getPages().size())) {
+      article = article.clone();
+      article.select("a").html(page.getTitle());
+      article.select("a")
+          .attr("href", "/" + page.getId())
+          .attr("title", DATE_FORMAT.format(page.getPostedOn()));
+
+      inner.append(article.outerHtml());
+    }
+
+    writeFile(new File("index.html1"), indexTemplate.outerHtml());
   }
 
   private static String snippet(Document document) {
@@ -165,12 +195,12 @@ public class Rethrick {
   }
 
   private static void writeFile(File outFile, String data) throws IOException {
-    FileOutputStream outputStream = new FileOutputStream(outFile);
-    outputStream.getChannel().truncate(0L);
-    OutputStreamWriter writer = new OutputStreamWriter(outputStream, Charsets.UTF_8);
-    IOUtils.write(data, writer);
-    writer.flush();
-    IOUtils.closeQuietly(writer);
-    IOUtils.closeQuietly(outputStream);
+    try (FileOutputStream outputStream = new FileOutputStream(outFile)) {
+      outputStream.getChannel().truncate(0L);
+      try (OutputStreamWriter writer = new OutputStreamWriter(outputStream, Charsets.UTF_8)) {
+        writer.write(data);
+        writer.flush();
+      }
+    }
   }
 }
