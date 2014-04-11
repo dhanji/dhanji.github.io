@@ -128,8 +128,12 @@ public class Rethrick {
 
     // Write an index now.
     Collections.sort(index.getPages());
-    writeFile("index.json", gson.toJson(index));
-    System.out.println("New index written.");
+    Document indexTemplate = Jsoup.parse(IOUtils.toString(new FileReader("blog_template.html")));
+    indexTemplate.select("section.index").clear();
+
+    for (Page page : index.getPages()) {
+      indexTemplate
+    }
 
     // Write RSS feed.
     Collections.sort(pages);
