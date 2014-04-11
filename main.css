@@ -16,29 +16,148 @@ body {
   font-size: small;
   margin: 0;
 
-  background: #eee;
+  background: #222;
+}
+
+.image-container {
+  width: 100%;
+  height: 995px;
+  overflow: hidden;
+
+  background: black;
 }
 
 img.mural {
-  margin-top: -5em;
-  width: 100%;
+  margin-top: -6em;
+  width: 1428px;
+  border-bottom: 2px solid black;
 }
 
 header h1 {
   position: absolute;
   left: 1em;
+  margin-top: 0.6em;
   font-family: 'Museo', Arial, sans-serif;
-  text-transform: uppercase;
-
+  font-weight: bold;
+  font-size: 2em;
+  text-transform: capitalize;
   color: white;
-  text-shadow: 0 0 4px rgba(0,0,0,0.9);
+  background: rgba(0,0,0,0.4);
+  text-shadow: 0 0 2px #000;
+  /*text-shadow:*/
+    /*3px 3px 0 #fff,*/
+    /*-1px -1px 0 #fff,*/
+    /*1px -1px 0 #fff,*/
+    /*-1px 1px 0 #fff,*/
+    /*1px 1px 0 #fff;*/
+}
+
+header .tagline {
+  display: block;
+  font-family: "Raleway";
+  font-weight: lighter;
+  font-size: small;
+  opacity: 0.8;
+  text-transform: none;
 }
 
 nav.quick {
   position: absolute;
-  right: 1em
+  margin-top: 0.4em;
+  left: 49em
 }
 
+
 nav.quick a {
+  font-family: 'AvenirNext-Regular', "Helvetica Neue", "Arial", sans-serif;
+  font-size: 14px;
+  text-shadow: 0 1px 2px rgba(0,0,0,1);
+
   color: white;
+  /*text-transform: capitalize;*/
+  text-decoration: none;
+}
+nav.quick a:hover {
+  text-decoration: underline;
+}
+
+nav.quick ul li {
+  display: inline-block;
+  padding: 0 0.6em;
+}
+
+.index {
+  position: absolute;
+  margin-top: 44em;
+}
+.index .inner {
+  margin-left: 20em
+}
+
+.index .post:hover {
+  background-color: rgba(0,0,0,0.34);
+  cursor: pointer;
+}
+.index .post {
+  background-color: rgba(0,0,0,0.12);
+  float: left;
+  color: white;
+  width: 200px;
+  margin-right: 10em;
+
+  border-top: 8px solid white;
+  border-bottom: 8px solid white;
+  padding: 2em 8px;
+}
+
+.index .post h3 {
+  font-family: 'Raleway';
+  margin: 0;
+  margin-bottom: 1em;
+}
+
+.index .post time {
+  font-size: smaller;
+  float: right;
+}
+
+.index .post .snippet {
+  font-family: 'Raleway';
+  font-size: 15px;
+  text-shadow: 0 0 3px rgba(0,0,0,1.0);
+}
+
+#footer .caption {
+  position: absolute;
+  bottom: 1em;
+  left: 1em;
+  font-family: 'Helvetica Neue', "Arial", sans-serif;
+  color: #555;
+}
+
+#footer .menu {
+  font-family: 'Raleway';
+  font-size: medium;
+  color: #aaa;
+}
+
+#footer .menu li {
+  margin-top: 0.6em;
+  display: inline-block;
+}
+
+#footer .menu li a:hover {
+  text-decoration: underline;
+  color: #eee;
+}
+#footer .menu li a {
+  color: inherit;
+  text-decoration: none;
+  margin: 0 1em;
+}
+
+#footer .bottom {
+  margin: 2em 1px 0 1px;
+  height: 4em;
+  background: #333;
 }
