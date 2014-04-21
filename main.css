@@ -21,30 +21,27 @@ body {
 
 .image-container {
   width: 100%;
-  height: 995px;
-  overflow: hidden;
-
-  background: black;
+  /*overflow: hidden;*/
 }
 
 img.mural {
-  margin-top: -6em;
-  width: 1428px;
+  margin-top: -5em;
+  width: 100%;
   border-bottom: 2px solid black;
 }
 
 header h1 {
   float: left;
-  position: relative;
-  left: 1em;
-  top: 0.45em;
+  position: absolute;
   margin: 0;
-  font-family: 'Museo', Arial, sans-serif;
-  font-weight: bold;
+  margin-top: 0.45em;
+  margin-left: 1em;
+  font-family: 'Raleway', Arial, sans-serif;
+  font-weight: normal;
   font-size: 2em;
   text-transform: capitalize;
   color: white;
-  text-shadow: 0 0 2px #000;
+  text-shadow: 0 0 5px rgba(0,0,0,0.7);
   /*text-shadow:*/
     /*3px 3px 0 #fff,*/
     /*-1px -1px 0 #fff,*/
@@ -70,7 +67,7 @@ header .tagline {
 
 nav.quick {
   float: right;
-  margin-top: 0.4em;
+  margin-top: -1em;
   margin-right: 1em;
 }
 
@@ -83,11 +80,13 @@ nav.quick a {
   text-shadow: 0 1px 2px rgba(0,0,0,1);
 
   color: white;
+  opacity: 0.9;
   /*text-transform: capitalize;*/
   text-decoration: none;
 }
 nav.quick a:hover {
-  text-decoration: underline;
+  opacity: 1.0;
+  text-shadow: 0 0 3px rgba(255,255,255, 0.5);
 }
 
 nav.quick ul li {
@@ -97,10 +96,8 @@ nav.quick ul li {
 
 .index {
   position: absolute;
-  margin-top: 44em;
-}
-.index .inner {
-  margin-left: 20em
+  margin-top: 43em;
+  overflow: hidden;
 }
 
 .index .post:hover {
@@ -118,7 +115,7 @@ nav.quick ul li {
 }
 
 .index .post {
-  background-color: rgba(0,0,0,0.12);
+  background-color: rgba(0,0,0,0.16);
   float: left;
   color: white;
   width: 200px;
@@ -167,7 +164,6 @@ nav.quick ul li {
 
 #footer .menu li {
   margin-top: 0.6em;
-  display: inline-block;
 }
 
 #footer .menu li a:hover {
@@ -179,7 +175,10 @@ nav.quick ul li {
   text-decoration: none;
   margin: 0 1em;
 }
-
+#footer .menu li time {
+  font-size: 0.8em;
+  opacity: 0.5;
+}
 #footer .bottom {
   margin: 2em 1px 0 1px;
   height: 4em;
