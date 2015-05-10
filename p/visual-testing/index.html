@@ -1,0 +1,88 @@
+<!DOCTYPE HTML> 
+<html> 
+ <head> 
+  <meta charset="UTF-8" /> 
+  <title>Rethrick Construction</title> 
+  <link href="http://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet" type="text/css" /> 
+  <link href="http://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet" type="text/css" /> 
+  <link href="http://fonts.googleapis.com/css?family=Inconsolata&amp;v2" rel="stylesheet" type="text/css" /> 
+  <link rel="stylesheet" href="../../css/flaticon.css" /> 
+  <link rel="stylesheet" href="../../css/main.css" /> 
+  <script type="text/javascript" src="../../js/coffee-script.js">
+  </script> 
+  <script type="text/javascript" src="../../js/jquery-2.1.3.min.js">
+  </script> 
+  <script type="text/coffeescript" src="../../cs/main.coffee">
+  </script> 
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-24538005-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  
+  </script> 
+ </head> 
+ <body> 
+  <nav id="top"> 
+   <ul> 
+    <li><a href="/p/about">About</a></li> 
+    <li><a href="/p/projects">Projects</a></li> 
+   </ul> 
+   <h1>Rethrick Construction</h1> 
+  </nav> 
+  <nav id="share"> 
+   <ul> 
+    <li><a href="https://www.facebook.com/dialog/share?app_id=480715222077095&amp;display=popup&amp;href=http%3A%2F%2Frethrick.com&amp;redirect_uri=http%3A%2F%2Frethrick.com/popup_close.html" class="fb" title="Share on facebook">
+      <div class="glyph-icon flaticon-facebook2"></div></a></li> 
+    <li><a href="https://twitter.com/share?via=dhanji&amp;related=dhanji&amp;dnt=true&amp;url=http%3A%2F%2Frethrick.com" target="_blank" title="Share on twitter" class="tweet">
+      <div class="glyph-icon flaticon-twitter"></div></a></li> 
+    <li><a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;tf=1&amp;to=&amp;su=I+thought+you+might+like+this...&amp;body=Article+by+Dhanji+R.+Prasanna%3A%0A%0Ahttp%3A%2F%2Frethrick.com" title="Send via Gmail" class="gmail">
+      <div class="glyph-icon flaticon-mail59"></div></a></li> 
+   </ul> 
+  </nav> 
+  <section id="content"> 
+   <div class="meta"> 
+    <ul class="tags"> 
+    </ul> 
+   </div> 
+   <h2>Testing Parsers &amp; Concurrent Code</h2> 
+   <div class="text">
+    <p></p>   
+    <p>Testing is an interesting subject. Everyone pays lip service to it, but I suspect that secretly no one wants to do it. I'm specifically talking about writing automated tests. Much of the available literature focuses on testing frameworks (xUnit, QuickCheck, Selenium, and so on) or methodologies (test-driven development, functional testing), but not much on testing techniques. This may sound reasonable, but by comparison literature on writing production code is considerably richer-you can find all kinds of books and articles on design patterns, architecture, and algorithms. But apart from some pedantic stuff about mock versus stub objects, I haven't really come across a lot on the techniques of testing. I've always found learning a new technique to be far more valuable than learning a new framework.</p> 
+    <p>Until a few years ago, I had pretty much assumed that I knew all there was to know about testing. It was a chore that simply had to be endured, with things like test-driven development (TDD) being occasional, interesting distractions. However, since then I've come to realize that what I don't know far outweighs what I do know. Visual testing is a technique I picked up from watching and imitating brilliant engineers over the years. While it may not be revolutionary, I've found it incredibly useful when attacking difficult testing problems.</p> 
+    <h3>Comparing Strings</h3> 
+    <p>Like many good techniques, visual testing is largely about giving you clear, concise, and exhaustive information about what happened. Here's a simple example:</p> 
+    <pre><code> @Test
+ public void sortSomeNumbers() {
+   assertEquals(&quot;[1, 2, 3]&quot;, Sorter.sort(3, 2, 1).toString());
+ }
+</code></pre> 
+    <p>This test asserts that my program, Sorter, correctly sorts a list of three numbers. But the test is comparing strings, rather than asserting order in a list of numbers. <em>If this example is setting off your type-safety warning bells, don't worry; its benefit will become clear shortly.</em></p> 
+    <p>Since we're only testing string equality, it doesn't really matter if Sorter.sort() returns a list, an array, or some other kind of object-as long as its string form produces a result that we expect. This capability is incredibly powerful for a couple of reasons:n</p> 
+    <p>You can instantly see when something is wrong by simply diffing two strings. You're free to change your mind about the underlying logic (repeatedly), and your test remains unchanged. You might argue that the second point is achieved with a sufficiently abstract interface--this is largely true, but in many cases it's quite cumbersome. (Particularly with evolving code, I've found it quite painful.) And refactoring tools only take you so far. Using strings neatly sidesteps this problem.</p> 
+    <p><i>Read the <a href="http://www.informit.com/articles/article.aspx?p=1831497">rest of this article</a> (at InformIT).</i></p> 
+    <p><br /></p> 
+    <div style="font-size: small;">
+      Find me on 
+     <a href="http://twitter.com/dhanji">twitter</a> 
+    </div>
+   </div> 
+   <footer> 
+    <p>Last updated on <time>June 12th 2012</time>.</p> 
+    <p>Find me on <a href="https://twitter.com/dhanji">Twitter</a></p> 
+   </footer> 
+  </section> 
+  <footer id="footer">
+    Font generated by 
+   <a href="http://www.flaticon.com">flaticon.com</a> under 
+   <a href="http://creativecommons.org/licenses/by/3.0/">CC BY</a>. The authors are: 
+   <a href="http://www.bogdanrosu.com">Bogdan Rosu</a>, 
+   <a href="http://www.simpleicon.com">SimpleIcon</a>, 
+   <a href="http://www.freepik.com">Freepik</a>. 
+  </footer>   
+ </body>
+</html>

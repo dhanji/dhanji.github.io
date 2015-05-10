@@ -1,0 +1,749 @@
+<rss version="2.0">
+  <channel>
+    <title>Rethrick Construction</title>
+    <description>A website by Dhanji R. Prasanna</description>
+    <link rel="self" type="application/rss+xml">http://rethrick.com/</link>
+
+    
+    <item>
+      <guid isPermaLink="true">
+        http://rethrick.com/rethinking
+      </guid>
+      <title>Rethinking Google Wave</title>
+      <description>&lt;p&gt;&lt;/p&gt;
+&lt;meta published=&quot;11 Sep 2012&quot; /&gt; 
+&lt;meta tag=&quot;programming&quot; /&gt; 
+&lt;meta tag=&quot;interface&quot; /&gt;  
+&lt;p&gt;Ok this will be my last post about Wave and all things related. I've wanted to get this off my chest for awhile, so here goes. Hopefully, reading it is as interesting to you as writing it was cathartic for me.&lt;/p&gt; 
+&lt;h2&gt;Part 1: A Seedling Doubt&lt;/h2&gt; 
+&lt;p&gt;I remember a chilly Spring evening at Sweeney's rooftop bar in Sydney. This was at the height of Wave. The growth numbers were incredible, signups were happening faster than we could spin up capacity, and invites were filling up eBay auctions at a rate of knots.&lt;/p&gt; 
+&lt;p&gt;We sat around the table in silence, nursing our beers. Finally, one of my colleagues broke the silence with a sheepish grin, &amp;quot;Maybe there is something to this Wave thing after all.&amp;quot;&lt;/p&gt; 
+&lt;p&gt;I was thinking the same thing. We had spent many such evenings railing against bad UI decisions, architectural choices and general process problems. We were in a pressure-cooker with unrealistic, mythic, startup-style deadlines, so it was natural to vent. But I had always felt this was more than venting, that behind each desperate argument was the pain of deep frustration. One that was born of an equally deep passion to see this thing we had dedicated the past year to, succeed.&lt;/p&gt; 
+&lt;p&gt;But now there was a doubt in our minds. Numbers don't lie--or do they?&lt;/p&gt; 
+&lt;h3&gt;Technology vs. Product&lt;/h3&gt; 
+&lt;p&gt;To be sure not everyone felt this way. Only a handful of us gathered to drink after work, and an even smaller number vented such frustrations.&lt;/p&gt; 
+&lt;p&gt;Some weeks later, I read a blog post that was being circulated around the team. Most press we got in those days was of the adulatory, sycophantic and over-hyped variety. Some of it was negative, but this was usually driven by some agenda; like the &lt;a href=&quot;http://en.wikipedia.org/wiki/Ray_Ozzie&quot;&gt;creator of Lotus Notes&lt;/a&gt; declaring in an epic fit of irony that &amp;quot;Wave was &lt;a href=&quot;http://tech.slashdot.org/story/09/06/09/198205/ray-ozzie-calls-google-wave-anti-web&quot;&gt;too complex&lt;/a&gt;&amp;quot;, so I learned to tune most of it out.&lt;/p&gt; 
+&lt;p&gt;This article was different however (try as I might, I can't locate it), its essential thrust was about how the official description of Wave read like a laundry list of technology features, but said nothing about the product itself. It went on to talk about a Facebook press release, which by comparison, was a succinct and clear statement of what a user could do with Events.&lt;/p&gt; 
+&lt;p&gt;This really hit home for me. It phrased in simple words what I had been feeling all along and tied together the threads of all those frustrations into a coherent problem statement.&lt;/p&gt; 
+&lt;h3&gt;Skunkworks&lt;/h3&gt; 
+&lt;p&gt;Of course we now know that the numbers were not to last. After the initial tsunami of tire-kickers came and went, there was a barren wreck left. But it was also more than this: Wave really appealed to some people, it certainly appealed to me, but why that was no one could really say. Perhaps it was the geek in me that liked the idea of individual keystrokes flying about the earth, browser-to-browser, in fractions of a second. Or that there was finally a simple way to capture all kinds of media in a simple, shared record (any Pinterest fans out there?). Or even the idea of a really snazzy web app, a long overdue follow up to Gmail's breakthrough effort years before.&lt;/p&gt; 
+&lt;p&gt;Whatever it was, the project had its own momentum and that was not going to change. I even started a &lt;a href=&quot;http://code.google.com/p/google-wave-splash/&quot;&gt;skunkworks project&lt;/a&gt; to try to fix some of the problems with the slow, unwieldy GWT client. At this time, I still thought that things were salvageable if we only got the user interface to be simple and fast. I roped in four colleagues including Wave's UX designer when no one was looking. When we demoed opening a 420-message conversation in under 300ms to the rest of the team (in IE6 no less!), we actually got some converts. The GWT client team started a skunkworks in counter-response to speed up their own UI. They did a great job (to be fair, I had also contributed to the slowness of the old GWT client).&lt;/p&gt; 
+&lt;p&gt;By the time we pushed this through Google's careful release process however, it was time to draw the curtain down. The executive team was not interested in a second wind.&lt;/p&gt; 
+&lt;h2&gt;Part 2: Rethinking things&lt;/h2&gt; 
+&lt;p&gt;But in hindsight, Im not sure that making a faster or simpler client would have bought us all that much. The problems ran deeper, as that blogger had so succinctly identified. There was a looming question about the product itself. &lt;/p&gt; 
+&lt;p&gt;In that vein, I began thinking about what Wave might look like if it were run again as a startup in earnest. That is, one without legions of engineers and product designers, and without the Leviathan Google launchpad to spring from.&lt;/p&gt; 
+&lt;p&gt;What wave was good for in the end was working on a topic with a group. Generally the model worked best as follows:&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;A single &amp;quot;presenter&amp;quot; of a topic puts out a thesis in the first post&lt;/li&gt; 
+ &lt;li&gt;N responders comment or make minor edits to the post for marginal improvements&lt;/li&gt; 
+ &lt;li&gt;Each topic has an ephemeral lifespan not unlike a forum thread&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;p&gt;What use case fits this really well? There are probably a number that come to mind, but my pick would be mailing lists; for example, a Google Group used by an open source project. The current state of the art here is severely lacking:&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;It is stuck in the email era of interactivity&lt;/li&gt; 
+ &lt;li&gt;Spam is an enormous problem (jQuery &lt;a href=&quot;http://forum.jquery.com/topic/moving-away-from-google-groups-to-forums&quot;&gt;left Google Groups&lt;/a&gt;)&lt;/li&gt; 
+ &lt;li&gt;Poor support for rich media, extensions, and so on.&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;p&gt;When I originally thought this up, I started by limiting logins to Twitter accounts (now I might choose something more developer friendly). This has a number of benefits, the main one being that you eliminate spam almost instantly. Also Twitter users overlap well with our target audience--active open source contributors and users. These people are generally avid early adopters and strong evangelists for products they like.&lt;/p&gt; 
+&lt;p&gt;Using something like Twitter for logins also has little advantages like better proliferation of avatars and an easy-access, viral bullhorn for announcements. &lt;/p&gt; 
+&lt;h3&gt;Minimum Viable Product&lt;/h3&gt; 
+&lt;p&gt;In this spirit I made a few mockups (click to expand):&lt;/p&gt; 
+&lt;p&gt;&lt;a href=&quot;http://rethrick.com/images/wave/main.png&quot;&gt; &lt;img src=&quot;http://rethrick.com/images/wave/main.png&quot; style=&quot;width:500px; display: block; margin: 0 auto; border: 1px solid #777; padding: 2px;&quot; /&gt; &lt;/a&gt;&lt;/p&gt; 
+&lt;p&gt;This is a simple list of discussion threads belonging to a group, in this case for the &lt;a href=&quot;http://sitebricks.org&quot;&gt;Sitebricks project&lt;/a&gt;. It is nice and clean, and it presents most of the information you need. Newer discussions rise to the top, and older ones fall away into an archive. The app deliberately shows a limited number as I think the signal-to-noise ratio of mailing lists has a dramatic falloff.&lt;/p&gt; 
+&lt;p&gt;The detailed view of a single discussion is also modernized but presents the main topic clearly.&lt;/p&gt; 
+&lt;p&gt;&lt;a href=&quot;http://rethrick.com/images/wave/thread.png&quot;&gt; &lt;img src=&quot;http://rethrick.com/images/wave/thread.png&quot; style=&quot;width:500px; display: block; margin: 0 auto; border: 1px solid #777; padding: 2px;&quot; /&gt; &lt;/a&gt;&lt;/p&gt; 
+&lt;p&gt;Here we have concurrently-editable rich text (that famous Wave OT technology) that forms the base of the discussion. While I think there is value in anyone being able to annotate the text of the first post, I didn't particularly like Wave's freeform tree-reply model. Replies ran off-topic and out of hand quickly. Follow up replies and comments instead occur in a simple linear flow:&lt;/p&gt; 
+&lt;p&gt;&lt;a href=&quot;http://rethrick.com/images/wave/reply.png&quot;&gt; &lt;img src=&quot;http://rethrick.com/images/wave/reply.png&quot; style=&quot;width:500px; display: block; margin: 0 auto; border: 1px solid #777; padding: 2px;&quot; /&gt; &lt;/a&gt;&lt;/p&gt; 
+&lt;p&gt;Another thing I felt strongly about was the need for a topic &lt;em&gt;before&lt;/em&gt; you start writing a post. &lt;/p&gt; 
+&lt;p&gt;&lt;a href=&quot;http://rethrick.com/images/wave/post.png&quot;&gt; &lt;img src=&quot;http://rethrick.com/images/wave/post.png&quot; style=&quot;width:500px; display: block; margin: 0 auto; border: 1px solid #777; padding: 2px;&quot; /&gt; &lt;/a&gt;&lt;/p&gt; 
+&lt;p&gt;This makes people stop and think about what exactly they want to say, and the best way in which to summarize it rather than dumping a bunch of thoughts in a post and then sticking a subject on them as an afterthought.&lt;/p&gt; 
+&lt;p&gt;Next, a simple analog of Twitter's asymmetric follow model makes it easy to express interest in a single thread, an entire group, or a person &lt;em&gt;across&lt;/em&gt; groups:&lt;/p&gt; 
+&lt;p&gt;&lt;a href=&quot;http://rethrick.com/images/wave/following.png&quot;&gt; &lt;img src=&quot;http://rethrick.com/images/wave/following.png&quot; style=&quot;width:500px; display: block; margin: 0 auto; border: 1px solid #777; padding: 2px;&quot; /&gt; &lt;/a&gt;&lt;/p&gt; 
+&lt;p&gt;This is not dissimilar to &amp;quot;watched&amp;quot; threads in traditional forum apps. However, the toggle button being quick and responsive, lets you jump in and out of interest in a topic nicely. Replies to public threads come back at you via @mentions on Twitter, or if you've elected, as an email notification; but all the engagement happens on the site.&lt;/p&gt; 
+&lt;p&gt;You can even implement ACLs using this scheme. Doing inventive things like restricting edit or comment access to your social graph on Twitter. One can imagine expert groups being run this way quite effectively.&lt;/p&gt; 
+&lt;p&gt;There are a number of similar engagement techniques, for example, a dynamic counter showing who's active on this group &lt;em&gt;right now.&lt;/em&gt;&lt;/p&gt; 
+&lt;p&gt;&lt;a href=&quot;http://rethrick.com/images/wave/stats.png&quot;&gt; &lt;img src=&quot;http://rethrick.com/images/wave/stats.png&quot; style=&quot;width:200px; display: block; margin: 0 auto; border: 1px solid #777; padding: 2px;&quot; /&gt; &lt;/a&gt;&lt;/p&gt; 
+&lt;p&gt;The grid of avatars approach works too, especially if it were dynamically updated to show presence.&lt;/p&gt; 
+&lt;h3&gt;Conclusion&lt;/h3&gt; 
+&lt;p&gt;Getting one or two high-profile open source projects to use the app would be a fantastic way to get grass-roots usage going. Related projects would soon follow giving you coveted viral growth (e.g. jQuery + plugins). And there'd be a ton of daily, real-world usage to measure and learn from. These kinds of users are quite vocal and will tell you exactly where you need to improve, and will bring with them a devoted user community.&lt;/p&gt; 
+&lt;p&gt;Furthermore, I'd follow Github's wonderful example of giving away all public groups for free and charging a modest sum for private discussions as a source of revenue.&lt;/p&gt; 
+&lt;p&gt;&lt;a href=&quot;http://rethrick.com/images/wave/private.png&quot;&gt; &lt;img src=&quot;http://rethrick.com/images/wave/private.png&quot; style=&quot;width:500px; display: block; margin: 0 auto; border: 1px solid #777; padding: 2px;&quot; /&gt; &lt;/a&gt;&lt;/p&gt; 
+&lt;p&gt;Finally, there is a lot of scope beyond this. The set of Mailing List users (although this set is very large--Google Groups itself accounts for millions of users) is only a starting point, but a good starting point at that. If successful, working your way to the next great use case ought to be natural and smooth. You can imagine everything from planning an event, to working on group assignments, to live-blogging the next iProduct happening on this platform.&lt;/p&gt; 
+&lt;p&gt;Wave attempted to be a great many things, but it attempted them all at once. If it started instead with just one and mastered it thoroughly, perhaps in time it would have earned all the rest.&lt;/p&gt; 
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt; 
+&lt;div style=&quot;font-size: small;&quot;&gt;
+ Find me on 
+ &lt;a href=&quot;http://twitter.com/dhanji&quot;&gt;twitter&lt;/a&gt;
+&lt;/div&gt;</description>
+      <link>http://rethrick.com/#rethinking</link>
+    </item>
+    
+    <item>
+      <guid isPermaLink="true">
+        http://rethrick.com/rip-fluent
+      </guid>
+      <title>On Ending Fluent</title>
+      <description>&lt;p&gt;&lt;/p&gt;
+&lt;meta published=&quot;08 Aug 2012&quot; /&gt;  
+&lt;p&gt;OK by now you probably know that Fluent.io, the email startup that I founded along with &lt;a href=&quot;http://twitter.com/themaninblue&quot;&gt;@themaninblue&lt;/a&gt; and &lt;a href=&quot;http://www.linkedin.com/in/jochenbekmann&quot;&gt;&lt;strong&gt;jochen&lt;/strong&gt;&lt;/a&gt; has announced it's &lt;a href=&quot;http://fluentmail.tumblr.com/post/28767857337/fluent-is-closing&quot;&gt;closing down&lt;/a&gt;. There will no doubt be a lot of speculation about this. Most of what I've read is of the **Oh, that's disappointing...** variety. But as with all such discussions some of it is harsh, and some just plain wrong.&lt;/p&gt; 
+&lt;p&gt;So here's me setting the record straight. The disclaimer is, I don't speak for my colleagues; so take this as you like:&lt;/p&gt; 
+&lt;h3&gt;Sparrow&lt;/h3&gt; 
+&lt;p&gt;The tin-foil hatters will never believe me, but I promise the rest of you that we had made this decision long before Sparrow announced its acquisition by Google. Fluent's model was never similar to Sparrow's. Sparrow was all about a single transaction--like a game or an old-school app. We knew from the start that this was not going to pay the bills, and that despite the great app that they put out, it wasn't particularly revolutionary with respect to the core problem--email.&lt;/p&gt; 
+&lt;p&gt;What we wanted to do was build a communications crucible. One that could take all your data and make sense of it, to not just separate the chaff from the grain, but also help you discover things--things that weren't merely needles in the haystack. In other words, we wanted to yield more than merely the sum of all your emails, distilled and presented for easy consumption.&lt;/p&gt; 
+&lt;p&gt;Our long term roadmap focused on things like building a workflow between members of a team, a revisioned history of changes to a file or document, with a corresponding comment thread. To know, by person, everything about them--what's on their mind (Twitter/FB), how important they are to you (the frequency graph of comms), the mood of chatter in a discussion (we had prototypes that extracted topics, mood words). To read patterns in your contact with the world around you that might provide a kind of insight that you were simply not aware of.&lt;/p&gt; 
+&lt;p&gt;There is an astronomical wealth of data available in your personal correspondence. This includes social networks, calendars, cloud file systems, forums, wikis, documents and more. We wanted to take a user's interaction with their digital world to the next level.&lt;/p&gt; 
+&lt;p&gt;Email was just the first step.&lt;/p&gt; 
+&lt;p&gt;You can see that this is a valid, if ambitious goal, with the recent trend in apps--Google Now, Cue, Siri, all feature small facets of this unified communications crucible and personal narrative.&lt;/p&gt; 
+&lt;h3&gt;Chasing Gmail&lt;/h3&gt; 
+&lt;p&gt;Unfortunately, I think we got caught up in trying to be a better Gmail. All our early feedback from users basically just highlighted the delta between us and Gmail. So this was a baseline we started chasing.&lt;/p&gt; 
+&lt;p&gt;Gmail is a fantastic service--it is the app I used the most bar none before Fluent. For most users it is good enough. And therein lies the problem.&lt;/p&gt; 
+&lt;p&gt;I recently spoke with the former CEO and founder of Zimbra, who told me that he would simply walk out of a client if they were using Gmail--it's just not worth trying to beat them. He knew that Zimbra was better, but getting that across wasn't going to happen (you're probably thinking even now, that you can't imagine how it's better than Gmail).&lt;/p&gt; 
+&lt;p&gt;There are a hundred little reasons why I think Fluent did things better than Gmail, but for most people Gmail is good enough. And even if someone buys those hundred little reasons, they don't necessarily add up to a single forcing function to switch.&lt;/p&gt; 
+&lt;p&gt;Add to this, the fact that we were a webapp first and you have the exposure of navigating away and never coming back. Mobile apps have the benefit of (an albeit tiny bit of) screen real-estate. A webapp does not have this luxury to remind someone to come back for a second visit. Let alone the third, fourth or tenth that you really need for stickiness.&lt;/p&gt; 
+&lt;p&gt;In both the literal and metaphorical senses, the muscle memory of &lt;code&gt;g-m-a-i-l.com&lt;/code&gt; is just too powerful to overcome. This is not to say you can't build a popular email service (for instance, by selling hosting for domains, providing security features, or simply by competing with Hotmail and Yahoo), but what we attempted was an enormous uphill challenge.&lt;/p&gt; 
+&lt;p&gt;Things would likely have been different if we hadn't burned a lot of our time building feature parity with Gmail.&lt;/p&gt; 
+&lt;h3&gt;Raising funds&lt;/h3&gt; 
+&lt;p&gt;I don't want to get too deep into this, but let it suffice to say that we had nearly closed a round and a key investor pulled out at the last minute (we could have taken the rest of the round and kept on, but then we'd be back at the raising table a lot sooner than we liked). We had already burned several months putting together this round and were looking at another long stretch of uncertainty at this stage.&lt;/p&gt; 
+&lt;p&gt;The cost of indexing and serving your Email is almost prohibitively high. I imagine you will find that a service like Yahoo! or Hotmail is heavily subsidized and probably loss-making, even after 10+ years of life. So you need a disproportionately expensive runway to do what we attempted.&lt;/p&gt; 
+&lt;p&gt;Also being in Australia automatically means many VCs won't invest, and this was certainly our experience. And investors are &lt;a href=&quot;http://paulgraham.com/ambitious.html&quot;&gt;doubly wary&lt;/a&gt; of web-email startups because of the 800lb gorilla that is Gmail.&lt;/p&gt; 
+&lt;p&gt;Add to all this the fact that we had run a full year into savings, two of us had big mortgages, one a baby, a mounting EC2 bill, and the picture starts to look a lot different.&lt;/p&gt; 
+&lt;p&gt;Even after all this I think it was still possible--but each additional day of fundraising makes things exponentially more difficult. And at some point we had to make a call of whether the time spent chasing after funds was worth the (less than stellar) runway it promised.&lt;/p&gt; 
+&lt;h3&gt;Acquisition&lt;/h3&gt; 
+&lt;p&gt;We had &lt;strong&gt;plenty&lt;/strong&gt; of acquisition interest. Pretty much all of it was of the acqui-hire variety, the kind that Sparrow took and got universally panned for (I don't blame them, personally, I think they were in a tough position). These offers were from the usual suspects as well as other red-hot Valley startups. &lt;/p&gt; 
+&lt;p&gt;In the end, each of us decided on a project that appealed to us on a personal level. We're all going on to different things--we're still friends and we still hang out (really! =). Ultimately, the financial motive didn't rule the day. I like to think we deserve some credit for that. But maybe you think that's cynical too, I don't know.&lt;/p&gt; 
+&lt;h3&gt;The Future&lt;/h3&gt; 
+&lt;p&gt;As we said in the blog post, we're not killing the dream. Rather it's going on the back burner for awhile. Perhaps the way Steve Jobs put the iPad &lt;a href=&quot;http://thenextweb.com/apple/2010/06/02/steve-jobs-the-ipad-concept-came-before-the-iphone/&quot;&gt;back on the shelf&lt;/a&gt; to focus on the iPhone. Only to return to it years later, with the wisdom and maturity of the latter's success. &lt;/p&gt; 
+&lt;p&gt;Or perhaps it will be reborn in the projects we're each pursuing on our own, in some small way.&lt;/p&gt; 
+&lt;p&gt;&lt;strong&gt;Note: Techcrunch published a piece based on this article&lt;/strong&gt;&lt;/p&gt; 
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt; 
+&lt;div style=&quot;font-size: small;&quot;&gt;
+ Find me on 
+ &lt;a href=&quot;http://twitter.com/dhanji&quot;&gt;twitter&lt;/a&gt; 
+ &lt;a href=&quot;https://twitter.com/twitterapi&quot; class=&quot;twitter-follow-button&quot; data-show-count=&quot;false&quot; data-lang=&quot;en&quot;&gt;Follow @twitterapi&lt;/a&gt; 
+ &lt;script&gt;!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=&quot;//platform.twitter.com/widgets.js&quot;;fjs.parentNode.insertBefore(js,fjs);}}(document,&quot;script&quot;,&quot;twitter-wjs&quot;);
+ &lt;/script&gt; 
+&lt;/div&gt;</description>
+      <link>http://rethrick.com/#rip-fluent</link>
+    </item>
+    
+    <item>
+      <guid isPermaLink="true">
+        http://rethrick.com/instant-search
+      </guid>
+      <title>The Secret of 'Instant Search'</title>
+      <description>&lt;p&gt;&lt;/p&gt;
+&lt;meta published=&quot;22 Jun 2012&quot; /&gt; 
+&lt;meta tag=&quot;programming&quot; /&gt;  
+&lt;p&gt;So we have this feature in my startup &lt;a href=&quot;http://fluent.io&quot;&gt;Fluent&lt;/a&gt; called &lt;em&gt;Instant Search&lt;/em&gt;. The idea is that as you are typing a query, the results arrive instantaneously for each partially formed progression of your final query term. So for example, if you typed &amp;quot;deep&amp;quot;, before pressing enter you would already have results for &amp;quot;deep vein thrombosis&amp;quot;, &amp;quot;deep blue&amp;quot; and &amp;quot;deep sea diving&amp;quot; in the infinitesimal space of time it took to type the 'p' in &amp;quot;deep&amp;quot;.&lt;/p&gt; 
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt; 
+&lt;p&gt;Here's a video of it in action (Instant Search begins around the 1:18 mark):&lt;/p&gt; 
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;http://www.youtube.com/embed/R_zD90mIHSU&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt; 
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt; 
+&lt;p&gt;Not only is this a neat piece of technology (if I may be permitted to say so of my own work), it is really a fantastic way to improve your use of search. In other words, not only do you &lt;em&gt;search faster&lt;/em&gt; you also &lt;em&gt;find faster&lt;/em&gt;. &lt;/p&gt; 
+&lt;p&gt;In particular, I believe this puts Fluent's search capability far above say Gmail, Yahoo Mail or Hotmail, in terms of usefulness and speed. For example, in Fluent, typing &amp;quot;In&amp;quot; would produce results for &amp;quot;India&amp;quot;, &amp;quot;Indifferent&amp;quot; and &amp;quot;Inca&amp;quot;, and a further keypress of &amp;quot;e&amp;quot; would narrow down the results to only emails about &amp;quot;Inertia&amp;quot; or &amp;quot;Ineptitude&amp;quot; (lets hope there aren't too many of those in your inbox ;). Other webmail providers would not return these results at all, never mind returning them in tenths of a second.&lt;/p&gt; 
+&lt;p&gt;Now you may think that a lot of clever engineering work went into the backends to make this a reality and that it involves some kind of highly patent-worthy secret sauce. You'd be wrong. The secret is all in the Browser.&lt;/p&gt; 
+&lt;h3&gt;The Browser&lt;/h3&gt; 
+&lt;p&gt;OK, so I'm obviously exaggerating. We did put in an enormous amount of engineering effort to make the search and indexing backends robust, concurrent and scalable. But the real trick of instant search lies in &lt;em&gt;latency to the browser&lt;/em&gt;. I would say this is the single most important thing that webapps get wrong when thinking about performance. Unless you're running multi-second join queries on your database, the dominant factor in perceived latency is by far the network cost. In other words, the cost of pushing bits down the pipe from server to client generally outweighs any algorithm tweaking or CPU savings you can get (please keep in mind that the operative word is &lt;em&gt;generally&lt;/em&gt;). And that's exactly where we focused.&lt;/p&gt; 
+&lt;p&gt;What makes this hellish problem to solve is that browsers come in all shapes and sizes, sit behind weird packet-inspecting firewalls and vary wildly from user to user, mobile, desktop or otherwise. In addition to this, not everyone is using the same version of the same browser, and point releases often change functionality or performance characteristics quite significantly.&lt;/p&gt; 
+&lt;p&gt;However, all this aside, the best way to reduce latency for instant responsiveness is via the use of an always-on connection. Particularly, an HTML5 WebSocket. This may seem obvious to you, but consider that there are various tradeoffs to be made. WebSocket instantly limits you to a handful of browsers (at the time, only Safari and Chrome), and even those don't implement it exactly alike. Minor differences in how SSL/trust occurs, etc., can affect the WebSocket upgrade request or prevent reconnections on-drop from working properly. For example, for a long time Safari would refuse to make a WebSocket connection to an untrusted cert on localhost, so that made testing locally very painful. A version upgrade later, Safari allowed this but Chrome decided not to.&lt;/p&gt; 
+&lt;p&gt;Furthermore, you have to keep in mind that this channel wasn't meant solely for the Instant Search feature--a whole lot of other traffic had to go up and down it. New mail notifications, Read/unread status changes, archive, folders, starring, TODO lists and other metadata, send mail confirmations, and so on. You don't want noisy lower priority traffic to crowd out higher priority traffic.&lt;/p&gt; 
+&lt;p&gt;But all said and done using WebSocket vastly reduces the latency for pushes from server to client by removing HTTP request/response headers from the equation, and by keeping open a full-duplex bidirectional socket that is ideally suited for short bursts of messages.&lt;/p&gt; 
+&lt;p&gt;Compared to Long-Polling, it also removes the overhead of making a &lt;em&gt;renewal&lt;/em&gt; request everytime the server pushes something down. These savings don't sound like much, but when you're implementing such a latency-sensitive feature that is central to your app, they are a godsend.&lt;/p&gt; 
+&lt;h3&gt;Simplicity&lt;/h3&gt; 
+&lt;p&gt;I must have spent days testing the various WebSocket implementations out there. I was universally disappointed. Now, there are some great libraries--Atmosphere, Socket.io, Webbit and so on, but these really didn't suit my purpose at all. Like any nascent technology, early libraries for WebSocket settle on making it easy to set up, focusing their efforts on that aspect of it, rather than things like memory footprint, message-queueing, reliable delivery, fault-tolerance &amp;amp; backoff, concurrency, and so on. I don't blame these libraries for not doing these things (some of them are starting to have features like this), I think as the technology matures, use cases will drive them towards having these features. But for my purposes they were completely inadequate.&lt;/p&gt; 
+&lt;p&gt;Add to this, the fact that a user can keep multiple tabs open with different email accounts open on each one and the system starts to look a lot more complex than simply dragging in a library and hooking up WebSocket.&lt;/p&gt; 
+&lt;p&gt;So I did what any engineer does after preaching for years about the &lt;a href=&quot;http://rethrick.com/nih&quot;&gt;perils of NIH&lt;/a&gt;--I rolled my own. Actually, I built all of these features on top of Jetty's excellent WebSocket extension. &lt;/p&gt; 
+&lt;p&gt;I'm sure I frustrated my colleagues on more than one occasion when our custom implementation broke or dropped the connection randomly, or didn't backoff properly and spun the server to its knees with reconnect requests. But gradually, over time and a number of bug reports and concomitant patches, with a lot of seasoning and hardening, like good steel it began to shine.&lt;/p&gt; 
+&lt;p&gt;A dropped WebSocket coming back up mid-flight, would receive all the messages it missed in the interim; failures in the network caused by poor connectivity or firewalls, were papered over with throttled reconnects; and traffic requested in one browser tab would correctly return to it, while general traffic (like new mail notifications) made it out to all tabs concurrently.&lt;/p&gt; 
+&lt;p&gt;The early effort and frustrations totally paid off. Here is a selection of press responses to our Instant Search feature:&lt;/p&gt; 
+&lt;blockquote&gt; 
+ &lt;p&gt;Fluent's ... instant search function, which is one of the service's standout features. Fluent starts searching as soon as you type a single letter into the box; results from your email appear almost instantly and then morph as you continue to construct your search term ... The speed and accuracy of the mail search is stupendous.&lt;/p&gt; 
+&lt;/blockquote&gt; 
+&lt;p&gt;-- &lt;a href=&quot;http://www.computerworld.com/s/article/9227899/Fluent_review_An_innovative_new_interface_for_Gmail&quot;&gt;Computer World&lt;/a&gt;&lt;/p&gt; 
+&lt;blockquote&gt; 
+ &lt;p&gt;[Fluent's] flashiest thing is the &amp;quot;instant&amp;quot; search, which finds results as you type like Google Instant-the Web search results that appear as you type a query into Google.&lt;/p&gt; 
+&lt;/blockquote&gt; 
+&lt;p&gt;-- &lt;a href=&quot;http://m.technologyreview.com/web/40612/&quot;&gt;Technology Review&lt;/a&gt;&lt;/p&gt; 
+&lt;blockquote&gt; 
+ &lt;p&gt;Even more impressive than all the above is Fluent's instant search. This is potentially the service's &amp;quot;killer&amp;quot; feature ...Fluent's search feature doesn't wait until you've completed a word, it's truly instantaneous ... Fluent's instant search is crazy, crazy fast.&lt;/p&gt; 
+&lt;/blockquote&gt; 
+&lt;p&gt;-- &lt;a href=&quot;http://techcrunch.com/2012/05/31/first-impressions-on-fluent-the-startup-promising-the-future-of-email/&quot;&gt;TechCrunch&lt;/a&gt;&lt;/p&gt; 
+&lt;h3&gt;Progressive querying&lt;/h3&gt; 
+&lt;p&gt;The nice thing about using something like WebSocket is breaking the request/response coupling. By making the responses asynchronous, you can actually send additional keystrokes that race against (and invalidate) previous ones, and reach the client in record time. So as you refine your query with additional characters, the system actually becomes more responsive.&lt;/p&gt; 
+&lt;p&gt;This kind of progressive query build-up, helps warm the caches all the way from RAM to disk, making subsequent parts of the query much faster. The progressive build-up of the query also has other benefits: conducting an AND between two terms is much faster than searching for either of those terms individually. Moreover, the structure of the index lends itself to further optimizations like filtering results within results and so on. &lt;/p&gt; 
+&lt;p&gt;On top of that reducing the size of each response going down the wire has an enormous impact on search performance. One potential optimization is for the server to keep track of what results the client already knows about and simply send an id down instead of the entire snippet.&lt;/p&gt; 
+&lt;p&gt;If one were so inclined one could spend a whole year tweaking things like this to improve search performance.&lt;/p&gt; 
+&lt;h3&gt;Conclusion&lt;/h3&gt; 
+&lt;p&gt;Ultimately, building various pieces of this puzzle from scratch did pay off for us. But I picked my battles--the underlying text is tokenized and stored by Lucene. Yes, there are some customizations we did to make it perform and scale better, but essentially, Lucene is a fantastic library and does the job but only if you take the time to adapt it for your needs. We could have used any tokenizing/full-text search library, but we would not automatically have ended up with Instant Search. &lt;/p&gt; 
+&lt;p&gt;The point I'm trying to make is that building a powerful feature like Instant Search requires diligence and a careful, measured approach to the problem at hand; with a lot of backtracking, frustration and gradual evolution toward the (albeit optimistic) final goal. And more often than not, it involves working in unsexy parts of the stack, reinventing and replacing minor cogs in a much bigger system of gears so that the engine may hum apace.&lt;/p&gt; 
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt; 
+&lt;div style=&quot;font-size: small;&quot;&gt;
+ Find me on 
+ &lt;a href=&quot;http://twitter.com/dhanji&quot;&gt;twitter&lt;/a&gt;
+&lt;/div&gt;</description>
+      <link>http://rethrick.com/#instant-search</link>
+    </item>
+    
+    <item>
+      <guid isPermaLink="true">
+        http://rethrick.com/nih
+      </guid>
+      <title>'Not Invented Here' Syndrome</title>
+      <description>&lt;p&gt;&lt;/p&gt;
+&lt;meta published=&quot;12 Jun 2012&quot; /&gt; 
+&lt;meta tag=&quot;programming&quot; /&gt; 
+&lt;meta tag=&quot;essay&quot; /&gt;  
+&lt;p&gt;No doubt you've come across the &amp;quot;Not Invented Here&amp;quot; (NIH) issue at some point. (It even has a Wikipedia entry.) You start a new job, or a new project with a different team, and the first thing you see is a whole bunch of proprietary code. What web framework do you use? Oh, it's an in-house thing. JavaScript libraries? Some JQuery, but a lot of it is hand-rolled. And what database...? You get the picture.&lt;/p&gt; 
+&lt;p&gt;Most good developers have a healthy aversion to seeing something like this. It smacks of a poorly managed, undisciplined project environment, and probably a disorganized workplace in general. But is that the whole story? Not necessarily&mdash;even companies with well-established development houses, with very experienced and successful engineers, often follow this system. Take Facebook's Cassandra, for example. This is a distributed database of the like of HBase, CouchDB, or MongoDB. LinkedIn's Voldemort is a similar technology. Facebook has the Thrift message-transmission format, which is not unlike Google's Protocol Buffers, which is itself not all that different in purpose and goal from Binary XML or JSON.&lt;/p&gt; 
+&lt;p&gt;Why then does this NIH attitude proliferate throughout software development companies, both new and experienced, young and old? I believe there are a couple of reasons.&lt;/p&gt; 
+&lt;h3&gt;An Interesting Problem&lt;/h3&gt; 
+&lt;p&gt;When you first start programming as an engineer, you're full of enthusiasm and verve. Everything you see is a problem to be solved, a mountain to be conquered. No matter that this mountain has been climbed hundreds of times by more seasoned (and often more sensible) climbers. Usually a young engineer finds some justification&mdash;the existing solutions are too complex, they're in the wrong programming language or platform, they're too slow or have security problems.&lt;/p&gt; 
+&lt;p&gt;Generally these criticisms have some truth to them, but implicit is the assumption that the young programmer can do better, with limited time and resources, and with a more important goal in sight. The real reason, of course, is that the original goal is boring&mdash;most junior programmers don't get to code on the really &amp;quot;hot&amp;quot; stuff. They must do their time, implementing easy-but-laborious features, working their way usually from the front of the stack to the back-end, where senior stalwarts jealously guard their territories, gathered through years of careful experience.&lt;/p&gt; 
+&lt;p&gt;I've fallen prey to this attitude myself, many times. Plenty of solutions worked well enough for the problem at hand. But generally, the problem itself offered very little challenge, so I invented my own challenge by trying to build a framework or an abstraction that did things maybe 10% better than the existing solution.&lt;/p&gt; 
+&lt;p&gt;&lt;i&gt;Read the &lt;a href=&quot;http://www.informit.com/articles/article.aspx?p=1905548&quot;&gt;rest of this article&lt;/a&gt; (at InformIT).&lt;/i&gt;&lt;/p&gt; 
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt; 
+&lt;div style=&quot;font-size: small;&quot;&gt;
+ Find me on 
+ &lt;a href=&quot;http://twitter.com/dhanji&quot;&gt;twitter&lt;/a&gt;
+&lt;/div&gt;</description>
+      <link>http://rethrick.com/#nih</link>
+    </item>
+    
+    <item>
+      <guid isPermaLink="true">
+        http://rethrick.com/source-code-dead
+      </guid>
+      <title>Source code is dead: Long live source code</title>
+      <description>&lt;p&gt;&lt;/p&gt;
+&lt;meta published=&quot;08 May 2012&quot; /&gt;  
+&lt;p&gt;I used to work at Google, a company that's entirely dependent on the source code its engineers produce for its lifeblood. And yet, Google has a rather strange attitude toward source code, giving it away like there's no tomorrow.&lt;/p&gt; 
+&lt;p&gt;From various APIs and libraries to its two programming languages (DART and Go) and its flagship web browser (Chrome), Google has a multitude of high-profile open source projects. This has gained the company a lot of fans in the developer community, and has enabled real extensions and real projects that are offshoots (for example, RockMelt was a startup built on Chromium).&lt;/p&gt; 
+&lt;p&gt;And yet, there's a definite tension at Google between the old guard, who believe that source code is very valuable, and the open source &amp;quot;evangelists,&amp;quot; who believe that nearly all code at the company should be released as open source. Fortunately for Google (and for developers at large), its track record generally shows a willingness to share. Even in cases where Google has been reluctant to release source code (GFS, BigTable), engineers have published papers describing how others may be able to implement their own versions.&lt;/p&gt; 
+&lt;p&gt;This situation mimics a tension seen at many companies-some folks (engineers) want to see their source code released in the open, and others (management) find the idea very scary. In the old days, source code was genuinely an advantage-tools such as compilers and development editors were few and far between, often jealously guarded if they did anything at all capable, and in many cases even sold as a vended product. As time progressed, having source code became less important-we have the GNU Project to thank for this change, primarily. The GNU C Compiler, Emacs, and various other free tools made it much easier for anyone to produce and release their own tools. Fantastic purpose-driven tools like Python and the Apache web server expanded and democratized the landscape enormously.&lt;/p&gt; 
+&lt;p&gt;&lt;i&gt;Read the &lt;a href=&quot;https://www.informit.com/articles/article.aspx?p=1848530&quot;&gt;rest of this article&lt;/a&gt; (at InformIT).&lt;/i&gt;&lt;/p&gt; 
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt; 
+&lt;div style=&quot;font-size: small;&quot;&gt;
+ Find me on 
+ &lt;a href=&quot;http://twitter.com/dhanji&quot;&gt;twitter&lt;/a&gt;
+&lt;/div&gt;</description>
+      <link>http://rethrick.com/#source-code-dead</link>
+    </item>
+    
+    <item>
+      <guid isPermaLink="true">
+        http://rethrick.com/rip
+      </guid>
+      <title>RIP, Google Wave</title>
+      <description>&lt;p&gt;&lt;/p&gt;
+&lt;meta published=&quot;30 Apr 2012&quot; /&gt; 
+&lt;meta tag=&quot;wave&quot; /&gt;  
+&lt;p&gt;Today, Google Wave is scheduled to be taken down. After weeks of being read-only, it will finally close its doors and vanish from the domains of Google to the nether-realm of the dead pool.&lt;/p&gt; 
+&lt;p&gt;For me, today is a day to remember all the components I got to work on, and all the fantastic, brilliant, whip-smart engineers that touched it. And whom I was privileged to work, talk and share a drink with. &lt;/p&gt; 
+&lt;p&gt;Through my 2 years on the project I worked variously on Search, Indexing, APIs, the Wave Server, open-source effort, JVMs and web client. Between my friend and former colleague, &lt;a href=&quot;http://tirsen.com&quot;&gt;Jon Tirsen&lt;/a&gt;, I think we touched nearly every part of the stack. As messy as that sounds, it was immensely fun and rewarding, and I wouldn't have it any other way: equal parts chaos, adrenaline, frustration, disappointment and celebration.&lt;/p&gt; 
+&lt;p&gt;Many words have been written about Wave, warts, sparkles, and all. To me it was a deeply personal and moving experience, like none before. We tried, and failed, to make a dent in the universe.&lt;/p&gt; 
+&lt;p&gt;Hopefully, someday, someone will try again.&lt;/p&gt; 
+&lt;p&gt;=)&lt;/p&gt; 
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt; 
+&lt;div style=&quot;font-size: small;&quot;&gt;
+ Find me on 
+ &lt;a href=&quot;http://twitter.com/dhanji&quot;&gt;twitter&lt;/a&gt;
+&lt;/div&gt;</description>
+      <link>http://rethrick.com/#rip</link>
+    </item>
+    
+    <item>
+      <guid isPermaLink="true">
+        http://rethrick.com/type-theory
+      </guid>
+      <title>Programming Languages &amp; Type Systems</title>
+      <description>&lt;p&gt;&lt;/p&gt;
+&lt;meta published=&quot;27 Mar 2012&quot; /&gt;  
+&lt;p&gt;In the late part of the 19th century, there was a furore. Well there were many furors really, Otto Von Bismarck was making threatening movements in Europe, India was on the verge of rebellion, Japan was descending into deep imperialist sentiment, the US was just recovering from several economic collapses. And in Britain, a young man names Bertrand Russell asked a very interesting question.&lt;/p&gt; 
+&lt;p&gt;The result of this furor, was a great change in the way people viewed mathematics, in both its applied and theoretical domains. If you have spent any time at all on the Computing or Mathematics sections of Wikipedia you have heard of this famous challenge known as Russell's Paradox. Prior to Russell, Set theory in mathematics (often referred to with the wonderful irony of hindsight as Naive Set Theory) had a deep and serious flaw.&lt;/p&gt; 
+&lt;p&gt;It goes something like this: if you imagine sets to be any collection of unique objects, then it is possible to construct a set that contains itself. In notational form this might look like:&lt;/p&gt; 
+&lt;pre&gt;&lt;code&gt;b = [Some Object]
+a = { a, b }
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;In this case, a is a member of itself. This is not such an unusual construction, anyone who has implemented a binary tree can relate to this--a Node is usually a composition of two other Nodes (left- and right- child).&lt;/p&gt; 
+&lt;p&gt;Now that we have this construction, we can logically infer that there exists a set that is NOT a member of itself:&lt;/p&gt; 
+&lt;pre&gt;&lt;code&gt;a = { }
+a = { b }
+a = { &amp;lt;anything but a&amp;gt; }
+etc.
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;In fact there exist infinitely many such sets. We have now established two special properties that we can describe generally as follows:&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;Sets that contain themselves&lt;/li&gt; 
+ &lt;li&gt;Sets that don't contain themselves&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;p&gt;All sets that exhibit one or the other property can be put into a &amp;quot;common&amp;quot; set. In other words we can functionally describe these two properties as follows:&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;The set of all sets that contain themselves&lt;/li&gt; 
+ &lt;li&gt;The set of all sets that don't contain themselves&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;p&gt;The paradox arises when you consider the second property. It is logically imperative for the master set of all sets that don't contain themselves, to contain itself. In other words, if we're counting sets that don't contain themselves then we must count the master set, but once we do it is no longer a set that doesn't contain itself. And this is an infinite logical loop. The kind that Captain Kirk has often used to good effect to shut down rogue artificial intelligences.&lt;/p&gt; 
+&lt;h3&gt;A Theory of Types&lt;/h3&gt; 
+&lt;p&gt;Years later, Russell and Whitehead would publish Principia Mathematica, which among other things, proposed a solution to the paradox. Their solution was to introduce something known as the theory of types. This theory of theirs reorganized the system of set theory in terms of increasing hierarchies of different types. Each layer in the hierarchy was exclusively composed of types from the previous layer, avoiding the kind of loops that were the bane of set theory. (see &lt;a href=&quot;http://en.wikipedia.org/wiki/Type_theory&quot;&gt;http://en.wikipedia.org/wiki/Type_theory&lt;/a&gt;)&lt;/p&gt; 
+&lt;p&gt;This is, very loosely, the foundation of type theory and type systems that we see in modern programming languages today. Java, C#, Ruby, Haskell and programmers of many other such languages take the idea of types, properties and hierarchies for granted. But it is useful to know their origin.&lt;/p&gt; 
+&lt;p&gt;It is also useful to know the distinction between the systems of types used in various programming languages. In heated debates between proponents of dynamic-typing and static-typing, one often encounters a few misconceptions about terminology and the nature of type systems. The primary among these is strong vs. weak typing--it may surprise you to learn that Java, Ruby, Python, Scheme and C# are all strongly typed languages. Strong typing is the idea that computations occur only between compatible types. For example, this expression in Java is illegal:&lt;/p&gt; 
+&lt;pre&gt;&lt;code&gt;// Given a method:
+public void increment(int i);
+
+// This call is illegal
+increment(24.0);
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;This is because the types int and double are incompatible. Java does not know how to correctly convert 24.0 into an integer for computation. This kind of expression is known as a mixed-type computation and is generally discouraged by best practice. The reason is that it can't convert between these types without losing some information in the process. Doubles in Java are stored in 64-bits. Ints are stored in 32-bits, so the conversion between them necessitates a loss of information.&lt;/p&gt; 
+&lt;p&gt;You might argue that Java permits expressions of this form:&lt;/p&gt; 
+&lt;pre&gt;&lt;code&gt;3 + 24.0
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;However, this is a type-widening expression. The resulting type is actually a double, since the information in the integer can be preserved, this conversion is permissible. It is easy to see this distinction by attempting to assign the result to an int:&lt;/p&gt; 
+&lt;pre&gt;&lt;code&gt;int x = 3 + 24.0;
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;This is an illegal expression which won't compile. Similarly, we can try this in a dynamically typed language and see the same problem. In Python the following expression:&lt;/p&gt; 
+&lt;pre&gt;&lt;code&gt;&amp;quot;1&amp;quot; + 2
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;Results in an error:&lt;/p&gt; 
+&lt;p&gt;&lt;em&gt;TypeError: cannot concatenate 'str' and 'int' objects&lt;/em&gt;&lt;/p&gt; 
+&lt;p&gt;This message is interesting, because it tells us that the mistake we've made is a TypeError, in other words, Python has no idea how to combine these types in a sensible fashion. Ruby reports a similar error. This is the effect of strong typing and as you can see, it exists in both statically (Java, C#) and dynamically typed (Ruby, Python, Scheme) languages.&lt;/p&gt; 
+&lt;p&gt;In order to correctly process this computation we need to explicitly convert the types into a compatible form. In Python, the str() function explicitly converts integers to strings:&lt;/p&gt; 
+&lt;pre&gt;&lt;code&gt;&amp;quot;1&amp;quot; + str(2)  # returns '12'
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;Now this works as expected. Conversely, we can add two numbers by performing the following conversion:&lt;/p&gt; 
+&lt;pre&gt;&lt;code&gt;int(&amp;quot;1&amp;quot;) + 2   # returns 3
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;The subtlety here is that Python isn't really sure if the + operator should convert strings into ints, or vice versa. And instead of making a surprising choice, it leaves this situation up to the programmer to resolve--a good practice for strongly typed systems.&lt;/p&gt; 
+&lt;p&gt;You may further argue that Java in fact permits this conversion:&lt;/p&gt; 
+&lt;pre&gt;&lt;code&gt;&amp;quot;1&amp;quot; + 2  // returns &amp;quot;12&amp;quot;
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;At first glance it does look like Java is doing something questionable. In fact, what you're really seeing here is operator overloading in action. Unlike Python and Ruby, Java treats all types as naturally string-representable. So the + operator implicitly calls .toString() on any given object. In this case, the integer is implicitly converted to a string. It's a debatable choice, but arguably it is reasonable to allow this kind of flexibility given that the rest of the type system is very rigorous.&lt;/p&gt; 
+&lt;p&gt;For example, in Python, a function must always accept any type of object:&lt;/p&gt; 
+&lt;pre&gt;&lt;code&gt;def fun(arg):
+  ...
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;In such conditions, it is better to be safe than sorry about type conversions, so Python chooses the TypeError route. On the other hand, Java sports compulsory type annotations, which constrain the given function to a very specific type:&lt;/p&gt; 
+&lt;pre&gt;&lt;code&gt;void fun(String arg) { .. }
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;In this case, it is arguably much safer to allow the mixed type conversion of arbitrary objects to strings, given that these objects are clearly type-constrained wherever they are declared.&lt;/p&gt; 
+&lt;p&gt;Then again, most dynamically typed languages also assume that any object can be converted to a string form. So in a sense, this is a compromise for convenience.&lt;/p&gt; 
+&lt;h3&gt;Weak Typing&lt;/h3&gt; 
+&lt;p&gt;Weak typing as you might guess, is the converse of strong typing. In a sense weak typing takes the compromise we just examined and pushes it as far as possible, prioritizing convenience over all else. JavaScript is a weakly typed language:&lt;/p&gt; 
+&lt;pre&gt;&lt;code&gt;&amp;quot;100&amp;quot; &amp;gt; 10 // returns true
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;JavaScript goes to great lengths to make the lives of programmers better by performing conversions like this. There are many, many such examples, where it attempts to coerce values into types appropriate for the expression in question. Here are some such examples:&lt;/p&gt; 
+&lt;pre&gt;&lt;code&gt;&amp;quot;Infinity&amp;quot; == Number.POSITIVE_INFINITY   // returns true
+&amp;quot;Infinity&amp;quot; == Number.POSITIVE_INFINIT   // returns false
+&amp;quot;Infinity&amp;quot; == Number.NONSENSE   // returns false
+0 == &amp;quot;&amp;quot;   // returns true
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;It is a dramatically different approach to strong typing, which provides a basic set of constraints to prevent programmers from shooting themselves in the foot. The nature of these automatic type conversions is such that they are very language specific. Each language makes its own decisions about exactly what will happen when ambivalently typed expressions are encountered. For example, this expression in JavaScript:&lt;/p&gt; 
+&lt;pre&gt;&lt;code&gt;100 + &amp;quot;1&amp;quot; + 0
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;...evaluates to the string &amp;quot;10010&amp;quot;. In Visual Basic on the other hand, it would evaluate to the number 101. Both of these represent decisions to convert between types to make programmers' lives easier, but they also represent arbitrary decisions. There is no clear reason why one rule is preferable to the other. In this sense, strongly typed systems are more predictable and consistent.&lt;/p&gt; 
+&lt;h3&gt;Conclusion&lt;/h3&gt; 
+&lt;p&gt;Strong and weak typing are choices that language designers make, depending on what they're optimizing for. Clearly, strongly typed languages like Ruby and Java are safer for teams of programmers where the impact of small mistakes is greatly magnified. Conversely, it may be useful for the kinds of conveniences that exist in JavaScript to be provided for quick, in-web browser development. However, I leave you with this curious feature of JavaScript:&lt;/p&gt; 
+&lt;pre&gt;&lt;code&gt;[[] + [] * 1][0] == &amp;quot;0&amp;quot;
+[[] + [] * 1][0][0] == &amp;quot;0&amp;quot;
+[[] + [] * 1][0][0][0] == &amp;quot;0&amp;quot;
+// and so on...
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;No matter how many times you pick the first value of the preceding expression, and the first of that, you always end up with the string &amp;quot;0&amp;quot;. Not quite Russell's Paradox, but should leave you scratching your head nonetheless. =)&lt;/p&gt; 
+&lt;p&gt;Tweet me your thoughts.&lt;/p&gt; 
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt; 
+&lt;div style=&quot;font-size: small;&quot;&gt;
+ Find me on 
+ &lt;a href=&quot;http://twitter.com/dhanji&quot;&gt;twitter&lt;/a&gt;
+&lt;/div&gt;</description>
+      <link>http://rethrick.com/#type-theory</link>
+    </item>
+    
+    <item>
+      <guid isPermaLink="true">
+        http://rethrick.com/visual-testing
+      </guid>
+      <title>Testing Parsers &amp; Concurrent Code</title>
+      <description>&lt;p&gt;&lt;/p&gt;
+&lt;meta published=&quot;01 Feb 2012&quot; /&gt; 
+&lt;meta tag=&quot;programming&quot; /&gt;  
+&lt;p&gt;Testing is an interesting subject. Everyone pays lip service to it, but I suspect that secretly no one wants to do it. I'm specifically talking about writing automated tests. Much of the available literature focuses on testing frameworks (xUnit, QuickCheck, Selenium, and so on) or methodologies (test-driven development, functional testing), but not much on testing techniques. This may sound reasonable, but by comparison literature on writing production code is considerably richer-you can find all kinds of books and articles on design patterns, architecture, and algorithms. But apart from some pedantic stuff about mock versus stub objects, I haven't really come across a lot on the techniques of testing. I've always found learning a new technique to be far more valuable than learning a new framework.&lt;/p&gt; 
+&lt;p&gt;Until a few years ago, I had pretty much assumed that I knew all there was to know about testing. It was a chore that simply had to be endured, with things like test-driven development (TDD) being occasional, interesting distractions. However, since then I've come to realize that what I don't know far outweighs what I do know. Visual testing is a technique I picked up from watching and imitating brilliant engineers over the years. While it may not be revolutionary, I've found it incredibly useful when attacking difficult testing problems.&lt;/p&gt; 
+&lt;h3&gt;Comparing Strings&lt;/h3&gt; 
+&lt;p&gt;Like many good techniques, visual testing is largely about giving you clear, concise, and exhaustive information about what happened. Here's a simple example:&lt;/p&gt; 
+&lt;pre&gt;&lt;code&gt; @Test
+ public void sortSomeNumbers() {
+   assertEquals(&amp;quot;[1, 2, 3]&amp;quot;, Sorter.sort(3, 2, 1).toString());
+ }
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;This test asserts that my program, Sorter, correctly sorts a list of three numbers. But the test is comparing strings, rather than asserting order in a list of numbers. &lt;em&gt;If this example is setting off your type-safety warning bells, don't worry; its benefit will become clear shortly.&lt;/em&gt;&lt;/p&gt; 
+&lt;p&gt;Since we're only testing string equality, it doesn't really matter if Sorter.sort() returns a list, an array, or some other kind of object-as long as its string form produces a result that we expect. This capability is incredibly powerful for a couple of reasons:n&lt;/p&gt; 
+&lt;p&gt;You can instantly see when something is wrong by simply diffing two strings. You're free to change your mind about the underlying logic (repeatedly), and your test remains unchanged. You might argue that the second point is achieved with a sufficiently abstract interface--this is largely true, but in many cases it's quite cumbersome. (Particularly with evolving code, I've found it quite painful.) And refactoring tools only take you so far. Using strings neatly sidesteps this problem.&lt;/p&gt; 
+&lt;p&gt;&lt;i&gt;Read the &lt;a href=&quot;http://www.informit.com/articles/article.aspx?p=1831497&quot;&gt;rest of this article&lt;/a&gt; (at InformIT).&lt;/i&gt;&lt;/p&gt; 
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt; 
+&lt;div style=&quot;font-size: small;&quot;&gt;
+ Find me on 
+ &lt;a href=&quot;http://twitter.com/dhanji&quot;&gt;twitter&lt;/a&gt;
+&lt;/div&gt;</description>
+      <link>http://rethrick.com/#visual-testing</link>
+    </item>
+    
+    <item>
+      <guid isPermaLink="true">
+        http://rethrick.com/weekendproject
+      </guid>
+      <title>Exploring the mythical weekend project</title>
+      <description>&lt;p&gt;&lt;/p&gt;
+&lt;meta published=&quot;01 Feb 2012&quot; /&gt;  
+&lt;p&gt;Recently, I decided to give up one of my weekends and see if I could build an entire working product from scratch. If you're like me, you have a lot of ideas rattling around in your head and far too little time to realize any of them. Some seem like world-beaters, others are interesting asides that would probably delight a niche audience. Regardless, I can't shake the feeling that the world (and certainly, I) would be better off with these ideas material in reality, and perhaps more importantly--out of my head.&lt;/p&gt; 
+&lt;p&gt;I'll give away the ending: I succeeded. It took me roughly 16 hours to plan, build and launch my idea to the world. And then, there was anti-climax.&lt;/p&gt; 
+&lt;p&gt;But before we get into that, let me retrace my steps over a gruelling, frustrating and wholly satisfying two days.&lt;/p&gt; 
+&lt;h3&gt;The Idea&lt;/h3&gt; 
+&lt;p&gt;The easiest part of the whole process was the idea. Not only do I have far too many of those available, but at any given time I am also sitting on a pile of partially-built prototypes. They number in the 20s at current and were variously built at airports, hotel-lobbies, conference venues and any other time that I imagine the rest of the population spends at the beach and on other healthy activities.&lt;/p&gt; 
+&lt;p&gt;If you hack on open source or your own startup ideas you know exactly what I'm talking about. Many of these projects will never see the light of day, but there is a primal, irrepressible need at the cellular level to try.&lt;/p&gt; 
+&lt;p&gt;I picked the one that I've been thinking about most recently, and opened my code editor. As a lark, I decided to put this up on twitter:&lt;/p&gt; 
+&lt;blockquote class=&quot;twitter-tweet&quot;&gt;
+ &lt;p&gt; Attempting &amp;quot;weekend coding project&amp;quot; Goal: working app in 2 days. Will I succeed? Will I fail miserably? Watch this spot for hourly updates!&lt;/p&gt;@dhanji 
+&lt;/blockquote&gt; 
+&lt;h3&gt;The Journey&lt;/h3&gt; 
+&lt;p&gt;There was quite a spirited response, plenty of encouragement, curiosity and snark for good measure:&lt;/p&gt; 
+&lt;blockquote class=&quot;twitter-tweet&quot;&gt;
+ &lt;p&gt; @dhanji It'll kinda work but then you'll never finish it really is what usually happens.&lt;/p&gt; @dosinga 
+&lt;/blockquote&gt; 
+&lt;blockquote class=&quot;twitter-tweet&quot;&gt;
+ &lt;p&gt; @dhanji hashtag please&lt;/p&gt; @j03w 
+&lt;/blockquote&gt; 
+&lt;blockquote class=&quot;twitter-tweet&quot;&gt;
+ &lt;p&gt; @dhanji Wats the app? Wat technologies u using?&lt;/p&gt; @AalasiAadmi 
+&lt;/blockquote&gt; 
+&lt;p&gt;I had not planned to put anything on twitter, and I certainly had not planned on anyone following me through two days of blathering on about obscure compile bugs, &lt;a href=&quot;http://en.wikipedia.org/wiki/User_error&quot;&gt;PEBKAC&lt;/a&gt; errors and mostly, simple &lt;a href=&quot;http://en.wikipedia.org/wiki/Rtfm&quot;&gt;RTFM&lt;/a&gt; whining. This was an unexpected boost to my productivity and cheer. It turned into a game: if I ran into something frustrating I cursed and swore on twitter while my friends cheered me up or brought me back down to earth.&lt;/p&gt; 
+&lt;blockquote class=&quot;twitter-tweet&quot;&gt;
+ &lt;p&gt; Feeling a lot slower than I normally do with this setup. Waiting for that boulder to cross the crest of the hill #weekendproject&lt;/p&gt; @dhanji 
+&lt;/blockquote&gt; 
+&lt;blockquote class=&quot;twitter-tweet&quot;&gt;
+ &lt;p&gt; @dhanji perhaps it's all the tweeting slowing you down :D&lt;/p&gt; --private-- 
+&lt;/blockquote&gt; 
+&lt;p&gt;&lt;i&gt;Read the &lt;a href=&quot;http://www.informit.com/articles/article.aspx?p=1829420&quot;&gt;rest of this article&lt;/a&gt; (at InformIT).&lt;/i&gt;&lt;/p&gt; 
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt; 
+&lt;div style=&quot;font-size: small;&quot;&gt;
+ Find me on 
+ &lt;a href=&quot;http://twitter.com/dhanji&quot;&gt;twitter&lt;/a&gt;
+&lt;/div&gt;</description>
+      <link>http://rethrick.com/#weekendproject</link>
+    </item>
+    
+    <item>
+      <guid isPermaLink="true">
+        http://rethrick.com/sherlock
+      </guid>
+      <title>More than a Boswell</title>
+      <description>&lt;p&gt;&lt;/p&gt;
+&lt;meta published=&quot;16 Jan 2012&quot; /&gt; 
+&lt;meta tag=&quot;writing&quot; /&gt;  
+&lt;p&gt;To say that I am a fan of Sherlock Holmes is like saying the Pope has a passing interest in Christianity. I have a deep fondness for the Victorian detective stories, and read all 4 novels and 56 short stories multiple times before I was 13. I watched with great interest, then, the two new revivals of this enormous, looming franchise: &lt;em&gt;Sherlock&lt;/em&gt;, the BBC TV show and the somewhat more classical (at least in period) &lt;em&gt;Sherlock Holmes&lt;/em&gt; films by Guy Ritchie. Having watched actors from Ian Richardson to Jeremy Brett play the title character, I always approach new remakes with some trepidation. I have never been a particular fan of any one portrayal of Sherlock Holmes. In some sense I believe he is a larger and more fantastical presence than any actor can reasonably portray.&lt;/p&gt; 
+&lt;p&gt;I do, however, set aside my disbelief, incredulity and impossibly high expectations in an attempt to treat each new adaptation fairly and for what it is--an interpretation of the great detective and his erstwhile partner. In each turn, these adaptations equally and summarily disappoint me. They are all consistently poor, with a retelling of the story so faded and coarse that it either misses the entire tension in the plot, or makes a perfect hash of its vaunted title characters.&lt;/p&gt; 
+&lt;p&gt;And this I suppose is the major complaint that I have--until now, nearly all of the film and television adaptations treat Dr. Watson poorly. He is either a hapless sidekick, pitied and suffered (as a pet might be) by his vastly superior companion--or worse, a dumb prop piece who voices the obvious questions the audience has been harboring at appropriate times to drive the plot along. In either skin, the character of Dr. Watson has been ruthlessly denigrated by his writers and performers thus far.&lt;/p&gt; 
+&lt;p&gt;It was with great delight then that I watched both these two new adaptations, that not only cast first rate actors to play Dr. Watson (Martin Freeman &amp;amp; Jude Law) but that also do him great justice as a character by oscillating his role between friend, foil, confidant, rescuer and secret lover. This last one is particularly sharp in the TV series Sherlock, which incessantly pokes fun at Watson's many failed heterosexual romances, his unconvincing denials of countless misreads by minor characters of their sexuality, and of Holmes's own ambiguous reactions on the matter. In 21st century London, it is less an item of note that Holmes and Watson often share rooms together, than that they do it for purely platonic reasons.&lt;/p&gt; 
+&lt;p&gt;The film version attacks this from a somewhat less direct but equally palpable angle--with Holmes's obstinate jealousy of Watson's fiancee, often bordering on the boorish and cruel. When Holmes reluctantly agrees to meet her for dinner, then proceeds to humiliate her in front of Watson by erroneously deducing past romances, it is hard to imagine the cold, calculating consulting detective of Baker street having no passions on the matter of his best friend's engagement to a member of the opposite sex and imminent departure from their shared rooms.&lt;/p&gt; 
+&lt;p&gt;But beyond this lies the character of Watson himself, something that seems to have taken over a hundred years to get right on the screen. Watson is a man driven by passions, sometimes dark, sometimes frivolous, often wistful. In &lt;em&gt;A Study in Scarlet&lt;/em&gt; we find out he has seen unspoken horrors in Afghanistan and sustained a debilitating lifetime injury from a &lt;em&gt;Jezail&lt;/em&gt; bullet. Watson is in the long, morbid, torporific process of wasting his life and pension away after this shattering event. He is rescued by Holmes, not in a literal sense,&#65532;but certainly in an intellectual one. The stories of Sherlock Holmes are thus the rediscovery of Watson's curiosity in life, in London, and humanity itself. The irony is of course that this rediscovery is at the behest of investigating criminals and alongside one of the most inhuman characters ever created in literary fiction.&lt;/p&gt; 
+&lt;p&gt;Indeed, in &lt;em&gt;A Study in Pink&lt;/em&gt;, Sherlock reminds Anderson that he is a &amp;quot;high functioning sociopath&amp;quot; clearly more offended by the &lt;em&gt;miscategorization&lt;/em&gt; than the mischaracterization. I find this dichotomy infinitely interesting, and believe it is at the heart of all the interaction between Sherlock Holmes and Dr. Watson. Holmes, the sociopath, when on a case is full of resolve, purpose and single-minded dedication. He cannot be stopped, and to oppose him is to write the script of one's own downfall. This much is clear across all 60 penned stories and countless, further in-the-spirit extensions.&lt;/p&gt; 
+&lt;p&gt;When without a case however, the manifestations of his pathology are truly frightening. He abuses cocaine liberally, practices violin at all hours of the morning, shoots off his revolver indoors and generally is a nuisance to everyone around him (including his housekeeper, the long-suffering Mrs. Hudson).&lt;/p&gt; 
+&lt;p&gt;A man locked indoors for days, baking in the fog of his own tobacco smoke and drug induced hypnosis, shooting revolvers into the walls to relieve his boredom is cause in any modern setting for an emergency call to the police, at the very minimum. (And more likely to be put away in a mental institution.)&lt;/p&gt; 
+&lt;p&gt;But lets get back to Watson--the prime mover of these narratives. You may disagree with that statement, but think on it for a second. Sherlock Holmes is the title character, he is the novelty that the brings about the mechanics of these stories. He is so esoteric and so strange and fantastical, that we can only understand him through Watson's eyes. It is no accident that the weakest Sherlock Holmes story is the one told in Holmes' own voice--&lt;em&gt;The Adventure of the Lion's Mane&lt;/em&gt;. It has the lens of Watson's viewpoint, but without the resonance of his character, so it feels strange and forced. (Of course the story itself is also rather banal--the central mystery being a Jellyfish bite).&lt;/p&gt; 
+&lt;p&gt;I find a similar structural parallel in the story of the &lt;em&gt;Shawshank Redemption&lt;/em&gt;--this on the surface--is the story of Andy Dufresne's legendary escape from prison, as a righting of the injustices done him by his wrongful conviction. However, the movie is really about Red, &amp;quot;the only guilty man in Shawshank&amp;quot;, who never thinks he will get out of prison, nor believes he will survive it. But finds his redemption nonetheless through his friendship with Andy.&lt;/p&gt; 
+&lt;p&gt;The Watson/Holmes narrative is similarly structured--Watson is aimless after his return from war, and it is Holmes that provides him with purpose. But it is also more than that, Holmes himself is a character teetering on the edge of madness, he must constantly be reined in, have his ego stroked, given a trusted interlocutor, and really, made human. Watson is the only one who can do this--he is the only one who cares enough, and more importantly, he is the only one Holmes wants. It is instructive that even though Holmes often keeps Watson in the dark about his inner processes, and mysteries of the case that he has already unraveled (more for theatrical effect, than material purpose, let's face it), he never keeps Watson out of a case. Even the most sensitive cases involving national security (&lt;em&gt;The Bruce-Partington Plans&lt;/em&gt;, &lt;em&gt;The Adventure of the Second Stain&lt;/em&gt;), or prominent figures (&lt;em&gt;A Scandal in Bohemia&lt;/em&gt;), Holmes easily refuses to help without Watson's presence.&lt;/p&gt; 
+&lt;p&gt;Watson is much more than a Boswell, he is a partner, and an intimate.&lt;/p&gt; 
+&lt;p&gt;Furthermore, Watson is a man of action. A man &amp;quot;familiar with the fairer sex&amp;quot;, who regularly socializes and involves himself with the knowledge of the day (of the two, one is completely unaware of the Copernican theory of the planets--I'll let you guess which one). On more than one occasion Watson has saved Holmes and his clients with urgency and quick action. This is the character in the Guy Ritchie film. I like this version of Watson. He is a foil to Sherlock Holmes in a way that no film or TV dramatization has ever done justice to--until now. Jude Law is a suitably brash, door-busting, fist-swinging hustler who has such a great passion for his friend and their adventures that he regularly skips appointments with his soon-to-be wife to burst in on Holmes, fists at the ready.&lt;/p&gt; 
+&lt;p&gt;A far cry from the torporific, post-traumatic, pathetic man lost between worlds, no hope nor joy in his heart.&lt;/p&gt; 
+&lt;p&gt;And this in essence is the magic of Sherlock Holmes--the growth of Dr. Watson as a character, his emergence from a painful and unremarkable past, into the life and presence of the great detective--not as a sidekick, not as the bungler who accidentally coughs up the missing clue, not even as the by-standing chronicler who gives us a post-events report of a wonderful, but unreachable story--no, rather as the friend and confidant, as the brother and colleague, the one who Holmes counts on as his backup over the sum total of bodies in Scotland Yard, as the man who brings the alien Holmes a connection to a very real and human life. And as a man through whose eyes, we see, and live, the adventure.&lt;/p&gt; 
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt; 
+&lt;div style=&quot;font-size: small;&quot;&gt;
+ Find me on 
+ &lt;a href=&quot;http://twitter.com/dhanji&quot;&gt;twitter&lt;/a&gt;
+&lt;/div&gt;</description>
+      <link>http://rethrick.com/#sherlock</link>
+    </item>
+    
+    <item>
+      <guid isPermaLink="true">
+        http://rethrick.com/verbosity-java
+      </guid>
+      <title>Languages, Verbosity and Java</title>
+      <description>&lt;p&gt;&lt;/p&gt;
+&lt;meta published=&quot;10 Jan 2012&quot; /&gt;  
+&lt;p&gt;I learned Java in a short summer course right after graduating from high school. Since then, I have programmed with Java off and on for nearly 12 years, most recently at Google (which I represented on several Java expert groups) and a short consulting stint at the payments startup Square. I enjoy programming in Java. I'm not one of those engineers who bemoans Java's various idiosyncrasies around the coffee machine (although I occasionally enjoy doing that). I have an unabashed love for the language and platform and all the engineering power it represents.&lt;/p&gt; 
+&lt;p&gt;Java is verbose--full of seemingly unnecessary repetitions; lengthy, overwrought conventions; and general syntax excessiveness. This isn't really news; Java was conceived as a subset of C++, which itself derives from C, a language that's over 30 years old and not particularly known for being concise.&lt;/p&gt; 
+&lt;p&gt;As a platform, however, Java is modern and genuinely competitive. The combination of a robust garbage collector, blazing fast virtual machine, and a battery of libraries for just about every task has made it the perfect launchpad for a plethora of products and new hosted languages. (Interestingly, Google's V8 is following a similar pattern.)&lt;/p&gt; 
+&lt;h3&gt;Expressiveness&lt;/h3&gt; 
+&lt;p&gt;&amp;quot;ProducerConstructorFactoryFactory&amp;quot; jokes notwithstanding, there is little doubt that the Java language suffers from a poor character-to-instruction ratio. I call this property &amp;quot;expressiveness&amp;quot;, in other words, the number of keys you must press in order to accomplish a simple task. This number is pretty large in Java. It repeatedly violates the &amp;quot;don't repeat yourself&amp;quot; (DRY) principle, and many of its modern features (such as Generics) feel lumbering and unwieldy, making reading and understanding source code a tedious task.&lt;/p&gt; 
+&lt;p&gt;&lt;i&gt;Read the &lt;a href=&quot;http://www.informit.com/articles/article.aspx?p=1824790&quot;&gt;rest of this article&lt;/a&gt; (at InformIT).&lt;/i&gt;&lt;/p&gt; 
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt; 
+&lt;div style=&quot;font-size: small;&quot;&gt;
+ Find me on 
+ &lt;a href=&quot;http://twitter.com/dhanji&quot;&gt;twitter&lt;/a&gt;
+&lt;/div&gt;</description>
+      <link>http://rethrick.com/#verbosity-java</link>
+    </item>
+    
+    <item>
+      <guid isPermaLink="true">
+        http://rethrick.com/mmm
+      </guid>
+      <title>The Mythical Man-Month</title>
+      <description>&lt;p&gt;&lt;/p&gt;
+&lt;meta published=&quot;12 Oct 2011&quot; /&gt; 
+&lt;meta tag=&quot;wave&quot; /&gt; 
+&lt;meta tag=&quot;personal&quot; /&gt;  
+&lt;p&gt;I vividly recall my first week at Google. It was in Google's old office in Sydney, high up on the 18th floor of a triangular skyscraper. The views from virtually everywhere in the office were breathtaking. And inside, the walls beamed the warm glow of those wonderful colors so familiar from a childhood playing with Lego--Yellow, Red, Blue and Green.&lt;/p&gt; 
+&lt;p&gt;I spent the first week imbibing everything a Noogler is given--tutorials, catered food, instructions on how to work the coffee machine, and the general lay of the land. One part of this was project selection--deciding what I was going to work on. This came in the form of a two-on-one meeting with Lars &amp;amp; Jens Rasmussen, the famed creators of Google Maps. They were working on a new, secret project codenamed &lt;a href=&quot;http://googleblog.blogspot.com/2009/05/went-walkabout-brought-back-google-wave.html&quot;&gt;&lt;em&gt;Walkabout&lt;/em&gt;&lt;/a&gt;. Everyone in the office was bursting with curiosity (only a handful of engineers actually knew what it was).&lt;/p&gt; 
+&lt;p&gt;The pitch went something like this: Walkabout was a &amp;quot;startup inside a startup&amp;quot;, it was an attempt to remake Google's nimble, big-thinking, cultural roots in an isolated microcosm in Australia. We worked in secret--even from other Sydney Googlers--had our own higher risk/reward bonus scheme, and a reporting chain that bypassed the Sydney Site Director and layers of bureaucracy, directly to the Decision Makers in Mountain View.&lt;/p&gt; 
+&lt;p&gt;Of course, I said yes.&lt;/p&gt; 
+&lt;h3&gt;Early Days&lt;/h3&gt; 
+&lt;p&gt;My colleague and I joined on the same day and were employees #25 &amp;amp; #26 of Walkabout. As we walked out of the meeting room I asked if we would be the last, thinking this was a sizeable number for any startup let alone an early-stage one. I was met with a somewhat incredulous &amp;quot;No, no. Not at all!&amp;quot; That was a red flag I ignored wilfully.&lt;/p&gt; 
+&lt;p&gt;Fast-forward six months and Google was in a lavish, new office with Walkabout fully underway and around 35 strong. The trouble, I am sure, began a lot earlier but this is when I started to really feel it. First, there was the dreaded endless meeting--they lasted for hours with very little being decided. Then, you started having to push people to provide APIs or code changes that you desperately needed for your feature but that they had little to no interest in beyond the academic.&lt;/p&gt; 
+&lt;p&gt;My style is to ask politely and then when I realize nothing is going to be done, to do it myself. This is a prized hacker ethic, but it does NOT work in large teams. There is simply too much system complexity for this to scale as a solution. Instead of shaving one Yak, you're shaving the entire Yak pen at the Zoo, and pretty soon traveling to Tibet to shave foreign Yaks you've never seen before and whose barbering you know little about.&lt;/p&gt; 
+&lt;p&gt;What happened with me was that my pride made me take on all this and I ended up simply failing at it. It is irreconcilably demoralizing to think that you can complete a feature in 2 weeks and find yourself three months in, stuck at work at 3am and neck deep in mounting backlog work.&lt;/p&gt; 
+&lt;p&gt;I'll admit I considered resigning, defeated.&lt;/p&gt; 
+&lt;h3&gt;On Agility&lt;/h3&gt; 
+&lt;p&gt;Some of you are reading this and thinking &amp;quot;if only they used an Agile process like Scrum!&amp;quot; Or, &amp;quot;if only you or someone had prior experience with an Agile team.&amp;quot; Well, the sentiment is right but also entirely naive. Before Google, I worked at a company called ThoughtWorks. They are a religiously Agile shop and whose Chief Scientist is Martin Fowler, one of the original signatories of the Agile manifesto. So I knew a thing or two about Agile going in. As did &lt;a href=&quot;http://jutopia.tirsen.com/about.html&quot;&gt;several of my colleagues&lt;/a&gt;. Furthermore, this was a team with plenty of very senior ex-Search Quality, Gmail, Maps and Infrastructure people.&lt;/p&gt; 
+&lt;p&gt;To say we should have been better prepared or organized is to miss the point--large teams starting on a new project are &lt;em&gt;inherently dysfunctional&lt;/em&gt;. One common consequence of all this chaos is that experienced engineers seclude themselves to their area of expertise. At a company like Google, this generally means infrastructure or backend architecture. A major externality of this is that fresh grads, and junior engineers are shunted to the UI layer. I have seen this happen time and again in a number of organizations, and it is a critical, unrecognized problem.&lt;/p&gt; 
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;UI is hard.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt; 
+&lt;p&gt;You need the same mix of experienced talent working in the UI as you do with traditional &amp;quot;serious&amp;quot; stuff. This is where Apple is simply ahead of everyone else--taking design seriously is not about having a dictator fuss over seams and pixels. It's about giving it the same consideration that you give any other critical part of the system.&lt;/p&gt; 
+&lt;p&gt;Now, I don't mean to imply that Wave did not have some very smart engineers working on the UI, we certainly did. But talent is different from experience. The latter is a guard against 3.5MB of compressed, minified, inlined Javascript. Against 6 minute compiles to see CSS changes in browser. Against giving up on IE support (at the time, over 60% of browser market share) because it was simply too difficult. Against Safari running out of memory as soon as Wave was opened on an iPad.&lt;/p&gt; 
+&lt;p&gt;At the end we were close to 60 engineers, with nearly 20 working on the browser client alone.&lt;/p&gt; 
+&lt;h3&gt;Wins and Losses&lt;/h3&gt; 
+&lt;p&gt;Looking back, there was one vivid, crystallizing moment where I decided not to resign and stick it out instead. It came a little after we launched to consumers. At the time, we were at the very peak of the hype curve, invites were flooding user mailboxes and the servers were melting under load. Not even Google's mammoth datacenter power could stem this tide (the problem was with the software, not machine strength). The Java VMs could not handle the load, they were running out of memory, crashing or spending more time paused for garbage collection than serving.&lt;/p&gt; 
+&lt;p&gt;Nobody on our team knew anything about JVM tuning. I knew only a tiny bit more than that. It took a great deal of effort, many sleepless nights, and it put a lot of stress on my life outside work but in the end we won. We tamed the load not by some magic salvo, but by degrees--measuring, tuning, patching--incrementally. And each one of these increments was a small win. It felt good to have a win, even a small one at that. I felt useful again.&lt;/p&gt; 
+&lt;p&gt;And this is the essential broader point--as a programmer you must have a series of wins, every single day. It is the Deus Ex Machina of hacker success. It is what makes you eager for the next feature, and the next after that. And a large team is poison to small wins. The nature of large teams is such that even when you do have wins, they come after long, tiresome and disproportionately many hurdles. And this takes all the wind out of them. Often when I shipped a feature it felt more like relief than euphoria.&lt;/p&gt; 
+&lt;h3&gt;In Hindsight&lt;/h3&gt; 
+&lt;p&gt;Critical, drop-everything bugs become daily affairs, and the sense of confidence in the engineering strength of the structure begins to erode. This leads to low morale, burnout, and less internal cooperation for fear of taking on too many bugs.&lt;/p&gt; 
+&lt;p&gt;Of course I enjoyed my time on Wave like no other time in my career. It was equal parts frustration, joy, defeat and passion. I don't regret a single moment of being associated with it. It remains a wonderful attempt at creating something unique, exciting and incomparably bold. Nor do I want to ascribe blame to anyone on the team or Google at large. I just want to point that even the smartest, most motivated and talented people in the world--with a track record of delivering success--are alone not sufficient to overcome complexity that creeps up on you. Maybe we should have known better, but we didn't.&lt;/p&gt; 
+&lt;p&gt;In the end, the man-month as a scalable unit of work is hubris worthy of a Greek tragedy.&lt;/p&gt; 
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt; 
+&lt;div style=&quot;font-size: small;&quot;&gt;
+ Find me on 
+ &lt;a href=&quot;http://twitter.com/dhanji&quot;&gt;twitter&lt;/a&gt;
+&lt;/div&gt;</description>
+      <link>http://rethrick.com/#mmm</link>
+    </item>
+    
+    <item>
+      <guid isPermaLink="true">
+        http://rethrick.com/google-plus
+      </guid>
+      <title>Like it or Not</title>
+      <description>&lt;p&gt;&lt;/p&gt;
+&lt;meta published=&quot;11 Jul 2011&quot; /&gt; 
+&lt;meta tag=&quot;essay&quot; /&gt; 
+&lt;meta tag=&quot;products&quot; /&gt;  
+&lt;p&gt;There's no shortage of punditry around the future and fate of Google+, a massive social networking effort from Google. Much of it centers around competition with facebook and whether or not it will succeed in unseating the latter as the dominant social networking site.&lt;/p&gt; 
+&lt;p&gt;I have a somewhat unique perspective on the matter, since I worked under the Google+ project umbrella for a good 6-8 months after &lt;a href=&quot;http://rethrick.com/#waving-goodbye&quot;&gt;Wave was canceled&lt;/a&gt; and know many of the engineers and product designers involved in this drama.&lt;/p&gt; 
+&lt;p&gt;The argument is generally phrased along the lines of 'is Google+ a facebook killer?'. This is a somewhat contrived and sensational narrative, so let me try and explain what I think the argument is really about, in perhaps less shrill terms.&lt;/p&gt; 
+&lt;p&gt;The argument is certainly about whether Google+ will succeed as a social networking product. About whether users will leave facebook for it in significant numbers, and whether this will dethrone facebook as the reigning social network monopoly. But before you hear my take, let me give you some background.&lt;/p&gt; 
+&lt;h3&gt;On Innovation&lt;/h3&gt; 
+&lt;p&gt;It might surprise you to learn that I don't find Google+ all that innovative. It hits all the notes that a facebook clone merits, and adds a few points of distinctiveness that are genuinely compelling, sure--but I don't find it all that interesting, personally. To my mind, Twitter was a far greater innovation that continues unchallenged. But broad product innovation is not exactly what they were going for, I believe.&lt;/p&gt; 
+&lt;h3&gt;A History of Circles&lt;/h3&gt; 
+&lt;p&gt;A few years ago, before the CEO cared a whit about social networking or identity, a Google User Experience researcher named Paul Adams created a slide deck called the &lt;a href=&quot;http://www.slideshare.net/padday/the-real-life-social-network-v2&quot;&gt;Real Life Social Network&lt;/a&gt;. In a very long and well-illustrated talk, he makes the point that there is an impedence mismatch between what you share on facebook and your interactions in real life. So when you share a photo of yourself doing something crazy at a party, you don't intend for your aunt and uncle, workmates or casual acquaintances to see it. But facebook does not do a good job of making this separation. This, in essence, is what the slide deck says and his point is made with great amounts of detail and insight.&lt;/p&gt; 
+&lt;p&gt;So when Google began its social effort in earnest, the powers-that-be seized upon Paul's research and came up with the Circles product. This was to be the core differentiator between Google+ (then codenamed &lt;a href=&quot;http://www.wired.com/epicenter/2011/06/inside-google-plus-social/&quot;&gt;Emerald Sea&lt;/a&gt;) and facebook.&lt;/p&gt; 
+&lt;p&gt;As part of induction into Emerald Sea, my team got the 30-minute pitch from the Circles team. I listened politely, all the while rolling-my-eyes in secret at their seemingly implausible naivete. By then I was also growing increasingly frustrated at Google's &lt;a href=&quot;http://slacy.com/blog/2011/03/what-larry-page-really-needs-to-do-to-return-google-to-its-startup-roots/&quot;&gt;sluggish engineering culture&lt;/a&gt;. I have &lt;a href=&quot;http://rethrick.com/#waving-goodbye&quot;&gt;previously described&lt;/a&gt; how the toolchain is not well-suited to fast, iterative development and rapid innovation. I asked the obvious question--&amp;quot;While I agree that Circles is a very compelling feature, this slide deck is public. Surely someone at facebook has seen it, and it won't take them long to copy it?&amp;quot;&lt;/p&gt; 
+&lt;p&gt;I was met with a sheepish, if honest look of resignation. They knew the danger of this, but were counting on the fact that facebook wouldn't be able to change something so core to their product, at least not by the time Emerald Sea got to market.&lt;/p&gt; 
+&lt;p&gt;I laughed, disbelieving. Facebook has a hacker culture, they're only a handful of engineers, and they develop with quick, adaptable tools like PHP. Especially when compared with the slow moving mammoths we were using at Google. (By that time, 200+ engineers over 3 months had produced little more than ugly, bug-ridden demos, and everyone was fretting about the sure-to-fail aggressive timeline.)&lt;/p&gt; 
+&lt;h3&gt;Half Circle&lt;/h3&gt; 
+&lt;p&gt;Sure enough, I watched as techcrunch published leak after leak of facebook going into lockdown for a secret project. Hinted at being an overhaul of their social graph, a new groups system, and many other things. On my side of the fence, engineers were increasingly frustrated. Some leaving Emerald Sea for other projects and some even &lt;a href=&quot;http://techcrunch.com/2010/10/29/rasmussen-facebook-google/&quot;&gt;leaving for facebook&lt;/a&gt;. I had the impression that Paul Adams was not being heard (if you're not an engineer at Google, you often aren't). Many were visibly unhappy with his slide deck having been published for all to see (soon to be released as a book). I even heard a rumor that there was an attempt to stop or delay the book's publication.&lt;/p&gt; 
+&lt;p&gt;I have no idea if this last bit was true or not, but one fine day Paul Adams quit and &lt;a href=&quot;http://techcrunch.com/2010/12/20/paul-adams-googler-whose-presentation-foretold-facebook-groups-heads-to-facebook/&quot;&gt;went to facebook&lt;/a&gt;. I was convinced that this was the final nail in the coffin. Engineers outside Emerald Sea--a cynical bunch at the best of times--were making snide comments and writing off the project as a dismal failure before it even launched.&lt;/p&gt; 
+&lt;p&gt;Then it happened--facebook finally released the product they'd been working on so secretly, their answer to Paul's thesis. The team lead at facebook even publicly tweeted a snarky jab at Google. Their product was called &lt;a href=&quot;http://www.huffingtonpost.com/2010/10/06/facebook-groups-launch-to_n_752918.html&quot;&gt;Facebook Groups&lt;/a&gt;.&lt;/p&gt; 
+&lt;p&gt; I was dumbstruck. Was I reading this correctly? I quickly logged on and played with it, to see for myself. My former colleagues had started a Google Wave alumni group, and I even looked in there to see if I had misunderstood. But no--it seemed that facebook had completely missed the point. There was no change to the social graph, there was no real impetus to encourage people to map their real-life social circles on to the virtual graph, and the feature itself was a under a tab sitting somewhere off to the side.&lt;/p&gt; 
+&lt;h3&gt;Full Circle&lt;/h3&gt; 
+&lt;p&gt;Then I remembered something the Circles team lead had said:&lt;/p&gt; 
+&lt;blockquote&gt; 
+ &lt;p&gt;&amp;quot;...[We know] the danger of this, but were counting on the fact that facebook wouldn't be able to change something so core to their product.&amp;quot;&lt;/p&gt; 
+&lt;/blockquote&gt; 
+&lt;p&gt;I had originally assumed that he meant facebook would lack the agility to make the necessary technical changes, so central to their system. But I was wrong--the real point was that they would not be &lt;em&gt;willing&lt;/em&gt; to change direction so fundamentally. And given such a large, captivated audience you could hardly blame them.&lt;/p&gt; 
+&lt;p&gt;And now, Circles have launched as a central feature of Google+, with a generally positive reaction from the tech press and users alike. Wow.&lt;/p&gt; 
+&lt;p&gt;Now, I'm not saying that Circles is the one killer feature to bring down facebook--not at all. What I am saying, however, is that these two products are not playing on an even field. Like Microsoft and online Office, it is incredibly difficult for facebook to make fundamental changes to their product suite to answer competitive threats. It is for this reason I feel that Google+ has a genuine shot at dethroning facebook.&lt;/p&gt; 
+&lt;h3&gt;A Game of Thrones&lt;/h3&gt; 
+&lt;p&gt;Of course, there are many other factors to consider--some more important than I've stated. For example, the Google+ sharing console is only ever a click away in any Google property via the toolbar. This is bound to keep users deeply engaged. At the same time it will probably attract anti-trust scrutiny. On the other hand, Facebook already has strong networks effects in its favor and stealing away even a quarter of its 750m users will be an arduous, multi-year campaign. And Mark Zuckerberg has time and again shown that he has the uncanny ability to make good decisions under pressure. So maybe facebook will decide at some point that it needs to pivot fundamentally and make the necessary changes.&lt;/p&gt; 
+&lt;p&gt; Both companies will compete fervently for partnerships with major web properties to feature the Like or +1 buttons. And the mobile ecosystem (with Apple now &lt;a href=&quot;http://mashable.com/2011/06/07/apple-twitter-ios5/&quot;&gt;getting in bed with Twitter&lt;/a&gt;) will have a large impact. There are so many variables at play that many of the things I've said may make no difference at all in the outcome.&lt;/p&gt; 
+&lt;p&gt;With those caveats in place however, I predict that while Google+ will not usurp the throne from facebook per se, it will instead grow into a strong, competitive player and much-needed alternative. Much as Chrome has with IE. Where facebook has the larger, but no-longer dominant share. I predict that when this game is done playing, there will be no more thrones.&lt;/p&gt; 
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt; 
+&lt;div style=&quot;font-size: small;&quot;&gt;
+ Find me on 
+ &lt;a href=&quot;http://twitter.com/dhanji&quot;&gt;twitter&lt;/a&gt; (Disclaimer: All opinions here are purely my speculation. And any Google-specific information is already in the public domain and linked-to where appropriate)
+&lt;/div&gt;</description>
+      <link>http://rethrick.com/#google-plus</link>
+    </item>
+    
+    <item>
+      <guid isPermaLink="true">
+        http://rethrick.com/haskell-better
+      </guid>
+      <title>Haskell</title>
+      <description>&lt;p&gt;&lt;/p&gt;
+&lt;meta published=&quot;29 Jun 2011&quot; /&gt; 
+&lt;meta tag=&quot;haskell&quot; /&gt;  
+&lt;p&gt;I'm sure you've run into that annoying clod of a programmer, perhaps a colleague, an intern, or someone you meet at drinks after a usergroup meeting. This person won't shut up about how fantastic the Haskell programming language is. About how every other language is inferior, almost by definition, how some day we will all be coding in Haskell, and disdaining object-oriented programming as the failed anachronism that it already, clearly is.&lt;/p&gt; 
+&lt;p&gt;Well, I am one of these people! To be sure, I find them equally annoying to be around and do roll my eyes when I hear the phrase &lt;em&gt;referential transparency&lt;/em&gt; bandied about with the same fervent, partial dementia as &lt;em&gt;manifest destiny&lt;/em&gt;. I listen closely for the subtle misunderstandings that are inevitably lurking underneath this newly-minted zealotry. And I am seldom disappointed.&lt;/p&gt; 
+&lt;p&gt;Haskell will never take over mainstream programming, it will always be the seductive, out-of-reach mistress and muse of aspiring hackers. But I am a fan. Let me tell you why.&lt;/p&gt; 
+&lt;h3&gt;A Question of State&lt;/h3&gt; 
+&lt;p&gt;Most modern programming is built around the idea of a state machine. Sure, there are patterns that reduce things to declarative constructs and good libraries that encourage stateless architecture, but essentially this is window dressing around the core programming model--which is pushing inputs through a series of states.&lt;/p&gt; 
+&lt;p&gt;I don't know about you but I find this model extremely difficult. In my limited experience, most people are unable to keep more than a handful of potential options in their heads, let alone model the search space of even the simplest of practical computing problems. If you don't believe me, construct a binary search tree in your head, consisting of the english alphabet and desribe how to get to the letter Q.&lt;/p&gt; 
+&lt;p&gt;This brings me to my next point--we're lazy. It's much simpler to describe the mechanism of the tree than to realize the tree in your head. To say the tree behaves such that all letters above 'K' go in the right half of the tree and those below 'K' go in the left half. And so on, recursively.&lt;/p&gt; 
+&lt;p&gt;Programming in Haskell naturally fits this way of modeling the universe. I concede here that I've picked an example that is very favorable to my argument. But consider the broader dialectic of a material search space versus the abstract, recursive description of a constraint. I argue that almost all problems can be reduced this way. And it is quite clear which side is the more suited to human cognitive facility.&lt;/p&gt; 
+&lt;h3&gt;Actual Performance&lt;/h3&gt; 
+&lt;p&gt;This is something you rarely hear annoying Haskell fanboys say, but Haskell has inherent, idiomatic advantages over most other languages in performance. The trick is in &lt;a href=&quot;http://en.wikipedia.org/wiki/Lazy_evaluation&quot;&gt;lazy evaluation&lt;/a&gt;. Consider the following trivial example:&lt;/p&gt; 
+&lt;pre&gt;&lt;code&gt;pick [] = []
+pick ls = (take 100 ls) !! random
+
+pick [1..]
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;Here we are picking a number at random from the first 100 items of a list. Haskell's advantage lies in the fact that it will only pick as many items from the list as the random index requires. In this case, since the list is infinitely long, that will save us a lot of memory and CPU.&lt;/p&gt; 
+&lt;p&gt;This code is readable, expressive and incredibly performant. Writing code like this in any other language is pretty much impossible without trading speed and memory. This sort of expressiveness is extremely useful in many real world use cases.&lt;/p&gt; 
+&lt;p&gt;Lest you write this off as yet another contrived example to favor Haskell, check out this parser that emits &lt;code&gt;xml&lt;/code&gt; from &lt;a href=&quot;https://github.com/dhanji/play/blob/master/hake.hs&quot;&gt;Maven Atom source code&lt;/a&gt;.&lt;/p&gt; 
+&lt;p&gt;In particular, this line:&lt;/p&gt; 
+&lt;pre&gt;&lt;code&gt;xmlTag name content = '&amp;lt;' : name ++ &amp;quot;&amp;gt;&amp;quot; ++ content ++
+                      ( &amp;quot;&amp;lt;/&amp;quot; ++ (head $ words name) ++ &amp;quot;&amp;gt;&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;..is used almost abusively all over the program; to rip apart the contents of an XML start tag to extract the name of its end tag: &lt;code&gt;&amp;quot;&amp;lt;/&amp;quot; ++ (head $ words name) ++ &amp;quot;&amp;gt;&amp;quot;&lt;/code&gt;. To the non-lazy programmer, this would appear extremely inefficient--why split the entire length of &lt;code&gt;name&lt;/code&gt; by whitespace every single time? But this is not how it works--in practice, the program only ever seeks as far as the first space character because the function &lt;code&gt;words&lt;/code&gt; is &lt;em&gt;lazily&lt;/em&gt; evaluated.&lt;/p&gt; 
+&lt;p&gt;In most other languages, this is something that could easily explode in CPU and memory cost. In those languages, you'd be writing a separate 'optimized' version requiring additional tests, prone to subtle bugs, performance problems and creating reams of unnecessary text to drag one's eyes over.&lt;/p&gt; 
+&lt;h3&gt;No Manifest Destiny&lt;/h3&gt; 
+&lt;p&gt;So, I'll admit it--I too, am a fanboy. I have a special affinity for Haskell, for the reasons mentioned above and many others (my uncle was even a member of the original Haskell committee).&lt;/p&gt; 
+&lt;p&gt;But as I said, it will never head over to the mainstream. There are many reasons for this: Haskell's APIs are pedantic, quirkily designed, its monadic IO is confusing and complicated, and so on. But the main reason is that the shift in mindset required is far too great. We're just too used to laundry-list-style sequences of instructions and attempting, however futilely, to map the search-space of complex real-world problems in our minds, in fairly literal terms.&lt;/p&gt; 
+&lt;p&gt;And I'm glad. I have fun with my exclusive little hobby, small community of co-conspirators, and that tiny bit of magic I feel every time I stand back and behold my latest Haskell creation!&lt;/p&gt; 
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt; 
+&lt;div style=&quot;font-size: small;&quot;&gt;
+ Find me on 
+ &lt;a href=&quot;http://twitter.com/dhanji&quot;&gt;twitter&lt;/a&gt;
+&lt;/div&gt;</description>
+      <link>http://rethrick.com/#haskell-better</link>
+    </item>
+    
+    <item>
+      <guid isPermaLink="true">
+        http://rethrick.com/crosstalk
+      </guid>
+      <title>Crosstalk: A Chat App</title>
+      <description>&lt;p&gt;&lt;/p&gt;
+&lt;meta published=&quot;08 Jun 2011&quot; /&gt; 
+&lt;meta tag=&quot;programming&quot; /&gt; 
+&lt;meta tag=&quot;products&quot; /&gt;  
+&lt;p&gt;Not long ago there was a crazy rush of startups building group chat applications. Names like Beluga, Convore, Banter.ly, Group.me, Brizzly and others spring to mind. Other, more mature products like 37signals' Campfire and web-based IRC clients are also part of this suite.&lt;/p&gt; 
+&lt;p&gt;The space is crowded, and recently bubble-like in its growth. I think there are a multitude of reasons for this:&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;Status updates have become the currency of social interaction thanks to Twitter and Facebook&lt;/li&gt; 
+ &lt;li&gt;There is a real need for group communication that these products do not provide&lt;/li&gt; 
+ &lt;li&gt;It is fairly easy to write a group chat app, and the point of distincion is all about UI&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;p&gt;As an experiment to test these three theories, &lt;a href=&quot;http://themaninblue.com&quot;&gt;The Man in Blue&lt;/a&gt; and I took a week to see if we could build such a group-chat application. We came up with Crosstalk after four days.&lt;/p&gt; 
+&lt;p&gt;&lt;a href=&quot;http://rethrick.com/images/xtalk-home.png&quot;&gt; &lt;img src=&quot;http://rethrick.com/images/xtalk-home.png&quot; style=&quot;width:400px; display: block; margin: 0 auto; border: 1px solid #777; padding: 2px;&quot; /&gt; &lt;/a&gt;&lt;/p&gt; 
+&lt;p&gt;&lt;br /&gt; &lt;a href=&quot;http://rethrick.com/images/xtalk-room.png&quot;&gt; &lt;img src=&quot;http://rethrick.com/images/xtalk-room.png&quot; style=&quot;width:400px; display: block; margin: 0 auto; border: 1px solid #777; padding: 2px;&quot; /&gt; &lt;/a&gt;&lt;/p&gt; 
+&lt;p&gt;We have no particular intention of making this a startup or a running service (for reasons obvious from above), so in light of that I am announcing the release of the code as open source to do with as you will:&lt;/p&gt; 
+&lt;p&gt;&lt;a href=&quot;http://github.com/dhanji/crosstalk&quot;&gt;http://github.com/dhanji/crosstalk&lt;/a&gt;&lt;/p&gt; 
+&lt;h3&gt;Events&lt;/h3&gt; 
+&lt;p&gt;To give ourselves a specific goal, we focused on realtime chat for events, and customized it for the excellent &lt;a href=&quot;http://webstock.co.nz&quot;&gt;Webstock&lt;/a&gt; conference in New Zealand. We hoped it would prove useful for session attendees to share instant reactions, links and photos.&lt;/p&gt; 
+&lt;p&gt; It proved to have mixed results, some sessions were good and others weak. We didn't promote the app at all beyond a tweet, so this may have been the cause. Also 4-days of coding are bound to leave one with a few bugs.&lt;/p&gt; 
+&lt;h3&gt;Technology&lt;/h3&gt; 
+&lt;p&gt;The server was written on Google Appengine/Java, and powered by &lt;a href=&quot;http://sitebricks.org&quot;&gt;Sitebricks&lt;/a&gt;. We used the Appengine Channel API for Comet support (Message Push to the browser) and the client was written in jQuery with a focus on HTML5 features.&lt;/p&gt; 
+&lt;p&gt;I am proud to say we managed to get nearly every feature we wanted done, though not all worked to satisfaction for various reasons, including some quirks of Appengine. Here's an overview:&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;You sign in with a Twitter account over OAuth&lt;/li&gt; 
+ &lt;li&gt;Adding &lt;em&gt;terms&lt;/em&gt; to a room triggers a periodic fetch of tweets matching that term from the public timeline&lt;/li&gt; 
+ &lt;li&gt;Attachments such as images can be dragged and dropped into the browser window&lt;/li&gt; 
+ &lt;li&gt;Images, Video URLs, and even Amazon product links are expanded/snippeted inline using &lt;a href=&quot;http://embed.ly&quot;&gt;embed.ly&lt;/a&gt;&lt;/li&gt; 
+ &lt;li&gt;The right margin features an activity histogram for the life of the chatroom&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;p&gt;The disclaimer is that it's still very raw, but you should be able to build and deploy it on any Appengine account using:&lt;/p&gt; 
+&lt;pre&gt;&lt;code&gt;mvn package
+appcfg.sh update src/main/webapp
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;div style=&quot;font-size: small;&quot;&gt;
+ You will need 
+ &lt;a href=&quot;http://maven.apache.org&quot;&gt;Maven 2.2.1&lt;/a&gt; and the 
+ &lt;a href=&quot;http://code.google.com/appengine/downloads.html&quot;&gt;Appengine Java SDK&lt;/a&gt;
+&lt;/div&gt; 
+&lt;p&gt;Tweet me your thoughts.&lt;/p&gt; 
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt; 
+&lt;div style=&quot;font-size: small;&quot;&gt;
+ Find me on 
+ &lt;a href=&quot;http://twitter.com/dhanji&quot;&gt;twitter&lt;/a&gt;
+&lt;/div&gt;</description>
+      <link>http://rethrick.com/#crosstalk</link>
+    </item>
+    
+    <item>
+      <guid isPermaLink="true">
+        http://rethrick.com/waving-goodbye
+      </guid>
+      <title>Waving Goodbye</title>
+      <description>&lt;p&gt;&lt;/p&gt;
+&lt;meta published=&quot;06 Jun 2011&quot; /&gt; 
+&lt;meta tag=&quot;personal&quot; /&gt; 
+&lt;meta tag=&quot;wave&quot; /&gt;  
+&lt;p&gt;In the past month or two, fully 8 of my colleagues from the &lt;a href=&quot;http://wave.google.com&quot;&gt;Google Wave&lt;/a&gt; project have resigned from the company. This is no strange coincidence given that annual bonuses for 2010 were paid out at the end of Q1 2011. However, it does give one pause to think about so many people from the same project (including myself) counting down the bonus clock.&lt;/p&gt; 
+&lt;p&gt;For my part I really enjoyed my time at Google--it is the best job I've ever had, by a long way. Everything you hear about is true: the friendly atmosphere, the freedom to pursue innovative ideas and projects, capricious indulgence of engineers, and the noble sense of purpose to change the world for the better with nary a thought given to profits or costs.&lt;/p&gt; 
+&lt;p&gt;So why did we all quit? My colleagues have stated &lt;a href=&quot;http://blog.pamelafox.org/2011/02/goodbye-google-hello-world.html&quot;&gt;their&lt;/a&gt; &lt;a href=&quot;http://blog.douweosinga.com/2011/05/leaving-google-part-2.html&quot;&gt;own&lt;/a&gt; &lt;a href=&quot;http://jutopia.tirsen.com/2011/04/29/leaving_google.html&quot;&gt;reasons&lt;/a&gt;, so I won't speak for them. But for me it was very simple: I just didn't enjoy going in to work anymore. Many would question why one would leave a high-paying job with all the comforts and freedoms that come at a place like Google. Some people possess the ability to truck on through and find their place in the system, maybe even take some joy in the everyday grind. I admire this ability but it is completely alien to me.&lt;/p&gt; 
+&lt;h3&gt;Productivity&lt;/h3&gt; 
+&lt;p&gt;Looking back, I did achieve a lot at Google--on Wave I helped design the search and indexing pipeline which was the single best-scaling component in the entire system, supporting over 3 million users at one point. The search team lead and I spent hours sitting together, hammering out details of intricate concurrency code, recovery algorithms and solutions to tricky memory-pressure issues.&lt;/p&gt; 
+&lt;p&gt;I also wrote the entire front end for Realtime Search, worked on Wave's Embedding APIs and spent long hours and sleepless nights with each backend team helping improve their server's performance during the harshest weeks of Wave's user load.&lt;/p&gt; 
+&lt;p&gt;Outside Wave, Bob Lee, Jesse Wilson and I maintained Guice--a library at the heart of nearly every single Java server at Google. I worked with various teams from AdWords, Gmail, Apps, and many others helping them sort out Guice and even general Java problems, particularly in dealing with performance and concurrency. And did countless code reviews. I also represented Google on 3 different expert groups and was a member of the internal leadership council on all matters relating to Java.&lt;/p&gt; 
+&lt;p&gt;Yet, I never once felt productive. I always felt like I was behind, and chasing the tail of some ephemeral milepost of where I ought to be.&lt;/p&gt; 
+&lt;h3&gt;Recognition&lt;/h3&gt; 
+&lt;p&gt;The nature of a large company like Google is such that they reward consistent, focused performance in one area. This sounds good on the surface, but if you're a hacker at heart like me, it's really the death knell for your career. It means that staking out a territory and defending it is far more important than &lt;em&gt;doing what it takes&lt;/em&gt; to get a project to its goal. It means that working on Search, APIs, UI, performance, scalability and getting each one of those pieces across the line by any means necessary is actually bad for your career.&lt;/p&gt; 
+&lt;p&gt;Engineers who simply staked out one component in the codebase, and rejected patches so they could maintain complete control over design and implementation details had much greater rewards. (I was one among many who felt this way, and had colleagues who deserved more recognition than me who received less, lest you think I am belly-aching =)&lt;/p&gt; 
+&lt;p&gt;This is a general problem at Google--where territorialism is incentivized, but it was particularly bad on the Wave project. I say this without bitterness--it is merely an observation in hindsight. A saving grace for me was that my colleagues across the various Google offices did give me a lot of personal recognition for my work on Guice and Java. But not everyone is so lucky.&lt;/p&gt; 
+&lt;h3&gt;Speed&lt;/h3&gt; 
+&lt;p&gt;Here is something you've may have heard but never quite believed before: Google's vaunted scalable software infrastructure is obsolete. Don't get me wrong, their hardware and datacenters are the best in the world, and as far as I know, nobody is close to matching it. But the software stack on top of it is 10 years old, aging and designed for building search engines and crawlers. And it is well and truly obsolete.&lt;/p&gt; 
+&lt;p&gt;&lt;a href=&quot;http://code.google.com/p/protobuf/&quot;&gt;Protocol Buffers&lt;/a&gt;, &lt;a href=&quot;http://labs.google.com/papers/bigtable.html&quot;&gt;BigTable&lt;/a&gt; and &lt;a href=&quot;http://labs.google.com/papers/mapreduce.html&quot;&gt;MapReduce&lt;/a&gt; are ancient, creaking dinosaurs compared to &lt;a href=&quot;http://msgpack.org&quot;&gt;MessagePack&lt;/a&gt;, JSON, and &lt;a href=&quot;http://hadoop.apache.org/&quot;&gt;Hadoop&lt;/a&gt;. And new projects like &lt;a href=&quot;http://code.google.com/webtoolkit/&quot;&gt;GWT&lt;/a&gt;, &lt;a href=&quot;http://code.google.com/closure/&quot;&gt;Closure&lt;/a&gt; and &lt;a href=&quot;http://www.cidrdb.org/cidr2011/Papers/CIDR11_Paper32.pdf&quot;&gt;MegaStore&lt;/a&gt; are sluggish, overengineered Leviathans compared to fast, elegant tools like &lt;a href=&quot;http://jquery.org&quot;&gt;jQuery&lt;/a&gt; and &lt;a href=&quot;http://mongodb.org&quot;&gt;mongoDB&lt;/a&gt;. Designed by engineers in a vacuum, rather than by developers who have need of tools.&lt;/p&gt; 
+&lt;p&gt;In the short time I've been outside Google I've created entire apps in Java in the space of a single workday. (Yes, you can program as &lt;a href=&quot;http://sitebricks.org&quot;&gt;quickly in Java&lt;/a&gt; as in Ruby or Python, if you understand your tools well.) I've gotten prototypes off the ground, shown it to people, or deployed them with hardly any barriers.&lt;/p&gt; 
+&lt;h3&gt;The Future&lt;/h3&gt; 
+&lt;p&gt;The feeling now is liberating and joyous. Working by yourself or in a small team is fantastic in so many ways, that I simply can't describe it properly. If you're a hacker, Google is not the ideal place for you.&lt;/p&gt; 
+&lt;p&gt;That said, I've learned so much from working there, and I like to believe that I bridge the gap between hacker and engineer quite well. I enjoy the mathematical puzzles that Googlers love, I believe in the value of a programmer versed in Computer Science as well as Software Engineering, ardently. I do believe that Google is the best company in several generations and has transformed the way we think, live and work for the better. And I have no cynical reservations about their motto &amp;quot;Don't Be Evil&amp;quot;. They aren't, and if you think you can find another company who has done as much for the world and been as conscientious while keeping its promises to shareholders, then the more fool you.&lt;/p&gt; 
+&lt;p&gt;For my part, the future is a bright day, free of the encumberances of bureaucracy and scale. The sun is shining and I'm getting ready to start hacking.&lt;/p&gt; 
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt; 
+&lt;div style=&quot;font-size: small;&quot;&gt;
+ Find me on 
+ &lt;a href=&quot;http://twitter.com/dhanji&quot;&gt;twitter&lt;/a&gt;
+&lt;/div&gt;</description>
+      <link>http://rethrick.com/#waving-goodbye</link>
+    </item>
+    
+    <item>
+      <guid isPermaLink="true">
+        http://rethrick.com/unit-tests-false-idol
+      </guid>
+      <title>Unit Testing: A False Idol</title>
+      <description>&lt;p&gt;&lt;/p&gt;
+&lt;meta published=&quot;29 May 2011&quot; /&gt; 
+&lt;meta tag=&quot;programming&quot; /&gt;  
+&lt;p&gt;There is a fervor among agile enthusiasts and programmers about unit testing that borders on religion. This fever has even infected the ranks of everyday programmers, even those who do not practice Test-driven or eXtreme Programming. So much so that the code coverage metric is a prized goal, one which misguided engineering managers give out t-shirts and other pedestrian awards for. (At Google you similarly received certifications based on levels of coverage--to be fair, among other criteria.) This is a false idol--don't worship it!&lt;/p&gt; 
+&lt;p&gt; Unit tests create the illusion of a well-tested codebase, without the rigor that goes with it. The problem lies in the fact that there is almost never a match between the unit test and the atomicity of the unit under test. Invariably, these components have strong dependencies on the behavior of neighboring, external code. When you mock that dependency you are making an explicit commitment to maintain two streams of code--the mock, and the neighboring logic.&lt;/p&gt; 
+&lt;p&gt;In Sitebricks, we have 321 unit tests and about 83 integration tests. The latter have, time and again, proven far more useful in detecting bugs and preventing regressions than have the former. In fact, every time I add a working, well-tested feature, I find that I must crawl a spiderweb of unrelated unit tests and fix all the mock behaviors to correspond to the new system. This makes refactoring very frustrating, and sometimes downright impractical.&lt;/p&gt; 
+&lt;p&gt;This is not to say that all unit testing is bad--of course not. The dispatch logic in Guice Servlet and Sitebricks benefit from rigorous, modular unit tests. If you have ever used Gmail, Blogger, Google Apps, AdWords or Google Wave (all use Guice Servlet to dispatch requests) you have seen the benefits of this rigor first-hand. But take it from me, we could have achieved the same level of confidence with a few well written unit tests and a battery of integration tests. And we'd have been in a much better position to improve the framework and add features quickly.&lt;/p&gt; 
+&lt;p&gt;Nowadays, when I'm doing major refactors of Sitebricks I simply delete unit tests that are getting in my way, the overall code quality continues to be high and I am able to respond faster to bug reports and feature requests.&lt;/p&gt; 
+&lt;p&gt;So the next time someone comes to you saying let's write the tests first, or that we should aim for 80% code coverage, take it with a healthy dose of skepticism.&lt;/p&gt;</description>
+      <link>http://rethrick.com/#unit-tests-false-idol</link>
+    </item>
+    
+    <item>
+      <guid isPermaLink="true">
+        http://rethrick.com/comets-meteors
+      </guid>
+      <title>Comets and Meteors</title>
+      <description>&lt;p&gt;&lt;/p&gt;
+&lt;meta published=&quot;28 May 2011&quot; /&gt; 
+&lt;meta tag=&quot;programming&quot; /&gt;  
+&lt;p&gt;I am exploring writing an app with Comet (reverse Ajax) aka 'hanging gets'. I thought I knew how this worked in detail, but after days of research I found my knowledge sorely lacking. There isn't much good information on the web either, so I thought I'd summarize what I learned here.&lt;/p&gt; 
+&lt;p&gt;You can achieve server-to-client message pushing in several different ways:&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;Websockets - HTML5 standard that allows you to establish a full-duplex TCP socket with a high-level Javascript API. Only Chrome/Safari, Opera and Firefox seem to support this (Firefox 4 has since disabled support for security reasons).&lt;/li&gt; 
+ &lt;li&gt;Forever Frame - An iFrame whose content length is infinite. You just keep writing script tags out that invoke a callback in the parent frame with the server's push data. This is commonly used with IE.&lt;/li&gt; 
+ &lt;li&gt;Hanging GET (Multipart response) - This is a wonderful hack around an occult and obscure behavior introduced by Netscape. It only works in Firefox and Safari/Chrome, but it is brilliant-by reusing the ability to send multiple images back in a single response, you can instead encode JSON packets chunked by message length. The browser processes each JSON packet without ever closing the response stream, which can live forever.&lt;/li&gt; 
+ &lt;li&gt;Hanging GET (Long polling) - A less wonderful but perhaps more effective hack, a long poll is very much like a regular poll except that if there is no data, the server holds the stream open rather than return an empty response. When there is data to push, it is written and the response is closed. The client immediately opens a new request to re-establish this backchannel. A clever scheme will hold open POSTs that the client uses to send data and flip between them. This is the basis for the Bayeaux protocol.&lt;/li&gt; 
+ &lt;li&gt;Other (Flash Socket, Java Pushlet, etc.) - These rely on plugins to open a duplex channel to the server and have their own issues with compatibility and problems working via proxies.&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;p&gt;This confused me at first because there are two flavors of hanging GET. Long polling works on all browsers but is somewhat inefficient. Multipart response is very clever and more efficient but does not work with IE.&lt;/p&gt; 
+&lt;p&gt;There are many libraries that magic all this away for you. I caution against using them until you really understand what they do. Most of the ones I checked out do way more than you want and implement everything under the sun. IMO this is unnecessary bloat on the JS side and an increase in stack complexity.&lt;/p&gt; 
+&lt;p&gt;You can build a long polling server with very little effort using vanilla jQuery and &lt;a href=&quot;http://eclipse.org/jetty&quot;&gt;Jetty&lt;/a&gt;, using its continuations API. This is remarkably scalable too, given that Jetty continuations is not a thread-per-request model. Making a server to use with Websockets is similarly straightforward.&lt;/p&gt; 
+&lt;p&gt;My advice? Build a simple RPC abstraction on top of websockets. Test with Chrome or Firefox and then when you really need to support other browsers sub in the hand-over-hand long polling method I described above.&lt;/p&gt; 
+&lt;p&gt;I'll post any code I come up with.&lt;/p&gt;</description>
+      <link>http://rethrick.com/#comets-meteors</link>
+    </item>
+    
+  </channel>
+</rss>

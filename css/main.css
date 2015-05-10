@@ -1,0 +1,237 @@
+@font-face {
+	font-family: "Flaticon";
+	src: url("flaticon.eot");
+	src: url("flaticon.eot#iefix") format("embedded-opentype"),
+	url("flaticon.woff") format("woff"),
+	url("flaticon.ttf") format("truetype"),
+	url("flaticon.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+  font-family: "Menlo", "Helvetica", "Arial", sans-serif;
+  font-size: small;
+  color: #333;
+  line-height: 1.5;
+  margin: 0;
+  background: rgba(0,0,0,0.04);
+  text-shadow: 0 0 1px rgba(0,0,0,0.12);
+}
+
+pre {
+  margin: 2.8em 0;
+  padding: 0 1.3em;
+  border-left: 2px solid rgba(0,0,0,0.1);
+  /*border-left: 2px solid rgba(61,154,255, 0.8);*/
+  /*rgba(61,114,239, 1.0)*/
+  color: #444;
+  font-family: "Inconsolata", "Courier New", monospace;
+
+}
+
+h1 {
+  margin: 0;
+  font-size: smaller;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+h2, h3 {
+  font-family: "Roboto Slab", serif;
+  font-weight: normal;
+}
+
+h2 {
+  text-align: center;
+  margin: 2em auto;
+}
+
+h3 {
+  margin-top: 2.6em;
+  font-size: 1.4em;
+  color: #111;
+}
+
+p {
+}
+
+a {
+ text-decoration: none;
+ color: rgb(61,154,239);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+ul {
+  list-style-type: none;
+}
+
+blockquote {
+  margin: 3em 2em;
+  margin-bottom: 4em;
+  font-family: "Georgia", serif;
+  font-style: italic;
+  font-size: medium;
+  color: #555;
+  text-shadow: 0 0 2px rgba(0,0,0,0.2);
+}
+
+blockquote .caption {
+  display: block;
+  font-size: smaller;
+  padding: 1em 0;
+  float: right;
+}
+
+footer {
+  margin-top: 4em;
+}
+
+footer p {
+  text-align: center;
+  font-style: italic;
+  font-size: 0.9em;
+  color: #555;
+}
+
+.meta {
+  position: absolute;
+  margin-top: -1em;
+  margin-left: 560px;
+}
+
+ul.tags {
+  padding: 0;
+  overflow: hidden;
+  font-size: smaller;
+}
+
+ul.tags li {
+  overflow: hidden;
+  margin: 3px 4px;
+  padding: 0 0 1px;
+  float: left;
+}
+
+ul.tags li a {
+  font-size: 0.9em;
+  outline: none;
+  float: left;
+  padding: 0 6px;
+  color: rgba(255,255,255,1);
+  border-radius: 6px;
+  background: rgba(61,154,239, 0.7);
+}
+
+ul.tags li a:hover {
+  background: rgba(61,154,239, 0.9);
+  text-decoration: none;
+}
+
+ul.tags li a:active {
+  position: relative;
+  top: 1px;
+}
+
+#share {
+  position: absolute;
+  top: 166px;
+  left: 0px;
+  font-family: "Flaticon";
+  color: #555;
+}
+
+#share a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#share .flaticon-facebook2:hover {
+  /*color: rgba(61,154,239, 0.7);*/
+  color: rgba(72,98,163,1)
+}
+
+#share .glyph-icon {
+  cursor: pointer;
+}
+
+#share .glyph-icon:active {
+  opacity: 0.5;
+}
+
+#share .flaticon-twitter:hover {
+  color: rgba(85,172,238,1)
+}
+
+#share .flaticon-mail59:hover {
+  color: rgba(221,74,56,1)
+}
+
+#content {
+  margin: 0 auto;
+  margin-top: 3em;
+  width: 500px;
+	overflow: hidden;
+}
+
+.image-spacer {
+	margin: 3.0em 0 3.5em 0;
+	height: 340px;
+}
+
+.image {
+	position: absolute;
+	left: 0;
+	right: 0;
+	height: 340px;
+}
+
+.image img {
+	display: block;
+	margin: 0 auto;
+	height: 100%;
+}
+
+#top {
+  font-family: "Helvetica", sans-serif;
+  padding: 1em;
+  color: #333;
+  height: 40px;
+}
+
+#top ul {
+  text-transform: uppercase;
+  font-size: smaller;
+
+  float: right;
+  margin: 0;
+}
+
+#top ul li {
+  margin: 0 1em;
+  float: left;
+}
+
+#top a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#top a:hover {
+  text-decoration: none;
+  color: rgb(61,154,239);
+}
+
+#footer {
+  font-family: "Helvetica Neue", "Arial", sans-serif;
+  font-weight: lighter;
+  padding: 8px;
+  padding-top: 4em;
+  text-align: right;
+  font-size: 10px;
+  opacity: 0.2;
+}
