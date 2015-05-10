@@ -20,7 +20,7 @@
     <dependency>
       <groupId>com.google.guava</groupId>
       <artifactId>guava</artifactId>
-      <version>r07</version>
+      <version>18.0</version>
     </dependency>
     <dependency>
       <groupId>com.google.code.gson</groupId>
@@ -55,18 +55,18 @@
   </dependencies>
 
   <build>
-    <sourceDirectory>src/main/java</sourceDirectory>
+    <sourceDirectory>src</sourceDirectory>
     <resources>
       <resource>
-        <directory>src/main/resources</directory>
+        <directory>pages</directory>
       </resource>
     </resources>
     <plugins>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
         <configuration>
-          <source>1.6</source>
-          <target>1.6</target>
+          <source>1.8</source>
+          <target>1.8</target>
         </configuration>
       </plugin>
     </plugins>
