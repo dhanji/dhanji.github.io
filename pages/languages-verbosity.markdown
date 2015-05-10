@@ -216,5 +216,3 @@ write better, and create better languages to express ourselves.
 
 [1] Technically this could refer to an outer/inner class structure, but that serves effectively
 the same purpose (namespace).
-
-<div style="font-size: small;">Find me on <a href="http://twitter.com/dhanji">twitter</a></div>

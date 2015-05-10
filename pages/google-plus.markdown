@@ -127,7 +127,3 @@ With those caveats in place however, I predict that while Google+ will not usurp
  grow into a strong, competitive player and much-needed alternative. Much as Chrome has with IE.
  Where facebook has the larger, but no-longer dominant share.
  I predict that when this game is done playing, there will be no more thrones.
-
-<br>
-
-<div style="font-size: small;">Find me on <a href="http://twitter.com/dhanji">twitter</a> (Disclaimer: All opinions here are purely my speculation. And any Google-specific information is already in the public domain and linked-to where appropriate)</div>

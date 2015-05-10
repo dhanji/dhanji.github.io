@@ -169,7 +169,3 @@ Furthermore, I'd follow Github's wonderful example of giving away all public gro
 Finally, there is a lot of scope beyond this. The set of Mailing List users (although this set is very large--Google Groups itself accounts for millions of users) is only a starting point, but a good starting point at that. If successful, working your way to the next great use case ought to be natural and smooth. You can imagine everything from planning an event, to working on group assignments, to live-blogging the next iProduct happening on this platform.
 
 Wave attempted to be a great many things, but it attempted them all at once. If it started instead with just one and mastered it thoroughly, perhaps in time it would have earned all the rest.
-
-<br>
-
-<div style="font-size: small;">Find me on <a href="http://twitter.com/dhanji">twitter</a></div>

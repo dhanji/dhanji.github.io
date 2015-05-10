@@ -71,7 +71,3 @@ Appengine account using:
 
 
 Tweet me your thoughts.
-
-<br>
-
-<div style="font-size: small;">Find me on <a href="http://twitter.com/dhanji">twitter</a></div>

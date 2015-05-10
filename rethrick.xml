@@ -69,12 +69,7 @@
 &lt;p&gt;Furthermore, I'd follow Github's wonderful example of giving away all public groups for free and charging a modest sum for private discussions as a source of revenue.&lt;/p&gt; 
 &lt;p&gt;&lt;a href=&quot;http://rethrick.com/images/wave/private.png&quot;&gt; &lt;img src=&quot;http://rethrick.com/images/wave/private.png&quot; style=&quot;width:500px; display: block; margin: 0 auto; border: 1px solid #777; padding: 2px;&quot; /&gt; &lt;/a&gt;&lt;/p&gt; 
 &lt;p&gt;Finally, there is a lot of scope beyond this. The set of Mailing List users (although this set is very large--Google Groups itself accounts for millions of users) is only a starting point, but a good starting point at that. If successful, working your way to the next great use case ought to be natural and smooth. You can imagine everything from planning an event, to working on group assignments, to live-blogging the next iProduct happening on this platform.&lt;/p&gt; 
-&lt;p&gt;Wave attempted to be a great many things, but it attempted them all at once. If it started instead with just one and mastered it thoroughly, perhaps in time it would have earned all the rest.&lt;/p&gt; 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt; 
-&lt;div style=&quot;font-size: small;&quot;&gt;
- Find me on 
- &lt;a href=&quot;http://twitter.com/dhanji&quot;&gt;twitter&lt;/a&gt;
-&lt;/div&gt;</description>
+&lt;p&gt;Wave attempted to be a great many things, but it attempted them all at once. If it started instead with just one and mastered it thoroughly, perhaps in time it would have earned all the rest.&lt;/p&gt;</description>
       <link>http://rethrick.com/#rethinking</link>
     </item>
     
@@ -116,15 +111,7 @@
 &lt;h3&gt;The Future&lt;/h3&gt; 
 &lt;p&gt;As we said in the blog post, we're not killing the dream. Rather it's going on the back burner for awhile. Perhaps the way Steve Jobs put the iPad &lt;a href=&quot;http://thenextweb.com/apple/2010/06/02/steve-jobs-the-ipad-concept-came-before-the-iphone/&quot;&gt;back on the shelf&lt;/a&gt; to focus on the iPhone. Only to return to it years later, with the wisdom and maturity of the latter's success. &lt;/p&gt; 
 &lt;p&gt;Or perhaps it will be reborn in the projects we're each pursuing on our own, in some small way.&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;Note: Techcrunch published a piece based on this post&lt;/strong&gt;&lt;/p&gt; 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt; 
-&lt;div style=&quot;font-size: small;&quot;&gt;
- Find me on 
- &lt;a href=&quot;http://twitter.com/dhanji&quot;&gt;twitter&lt;/a&gt; 
- &lt;a href=&quot;https://twitter.com/twitterapi&quot; class=&quot;twitter-follow-button&quot; data-show-count=&quot;false&quot; data-lang=&quot;en&quot;&gt;Follow @twitterapi&lt;/a&gt; 
- &lt;script&gt;!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=&quot;//platform.twitter.com/widgets.js&quot;;fjs.parentNode.insertBefore(js,fjs);}}(document,&quot;script&quot;,&quot;twitter-wjs&quot;);
- &lt;/script&gt; 
-&lt;/div&gt;</description>
+&lt;p&gt;&lt;strong&gt;Note: Techcrunch published a piece based on this post&lt;/strong&gt;&lt;/p&gt;</description>
       <link>http://rethrick.com/#rip-fluent</link>
     </item>
     
@@ -177,12 +164,7 @@
 &lt;p&gt;If one were so inclined one could spend a whole year tweaking things like this to improve search performance.&lt;/p&gt; 
 &lt;h3&gt;Conclusion&lt;/h3&gt; 
 &lt;p&gt;Ultimately, building various pieces of this puzzle from scratch did pay off for us. But I picked my battles--the underlying text is tokenized and stored by Lucene. Yes, there are some customizations we did to make it perform and scale better, but essentially, Lucene is a fantastic library and does the job but only if you take the time to adapt it for your needs. We could have used any tokenizing/full-text search library, but we would not automatically have ended up with Instant Search. &lt;/p&gt; 
-&lt;p&gt;The point I'm trying to make is that building a powerful feature like Instant Search requires diligence and a careful, measured approach to the problem at hand; with a lot of backtracking, frustration and gradual evolution toward the (albeit optimistic) final goal. And more often than not, it involves working in unsexy parts of the stack, reinventing and replacing minor cogs in a much bigger system of gears so that the engine may hum apace.&lt;/p&gt; 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt; 
-&lt;div style=&quot;font-size: small;&quot;&gt;
- Find me on 
- &lt;a href=&quot;http://twitter.com/dhanji&quot;&gt;twitter&lt;/a&gt;
-&lt;/div&gt;</description>
+&lt;p&gt;The point I'm trying to make is that building a powerful feature like Instant Search requires diligence and a careful, measured approach to the problem at hand; with a lot of backtracking, frustration and gradual evolution toward the (albeit optimistic) final goal. And more often than not, it involves working in unsexy parts of the stack, reinventing and replacing minor cogs in a much bigger system of gears so that the engine may hum apace.&lt;/p&gt;</description>
       <link>http://rethrick.com/#instant-search</link>
     </item>
     
@@ -202,12 +184,7 @@
 &lt;p&gt;When you first start programming as an engineer, you're full of enthusiasm and verve. Everything you see is a problem to be solved, a mountain to be conquered. No matter that this mountain has been climbed hundreds of times by more seasoned (and often more sensible) climbers. Usually a young engineer finds some justification&mdash;the existing solutions are too complex, they're in the wrong programming language or platform, they're too slow or have security problems.&lt;/p&gt; 
 &lt;p&gt;Generally these criticisms have some truth to them, but implicit is the assumption that the young programmer can do better, with limited time and resources, and with a more important goal in sight. The real reason, of course, is that the original goal is boring&mdash;most junior programmers don't get to code on the really &amp;quot;hot&amp;quot; stuff. They must do their time, implementing easy-but-laborious features, working their way usually from the front of the stack to the back-end, where senior stalwarts jealously guard their territories, gathered through years of careful experience.&lt;/p&gt; 
 &lt;p&gt;I've fallen prey to this attitude myself, many times. Plenty of solutions worked well enough for the problem at hand. But generally, the problem itself offered very little challenge, so I invented my own challenge by trying to build a framework or an abstraction that did things maybe 10% better than the existing solution.&lt;/p&gt; 
-&lt;p&gt;&lt;i&gt;Read the &lt;a href=&quot;http://www.informit.com/articles/article.aspx?p=1905548&quot;&gt;rest of this article&lt;/a&gt; (at InformIT).&lt;/i&gt;&lt;/p&gt; 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt; 
-&lt;div style=&quot;font-size: small;&quot;&gt;
- Find me on 
- &lt;a href=&quot;http://twitter.com/dhanji&quot;&gt;twitter&lt;/a&gt;
-&lt;/div&gt;</description>
+&lt;p&gt;&lt;i&gt;Read the &lt;a href=&quot;http://www.informit.com/articles/article.aspx?p=1905548&quot;&gt;rest of this article&lt;/a&gt; (at InformIT).&lt;/i&gt;&lt;/p&gt;</description>
       <link>http://rethrick.com/#nih</link>
     </item>
     
@@ -222,12 +199,7 @@
 &lt;p&gt;From various APIs and libraries to its two programming languages (DART and Go) and its flagship web browser (Chrome), Google has a multitude of high-profile open source projects. This has gained the company a lot of fans in the developer community, and has enabled real extensions and real projects that are offshoots (for example, RockMelt was a startup built on Chromium).&lt;/p&gt; 
 &lt;p&gt;And yet, there's a definite tension at Google between the old guard, who believe that source code is very valuable, and the open source &amp;quot;evangelists,&amp;quot; who believe that nearly all code at the company should be released as open source. Fortunately for Google (and for developers at large), its track record generally shows a willingness to share. Even in cases where Google has been reluctant to release source code (GFS, BigTable), engineers have published papers describing how others may be able to implement their own versions.&lt;/p&gt; 
 &lt;p&gt;This situation mimics a tension seen at many companies-some folks (engineers) want to see their source code released in the open, and others (management) find the idea very scary. In the old days, source code was genuinely an advantage-tools such as compilers and development editors were few and far between, often jealously guarded if they did anything at all capable, and in many cases even sold as a vended product. As time progressed, having source code became less important-we have the GNU Project to thank for this change, primarily. The GNU C Compiler, Emacs, and various other free tools made it much easier for anyone to produce and release their own tools. Fantastic purpose-driven tools like Python and the Apache web server expanded and democratized the landscape enormously.&lt;/p&gt; 
-&lt;p&gt;&lt;i&gt;Read the &lt;a href=&quot;https://www.informit.com/articles/article.aspx?p=1848530&quot;&gt;rest of this article&lt;/a&gt; (at InformIT).&lt;/i&gt;&lt;/p&gt; 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt; 
-&lt;div style=&quot;font-size: small;&quot;&gt;
- Find me on 
- &lt;a href=&quot;http://twitter.com/dhanji&quot;&gt;twitter&lt;/a&gt;
-&lt;/div&gt;</description>
+&lt;p&gt;&lt;i&gt;Read the &lt;a href=&quot;https://www.informit.com/articles/article.aspx?p=1848530&quot;&gt;rest of this article&lt;/a&gt; (at InformIT).&lt;/i&gt;&lt;/p&gt;</description>
       <link>http://rethrick.com/#source-code-dead</link>
     </item>
     
@@ -244,12 +216,7 @@
 &lt;p&gt;Through my 2 years on the project I worked variously on Search, Indexing, APIs, the Wave Server, open-source effort, JVMs and web client. Between my friend and former colleague, &lt;a href=&quot;http://tirsen.com&quot;&gt;Jon Tirsen&lt;/a&gt;, I think we touched nearly every part of the stack. As messy as that sounds, it was immensely fun and rewarding, and I wouldn't have it any other way: equal parts chaos, adrenaline, frustration, disappointment and celebration.&lt;/p&gt; 
 &lt;p&gt;Many words have been written about Wave, warts, sparkles, and all. To me it was a deeply personal and moving experience, like none before. We tried, and failed, to make a dent in the universe.&lt;/p&gt; 
 &lt;p&gt;Hopefully, someday, someone will try again.&lt;/p&gt; 
-&lt;p&gt;=)&lt;/p&gt; 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt; 
-&lt;div style=&quot;font-size: small;&quot;&gt;
- Find me on 
- &lt;a href=&quot;http://twitter.com/dhanji&quot;&gt;twitter&lt;/a&gt;
-&lt;/div&gt;</description>
+&lt;p&gt;=)&lt;/p&gt;</description>
       <link>http://rethrick.com/#rip</link>
     </item>
     
@@ -349,12 +316,7 @@ increment(24.0);
 // and so on...
 &lt;/code&gt;&lt;/pre&gt; 
 &lt;p&gt;No matter how many times you pick the first value of the preceding expression, and the first of that, you always end up with the string &amp;quot;0&amp;quot;. Not quite Russell's Paradox, but should leave you scratching your head nonetheless. =)&lt;/p&gt; 
-&lt;p&gt;Tweet me your thoughts.&lt;/p&gt; 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt; 
-&lt;div style=&quot;font-size: small;&quot;&gt;
- Find me on 
- &lt;a href=&quot;http://twitter.com/dhanji&quot;&gt;twitter&lt;/a&gt;
-&lt;/div&gt;</description>
+&lt;p&gt;Tweet me your thoughts.&lt;/p&gt;</description>
       <link>http://rethrick.com/#type-theory</link>
     </item>
     
@@ -378,12 +340,7 @@ increment(24.0);
 &lt;p&gt;This test asserts that my program, Sorter, correctly sorts a list of three numbers. But the test is comparing strings, rather than asserting order in a list of numbers. &lt;em&gt;If this example is setting off your type-safety warning bells, don't worry; its benefit will become clear shortly.&lt;/em&gt;&lt;/p&gt; 
 &lt;p&gt;Since we're only testing string equality, it doesn't really matter if Sorter.sort() returns a list, an array, or some other kind of object-as long as its string form produces a result that we expect. This capability is incredibly powerful for a couple of reasons:n&lt;/p&gt; 
 &lt;p&gt;You can instantly see when something is wrong by simply diffing two strings. You're free to change your mind about the underlying logic (repeatedly), and your test remains unchanged. You might argue that the second point is achieved with a sufficiently abstract interface--this is largely true, but in many cases it's quite cumbersome. (Particularly with evolving code, I've found it quite painful.) And refactoring tools only take you so far. Using strings neatly sidesteps this problem.&lt;/p&gt; 
-&lt;p&gt;&lt;i&gt;Read the &lt;a href=&quot;http://www.informit.com/articles/article.aspx?p=1831497&quot;&gt;rest of this article&lt;/a&gt; (at InformIT).&lt;/i&gt;&lt;/p&gt; 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt; 
-&lt;div style=&quot;font-size: small;&quot;&gt;
- Find me on 
- &lt;a href=&quot;http://twitter.com/dhanji&quot;&gt;twitter&lt;/a&gt;
-&lt;/div&gt;</description>
+&lt;p&gt;&lt;i&gt;Read the &lt;a href=&quot;http://www.informit.com/articles/article.aspx?p=1831497&quot;&gt;rest of this article&lt;/a&gt; (at InformIT).&lt;/i&gt;&lt;/p&gt;</description>
       <link>http://rethrick.com/#visual-testing</link>
     </item>
     
@@ -422,12 +379,7 @@ increment(24.0);
 &lt;blockquote class=&quot;twitter-tweet&quot;&gt;
  &lt;p&gt; @dhanji perhaps it's all the tweeting slowing you down :D&lt;/p&gt; --private-- 
 &lt;/blockquote&gt; 
-&lt;p&gt;&lt;i&gt;Read the &lt;a href=&quot;http://www.informit.com/articles/article.aspx?p=1829420&quot;&gt;rest of this article&lt;/a&gt; (at InformIT).&lt;/i&gt;&lt;/p&gt; 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt; 
-&lt;div style=&quot;font-size: small;&quot;&gt;
- Find me on 
- &lt;a href=&quot;http://twitter.com/dhanji&quot;&gt;twitter&lt;/a&gt;
-&lt;/div&gt;</description>
+&lt;p&gt;&lt;i&gt;Read the &lt;a href=&quot;http://www.informit.com/articles/article.aspx?p=1829420&quot;&gt;rest of this article&lt;/a&gt; (at InformIT).&lt;/i&gt;&lt;/p&gt;</description>
       <link>http://rethrick.com/#weekendproject</link>
     </item>
     
@@ -454,12 +406,7 @@ increment(24.0);
 &lt;p&gt;Watson is much more than a Boswell, he is a partner, and an intimate.&lt;/p&gt; 
 &lt;p&gt;Furthermore, Watson is a man of action. A man &amp;quot;familiar with the fairer sex&amp;quot;, who regularly socializes and involves himself with the knowledge of the day (of the two, one is completely unaware of the Copernican theory of the planets--I'll let you guess which one). On more than one occasion Watson has saved Holmes and his clients with urgency and quick action. This is the character in the Guy Ritchie film. I like this version of Watson. He is a foil to Sherlock Holmes in a way that no film or TV dramatization has ever done justice to--until now. Jude Law is a suitably brash, door-busting, fist-swinging hustler who has such a great passion for his friend and their adventures that he regularly skips appointments with his soon-to-be wife to burst in on Holmes, fists at the ready.&lt;/p&gt; 
 &lt;p&gt;A far cry from the torporific, post-traumatic, pathetic man lost between worlds, no hope nor joy in his heart.&lt;/p&gt; 
-&lt;p&gt;And this in essence is the magic of Sherlock Holmes--the growth of Dr. Watson as a character, his emergence from a painful and unremarkable past, into the life and presence of the great detective--not as a sidekick, not as the bungler who accidentally coughs up the missing clue, not even as the by-standing chronicler who gives us a post-events report of a wonderful, but unreachable story--no, rather as the friend and confidant, as the brother and colleague, the one who Holmes counts on as his backup over the sum total of bodies in Scotland Yard, as the man who brings the alien Holmes a connection to a very real and human life. And as a man through whose eyes, we see, and live, the adventure.&lt;/p&gt; 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt; 
-&lt;div style=&quot;font-size: small;&quot;&gt;
- Find me on 
- &lt;a href=&quot;http://twitter.com/dhanji&quot;&gt;twitter&lt;/a&gt;
-&lt;/div&gt;</description>
+&lt;p&gt;And this in essence is the magic of Sherlock Holmes--the growth of Dr. Watson as a character, his emergence from a painful and unremarkable past, into the life and presence of the great detective--not as a sidekick, not as the bungler who accidentally coughs up the missing clue, not even as the by-standing chronicler who gives us a post-events report of a wonderful, but unreachable story--no, rather as the friend and confidant, as the brother and colleague, the one who Holmes counts on as his backup over the sum total of bodies in Scotland Yard, as the man who brings the alien Holmes a connection to a very real and human life. And as a man through whose eyes, we see, and live, the adventure.&lt;/p&gt;</description>
       <link>http://rethrick.com/#sherlock</link>
     </item>
     
@@ -475,12 +422,7 @@ increment(24.0);
 &lt;p&gt;As a platform, however, Java is modern and genuinely competitive. The combination of a robust garbage collector, blazing fast virtual machine, and a battery of libraries for just about every task has made it the perfect launchpad for a plethora of products and new hosted languages. (Interestingly, Google's V8 is following a similar pattern.)&lt;/p&gt; 
 &lt;h3&gt;Expressiveness&lt;/h3&gt; 
 &lt;p&gt;&amp;quot;ProducerConstructorFactoryFactory&amp;quot; jokes notwithstanding, there is little doubt that the Java language suffers from a poor character-to-instruction ratio. I call this property &amp;quot;expressiveness&amp;quot;, in other words, the number of keys you must press in order to accomplish a simple task. This number is pretty large in Java. It repeatedly violates the &amp;quot;don't repeat yourself&amp;quot; (DRY) principle, and many of its modern features (such as Generics) feel lumbering and unwieldy, making reading and understanding source code a tedious task.&lt;/p&gt; 
-&lt;p&gt;&lt;i&gt;Read the &lt;a href=&quot;http://www.informit.com/articles/article.aspx?p=1824790&quot;&gt;rest of this article&lt;/a&gt; (at InformIT).&lt;/i&gt;&lt;/p&gt; 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt; 
-&lt;div style=&quot;font-size: small;&quot;&gt;
- Find me on 
- &lt;a href=&quot;http://twitter.com/dhanji&quot;&gt;twitter&lt;/a&gt;
-&lt;/div&gt;</description>
+&lt;p&gt;&lt;i&gt;Read the &lt;a href=&quot;http://www.informit.com/articles/article.aspx?p=1824790&quot;&gt;rest of this article&lt;/a&gt; (at InformIT).&lt;/i&gt;&lt;/p&gt;</description>
       <link>http://rethrick.com/#verbosity-java</link>
     </item>
     
@@ -517,12 +459,7 @@ increment(24.0);
 &lt;h3&gt;In Hindsight&lt;/h3&gt; 
 &lt;p&gt;Critical, drop-everything bugs become daily affairs, and the sense of confidence in the engineering strength of the structure begins to erode. This leads to low morale, burnout, and less internal cooperation for fear of taking on too many bugs.&lt;/p&gt; 
 &lt;p&gt;Of course I enjoyed my time on Wave like no other time in my career. It was equal parts frustration, joy, defeat and passion. I don't regret a single moment of being associated with it. It remains a wonderful attempt at creating something unique, exciting and incomparably bold. Nor do I want to ascribe blame to anyone on the team or Google at large. I just want to point that even the smartest, most motivated and talented people in the world--with a track record of delivering success--are alone not sufficient to overcome complexity that creeps up on you. Maybe we should have known better, but we didn't.&lt;/p&gt; 
-&lt;p&gt;In the end, the man-month as a scalable unit of work is hubris worthy of a Greek tragedy.&lt;/p&gt; 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt; 
-&lt;div style=&quot;font-size: small;&quot;&gt;
- Find me on 
- &lt;a href=&quot;http://twitter.com/dhanji&quot;&gt;twitter&lt;/a&gt;
-&lt;/div&gt;</description>
+&lt;p&gt;In the end, the man-month as a scalable unit of work is hubris worthy of a Greek tragedy.&lt;/p&gt;</description>
       <link>http://rethrick.com/#mmm</link>
     </item>
     
@@ -563,12 +500,7 @@ increment(24.0);
 &lt;h3&gt;A Game of Thrones&lt;/h3&gt; 
 &lt;p&gt;Of course, there are many other factors to consider--some more important than I've stated. For example, the Google+ sharing console is only ever a click away in any Google property via the toolbar. This is bound to keep users deeply engaged. At the same time it will probably attract anti-trust scrutiny. On the other hand, Facebook already has strong networks effects in its favor and stealing away even a quarter of its 750m users will be an arduous, multi-year campaign. And Mark Zuckerberg has time and again shown that he has the uncanny ability to make good decisions under pressure. So maybe facebook will decide at some point that it needs to pivot fundamentally and make the necessary changes.&lt;/p&gt; 
 &lt;p&gt; Both companies will compete fervently for partnerships with major web properties to feature the Like or +1 buttons. And the mobile ecosystem (with Apple now &lt;a href=&quot;http://mashable.com/2011/06/07/apple-twitter-ios5/&quot;&gt;getting in bed with Twitter&lt;/a&gt;) will have a large impact. There are so many variables at play that many of the things I've said may make no difference at all in the outcome.&lt;/p&gt; 
-&lt;p&gt;With those caveats in place however, I predict that while Google+ will not usurp the throne from facebook per se, it will instead grow into a strong, competitive player and much-needed alternative. Much as Chrome has with IE. Where facebook has the larger, but no-longer dominant share. I predict that when this game is done playing, there will be no more thrones.&lt;/p&gt; 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt; 
-&lt;div style=&quot;font-size: small;&quot;&gt;
- Find me on 
- &lt;a href=&quot;http://twitter.com/dhanji&quot;&gt;twitter&lt;/a&gt; (Disclaimer: All opinions here are purely my speculation. And any Google-specific information is already in the public domain and linked-to where appropriate)
-&lt;/div&gt;</description>
+&lt;p&gt;With those caveats in place however, I predict that while Google+ will not usurp the throne from facebook per se, it will instead grow into a strong, competitive player and much-needed alternative. Much as Chrome has with IE. Where facebook has the larger, but no-longer dominant share. I predict that when this game is done playing, there will be no more thrones.&lt;/p&gt;</description>
       <link>http://rethrick.com/#google-plus</link>
     </item>
     
@@ -607,12 +539,7 @@ pick [1..]
 &lt;h3&gt;No Manifest Destiny&lt;/h3&gt; 
 &lt;p&gt;So, I'll admit it--I too, am a fanboy. I have a special affinity for Haskell, for the reasons mentioned above and many others (my uncle was even a member of the original Haskell committee).&lt;/p&gt; 
 &lt;p&gt;But as I said, it will never head over to the mainstream. There are many reasons for this: Haskell's APIs are pedantic, quirkily designed, its monadic IO is confusing and complicated, and so on. But the main reason is that the shift in mindset required is far too great. We're just too used to laundry-list-style sequences of instructions and attempting, however futilely, to map the search-space of complex real-world problems in our minds, in fairly literal terms.&lt;/p&gt; 
-&lt;p&gt;And I'm glad. I have fun with my exclusive little hobby, small community of co-conspirators, and that tiny bit of magic I feel every time I stand back and behold my latest Haskell creation!&lt;/p&gt; 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt; 
-&lt;div style=&quot;font-size: small;&quot;&gt;
- Find me on 
- &lt;a href=&quot;http://twitter.com/dhanji&quot;&gt;twitter&lt;/a&gt;
-&lt;/div&gt;</description>
+&lt;p&gt;And I'm glad. I have fun with my exclusive little hobby, small community of co-conspirators, and that tiny bit of magic I feel every time I stand back and behold my latest Haskell creation!&lt;/p&gt;</description>
       <link>http://rethrick.com/#haskell-better</link>
     </item>
     
@@ -659,12 +586,7 @@ appcfg.sh update src/main/webapp
  &lt;a href=&quot;http://maven.apache.org&quot;&gt;Maven 2.2.1&lt;/a&gt; and the 
  &lt;a href=&quot;http://code.google.com/appengine/downloads.html&quot;&gt;Appengine Java SDK&lt;/a&gt;
 &lt;/div&gt; 
-&lt;p&gt;Tweet me your thoughts.&lt;/p&gt; 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt; 
-&lt;div style=&quot;font-size: small;&quot;&gt;
- Find me on 
- &lt;a href=&quot;http://twitter.com/dhanji&quot;&gt;twitter&lt;/a&gt;
-&lt;/div&gt;</description>
+&lt;p&gt;Tweet me your thoughts.&lt;/p&gt;</description>
       <link>http://rethrick.com/#crosstalk</link>
     </item>
     
@@ -696,12 +618,7 @@ appcfg.sh update src/main/webapp
 &lt;h3&gt;The Future&lt;/h3&gt; 
 &lt;p&gt;The feeling now is liberating and joyous. Working by yourself or in a small team is fantastic in so many ways, that I simply can't describe it properly. If you're a hacker, Google is not the ideal place for you.&lt;/p&gt; 
 &lt;p&gt;That said, I've learned so much from working there, and I like to believe that I bridge the gap between hacker and engineer quite well. I enjoy the mathematical puzzles that Googlers love, I believe in the value of a programmer versed in Computer Science as well as Software Engineering, ardently. I do believe that Google is the best company in several generations and has transformed the way we think, live and work for the better. And I have no cynical reservations about their motto &amp;quot;Don't Be Evil&amp;quot;. They aren't, and if you think you can find another company who has done as much for the world and been as conscientious while keeping its promises to shareholders, then the more fool you.&lt;/p&gt; 
-&lt;p&gt;For my part, the future is a bright day, free of the encumberances of bureaucracy and scale. The sun is shining and I'm getting ready to start hacking.&lt;/p&gt; 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt; 
-&lt;div style=&quot;font-size: small;&quot;&gt;
- Find me on 
- &lt;a href=&quot;http://twitter.com/dhanji&quot;&gt;twitter&lt;/a&gt;
-&lt;/div&gt;</description>
+&lt;p&gt;For my part, the future is a bright day, free of the encumberances of bureaucracy and scale. The sun is shining and I'm getting ready to start hacking.&lt;/p&gt;</description>
       <link>http://rethrick.com/#waving-goodbye</link>
     </item>
     

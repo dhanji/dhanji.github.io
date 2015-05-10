@@ -128,6 +128,3 @@ No matter how many times you pick the first value of the preceding expression, a
 
 Tweet me your thoughts.
 
-<br>
-
-<div style="font-size: small;">Find me on <a href="http://twitter.com/dhanji">twitter</a></div>

@@ -98,8 +98,3 @@ as conscientious while keeping its promises to shareholders, then the more fool 
 
 For my part, the future is a bright day, free of the encumberances of bureaucracy and scale. The sun
 is shining and I'm getting ready to start hacking.
-
-
-<br>
-
-<div style="font-size: small;">Find me on <a href="http://twitter.com/dhanji">twitter</a></div>

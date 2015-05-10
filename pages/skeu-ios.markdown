@@ -90,7 +90,3 @@ and with all the comfort and familiarity of past experience. Apps will develop a
 <br>
 
 <div style="font-size: small;">PS: I realize that one objection many of you will have is that Mac OS copies these designs too--to that I say yes, the operative word is "copy"</div>
-
-<br>
-
-<div style="font-size: small;">Find me on <a href="http://twitter.com/dhanji">twitter</a></div>

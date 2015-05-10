@@ -36,7 +36,3 @@ A far cry from the torporific, post-traumatic, pathetic man lost between worlds,
 
 And this in essence is the magic of Sherlock Holmes--the growth of Dr. Watson as a character, his emergence from a painful and unremarkable past, into the life and presence of the great detective--not as a sidekick, not as the bungler who accidentally coughs up the missing clue, not even as the by-standing chronicler who gives us a post-events report of a wonderful, but unreachable story--no, rather as the friend and confidant, as the brother and colleague, the one who Holmes counts on as his backup over the sum total of bodies in Scotland Yard, as the man who brings the alien Holmes a connection to a very real and human life. And as a man through whose eyes, we see, and live, the adventure.
 
-
-<br>
-
-<div style="font-size: small;">Find me on <a href="http://twitter.com/dhanji">twitter</a></div>

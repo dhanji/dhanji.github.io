@@ -121,7 +121,3 @@ of delivering success--are alone not sufficient to overcome complexity that cree
 we should have known better, but we didn't.
 
 In the end, the man-month as a scalable unit of work is hubris worthy of a Greek tragedy.
-
-<br>
-
-<div style="font-size: small;">Find me on <a href="http://twitter.com/dhanji">twitter</a></div>

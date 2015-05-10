@@ -26,7 +26,3 @@ You're free to change your mind about the underlying logic (repeatedly), and you
 You might argue that the second point is achieved with a sufficiently abstract interface--this is largely true, but in many cases it's quite cumbersome. (Particularly with evolving code, I've found it quite painful.) And refactoring tools only take you so far. Using strings neatly sidesteps this problem.
 
 <i>Read the <a href="http://www.informit.com/articles/article.aspx?p=1831497">rest of this article</a> (at InformIT).</i>
-
-<br>
-
-<div style="font-size: small;">Find me on <a href="http://twitter.com/dhanji">twitter</a></div>

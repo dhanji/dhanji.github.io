@@ -24,6 +24,3 @@ Hopefully, someday, someone will try again.
 
 =)
 
-<br>
-
-<div style="font-size: small;">Find me on <a href="http://twitter.com/dhanji">twitter</a></div>

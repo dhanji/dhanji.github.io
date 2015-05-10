@@ -19,7 +19,3 @@ Generally these criticisms have some truth to them, but implicit is the assumpti
 I've fallen prey to this attitude myself, many times. Plenty of solutions worked well enough for the problem at hand. But generally, the problem itself offered very little challenge, so I invented my own challenge by trying to build a framework or an abstraction that did things maybe 10% better than the existing solution.
 
 <i>Read the <a href="http://www.informit.com/articles/article.aspx?p=1905548">rest of this article</a> (at InformIT).</i>
-
-<br>
-
-<div style="font-size: small;">Find me on <a href="http://twitter.com/dhanji">twitter</a></div>

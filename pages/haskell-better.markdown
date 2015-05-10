@@ -89,7 +89,3 @@ map the search-space of complex real-world problems in our minds, in fairly lite
 
 And I'm glad. I have fun with my exclusive little hobby, small community of co-conspirators, and
 that tiny bit of magic I feel every time I stand back and behold my latest Haskell creation!
-
-<br>
-
-<div style="font-size: small;">Find me on <a href="http://twitter.com/dhanji">twitter</a></div>

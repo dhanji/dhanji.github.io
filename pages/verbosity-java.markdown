@@ -13,7 +13,3 @@ As a platform, however, Java is modern and genuinely competitive. The combinatio
 "ProducerConstructorFactoryFactory" jokes notwithstanding, there is little doubt that the Java language suffers from a poor character-to-instruction ratio. I call this property "expressiveness", in other words, the number of keys you must press in order to accomplish a simple task. This number is pretty large in Java. It repeatedly violates the "don't repeat yourself" (DRY) principle, and many of its modern features (such as Generics) feel lumbering and unwieldy, making reading and understanding source code a tedious task.
 
 <i>Read the <a href="http://www.informit.com/articles/article.aspx?p=1824790">rest of this article</a> (at InformIT).</i>
-
-<br>
-
-<div style="font-size: small;">Find me on <a href="http://twitter.com/dhanji">twitter</a></div>

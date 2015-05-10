@@ -71,7 +71,3 @@ Feeling a lot slower than I normally do with this setup. Waiting for that boulde
 </blockquote>
 
 <i>Read the <a href="http://www.informit.com/articles/article.aspx?p=1829420">rest of this article</a> (at InformIT).</i>
-
-<br>
-
-<div style="font-size: small;">Find me on <a href="http://twitter.com/dhanji">twitter</a></div>

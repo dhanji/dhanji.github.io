@@ -113,6 +113,3 @@ Ultimately, building various pieces of this puzzle from scratch did pay off for 
 The point I'm trying to make is that building a powerful feature like Instant Search requires diligence and a careful, measured approach to the problem at hand; with a lot of backtracking, frustration and gradual evolution toward the (albeit optimistic) final goal.
 And more often than not, it involves working in unsexy parts of the stack, reinventing and replacing minor cogs in a much bigger system of gears so that the engine may hum apace.
 
-<br>
-
-<div style="font-size: small;">Find me on <a href="http://twitter.com/dhanji">twitter</a></div>
