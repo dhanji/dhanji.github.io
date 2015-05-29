@@ -21,12 +21,12 @@ In 2011, I founded an email startup called [Fluent](http://fluent.io) which caus
 
 Since then, I was Lead Architect for [Tactile](http://tactile.com), founded by ex-Salesforce.com SVP Chuck Ganapathi, designing their data synchronization platform and many aspects of Tactile's innovative [personal cloud infrastructure](http://tactile.com/technology.html) including data concurrency, version control and offline device sync. Most recently, I was head of engineering at anonymous social network Secret where I was responsible for all infrastructure, server and client teams, and a representative to Google's Customer Advisory Board for Cloud Platforms.
 
-In my free time I contribute to various open source [projects](/p/projects).
-I created Sitebricks which sits behind many large projects. I also created and maintained Guice's Servlet request dispatching module. If you have ever used Gmail, Blogger, Google Apps, Wave or AdWords, chances are that your pageviews have been dispatched by my code.
+In my free time, I contribute to various open source [projects](/p/projects).
+I created Sitebricks and [Guice's Servlet](https://github.com/google/guice/wiki/Servlets) request dispatching module. If you have ever used Gmail, Blogger, Google Drive, Apps or AdWords, chances are that your pageviews have been dispatched by my code.
 
 Additionally, I am one of the authors of the [JAX-RS
  Specification](http://en.wikipedia.org/wiki/Java_API_for_RESTful_Web_Services) for RESTful Web Services.
 
-If you like books on Software Engineering you might enjoy [Dependency Injection: Design Patterns](http://manning.com/prasanna).
+If you like books on Software Engineering you might enjoy [Dependency Injection: Design Patterns](http://manning.com/prasanna) or read some of my [essays at InformIT](http://www.informit.com/authors/bio/32A62796-5AE8-43FA-BF5D-15AEB8F63F43).
 
 If you'd like to shout a question at me or simply say hi, I'm [on Twitter](http://twitter.com/dhanji) and [LinkedIn](http://linkedin.com/in/dhanji); or privately via [myfirstname] at gmail.
