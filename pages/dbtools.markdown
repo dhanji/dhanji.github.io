@@ -5,15 +5,19 @@
 
 # On "Will this solve my problem?" thinking
 
-Here's something one hears quite often
+Here's something one hears quite often:
 
-    use database technology _X_ because it is perfectly suited to your problem.
+<blockquote>
+Use database technology _X_ because it is perfectly suited to your problem.
+</blockquote>
 
 A variant of this is,
 
-    avoid technology _Y_ because it is *ill- suited* to your problem. Now both these statements can be valid, but in my experience they rarely are.
+<blockquote>
+Avoid technology _Y_ because it is *ill- suited* to your problem.
+</blockquote>
 
-Instead they often represent what I think of as a "Will this solve my problem?" mentality. Someone will say [MongoDB](https://www.mongodb.org) or [PostgreSQL](http://www.postgresql.org) or [Riak](http://basho.com) or _DB du jour_ is the best tool for the job, usually followed by some folksy platitude about how perfectly it suits a problem domain. My issue with this approach is that it ignores two realities of operational engineering: _performance and knowledge_.
+Now both these statements can be valid, but in my experience they rarely are. Instead they often represent what I think of as a "Will this solve my problem?" mentality. Someone will say [MongoDB](https://www.mongodb.org) or [PostgreSQL](http://www.postgresql.org) or [Riak](http://basho.com) or _DB du jour_ is the best tool for the job, usually followed by some folksy platitude about how perfectly it suits a problem domain. My issue with this approach is that it ignores two realities of operational engineering: _performance and knowledge_.
 
 It may very well be that MongoDB is perfect for your schema: you store everything as key-value blobs and rarely perform joins. Or it may be that you need to do joins all the time to pull in, for example, user avatars in a comment thread, for which a SQL schema design is more suitable. Neither of these is a great reason to to choose one database technology over the other, in my opinion.
 
@@ -23,7 +27,7 @@ When I was picking a database for my first startup [Fluent](http://techcrunch.co
 
 Given the same hardware, the same data ergonomics and usage conditions, there should be very little variation between the sheer write performance of databases. After all, they'd move the platters roughly in the same way if they're fed incoming blobs in the same way. Granting that neither of the authors were completely inept this makes no sense at all. Of course, we now know why this is: Mongo's defaults provide for very little consistency or durability (they expect multiple replicas to be in operation as a redundancy), essentially writing to disk asynchronously. Aphyr's excellent research has [since demonstrated](https://aphyr.com/posts/284-call-me-maybe-mongodb "Call me Maybe: MongoDB") other problems too. Once I reset everything to match PostgreSQL's guarantees (as much as was possible, anyway), their performances basically drew level.
 
-    Again, please note that this experience happened many years ago and I only recount it here for illustrative purposes.
+_Again, please note that this experience happened many years ago and I only recount it here for illustrative purposes._
 
 Fine, if they're equal, and Mongo's API is better to work with, then why not go with it anyway? That brings me to the second concern: knowledge. I know how PostgreSQL stores and retrieves data--rows are sequentially placed in discrete units called _pages_ which are written and loaded, individually. The pages are arranged in a BTree-like directory structure. Similarly, I know that a blob field type stores only a pointer in the record and the actual blob in a separate location. Conversely, a byte array stores it inline. This means when scanning down a table, storing large, cacheable objects as blobs has a significant performance advantage--and vice-versa for smaller, discrete objects that need to be retrieved immediately. I knew none of these things about Mongo. At the time there was not a great deal of tertiary documentation so I could not verify it all that easily either. I chose PostgreSQL.
 
@@ -32,7 +36,9 @@ Now, let me make _absolutely clear_ that this is not a panning of MongoDB. The e
 Recently, someone wondered why Secret didn't just store everything in a Graph database such as Neo4j (In fact we did evaluate this and many other options). I had never heard of Neo4j or any graph database taking the kinds of loads we saw. Nor was there much to go on in the way of information about sharding, rebalancing strategy, disk and index storage formats and so on. When you have QPS in excess of six-figures you have to be pretty certain to make such a fundamental choice, and you often have to make that choice quickly.
 The conventional-wisdom counter to this is, _it only matters at scale_. Go with SQL, says the argument, until it falls apart and then rewrite everything, and by that time it won't matter. This is a reasonable thought but I don't completely agree with it either. To my mind, performance is just as important as scale.
 
-    Here, I'm defining performance as what a single user experiences.
+<blockquote>
+Here, I'm defining performance as what a single user experiences.
+</blockquote>
 
 Another [startup](http://tactile.com) I worked at began with the SQL approach. Still in stealth mode, they had only alpha users but the volume of data per-user was incredibly large. The product pulls existing data from Salesforce, Google, LinkedIn and Exchange and then performs some domain-specific computation on it. This data is then synced to the phone for offline use. In short order, it was clear that a normalized MySQL schema was just not going to cut it. The kinds of queries needed to generate a final, searchable database for a single user were absurdly inefficient. Even to write this volume of data to a single instance was not feasible, the results were that when one user was being onboarded, others would visibly suffer. Yet the schema fit SQL perfectly, it should have been the right choice. In the end, a custom solution performed far better, one backed by a NoSQL store.
 
