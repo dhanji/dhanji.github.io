@@ -47,6 +47,14 @@ h2 {
   margin: 2em auto;
 }
 
+h2 a {
+  color: inherit;
+}
+
+h2 a:hover {
+  color: inherit;
+}
+
 h3 {
   margin-top: 2.6em;
   font-size: 1.4em;

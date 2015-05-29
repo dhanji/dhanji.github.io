@@ -25,19 +25,19 @@ public class Index {
     StringBuilder html = new StringBuilder();
 
     for (Page page : pages) {
-      html.append("<h2>").append(page.getTitle()).append("</h2>");
+      String relativeLink = "/p/" + page.getId();
+
+      html.append("<h2>").append(toAnchorLink(relativeLink, page.getTitle())).append("</h2>");
       html.append("<div class=").append('"').append("meta").append('"').append('>');
       html.append("<ul class=").append('"').append("tags").append('"').append('>');
       page.getTags().stream()
-          .forEach(t -> html.append("<li><a href=\"#\">")
-              .append(t)
-              .append("</a></li>"));
+          .forEach(t -> html.append("<li>")
+              .append(toAnchorLink("#", t))
+              .append("</li>"));
       html.append("</ul></div>");
 
       // Write snippet.
-      String snippet = page.getHtml() + (" <a href=\""
-          + "/p/" + page.getId()
-          +"\">read more &rarr;</a>");
+      String snippet = page.getHtml() + ' ' + toAnchorLink(relativeLink, "read more &rarr;");
       html.append("<div class=").append('"').append("text").append('"').append('>')
           .append(snippet)
           .append("</div>");
@@ -57,5 +57,9 @@ public class Index {
     template.select("body meta").remove();
 
     return template.outerHtml();
+  }
+
+  private static String toAnchorLink(String href, String text) {
+    return "<a href=\"" + href + "\"" + ">" + text + "</a>";
   }
 }
