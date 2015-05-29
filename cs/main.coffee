@@ -5,7 +5,7 @@ $ ->
 
     base_url = 'http%3A%2F%2Frethrick.com&'
     if url.indexOf('facebook.com') > -1
-      url = url.replace("#{base_url}&", "http%3A%2F%2Frethrick.com#{window.location.pathname}")
+      url = url.replace("#{base_url}&", "http%3A%2F%2Frethrick.com#{window.location.pathname}&")
     else
       url = url.replace(base_url, "http%3A%2F%2Frethrick.com#{window.location.pathname}")
 

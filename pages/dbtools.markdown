@@ -33,4 +33,6 @@ Another [startup](http://tactile.com) I worked at began with the SQL approach. S
 
 This brings me to my thesis: rather than asking if a tool will solve my problem, I'd rather ask if I understand the behavior of this tool properly. Don't reject MongoDB out of hand because it "doesn't do joins", these guys [prove you wrong](https://www.firebase.com). Don't reject SQL because it "doesn't scale or shard well", look at this [magic bit of work](http://instagram-engineering.tumblr.com/post/10853187575/sharding-ids-at-instagram). A good tool can be phenomenal but it won't solve a problem for you. Patient, methodical software engineering, ultimately, is what solves the problem.
 
+
+
 _Special thanks to [@sophistifunk](https://twitter.com/sophistifunk) and [@michaelneale](https://twitter.com/michaelneale) for reviewing early drafts._
