@@ -6,8 +6,8 @@
 
 Hi, I am Dhanji R. Prasanna, hacker-at-large. I like to [build things](http://rethrick.com/p/projects).
 
-I formerly worked at Google where I was a member of the Wave team among other things. In my two
-years on the project, I mainly worked on the Realtime Search and Indexing component where I
+I formerly worked at Google on Wave among other things. In my two
+years on the project, I mainly worked on the Live Search and Indexing where I
 helped design one of the most complex bits of machinery in the paradigm of search. In this I
  was fortunate to work with some very talented engineers, from whom I have learned the world and
  more. While at Wave, I also worked on its APIs and its scalability, with a
@@ -17,13 +17,12 @@ My background is primarily in Java. I represented Google on several Java expert 
 member of Google's internal leadership council on all matters Java. Before that I worked as a
 consultant at ThoughtWorks.
 
-In 2011 I founded an email startup called [Fluent](http://fluent.io) which caused a [brief splash](http://rethrick.com/p/projects). Since then, I was Lead Architect for Tactile, Inc., founded by ex-Salesforce.com SVP Chuck Ganapathi, designing their data synchronization platform and many aspects of Tactile's innovative "personal cloud" infrastructure including multi-edit data concurrency and offline mobile sync. Most recently, I was head of engineering at anonymous social network Secret where I was responsible for all infrastructure, server and client teams.
+In 2011, I founded an email startup called [Fluent](http://fluent.io) which caused a [brief splash](http://rethrick.com/p/projects).
+
+Since then, I was Lead Architect for [Tactile](http://tactile.com), founded by ex-Salesforce.com SVP Chuck Ganapathi, designing their data synchronization platform and many aspects of Tactile's innovative _personal cloud_ infrastructure including multi-edit data concurrency and offline mobile sync. Most recently, I was head of engineering at anonymous social network Secret where I was responsible for all infrastructure, server and client teams, and a representative to Google's Customer Advisory Board for Cloud Platforms.
 
 In my free time I contribute to various open source [projects](/p/projects).
-I created the Sitebricks web platform which sits behind many large projects including Maven
-Central and Repository Search. I also created and maintain Guice's Servlet request dispatching
-module. If you have ever used Gmail, Blogger, Google Apps, Wave or AdWords, chances are that
-your pageviews have been dispatched by my code.
+I created Sitebricks which sits behind many large projects. I also created and maintained Guice's Servlet request dispatching module. If you have ever used Gmail, Blogger, Google Apps, Wave or AdWords, chances are that your pageviews have been dispatched by my code.
 
 For a full resume, take a look at my [LinkedIn](http://linkedin.com/in/dhanji) profile.
 
