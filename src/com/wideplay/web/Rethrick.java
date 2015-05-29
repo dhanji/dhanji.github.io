@@ -129,8 +129,8 @@ public class Rethrick {
 
       // Share links.
       blogTemplate.select("#share a.fb").attr("href", "https://www.facebook.com/dialog/share?app_id=480715222077095&display=popup" +
-          "&href=http%3A%2F%2Frethrick.com/p/" + page.getId() +
-          "&redirect_uri=http%3A%2F%2Frethrick.com/popup_close.html");
+          "&href=http%3A%2F%2Frethrick.com" + URLEncoder.encode("/p/" + page.getId() + "/", Charsets.UTF_8.name()) +
+          "&redirect_uri=http%3A%2F%2Frethrick.com%2Fpopup_close.html");
 
       blogTemplate.select("#share a.tweet").attr("href", "https://twitter.com/share?via=dhanji&related=dhanji&dnt=true" +
           "&text=" + URLEncoder.encode(page.getTitle(), Charsets.UTF_8.name()) +
