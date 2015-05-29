@@ -4,7 +4,7 @@
 
 # About Me
 
-Hi, I am Dhanji R. Prasanna, hacker-at-large. I like to [build things](http://rethrick.com/p/projects).
+Hi, I am **Dhanji R. Prasanna**. I like to [build things](http://rethrick.com/p/projects).
 
 I formerly worked at Google on Wave among other things. In my two
 years on the project, I mainly worked on the Live Search and Indexing where I
@@ -26,10 +26,9 @@ I created Sitebricks which sits behind many large projects. I also created and m
 
 For a full resume, take a look at my [LinkedIn](http://linkedin.com/in/dhanji) profile.
 
-Additionally, I am one of the authors of the [JAX-RS](http://en.wikipedia.org/wiki/Java_API_for_RESTful_Web_Services)
- Specification for RESTful web services.
+Additionally, I am one of the authors of the [JAX-RS
+ Specification](http://en.wikipedia.org/wiki/Java_API_for_RESTful_Web_Services) for RESTful Web Services.
 
 If you like books on Software Engineering you might enjoy [Dependency Injection: Design Patterns](http://manning.com/prasanna).
 
-If you'd like to shout a question at me or simply say hi, I'm [on Twitter](http://twitter.com/dhanji).
- Or privately via [myfirstname] at gmail.
+If you'd like to shout a question at me or simply say hi, I'm [on Twitter](http://twitter.com/dhanji); or privately via [myfirstname] at gmail.
