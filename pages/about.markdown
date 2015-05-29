@@ -7,8 +7,8 @@
 Hi, I am **Dhanji R. Prasanna**. I like to [build things](http://rethrick.com/p/projects).
 
 I formerly worked at Google on Wave among other things. In my two
-years on the project, I mainly worked on the Live Search and Indexing where I
-helped design one of the most complex bits of machinery in the paradigm of search. In this I
+years on the project, I mainly worked on Live Search and indexing where I
+helped design one of the most complex bits of machinery in the paradigm of search. I
  was fortunate to work with some very talented engineers, from whom I have learned the world and
  more. While at Wave, I also worked on its APIs and its scalability, with a
  particular emphasis on JVM performance and garbage collection.
