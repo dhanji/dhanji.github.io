@@ -112,10 +112,12 @@ public class Rethrick {
 
       // Save as HTML.
       blogTemplate.select("#content h2").html(page.getTitle());
-      Elements time = blogTemplate.select("#content footer > time");
+      blogTemplate.select("#content .text").html(page.getHtml());
+
+      Elements time = blogTemplate.select("#content footer time");
       time.html(DATE_FORMAT.format(page.getPostedOn()));
       time.attr("datetime", DATE_FORMAT.format(page.getPostedOn()));
-      blogTemplate.select("#content .text").html(page.getHtml());
+
       Elements tagsElement = blogTemplate.select("#meta .tags");
       tagsElement.html("");
       page.getTags().stream()
