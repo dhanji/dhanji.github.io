@@ -21,6 +21,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
+import java.net.URLEncoder;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -125,6 +126,21 @@ public class Rethrick {
               + t
               + "</a></li>"
           ));
+
+      // Share links.
+      document.select("#share a.fb").attr("href", "https://www.facebook.com/dialog/share?app_id=480715222077095&display=popup" +
+          "&href=http%3A%2F%2Frethrick.com/p/" + page.getId() +
+          "&redirect_uri=http%3A%2F%2Frethrick.com/popup_close.html");
+
+      document.select("#share a.tweet").attr("href", "https://twitter.com/share?via=dhanji&related=dhanji&dnt=true" +
+          "&text=" + URLEncoder.encode(page.getTitle(), Charsets.UTF_8.name()) +
+          "&url=" +
+          "http%3A%2F%2Frethrick.com/p/" + page.getId());
+
+      document.select("#share a.gmail").attr("href", "https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=" +
+          "&su=" + URLEncoder.encode(page.getTitle(), Charsets.UTF_8.name()) +
+          "&body=" + URLEncoder.encode("I thought you might like this article by Dhanji R. Prasanna:", Charsets.UTF_8.name()) +
+          "%0A%0Ahttp%3A%2F%2Frethrick.com/p/" + page.getId());
 
       // Clean up.
       blogTemplate.select("body meta").remove();
