@@ -25,7 +25,7 @@ Now, let me make _absolutely clear_ that this is not a panning of MongoDB. The e
 
 Recently, someone wondered why Secret didn't just store everything in a Graph database such as [Neo4j](http://neo4j.com), it is a social network after all (In fact we did evaluate this and many other options). I had never heard of Neo4j or any graph database taking the kinds of loads we saw. Nor was there much to go on in the way of information about sharding, rebalancing strategy, disk and index storage formats and so on. When you have QPS in excess of six-figures you have to be pretty certain to make such a fundamental choice, and you often have to make that choice quickly.
 
-_Again, my point here is not that neo4j is incapable of all this, it may very well be. It's that when making such decisions, especially under time pressure, you need to be convinced of the solution first, and only then the tool; and one that you understand in that context._
+_Again, my point here is not that neo4j is incapable of all this, it may very well be. It's that when making such decisions, especially under time pressure, you need to be convinced of the solution first, and only then the tool, one that you understand in that context._
 
 The conventional-wisdom counter to this is, _it only matters at scale_. Go with SQL, says the argument, until it falls apart and then rewrite everything, and by that time it won't matter. This is a reasonable thought but I don't completely agree with it either. To my mind, performance is just as important as scale.
 
