@@ -1,7 +1,6 @@
 <meta published="29 May 2015"/>
 <meta tag="essay"/>
 <meta tag="programming"/>
-<meta noindex/>
 
 # On "Will this solve my problem?" thinking
 
