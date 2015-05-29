@@ -54,11 +54,11 @@
     <p></p>    
     <p>Here's something one hears quite often:</p> 
     <blockquote>
-      Use database technology _X_ because it is perfectly suited to your problem. 
+      Use database technology X because it is perfectly suited to your problem. 
     </blockquote> 
     <p>A variant of this is,</p> 
     <blockquote>
-      Avoid technology _Y_ because it is *ill- suited* to your problem. 
+      Avoid technology Y because it is *ill- suited* to your problem. 
     </blockquote> 
     <p>Now both these statements can be valid, but in my experience they rarely are. Instead they often represent what I think of as a &quot;Will this solve my problem?&quot; mentality. Someone will say <a href="https://www.mongodb.org">MongoDB</a> or <a href="http://www.postgresql.org">PostgreSQL</a> or <a href="http://basho.com">Riak</a> or <em>DB du jour</em> is the best tool for the job, usually followed by some folksy platitude about how perfectly it suits a problem domain. My issue with this approach is that it ignores two realities of operational engineering: <em>performance and knowledge</em>.</p> 
     <p>It may very well be that MongoDB is perfect for your schema: you store everything as key-value blobs and rarely perform joins. Or it may be that you need to do joins all the time to pull in, for example, user avatars in a comment thread, for which a SQL schema design is more suitable. Neither of these is a great reason to to choose one database technology over the other, in my opinion.</p> 

@@ -6,17 +6,13 @@
 # On "Will this solve my problem?" thinking
 
 Here's something one hears quite often:
-
 <blockquote>
-Use database technology _X_ because it is perfectly suited to your problem.
+Use database technology X because it is perfectly suited to your problem.
 </blockquote>
-
 A variant of this is,
-
 <blockquote>
-Avoid technology _Y_ because it is *ill- suited* to your problem.
+Avoid technology Y because it is *ill- suited* to your problem.
 </blockquote>
-
 Now both these statements can be valid, but in my experience they rarely are. Instead they often represent what I think of as a "Will this solve my problem?" mentality. Someone will say [MongoDB](https://www.mongodb.org) or [PostgreSQL](http://www.postgresql.org) or [Riak](http://basho.com) or _DB du jour_ is the best tool for the job, usually followed by some folksy platitude about how perfectly it suits a problem domain. My issue with this approach is that it ignores two realities of operational engineering: _performance and knowledge_.
 
 It may very well be that MongoDB is perfect for your schema: you store everything as key-value blobs and rarely perform joins. Or it may be that you need to do joins all the time to pull in, for example, user avatars in a comment thread, for which a SQL schema design is more suitable. Neither of these is a great reason to to choose one database technology over the other, in my opinion.
@@ -35,11 +31,9 @@ Now, let me make _absolutely clear_ that this is not a panning of MongoDB. The e
 
 Recently, someone wondered why Secret didn't just store everything in a Graph database such as Neo4j (In fact we did evaluate this and many other options). I had never heard of Neo4j or any graph database taking the kinds of loads we saw. Nor was there much to go on in the way of information about sharding, rebalancing strategy, disk and index storage formats and so on. When you have QPS in excess of six-figures you have to be pretty certain to make such a fundamental choice, and you often have to make that choice quickly.
 The conventional-wisdom counter to this is, _it only matters at scale_. Go with SQL, says the argument, until it falls apart and then rewrite everything, and by that time it won't matter. This is a reasonable thought but I don't completely agree with it either. To my mind, performance is just as important as scale.
-
 <blockquote>
 Here, I'm defining performance as what a single user experiences.
 </blockquote>
-
 Another [startup](http://tactile.com) I worked at began with the SQL approach. Still in stealth mode, they had only alpha users but the volume of data per-user was incredibly large. The product pulls existing data from Salesforce, Google, LinkedIn and Exchange and then performs some domain-specific computation on it. This data is then synced to the phone for offline use. In short order, it was clear that a normalized MySQL schema was just not going to cut it. The kinds of queries needed to generate a final, searchable database for a single user were absurdly inefficient. Even to write this volume of data to a single instance was not feasible, the results were that when one user was being onboarded, others would visibly suffer. Yet the schema fit SQL perfectly, it should have been the right choice. In the end, a custom solution performed far better, one backed by a NoSQL store.
 
 This brings me to my thesis: rather than asking if a tool will solve my problem, I'd rather ask if I understand the behavior of this tool properly. Don't reject MongoDB out of hand because it "doesn't do joins", these guys [prove you wrong](https://www.firebase.com). Don't reject SQL because it "doesn't scale or shard well", look at this [magic bit of work](http://instagram-engineering.tumblr.com/post/10853187575/sharding-ids-at-instagram). A good tool can be phenomenal but it won't solve a problem for you. Patient, methodical software engineering, ultimately, is what solves the problem.
