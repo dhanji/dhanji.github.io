@@ -19,7 +19,7 @@ consultant at ThoughtWorks.
 
 In 2011, I founded an email startup called [Fluent](http://fluent.io) which caused a [brief splash](http://rethrick.com/p/projects).
 
-Since then, I was Lead Architect for [Tactile](http://tactile.com), founded by ex-Salesforce.com SVP Chuck Ganapathi, designing their data synchronization platform and many aspects of Tactile's innovative _personal cloud_ infrastructure including multi-edit data concurrency and offline mobile sync. Most recently, I was head of engineering at anonymous social network Secret where I was responsible for all infrastructure, server and client teams, and a representative to Google's Customer Advisory Board for Cloud Platforms.
+Since then, I was Lead Architect for [Tactile](http://tactile.com), founded by ex-Salesforce.com SVP Chuck Ganapathi, designing their data synchronization platform and many aspects of Tactile's innovative [personal cloud infrastructure](http://tactile.com/technology.html) including data concurrency, version control and offline device sync. Most recently, I was head of engineering at anonymous social network Secret where I was responsible for all infrastructure, server and client teams, and a representative to Google's Customer Advisory Board for Cloud Platforms.
 
 In my free time I contribute to various open source [projects](/p/projects).
 I created Sitebricks which sits behind many large projects. I also created and maintained Guice's Servlet request dispatching module. If you have ever used Gmail, Blogger, Google Apps, Wave or AdWords, chances are that your pageviews have been dispatched by my code.
