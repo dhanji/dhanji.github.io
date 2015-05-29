@@ -1,0 +1,71 @@
+<!DOCTYPE HTML> 
+<html> 
+ <head> 
+  <meta charset="UTF-8" /> 
+  <title>Rethrick Construction</title> 
+  <link href="http://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet" type="text/css" /> 
+  <link href="http://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet" type="text/css" /> 
+  <link href="http://fonts.googleapis.com/css?family=Inconsolata&amp;v2" rel="stylesheet" type="text/css" /> 
+  <link rel="stylesheet" href="../../css/flaticon.css" /> 
+  <link rel="stylesheet" href="../../css/main.css" /> 
+  <script type="text/javascript" src="../../js/coffee-script.js">
+  </script> 
+  <script type="text/javascript" src="../../js/jquery-2.1.3.min.js">
+  </script> 
+  <script type="text/coffeescript" src="../../cs/main.coffee">
+  </script> 
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-24538005-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  
+  </script> 
+ </head> 
+ <body> 
+  <nav id="top"> 
+   <ul> 
+    <li><a href="/p/about">About</a></li> 
+    <li><a href="/p/projects">Projects</a></li> 
+   </ul> 
+   <h1>Rethrick Construction</h1> 
+  </nav> 
+  <nav id="share"> 
+   <ul> 
+    <li><a href="https://www.facebook.com/dialog/share?app_id=480715222077095&amp;display=popup&amp;href=http%3A%2F%2Frethrick.com&amp;redirect_uri=http%3A%2F%2Frethrick.com/popup_close.html" class="fb" title="Share on facebook">
+      <div class="glyph-icon flaticon-facebook2"></div></a></li> 
+    <li><a href="https://twitter.com/share?via=dhanji&amp;related=dhanji&amp;dnt=true&amp;url=http%3A%2F%2Frethrick.com" target="_blank" title="Share on twitter" class="tweet">
+      <div class="glyph-icon flaticon-twitter"></div></a></li> 
+    <li><a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;tf=1&amp;to=&amp;su=I+thought+you+might+like+this...&amp;body=Article+by+Dhanji+R.+Prasanna%3A%0A%0Ahttp%3A%2F%2Frethrick.com" title="Send via Gmail" class="gmail">
+      <div class="glyph-icon flaticon-mail59"></div></a></li> 
+   </ul> 
+  </nav> 
+  <section id="content"> 
+   <div class="meta"> 
+    <ul class="tags"> 
+    </ul> 
+   </div> 
+   <h2>On &quot;Will this solve my problem?&quot; thinking</h2> 
+   <div class="text">
+    <p></p>    
+    <p>Here's something you constantly hear--use database technology <em>X</em> because it is perfectly suited to your problem. A variant of this is: avoid technology <em>Y</em> because it is <em>ill- suited</em> to your problem. Now both these statements can be valid, but in my experience they rarely are. Instead they often represent what I think of as a &quot;Will this solve my problem?&quot; mentality. Someone will say MongoDB or PostgreSQL or Riak or <em>DB du jour</em> is the best tool for the job, usually followed by some folksy platitude about how perfectly it suits a problem domain. My issue with this approach is that it ignores two realities of operational engineering: <em>performance and knowledge</em>. It may very well be that MongoDB is perfect for your schema: you store everything as key-value blobs and rarely perform joins. Or it may be that you need to do joins all the time to pull in, for example, user avatars in a comment thread, for which a SQL/RDBMS schema design is apparently &quot;suitable&quot;. Neither of these is a great reason to to choose one database technology over the other, in my opinion. Now, this sounds absurdly counter-intuitive, but hear me out. My reason is basically that the API should play almost no part in the operational concerns of your application. And the latter should be your main worry, in general (there are some exceptions but we'll get to that). When I was picking a database for my first startup Fluent, I wanted to use a key-value approach. This made for absurdly fast iteration of the schema during development and even afterwards when we wanted to make major feature changes they could be done with a simple, background job that asynchronously updated all the objects already in store. Mongo would be the natural choice following &quot;Will it solve my problem?&quot; thinking. I benchmarked MongoDB vs PostgreSQL. Mongo blows PostgreSQL out of the water when used out-of-the-box (note that this information is some years out of date). I should naturally have been thrilled and picked it right away. But a nagging concern stuck with me: how is this possible? Given the same hardware, the same data ergonomics and usage conditions, there should be very little variation between the sheer write performance of databases. After all they should move the platters roughly in the same way if they're fed incoming blobs in the same way. Granting that neither of the authors were completely inept this makes no sense at all. Of course, we now know why this is: Mongo's defaults provide for very little consistency or durability (they expect multiple replicas to be in operation as a redundancy), essentially writing to disk asynchronously. Aphyr's excellent research has <a href="https://aphyr.com/posts/284-call-me-maybe-mongodb" title="Call me Maybe MongoDB">since demonstrated</a> other problems too. Once I reset everything to match PostgreSQL's guarantees (as much as was possible, anyway), their performances basically became even. Again, please note that this experience happened many years ago and I only recount it here for illustrative purposes. Fine, if they're equal, and Mongo's API is better to work with, then why not go with it anyway? That brings me to the second concern: knowledge. I know how PostgreSQL stores and retrieves data--rows are sequentially placed in discrete units called <em>pages</em> which are written and loaded, individually. The pages are arranged in a BTree-like directory structure. Similarly, I know that a blob field type stores only a pointer in the record and the actual blob in a separate location. Conversely, a byte array stores it inline. This means when scanning down a table, storing large, cacheable objects as blobs has a significant performance advantage--and vice-versa for smaller, discrete objects that need to be retrieved immediately. I knew none of these things about Mongo. At the time there was not a great deal of tertiary documentation so I could not verify it all that easily either. I chose PostgreSQL. Now, let me make <em>absolutely clear</em> that this is not a panning of MongoDB. The excellent <a href="http://firebase.com">Firebase</a> (recently acquired by Google to bolster its Cloud Platform) has long relied on it and to great effect. Rather, it's an examination of what choices and questions are important in software architecture. Recently, someone wondered why Secret didn't just store everything in a Graph database such as Neo4j (In fact we did evaluate this and many other options). I had never heard of Neo4j or any graph database taking the kinds of loads we saw. Nor was there much to go on in the way of information about sharding, rebalancing strategy, disk and index storage formats and so on. When you have QPS in excess of six-figures you have to be pretty certain to make such a fundamental choice, and you often have to make that choice quickly. The conventional-wisdom counter to this is--<em>it only matters at scale</em>. Go with SQL, says the argument, until it falls apart and then rewrite everything, by that time it won't matter. This is a reasonable thought but I disagree with it too. To my mind, performance is just as important as scale. (I'm defining performance as what a single user experiences.) Another <a href="http://tactile.com">startup</a> I worked at began with the SQL approach. Still in stealth mode, they had only alpha users but the volume of data per-user was incredibly large. The product pulls existing data from Salesforce, Google, LinkedIn and Exchange and then performs some domain-specific computation on it. This data is then synced to the phone for offline use. In short order, it was clear that a normalized MySQL schema was just not going to cut it. The kinds of queries need to generate a final, searchable database for a single user were absurdly inefficient. Even to write this volume of data to a single instance was not feasible, the results were that when one user was being onboarded, others would visibly suffer. Yet the schema fit SQL perfectly, it should have been the right choice. In the end, a custom solution performed far better, one backed by a NoSQL store. This brings me to my thesis: rather than asking if a tool will solve my problem, I prefer to ask if I understand the behavior of this tool properly. Don't reject MongoDB out of hand because it &quot;doesn't do joins&quot;, these guys <a href="https://www.firebase.com">prove you wrong</a>. Don't reject SQL because it &quot;doesn't scale or shard well&quot;, look at this <a href="http://instagram-engineering.tumblr.com/post/10853187575/sharding-ids-at-instagram">magic bit of work</a>. A good tool can be phenomenal but it won't solve a problem for you. Patient, methodical software engineering, ultimately, is what solves the problem. </p>
+   </div> 
+   <footer> 
+    <p>Last updated on <time>June 12th 2012</time>.</p> 
+    <p>Find me on <a href="https://twitter.com/dhanji">Twitter</a></p> 
+   </footer> 
+  </section> 
+  <footer id="footer">
+    Font generated by 
+   <a href="http://www.flaticon.com">flaticon.com</a> under 
+   <a href="http://creativecommons.org/licenses/by/3.0/">CC BY</a>. The authors are: 
+   <a href="http://www.bogdanrosu.com">Bogdan Rosu</a>, 
+   <a href="http://www.simpleicon.com">SimpleIcon</a>, 
+   <a href="http://www.freepik.com">Freepik</a>. 
+  </footer>   
+ </body>
+</html>

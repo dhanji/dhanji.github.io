@@ -68,4 +68,4 @@ consist of open source projects except where they point to my work at Google and
 After Wave, I also worked on a few secret projects at Google.
 
 In addition, I have a number of side projects I am always working on. As they mature I will post
-about them on this website. see [about me](/about) for more.
+about them on this website. see [about me](/p/about) for more.
