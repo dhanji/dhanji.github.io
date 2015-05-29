@@ -128,16 +128,16 @@ public class Rethrick {
           ));
 
       // Share links.
-      document.select("#share a.fb").attr("href", "https://www.facebook.com/dialog/share?app_id=480715222077095&display=popup" +
+      blogTemplate.select("#share a.fb").attr("href", "https://www.facebook.com/dialog/share?app_id=480715222077095&display=popup" +
           "&href=http%3A%2F%2Frethrick.com/p/" + page.getId() +
           "&redirect_uri=http%3A%2F%2Frethrick.com/popup_close.html");
 
-      document.select("#share a.tweet").attr("href", "https://twitter.com/share?via=dhanji&related=dhanji&dnt=true" +
+      blogTemplate.select("#share a.tweet").attr("href", "https://twitter.com/share?via=dhanji&related=dhanji&dnt=true" +
           "&text=" + URLEncoder.encode(page.getTitle(), Charsets.UTF_8.name()) +
           "&url=" +
           "http%3A%2F%2Frethrick.com/p/" + page.getId());
 
-      document.select("#share a.gmail").attr("href", "https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=" +
+      blogTemplate.select("#share a.gmail").attr("href", "https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=" +
           "&su=" + URLEncoder.encode(page.getTitle(), Charsets.UTF_8.name()) +
           "&body=" + URLEncoder.encode("I thought you might like this article by Dhanji R. Prasanna:", Charsets.UTF_8.name()) +
           "%0A%0Ahttp%3A%2F%2Frethrick.com/p/" + page.getId());
